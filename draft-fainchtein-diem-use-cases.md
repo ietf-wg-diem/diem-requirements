@@ -23,7 +23,7 @@ title: "TODO - Your title"
 abbrev: "TODO - Abbreviation"
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-fainchtein-diem-use-cases-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
@@ -40,7 +40,7 @@ venue:
   type: Working Group
   mail: WG@example.com
   arch: https://example.com/WG
-  github: USER/REPO
+  github: rahelFain/combined-diem-uses-reqs
   latest: https://example.com/LATEST
 
 author:
