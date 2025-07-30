@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: "Applications and Real-Time"
+workgroup: "Digital Emblems"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: rahelFain/combined-diem-uses-reqs
-  latest: https://example.com/LATEST
+  group: "Digital Emblems"
+  type: "Working Group"
+  mail: "diem@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/diem"
+  github: "rahelFain/combined-diem-uses-reqs"
+  latest: "https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-diem-use-cases.html"
 
 author:
  -
