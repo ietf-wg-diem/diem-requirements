@@ -186,7 +186,10 @@ For some emblems, it may be relevant to track that an emblem has been presented.
 
 # Use Cases
 
-Different use cases have different requirements. The purpose of this document is to list the requirements that will be addressed with the initial architecture. We believe that the use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions. We list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
+Different use cases have different requirements.
+The purpose of this document is to list the requirements that will be addressed with the initial architecture.
+The use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions.
+We alphabetically list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
 
 We provide auxiliary material under Informative References.
 
@@ -223,9 +226,8 @@ Digital emblems under IHL could be extended to digital, network-connected and ne
 
 ## Organization for the Prohibition of Chemical Weapons (OPCW)
 
-Requires protection of Schedule 1 chemicals in transit between signatory countries for research, medical, pharmaceutical, or protective purposes. Emblem would identify place, date, and volume of production.
-Also a need to encrypt the description/characteristics of the items for access only by the receiving customs agencies and material handlers.
-This encryption precludes other actors from determining the contents being transported.
+Requires protection of Schedule 1 chemicals in transit between signatory countries for research, medical, pharmaceutical, or protective purposes.
+Emblem would identify place, date, and volume of production, and the emblem can contain confidential data.
 
 ## Press
 
