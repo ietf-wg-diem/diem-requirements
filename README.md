@@ -1,8 +1,8 @@
 <!-- regenerate: on (set to off if you edit this file) -->
 
-# TODO - Your title
+# Digital Emblems - Use Cases and Requirements
 
-This is the working area for the individual Internet-Draft, "TODO - Your title".
+This is the working area for the individual Internet-Draft, "Digital Emblems - Use Cases and Requirements".
 
 * [Editor's Copy](https://rahelFain.github.io/combined-diem-uses-reqs/#go.draft-fainchtein-diem-use-cases.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-fainchtein-diem-use-cases)
