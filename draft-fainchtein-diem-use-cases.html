@@ -4,28 +4,29 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>TODO - Your title</title>
-<meta content="Your Name Here" name="author">
+<title>Digital Emblems - Use Cases and Requirements</title>
+<meta content="Casey Deccio" name="author">
+<meta content="Rahel A. Fainchtein" name="author">
+<meta content="Felix Linker" name="author">
+<meta content="Jim Reid" name="author">
+<meta content="Alex Rosenberg" name="author">
 <meta content="
        TODO Abstract 
     " name="description">
-<meta content="xml2rfc 3.30.0" name="generator">
-<meta content="next generation" name="keyword">
-<meta content="unicorn" name="keyword">
-<meta content="sparkling distributed ledger" name="keyword">
+<meta content="xml2rfc 3.30.1" name="generator">
 <meta content="draft-fainchtein-diem-use-cases-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.30.0
+  xml2rfc 3.30.1
     Python 3.12.11
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
     lxml 5.3.1
-    platformdirs 4.3.8
+    platformdirs 4.4.0
     pycountry 24.6.1
     PyYAML 6.0.2
-    requests 2.32.4
+    requests 2.32.5
     setuptools 80.9.0
     wcwidth 0.2.13
 -->
@@ -1045,12 +1046,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">TODO - Abbreviation</td>
-<td class="right">July 2025</td>
+<td class="center">DIEM Use Cases and Requirements</td>
+<td class="right">September 2025</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Here</td>
-<td class="center">Expires 31 January 2026</td>
+<td class="left">Deccio, et al.</td>
+<td class="center">Expires 19 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1058,27 +1059,42 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">WG Working Group</dd>
+<dd class="workgroup">Digital Emblems</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-fainchtein-diem-use-cases-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-07-30" class="published">30 July 2025</time>
+<time datetime="2025-09-15" class="published">15 September 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-01-31">31 January 2026</time></dd>
-<dt class="label-authors">Author:</dt>
+<dd class="expires"><time datetime="2026-03-19">19 March 2026</time></dd>
+<dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
-      <div class="author-name">Y. N. Here</div>
-<div class="org">Your Organization Here</div>
+      <div class="author-name">C. Deccio</div>
+<div class="org">Brigham Young University</div>
+</div>
+<div class="author">
+      <div class="author-name">R. A. Fainchtein</div>
+<div class="org">JHU/APL</div>
+</div>
+<div class="author">
+      <div class="author-name">F. Linker</div>
+</div>
+<div class="author">
+      <div class="author-name">J. Reid</div>
+<div class="org">RTFM llp</div>
+</div>
+<div class="author">
+      <div class="author-name">A. Rosenberg</div>
+<div class="org">Veridigo</div>
 </div>
 </dd>
 </dl>
 </div>
-<h1 id="title">TODO - Your title</h1>
+<h1 id="title">Digital Emblems - Use Cases and Requirements</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">TODO Abstract<a href="#section-abstract-1" class="pilcrow">¶</a></p>
@@ -1089,12 +1105,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
-        The latest revision of this draft can be found at <span><a href="https://example.com/LATEST">https://example.com/LATEST</a></span>.
+        The latest revision of this draft can be found at <span><a href="https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-diem-use-cases.html">https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-diem-use-cases.html</a></span>.
         Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-fainchtein-diem-use-cases/">https://datatracker.ietf.org/doc/draft-fainchtein-diem-use-cases/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
-        WG Working Group mailing list (<span><a href="mailto:WG@example.com">mailto:WG@example.com</a></span>),
-        which is archived at <span><a href="https://example.com/WG">https://example.com/WG</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
+        Digital Emblems Working Group mailing list (<span><a href="mailto:diem@ietf.org">mailto:diem@ietf.org</a></span>),
+        which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/diem">https://mailarchive.ietf.org/arch/browse/diem</a></span>.
+        Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/diem/">https://www.ietf.org/mailman/listinfo/diem/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
         <span><a href="https://github.com/rahelFain/combined-diem-uses-reqs">https://github.com/rahelFain/combined-diem-uses-reqs</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
@@ -1117,7 +1134,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 31 January 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 19 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1159,13 +1176,21 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1206,42 +1231,124 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="sec-normative-references">
+<div id="sec-combined-references">
 <section id="section-5">
-      <h2 id="name-normative-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+      <h2 id="name-references">
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
+<section id="section-5.1">
+        <h3 id="name-normative-references">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+        </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-5.2">
+        <h3 id="name-informative-references">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
+<dl class="references">
+<dt id="BLUEHELMET">[BLUEHELMET]</dt>
+        <dd>
+<span class="refAuthor">Doctors Without Borders</span>, <span class="refTitle">"The Practical Guide to Humanitarian Law"</span>, <span>n.d.</span>, <span>&lt;<a href="https://guide-humanitarian-law.org/content/article/3/peacekeeping/">https://guide-humanitarian-law.org/content/article/3/peacekeeping/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="BLUESHIELD">[BLUESHIELD]</dt>
+        <dd>
+<span class="refAuthor">United Nations Educational, Scientific and Cultural Organization</span>, <span class="refTitle">"Enhanced Protection - Cultural Property of Highest Importance to Humanity"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.unesco.org/en/heritage-armed-conflicts/enhanced-protection-cultural-property-highest-importance-humanity">https://www.unesco.org/en/heritage-armed-conflicts/enhanced-protection-cultural-property-highest-importance-humanity</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="DIPLOMAT">[DIPLOMAT]</dt>
+        <dd>
+<span class="refAuthor">Cornell Law School - Legal Information Institute</span>, <span class="refTitle">"Personnel of Foreign Governments and International Organizations and Special Treatment for Returning Individuals"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.law.cornell.edu/cfr/text/19/148.83">https://www.law.cornell.edu/cfr/text/19/148.83</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="HARMONIZED">[HARMONIZED]</dt>
+        <dd>
+<span class="refAuthor">World Customs Organization</span>, <span class="refTitle">"Harmonized System"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.wcotradetools.org/en/harmonized-system">https://www.wcotradetools.org/en/harmonized-system</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="ISPM15">[ISPM15]</dt>
+        <dd>
+<span class="refAuthor">International Plant Protection Convention, Food and Agriculture Organization of the United Nations</span>, <span class="refTitle">"International Standards for Phytosanitary Measures No. 15: Regulation of Wood Packaging Material in International Trade"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.ippc.int/static/media/files/publication/en/2019/02/ISPM_15_2018_En_WoodPackaging_Post-CPM13_Rev_Annex1and2_Fixed_2019-02-01.pdf">https://www.ippc.int/static/media/files/publication/en/2019/02/ISPM_15_2018_En_WoodPackaging_Post-CPM13_Rev_Annex1and2_Fixed_2019-02-01.pdf</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="PRESS">[PRESS]</dt>
+        <dd>
+<span class="refAuthor">Reporters Without Borders</span>, <span class="refTitle">"RSF Resource for Journalists' Safety"</span>, <span>n.d.</span>, <span>&lt;<a href="https://safety.rsf.org/appendix-i-protection-of-journalists-in-war-zones/">https://safety.rsf.org/appendix-i-protection-of-journalists-in-war-zones/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RAMSAR">[RAMSAR]</dt>
+        <dd>
+<span class="refAuthor">Convention on Wetlands Secretariat</span>, <span class="refTitle">"The Convention on Wetlands"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.ramsar.org">https://www.ramsar.org</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="REDCROSS">[REDCROSS]</dt>
+        <dd>
+<span class="refAuthor">International Committee of the Red Cross</span>, <span class="refTitle">"The Protection of the Red Cross / Red Crescent Emblems"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.icrc.org/en/doc/assets/files/other/protection_emblems.pdf">https://www.icrc.org/en/doc/assets/files/other/protection_emblems.pdf</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="UNMODELREGS">[UNMODELREGS]</dt>
+      <dd>
+<span class="refAuthor">United Nations Economic and Social Council</span>, <span class="refTitle">"UN Model Regulations on the Transport of Dangerous Goods"</span>, <span>n.d.</span>, <span>&lt;<a href="https://unece.org/transport/dangerous-goods/un-model-regulations-rev-23">https://unece.org/transport/dangerous-goods/un-model-regulations-rev-23</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
 </section>
 </div>
 <div id="acknowledgments">
 <section id="appendix-A">
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
-      </h2>
-<p id="appendix-A-1">TODO acknowledge.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+    </h2>
 </section>
 </div>
 <div id="authors-addresses">
 <section id="appendix-B">
-      <h2 id="name-authors-address">
-<a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
+      <h2 id="name-authors-addresses">
+<a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
 <address class="vcard">
-        <div dir="auto" class="left"><span class="fn nameRole">Your Name Here</span></div>
-<div dir="auto" class="left"><span class="org">Your Organization Here</span></div>
+        <div dir="auto" class="left"><span class="fn nameRole">Casey Deccio</span></div>
+<div dir="auto" class="left"><span class="org">Brigham Young University</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:your.email@example.com" class="email">your.email@example.com</a>
+<a href="mailto:casey@deccio.net" class="email">casey@deccio.net</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Rahel A. Fainchtein</span></div>
+<div dir="auto" class="left"><span class="org">JHU/APL</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:rahel.fainchtein@jhuapl.edu" class="email">rahel.fainchtein@jhuapl.edu</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Felix Linker</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:linkerfelix@gmail.com" class="email">linkerfelix@gmail.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Jim Reid</span></div>
+<div dir="auto" class="left"><span class="org">RTFM llp</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:jim@rfc1035.com" class="email">jim@rfc1035.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Alex Rosenberg</span></div>
+<div dir="auto" class="left"><span class="org">Veridigo</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:alexr@veridigo.com" class="email">alexr@veridigo.com</a>
 </div>
 </address>
 </section>
