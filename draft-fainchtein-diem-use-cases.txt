@@ -270,15 +270,15 @@ Table of Contents
 
    Different use cases have different requirements.  The purpose of this
    document is to list the requirements that will be addressed with the
-   initial architecture.  We believe that the use cases overlap and
-   would benefit from a DIEM architecture developed to provide the
-   requirements listed above, though some may require additional
-   extensions.  We list use cases here so that relevant stakeholders can
-   provide input whether their use case would indeed benefit from a DIEM
-   architecture, and invite participants to provide use cases or details
-   that we have missed.
+   initial architecture.  The use cases overlap and would benefit from a
+   DIEM architecture developed to provide the requirements listed above,
+   though some may require additional extensions.  We alphabetically
+   list use cases here so that relevant stakeholders can provide input
+   whether their use case would indeed benefit from a DIEM architecture,
+   and invite participants to provide use cases or details that we have
+   missed.
 
-   [COPY OVER INFORMATIVE LIST OF LINKS]
+   We provide auxiliary material under Informative References.
 
 5.1.  Basel Convention
 
@@ -334,10 +334,7 @@ Table of Contents
    Requires protection of Schedule 1 chemicals in transit between
    signatory countries for research, medical, pharmaceutical, or
    protective purposes.  Emblem would identify place, date, and volume
-   of production.  Also a need to encrypt the description/
-   characteristics of the items for access only by the receiving customs
-   agencies and material handlers.  This encryption precludes other
-   actors from determining the contents being transported.
+   of production, and the emblem can contain confidential data.
 
 5.6.  Press
 
