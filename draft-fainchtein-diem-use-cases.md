@@ -188,7 +188,7 @@ For some emblems, it may be relevant to track that an emblem has been presented.
 
 Different use cases have different requirements. The purpose of this document is to list the requirements that will be addressed with the initial architecture. We believe that the use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions. We list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
 
-[COPY OVER INFORMATIVE LIST OF LINKS]
+We provide auxiliary material under Informative References.
 
 ## Basel Convention
 
@@ -234,7 +234,7 @@ Digital assets belonging to the press could be digitally marked, and protective 
 
 ## United Nations Economic and Social Council (ECOSOC)
 
-UN Model Regulations [UNMODELREGS] includes "Recommendations on the Transport of Dangerous Goods."
+UN Model Regulations {{UNMODELREGS}} includes "Recommendations on the Transport of Dangerous Goods."
 This includes labeling of items with a four digit "UN Number" that indicates the comounds contained within, such as chemicals, explosives, flammable liquids, etc.
 For example, items containing lithium-based batteries are labeled with 3480 or 3481 and accompanied by a specific "battery mark" emblem.
 
@@ -244,7 +244,7 @@ UN Peacekeepers use protective markings in theater as well as facilities associa
 
 ## World Customs Organization (WCO)
 
-Specifies "Harmonized Systems" codes [HARMONIZED] that classify items such as livestock, arms and ammunition, chemicals, plastics, machinery, foodstuffs, etc.
+Specifies "Harmonized Systems" codes {{HARMONIZED}} that classify items such as livestock, arms and ammunition, chemicals, plastics, machinery, foodstuffs, etc.
 They also provide a system for labeling origin of items and valuation of items, all enforced by numerous international trade agreements between individual nations and groups of nations.
 
 ## World Health Organization (WHO)
