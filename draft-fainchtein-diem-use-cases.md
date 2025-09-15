@@ -44,6 +44,11 @@ author:
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
+    
+  -
+    fullname: Allison Mankin
+    organization: Packet Clearing House
+    email: allison@pch.net
 
 normative:
   CHARTER:
