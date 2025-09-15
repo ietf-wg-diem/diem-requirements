@@ -1,6 +1,6 @@
 ---
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "Digital Emblems - Use Cases and Requirements"
+abbrev: "DIEM Use Cases and Requirements"
 category: info
 
 docname: draft-fainchtein-diem-use-cases-latest
@@ -12,9 +12,6 @@ v: 3
 area: "Applications and Real-Time"
 workgroup: "Digital Emblems"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
 venue:
   group: "Digital Emblems"
   type: "Working Group"
@@ -24,18 +21,31 @@ venue:
   latest: "https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-diem-use-cases.html"
 
 author:
- -
-    fullname: "Rahel A. Fainchtein"
-    organization: Your Organization Here
-    email: "rafain.ietf@gmail.com"
-    
-    fullname: "Felix Linker"
-    organization: Your Organization Here
-    email: "linkerfelix@gmail.com"
+  -
+    fullname: Casey Deccio
+    organization: Brigham Young University
+    email: casey@deccio.net
+
+  -
+    fullname: Rahel A. Fainchtein
+    organization: JHU/APL
+    email: rahel.fainchtein@jhuapl.edu
+
+  -
+    fullname: Felix Linker
+    email: linkerfelix@gmail.com
+
+  -
+    fullname: Jim Reid
+    organization: RTFM llp
+    email: jim@rfc1035.com
+
+  -
+    fullname: Alex Rosenberg
+    organization: Veridigo
+    email: alexr@veridigo.com
 
 normative:
-  RFC2119:
-  RFC8174:
 
 informative:
   BLUEHELMET:
@@ -83,7 +93,6 @@ informative:
     title: "Harmonized System"
     author:
        org: World Customs Organization
-...
 
 
 --- abstract
@@ -112,13 +121,7 @@ TODO Security
 
 This document has no IANA actions.
 
-
 --- back
-# Contributors
-Tony DeSimone, Kerstin Vignard, and Erin Hahn provided insight into the legal and policy issues surrounding emblems.
-Tommy Jensen, Mauro Vignati provided many of the requirements that derive from digital asset use cases.
 
 # Acknowledgments
 {:numbered="false"}
-
-Rohan Mahy provided insightful review.
