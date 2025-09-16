@@ -44,7 +44,7 @@ author:
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
-    
+
   -
     fullname: Allison Mankin
     organization: Packet Clearing House
@@ -192,7 +192,7 @@ To accommodate for such use cases, one could specify means to discover bearers f
 
 An alternative approach to the above problem would be to bind emblems implicitly to their bearer.
 Implicit binding would identify the bearer by the emblem's location.
-For example, if emblems were distributed via NFC, the bearer could be the asset to which the NFC chip was attached. 
+For example, if emblems were distributed via NFC, the bearer could be the asset to which the NFC chip was attached.
 As of this writing, the current charter scope requires that digital emblems explicitly identify their bearer, but such discovery mechanisms could be investigated in future WG work.
 
 ## Confidentiality
