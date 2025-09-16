@@ -3,7 +3,7 @@ title: "Digital Emblems - Use Cases and Requirements"
 abbrev: "DIEM Use Cases and Requirements"
 category: info
 
-docname: draft-fainchtein-diem-use-cases-latest
+docname: draft-fainchtein-diem-use-cases-and-reqs-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
