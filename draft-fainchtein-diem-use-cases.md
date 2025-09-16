@@ -24,7 +24,7 @@ author:
   -
     fullname: Casey Deccio
     organization: Brigham Young University
-    email: casey@deccio.net
+    email: casey@byu.edu
 
   -
     fullname: Rahel A. Fainchtein
