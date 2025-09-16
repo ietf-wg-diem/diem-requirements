@@ -145,35 +145,35 @@ Digital emblems MUST specify how validators can check for the presence of a digi
 
 ### Removable
 
-Digital emblems MAY require to be removable in that checking for the presence of an emblem associated with a bearer results in no emblem. 
-Note that checking for emblem presence is independent of its validation. 
+Digital emblems MAY require to be removable in that checking for the presence of an emblem associated with a bearer results in no emblem.
+Note that checking for emblem presence is independent of its validation.
 That is, emblems do not count as removed when they become invalid.
 
 ### Undetectable Validation
 
-Digital emblem discovery MAY require that bearers, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated. 
-This requirement is motivated by emblems that mark its bearer as protected and ask validators to not attack the bearer. 
+Digital emblem discovery MAY require that bearers, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated.
+This requirement is motivated by emblems that mark its bearer as protected and ask validators to not attack the bearer.
 If emblem discovery were detectable by the bearer, issuer, or by an authorizing party, malicious parties could misuse the digital emblem as an intrusion detection system.
 
 ## Validation Requirements
 
 ### Validation
 
-Digital emblems MAY require validation. Validation MUST support verification of all the emblem’s data and its context. 
-In particular, validation MUST ensure that the emblem was issued for the respective bearer. 
+Digital emblems MAY require validation. Validation MUST support verification of all the emblem’s data and its context.
+In particular, validation MUST ensure that the emblem was issued for the respective bearer.
 Some use cases MAY use unverified digital emblems.
 
 ### Authorization
 
-Digital emblems MAY require authorization by third-parties. 
-Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials. 
+Digital emblems MAY require authorization by third-parties.
+Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
 Individual profiles MUST standardize a trust model that describes how validators can discover authorities and how the system selects authorities.
 
 ## Other Requirements
 
 ### Extensibility
 
-The digital emblem architecture should be extensible. 
+The digital emblem architecture should be extensible.
 The initial work should not preclude future extensions and individual standards should be designed as general as possible.
 
 # Extensions
@@ -190,10 +190,10 @@ To accommodate for such use cases, one could specify means to discover bearers f
 
 ## Implicit Discovery
 
-An alternative approach to the above problem would be to bind emblems implicitly to their bearer. 
-Implicit binding would identify the bearer by the emblem's location. 
-For example, if emblems were distributed via NFC, the bearer could be the asset that the NFC chip is attached to. 
-As of writing, the current charter scope requires that digital emblems explicitly identify their bearer, but such discovery mechanisms could be investigated in future WG work.
+An alternative approach to the above problem would be to bind emblems implicitly to their bearer.
+Implicit binding would identify the bearer by the emblem's location.
+For example, if emblems were distributed via NFC, the bearer could be the asset to which the NFC chip was attached. 
+As of this writing, the current charter scope requires that digital emblems explicitly identify their bearer, but such discovery mechanisms could be investigated in future WG work.
 
 ## Confidentiality
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
