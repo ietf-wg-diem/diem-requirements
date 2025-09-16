@@ -10,6 +10,7 @@
 <meta content="Felix Linker" name="author">
 <meta content="Jim Reid" name="author">
 <meta content="Alex Rosenberg" name="author">
+<meta content="Allison Mankin" name="author">
 <meta content="
        TODO Abstract 
     " name="description">
@@ -1051,7 +1052,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Deccio, et al.</td>
-<td class="center">Expires 19 March 2026</td>
+<td class="center">Expires 20 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-fainchtein-diem-use-cases-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-09-15" class="published">15 September 2025</time>
+<time datetime="2025-09-16" class="published">16 September 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-03-19">19 March 2026</time></dd>
+<dd class="expires"><time datetime="2026-03-20">20 March 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1090,6 +1091,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <div class="author">
       <div class="author-name">A. Rosenberg</div>
 <div class="org">Veridigo</div>
+</div>
+<div class="author">
+      <div class="author-name">A. Mankin</div>
+<div class="org">Packet Clearing House</div>
 </div>
 </dd>
 </dl>
@@ -1134,7 +1139,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 19 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 20 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1212,7 +1217,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="auto internal xref">3.4</a>.  <a href="#name-other-requirements" class="internal xref">Other Requirements</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.4.2.1">
-                    <p id="section-toc.1-1.3.2.4.2.1.1"><a href="#section-3.4.1" class="auto internal xref">3.4.1</a>.  <a href="#name-extensible" class="internal xref">Extensible</a></p>
+                    <p id="section-toc.1-1.3.2.4.2.1.1"><a href="#section-3.4.1" class="auto internal xref">3.4.1</a>.  <a href="#name-extensibility" class="internal xref">Extensibility</a></p>
 </li>
                 </ul>
 </li>
@@ -1381,7 +1386,9 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <h4 id="name-removable">
 <a href="#section-3.2.2" class="section-number selfRef">3.2.2. </a><a href="#name-removable" class="section-name selfRef">Removable</a>
           </h4>
-<p id="section-3.2.2-1">Digital emblems <span class="bcp14">MAY</span> require to be removable in that checking for the presence of an emblem associated with a bearer results in no emblem. Note that checking for emblem presence is independent of its validation. That is, emblems do not count as removed when they become invalid.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.2-1">Digital emblems <span class="bcp14">MAY</span> require to be removable in that checking for the presence of an emblem associated with a bearer results in no emblem.
+Note that checking for emblem presence is independent of its validation.
+That is, emblems do not count as removed when they become invalid.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="undetectable-validation">
@@ -1389,7 +1396,9 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <h4 id="name-undetectable-validation">
 <a href="#section-3.2.3" class="section-number selfRef">3.2.3. </a><a href="#name-undetectable-validation" class="section-name selfRef">Undetectable Validation</a>
           </h4>
-<p id="section-3.2.3-1">Digital emblem discovery <span class="bcp14">MAY</span> require that bearers, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated. This requirement is motivated by emblems that mark its bearer as protected and ask validators to not attack the bearer. If emblem discovery were detectable by the bearer, issuer, or by an authorizing party, malicious parties could misuse the digital emblem as an intrusion detection system.<a href="#section-3.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.3-1">Digital emblem discovery <span class="bcp14">MAY</span> require that bearers, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated.
+This requirement is motivated by emblems that mark its bearer as protected and ask validators to not attack the bearer.
+If emblem discovery were detectable by the bearer, issuer, or by an authorizing party, malicious parties could misuse the digital emblem as an intrusion detection system.<a href="#section-3.2.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1404,7 +1413,9 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <h4 id="name-validation">
 <a href="#section-3.3.1" class="section-number selfRef">3.3.1. </a><a href="#name-validation" class="section-name selfRef">Validation</a>
           </h4>
-<p id="section-3.3.1-1">Digital emblems <span class="bcp14">MAY</span> require validation. Validation <span class="bcp14">MUST</span> support verification of all the emblem’s data and its context. In particular, validation <span class="bcp14">MUST</span> ensure that the emblem was issued for the respective bearer. Some use cases <span class="bcp14">MAY</span> use unverified digital emblems.<a href="#section-3.3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.3.1-1">Digital emblems <span class="bcp14">MAY</span> require validation. Validation <span class="bcp14">MUST</span> support verification of all the emblem’s data and its context.
+In particular, validation <span class="bcp14">MUST</span> ensure that the emblem was issued for the respective bearer.
+Some use cases <span class="bcp14">MAY</span> use unverified digital emblems.<a href="#section-3.3.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authorization">
@@ -1412,7 +1423,9 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <h4 id="name-authorization">
 <a href="#section-3.3.2" class="section-number selfRef">3.3.2. </a><a href="#name-authorization" class="section-name selfRef">Authorization</a>
           </h4>
-<p id="section-3.3.2-1">Digital emblems <span class="bcp14">MAY</span> require authorization by third-parties. Any authorization mechanism <span class="bcp14">MUST</span> account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials. Individual profiles <span class="bcp14">MUST</span> standardize a trust model that describes how validators can discover authorities and how the system selects authorities.<a href="#section-3.3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.3.2-1">Digital emblems <span class="bcp14">MAY</span> require authorization by third-parties.
+Any authorization mechanism <span class="bcp14">MUST</span> account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
+Individual profiles <span class="bcp14">MUST</span> standardize a trust model that describes how validators can discover authorities and how the system selects authorities.<a href="#section-3.3.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1422,12 +1435,13 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-other-requirements">
 <a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-other-requirements" class="section-name selfRef">Other Requirements</a>
         </h3>
-<div id="extensible">
+<div id="extensibility">
 <section id="section-3.4.1">
-          <h4 id="name-extensible">
-<a href="#section-3.4.1" class="section-number selfRef">3.4.1. </a><a href="#name-extensible" class="section-name selfRef">Extensible</a>
+          <h4 id="name-extensibility">
+<a href="#section-3.4.1" class="section-number selfRef">3.4.1. </a><a href="#name-extensibility" class="section-name selfRef">Extensibility</a>
           </h4>
-<p id="section-3.4.1-1">The digital emblem architecture should be extensible. The initial work should not preclude future extensions and individual standards should be designed as general as possible.<a href="#section-3.4.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.4.1-1">The digital emblem architecture should be extensible.
+The initial work should not preclude future extensions and individual standards should be designed as general as possible.<a href="#section-3.4.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1453,7 +1467,8 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-bearer-discovery">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-bearer-discovery" class="section-name selfRef">Bearer Discovery</a>
         </h3>
-<p id="section-4.2-1">It may be non-obvious for some use cases to identify the bearer that is associated with an asset, and thus impossible to fetch emblems associated with that asset. To accommodate for such use cases, one could specify means to discover bearers for different types of assets.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-1">It may be non-obvious for some use cases to identify the bearer that is associated with an asset, and thus impossible to fetch emblems associated with that asset.
+To accommodate for such use cases, one could specify means to discover bearers for different types of assets.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="implicit-discovery">
@@ -1461,7 +1476,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-implicit-discovery">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-implicit-discovery" class="section-name selfRef">Implicit Discovery</a>
         </h3>
-<p id="section-4.3-1">An alternative approach to the above problem would be to bind emblems implicitly to their bearer. Implicit binding would identify the bearer by the emblem's location. For example, if emblems were distributed via NFC, the bearer could be the asset that the NFC chip is attached to. As of writing, the current charter scope requires that digital emblems explicitly identify their bearer, but such discovery mechanisms could be investigated in future WG work.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-1">An alternative approach to the above problem would be to bind emblems implicitly to their bearer.
+Implicit binding would identify the bearer by the emblem's location.
+For example, if emblems were distributed via NFC, the bearer could be the asset to which the NFC chip was attached.
+As of this writing, the current charter scope requires that digital emblems explicitly identify their bearer, but such discovery mechanisms could be investigated in future WG work.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="confidentiality">
@@ -1469,7 +1487,8 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-confidentiality">
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-confidentiality" class="section-name selfRef">Confidentiality</a>
         </h3>
-<p id="section-4.4-1">Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data. For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or to only serve emblems over channels with access control mechanisms.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-1">Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
+For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or by only serving emblems over channels with access control mechanisms.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="proof-of-presence">
@@ -1633,7 +1652,7 @@ Brands that are protected under international law (e.g., Madrid Protocol) can ma
         </h3>
 <p id="section-5.13-1">Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
 Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
-Potential need for the emblem to reference a flight manifest.<a href="#section-5.13-1" class="pilcrow">¶</a></p>
+Potential need for the emblem to reference a limited or partially redacted flight manifest.<a href="#section-5.13-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1776,6 +1795,14 @@ Potential need for the emblem to reference a flight manifest.<a href="#section-5
 <div class="email">
 <span>Email:</span>
 <a href="mailto:alexr@veridigo.com" class="email">alexr@veridigo.com</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Allison Mankin</span></div>
+<div dir="auto" class="left"><span class="org">Packet Clearing House</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:allison@pch.net" class="email">allison@pch.net</a>
 </div>
 </address>
 </section>

@@ -5,14 +5,16 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 19 March 2026                                           JHU/APL
+Expires: 20 March 2026                                           JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
                                                                 RTFM llp
                                                             A. Rosenberg
                                                                 Veridigo
-                                                       15 September 2025
+                                                               A. Mankin
+                                                   Packet Clearing House
+                                                       16 September 2025
 
 
               Digital Emblems - Use Cases and Requirements
@@ -55,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 March 2026.
+   This Internet-Draft will expire on 20 March 2026.
 
 Copyright Notice
 
@@ -87,7 +89,7 @@ Table of Contents
        3.3.1.  Validation
        3.3.2.  Authorization
      3.4.  Other Requirements
-       3.4.1.  Extensible
+       3.4.1.  Extensibility
    4.  Extensions
      4.1.  Data Formats
      4.2.  Bearer Discovery
@@ -215,7 +217,7 @@ Table of Contents
 
 3.4.  Other Requirements
 
-3.4.1.  Extensible
+3.4.1.  Extensibility
 
    The digital emblem architecture should be extensible.  The initial
    work should not preclude future extensions and individual standards
@@ -246,17 +248,17 @@ Table of Contents
    An alternative approach to the above problem would be to bind emblems
    implicitly to their bearer.  Implicit binding would identify the
    bearer by the emblem's location.  For example, if emblems were
-   distributed via NFC, the bearer could be the asset that the NFC chip
-   is attached to.  As of writing, the current charter scope requires
-   that digital emblems explicitly identify their bearer, but such
-   discovery mechanisms could be investigated in future WG work.
+   distributed via NFC, the bearer could be the asset to which the NFC
+   chip was attached.  As of this writing, the current charter scope
+   requires that digital emblems explicitly identify their bearer, but
+   such discovery mechanisms could be investigated in future WG work.
 
 4.4.  Confidentiality
 
    Some use cases may contain confidential or sensitive data, and may
    require mechanisms to protect such data.  For example, this could be
    realized with encryption of the general emblem data format that will
-   be part of the architecture or to only serve emblems over channels
+   be part of the architecture or by only serving emblems over channels
    with access control mechanisms.
 
 4.5.  Proof of Presence
@@ -394,7 +396,7 @@ Table of Contents
    cargo).  Digital emblem would carry a geographic description of the
    flight plan, its current location, and an indicator of its identity
    (i.e., tail number).  Potential need for the emblem to reference a
-   flight manifest.
+   limited or partially redacted flight manifest.
 
 6.  Security Considerations
 
@@ -498,3 +500,8 @@ Authors' Addresses
    Alex Rosenberg
    Veridigo
    Email: alexr@veridigo.com
+
+
+   Allison Mankin
+   Packet Clearing House
+   Email: allison@pch.net
