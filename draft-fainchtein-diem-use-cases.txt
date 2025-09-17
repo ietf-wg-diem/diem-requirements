@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 20 March 2026                                           JHU/APL
+Expires: 21 March 2026                                           JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,11 +14,11 @@ Expires: 20 March 2026                                           JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                       16 September 2025
+                                                       17 September 2025
 
 
               Digital Emblems - Use Cases and Requirements
-            draft-fainchtein-diem-use-cases-and-reqs-latest
+                 draft-fainchtein-diem-use-cases-latest
 
 Abstract
 
@@ -32,7 +32,7 @@ About This Document
    https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-
    diem-use-cases.html.  Status information for this document may be
    found at https://datatracker.ietf.org/doc/draft-fainchtein-diem-use-
-   cases-and-reqs/.
+   cases/.
 
    Discussion of this document takes place on the Digital Emblems
    Working Group mailing list (mailto:diem@ietf.org), which is archived
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 March 2026.
+   This Internet-Draft will expire on 21 March 2026.
 
 Copyright Notice
 
