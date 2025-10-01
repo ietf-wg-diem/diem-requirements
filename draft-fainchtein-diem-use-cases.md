@@ -119,12 +119,33 @@ This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
 We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of writing {{CHARTER}}.
+We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
+These definitions have been reproduced in section Conventions and Definitions. 
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
+The definitions for terms "(digital) emblem," "bearer," and "validation" are reproduced from the current charter as of
+this writing.
+
+
+Emblems such as the Red Cross, Red Crescent, Red Crystal, and Blue Shield can be symbols of protection governed by International Humanitarian Law (IHL).
+Emblems can also be identified by other laws, agreements, or standards.
+There is a need to present emblems through digital communication channels.
+Emblems presented in such ways are called digital emblems.
+Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
+
+
+"To bear an emblem" means to present and be identified by a digital emblem.
+The entity that bears the emblem is the bearer or emblem holder.
+This is often a separate entity from the creator or original designer of the emblem.
+"To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
+often by checking its details against a known standard or reference point.
+Validation may include ensuring that the bearer has not forged, stolen, or tampered with an emblem.
+Emblems may be observed by validators without the knowledge of the bearer presenting the emblem, or may be presented to a specific validator upon request.
+Cryptographic verification may or may not be used based on the in-place security mechanisms of the communication channel bearing the emblem.
+Which attributes an emblem contains, and how a digital emblem is secured and presented impacts how a validator interprets and trusts the assertions made within the emblem.
 # Requirements
 
 The DIEM architecture will allow validators to discover and validate digital emblems that are associated with bearers. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
