@@ -146,6 +146,7 @@ Validation may include ensuring that the bearer has not forged, stolen, or tampe
 Emblems may be observed by validators without the knowledge of the bearer presenting the emblem, or may be presented to a specific validator upon request.
 Cryptographic verification may or may not be used based on the in-place security mechanisms of the communication channel bearing the emblem.
 Which attributes an emblem contains, and how a digital emblem is secured and presented impacts how a validator interprets and trusts the assertions made within the emblem.
+
 # Requirements
 
 The DIEM architecture will allow validators to discover and validate digital emblems that are associated with bearers. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
