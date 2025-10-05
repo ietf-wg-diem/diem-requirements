@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-02T00:54:24.192005+00:00",
+  "timestamp": "2025-10-05T01:00:36.696026+00:00",
   "repo": "rahelFain/combined-diem-uses-reqs",
   "labels": [
     {
@@ -62,7 +62,7 @@
       "labels": [],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
       "createdAt": "2025-10-01T16:36:15Z",
-      "updatedAt": "2025-10-01T16:51:07Z",
+      "updatedAt": "2025-10-03T14:16:42Z",
       "closedAt": null,
       "comments": [
         {
@@ -71,6 +71,13 @@
           "body": "I began thinking of a few topics that could be included in the Security Considerations Section - but have listed them in this issue rather than a PR b/c I still have yet to discuss these with my co-authors. \n\nPotential Entries subsections to include:\n\n1. Digital Emblems do not actively stop/defend against attacks: For emblems that indicate an asset's protected status, digital emblems can at best serve as a deterrent for attack - as there is no guarantee a would-be attacker will respect the laws, agreements or standards granting the asset its status. \n\n2. Plausible deniability surrounding whether or not emblem was seen, visible or verifiable at time of validation.\n\nNote: This is by no means intended to be an exhaustive list of topics but rather a first brainstorm. ",
           "createdAt": "2025-10-01T16:51:07Z",
           "updatedAt": "2025-10-01T16:51:07Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "3. For Digital Emblems that require Authentication of the Digital Emblem, origin authentication or other authentication of the Bearer, or Authorization of the Digital Emblem (the MUSTs in Section 3),  the threat model addressed is presentation of falsified Digital Emblems. Both 1 and 2 above will require addressing this threat model.",
+          "createdAt": "2025-10-03T14:16:42Z",
+          "updatedAt": "2025-10-03T14:16:42Z"
         }
       ]
     }
@@ -88,13 +95,13 @@
       "labels": [],
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
-      "updatedAt": "2025-10-01T16:07:35Z",
+      "updatedAt": "2025-10-03T21:43:35Z",
       "baseRepository": "rahelFain/combined-diem-uses-reqs",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
       "headRepository": "rahelFain/combined-diem-uses-reqs",
       "headRefName": "add_charter_def",
-      "headRefOid": "adb4e846a9c2f2f3dbaf5d8c4e3e4c7225c56102",
+      "headRefOid": "f3c9f85962f4b96c9852862b0ac642a85cb52101",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -108,7 +115,148 @@
           "updatedAt": "2025-10-01T16:07:35Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7ET18I",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:22:56Z",
+          "updatedAt": "2025-10-02T09:22:56Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "```suggestion\r\n\r\n# Requirements\r\n```\r\n\r\nwhitespace matters in markdown!!",
+              "createdAt": "2025-10-02T09:22:56Z",
+              "updatedAt": "2025-10-02T09:25:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7ET4MG",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:24:58Z",
+          "updatedAt": "2025-10-02T09:24:58Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "```suggestion\r\nThe definitions for terms \"(digital) emblem,\" \"bearer,\" and \"validation\" are reproduced from the charter {{CHARTER}} as of this writing.\r\n```\r\n\r\n\"current\" is redundant and eventually wrong..",
+              "createdAt": "2025-10-02T09:24:58Z",
+              "updatedAt": "2025-10-02T09:24:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7ET42g",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:25:32Z",
+          "updatedAt": "2025-10-02T09:25:32Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\n```\r\n\r\nThis is no longer relevant since you have them in the next section.",
+              "createdAt": "2025-10-02T09:25:32Z",
+              "updatedAt": "2025-10-02T09:25:32Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7ET8TK",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:28:20Z",
+          "updatedAt": "2025-10-02T09:28:20Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\n```\r\n\r\nThese seem like requirements instead of part of the definition of \"validation\"",
+              "createdAt": "2025-10-02T09:28:20Z",
+              "updatedAt": "2025-10-02T09:28:20Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7ET_6F",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:31:15Z",
+          "updatedAt": "2025-10-02T09:31:16Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\n(Digital) Emblem:\r\n: Emblems such as the Red Cross, Red Crescent, Red Crystal, and Blue Shield can be symbols of protection governed by International Humanitarian Law (IHL).\r\n  Emblems can also be identified by other laws, agreements, or standards.\r\n  There is a need to present emblems through digital communication channels.\r\n  Emblems presented in such ways are called digital emblems.\r\n  Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.\r\n```\r\n\r\nTurn into a markdown definition",
+              "createdAt": "2025-10-02T09:31:15Z",
+              "updatedAt": "2025-10-02T09:31:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7EUBQV",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:32:22Z",
+          "updatedAt": "2025-10-02T09:32:23Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "```suggestion\r\nBearer:\r\n: \"To bear an emblem\" means to present and be identified by a digital emblem.\r\n  The entity that bears the emblem is the bearer or emblem holder.\r\n  This is often a separate entity from the creator or original designer of the emblem.\r\n```\r\n\r\nTurn into a markdown definition",
+              "createdAt": "2025-10-02T09:32:23Z",
+              "updatedAt": "2025-10-02T09:34:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7EUCrG",
+          "commit": {
+            "abbreviatedOid": "adb4e84"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T09:33:37Z",
+          "updatedAt": "2025-10-02T09:33:37Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\n\r\nValidation:\r\n: \"To validate an emblem\" means to confirm the authenticity or legitimacy of a particular symbol or design,\r\noften by checking its details against a known standard or reference point.\r\n  Validation may include ensuring that the bearer has not forged, stolen, or tampered with an emblem.\r\n  Emblems may be observed by validators without the knowledge of the bearer presenting the emblem, or may be presented to a specific validator upon request.\r\n  Cryptographic verification may or may not be used based on the in-place security mechanisms of the communication channel bearing the emblem.\r\n  Which attributes an emblem contains, and how a digital emblem is secured and presented impacts how a validator interprets and trusts the assertions made within the emblem.\r\n```\r\n\r\nTurn into a markdown definition",
+              "createdAt": "2025-10-02T09:33:37Z",
+              "updatedAt": "2025-10-02T09:33:38Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
