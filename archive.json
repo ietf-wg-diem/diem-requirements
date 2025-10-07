@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-05T01:00:36.696026+00:00",
+  "timestamp": "2025-10-07T00:55:27.477536+00:00",
   "repo": "rahelFain/combined-diem-uses-reqs",
   "labels": [
     {
@@ -95,13 +95,13 @@
       "labels": [],
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
-      "updatedAt": "2025-10-03T21:43:35Z",
+      "updatedAt": "2025-10-06T20:18:57Z",
       "baseRepository": "rahelFain/combined-diem-uses-reqs",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
       "headRepository": "rahelFain/combined-diem-uses-reqs",
       "headRefName": "add_charter_def",
-      "headRefOid": "f3c9f85962f4b96c9852862b0ac642a85cb52101",
+      "headRefOid": "c5054bc67eaf5fb7cf7f3fc236afd8d27874d5dd",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -113,6 +113,20 @@
           "body": "Response to feedback that the definitions in the charter could change in the event that the DIEM WG is rechartered sometime in the future. ",
           "createdAt": "2025-10-01T16:07:35Z",
           "updatedAt": "2025-10-01T16:07:35Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks for preparing, @rahelFain, and iterating, @rohanmahy!\r\n\r\nI must say, I don't like the \"definition\" of (digital) emblems in the charter. I don't find it to define anything. In the charter, this is not a problem, because we don't say: \"Look, here we define what an emblem is.\" It's informal and glue text. This changes, however, if we copy-paste these passages into the document.\r\n\r\nLet's look at what the definition says from a more abstract point of view:\r\n\r\n> Emblems such as [...] can be [X]. Emblems can also be [Y].\r\n\r\nThe three sentences after that are more a problem statement that I would rather keep in the charter. These two sentences don't define anything, they only give examples of emblems.\r\n\r\nPersonally, I have two, contradictory goals:\r\n\r\n- Have unambiguous terminology.\r\n- Don't spend much time discussing what \"digital emblems\" are.\r\n\r\nWe already spent a long time during chartering trying to define digital emblems, and my feeling is that little came out of that. And I would rather sacrifice ambiguous terminology than having to spent a long time defining digital emblems.\r\n\r\nWhat do you think? Is it really necessary to have a definition of digital emblems that encompass everything ever brought to the WG?",
+          "createdAt": "2025-10-06T16:59:50Z",
+          "updatedAt": "2025-10-06T16:59:50Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "OWNER",
+          "body": "@felixlinker My intent in adding the definition text was not necessarily to state that this was the official definition, but rather to have the referenced text explicitly copied here so that it could be referenced even if the charter were to change. (Hence the comments noting that the text is copy-pasted from the current version of the charter.) \r\nI'd be willing to call this something less firm than a set of definitions (say for example descriptions) and to add a caveat that later documents may more precisely define these terms - and that the sole reason for including this text was to ensure document clarity.",
+          "createdAt": "2025-10-06T20:18:03Z",
+          "updatedAt": "2025-10-06T20:18:57Z"
         }
       ],
       "reviews": [
