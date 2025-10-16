@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-07T00:55:27.477536+00:00",
+  "timestamp": "2025-10-16T00:56:59.364463+00:00",
   "repo": "rahelFain/combined-diem-uses-reqs",
   "labels": [
     {
@@ -95,7 +95,7 @@
       "labels": [],
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
-      "updatedAt": "2025-10-06T20:18:57Z",
+      "updatedAt": "2025-10-15T05:25:03Z",
       "baseRepository": "rahelFain/combined-diem-uses-reqs",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
@@ -127,6 +127,27 @@
           "body": "@felixlinker My intent in adding the definition text was not necessarily to state that this was the official definition, but rather to have the referenced text explicitly copied here so that it could be referenced even if the charter were to change. (Hence the comments noting that the text is copy-pasted from the current version of the charter.) \r\nI'd be willing to call this something less firm than a set of definitions (say for example descriptions) and to add a caveat that later documents may more precisely define these terms - and that the sole reason for including this text was to ensure document clarity.",
           "createdAt": "2025-10-06T20:18:03Z",
           "updatedAt": "2025-10-06T20:18:57Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "If we move the text on DEs into the intro, that could work, for example. Just wanted to make clear that I think we should stay away from defining the term \"DE.\" It' sa rabbit hole that we just got out off (chartering) :)",
+          "createdAt": "2025-10-14T01:07:14Z",
+          "updatedAt": "2025-10-14T01:07:14Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "body": "> If we move the text on DEs into the intro, that could work, for example. Just wanted to make clear that I think we should stay away from defining the term \"DE.\" It' sa rabbit hole that we just got out off (chartering) :)\r\n\r\nYou could also use terms like \"working definition\" or \"temporary definition\" for now.",
+          "createdAt": "2025-10-14T06:50:30Z",
+          "updatedAt": "2025-10-14T06:50:30Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> You could also use terms like \"working definition\" or \"temporary definition\" for now.\r\n\r\n\"Working definition\" maybe, but \"temporary\" suggests we may want to revisit it. I think we shouldn't. This will just distract the working group without any benefit.",
+          "createdAt": "2025-10-15T05:25:03Z",
+          "updatedAt": "2025-10-15T05:25:03Z"
         }
       ],
       "reviews": [
