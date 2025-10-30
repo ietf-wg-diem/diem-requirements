@@ -1,4 +1,4 @@
 # License
 
 See the
-[guidelines for contributions](https://github.com/rahelFain/combined-diem-uses-reqs/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/ietf-wg-diem/diem-requirements/blob/main/CONTRIBUTING.md).
