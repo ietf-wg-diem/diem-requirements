@@ -1,3 +1,3 @@
-# Automatically generated CODEOWNERS
-# Regenerate with `make update-codeowners`
-draft-fainchtein-diem-use-cases.md linkerfelix@gmail.com
+# Manually generated CODEOWNERS
+# DO NOT Regenerate with `make update-codeowners`
+draft-ietf-diem-requirements.md @rahelFain @felixlinker
