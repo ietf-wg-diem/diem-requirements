@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 20 March 2026                                           JHU/APL
+Expires: 3 May 2026                                              JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,11 +14,11 @@ Expires: 20 March 2026                                           JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                       16 September 2025
+                                                         30 October 2025
 
 
               Digital Emblems - Use Cases and Requirements
-            draft-fainchtein-diem-use-cases-and-reqs-latest
+                  draft-ietf-diem-requirements-latest
 
 Abstract
 
@@ -28,11 +28,10 @@ About This Document
 
    This note is to be removed before publishing as an RFC.
 
-   The latest revision of this draft can be found at
-   https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-
-   diem-use-cases.html.  Status information for this document may be
-   found at https://datatracker.ietf.org/doc/draft-fainchtein-diem-use-
-   cases-and-reqs/.
+   The latest revision of this draft can be found at https://ietf-wg-
+   diem.github.io/diem-requirements/draft-ietf-diem-requirements.html.
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-ietf-diem-requirements/.
 
    Discussion of this document takes place on the Digital Emblems
    Working Group mailing list (mailto:diem@ietf.org), which is archived
@@ -40,7 +39,7 @@ About This Document
    https://www.ietf.org/mailman/listinfo/diem/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/rahelFain/combined-diem-uses-reqs.
+   https://github.com/ietf-wg-diem/diem-requirements.
 
 Status of This Memo
 
@@ -57,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 March 2026.
+   This Internet-Draft will expire on 3 May 2026.
 
 Copyright Notice
 
