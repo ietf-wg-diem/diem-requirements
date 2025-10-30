@@ -3,7 +3,7 @@ title: "Digital Emblems - Use Cases and Requirements"
 abbrev: "DIEM Use Cases and Requirements"
 category: info
 
-docname: draft-fainchtein-diem-use-cases-latest
+docname: draft-ietf-diem-requirements-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
@@ -17,8 +17,8 @@ venue:
   type: "Working Group"
   mail: "diem@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/diem"
-  github: "rahelFain/combined-diem-uses-reqs"
-  latest: "https://rahelFain.github.io/combined-diem-uses-reqs/draft-fainchtein-diem-use-cases.html"
+  github: "ietf-wg-diem/diem-requirements"
+  latest: "https://ietf-wg-diem.github.io/diem-requirements/draft-ietf-diem-requirements.html"
 
 author:
   -
