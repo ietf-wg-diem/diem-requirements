@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-16T00:56:59.364463+00:00",
-  "repo": "rahelFain/combined-diem-uses-reqs",
+  "timestamp": "2025-10-30T01:00:08.628920+00:00",
+  "repo": "ietf-wg-diem/combined-diem-uses-reqs",
   "labels": [
     {
       "name": "bug",
@@ -54,10 +54,10 @@
       "number": 2,
       "id": "I_kwDOPTNEDc7PFar0",
       "title": "Add outline of Security Considerations Topics/sub-sections",
-      "url": "https://github.com/rahelFain/combined-diem-uses-reqs/issues/2",
+      "url": "https://github.com/ietf-wg-diem/combined-diem-uses-reqs/issues/2",
       "state": "OPEN",
       "author": "rahelFain",
-      "authorAssociation": "OWNER",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
@@ -67,7 +67,7 @@
       "comments": [
         {
           "author": "rahelFain",
-          "authorAssociation": "OWNER",
+          "authorAssociation": "COLLABORATOR",
           "body": "I began thinking of a few topics that could be included in the Security Considerations Section - but have listed them in this issue rather than a PR b/c I still have yet to discuss these with my co-authors. \n\nPotential Entries subsections to include:\n\n1. Digital Emblems do not actively stop/defend against attacks: For emblems that indicate an asset's protected status, digital emblems can at best serve as a deterrent for attack - as there is no guarantee a would-be attacker will respect the laws, agreements or standards granting the asset its status. \n\n2. Plausible deniability surrounding whether or not emblem was seen, visible or verifiable at time of validation.\n\nNote: This is by no means intended to be an exhaustive list of topics but rather a first brainstorm. ",
           "createdAt": "2025-10-01T16:51:07Z",
           "updatedAt": "2025-10-01T16:51:07Z"
@@ -87,19 +87,19 @@
       "number": 1,
       "id": "PR_kwDOPTNEDc6rl4Fu",
       "title": "Add charter definitions",
-      "url": "https://github.com/rahelFain/combined-diem-uses-reqs/pull/1",
+      "url": "https://github.com/ietf-wg-diem/combined-diem-uses-reqs/pull/1",
       "state": "OPEN",
       "author": "rahelFain",
-      "authorAssociation": "OWNER",
+      "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
       "updatedAt": "2025-10-15T05:25:03Z",
-      "baseRepository": "rahelFain/combined-diem-uses-reqs",
+      "baseRepository": "ietf-wg-diem/combined-diem-uses-reqs",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
-      "headRepository": "rahelFain/combined-diem-uses-reqs",
+      "headRepository": "ietf-wg-diem/combined-diem-uses-reqs",
       "headRefName": "add_charter_def",
       "headRefOid": "c5054bc67eaf5fb7cf7f3fc236afd8d27874d5dd",
       "closedAt": null,
@@ -109,7 +109,7 @@
       "comments": [
         {
           "author": "rahelFain",
-          "authorAssociation": "OWNER",
+          "authorAssociation": "COLLABORATOR",
           "body": "Response to feedback that the definitions in the charter could change in the event that the DIEM WG is rechartered sometime in the future. ",
           "createdAt": "2025-10-01T16:07:35Z",
           "updatedAt": "2025-10-01T16:07:35Z"
@@ -123,7 +123,7 @@
         },
         {
           "author": "rahelFain",
-          "authorAssociation": "OWNER",
+          "authorAssociation": "COLLABORATOR",
           "body": "@felixlinker My intent in adding the definition text was not necessarily to state that this was the official definition, but rather to have the referenced text explicitly copied here so that it could be referenced even if the charter were to change. (Hence the comments noting that the text is copy-pasted from the current version of the charter.) \r\nI'd be willing to call this something less firm than a set of definitions (say for example descriptions) and to add a caveat that later documents may more precisely define these terms - and that the sole reason for including this text was to ensure document clarity.",
           "createdAt": "2025-10-06T20:18:03Z",
           "updatedAt": "2025-10-06T20:18:57Z"
