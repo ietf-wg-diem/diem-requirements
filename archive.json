@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-30T01:00:08.628920+00:00",
-  "repo": "ietf-wg-diem/combined-diem-uses-reqs",
+  "timestamp": "2025-11-02T01:02:32.650917+00:00",
+  "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
       "name": "bug",
@@ -54,7 +54,7 @@
       "number": 2,
       "id": "I_kwDOPTNEDc7PFar0",
       "title": "Add outline of Security Considerations Topics/sub-sections",
-      "url": "https://github.com/ietf-wg-diem/combined-diem-uses-reqs/issues/2",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/2",
       "state": "OPEN",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
@@ -87,7 +87,7 @@
       "number": 1,
       "id": "PR_kwDOPTNEDc6rl4Fu",
       "title": "Add charter definitions",
-      "url": "https://github.com/ietf-wg-diem/combined-diem-uses-reqs/pull/1",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/1",
       "state": "OPEN",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
@@ -96,10 +96,10 @@
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
       "updatedAt": "2025-10-15T05:25:03Z",
-      "baseRepository": "ietf-wg-diem/combined-diem-uses-reqs",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
-      "headRepository": "ietf-wg-diem/combined-diem-uses-reqs",
+      "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "add_charter_def",
       "headRefOid": "c5054bc67eaf5fb7cf7f3fc236afd8d27874d5dd",
       "closedAt": null,
@@ -137,7 +137,7 @@
         },
         {
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "> If we move the text on DEs into the intro, that could work, for example. Just wanted to make clear that I think we should stay away from defining the term \"DE.\" It' sa rabbit hole that we just got out off (chartering) :)\r\n\r\nYou could also use terms like \"working definition\" or \"temporary definition\" for now.",
           "createdAt": "2025-10-14T06:50:30Z",
           "updatedAt": "2025-10-14T06:50:30Z"
@@ -157,7 +157,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:22:56Z",
@@ -177,7 +177,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:24:58Z",
@@ -197,7 +197,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:25:32Z",
@@ -217,7 +217,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:28:20Z",
@@ -237,7 +237,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:31:15Z",
@@ -257,7 +257,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:32:22Z",
@@ -277,7 +277,7 @@
             "abbreviatedOid": "adb4e84"
           },
           "author": "rohanmahy",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-10-02T09:33:37Z",
@@ -292,6 +292,32 @@
           ]
         }
       ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOPTNEDc6wpSrZ",
+      "title": "Ready to Submit draft-ietf-diem-requirements-00 ??",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/3",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "If the authors are ready to submit draft-ietf-diem-requirements-00 after the draft submission pause, just merge this PR and manually submit versioned/draft-ietf-diem-requirements-00.xml.\r\n",
+      "createdAt": "2025-10-30T15:13:42Z",
+      "updatedAt": "2025-10-30T15:38:11Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "8961c17add83b473f521fe467ec9260ffa1968a5",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "submit-ietf-00",
+      "headRefOid": "59157b956c8d14f34352e05cbb05ed5916a16e10",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
