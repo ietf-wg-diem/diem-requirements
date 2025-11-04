@@ -254,7 +254,7 @@ Particularly relevant are the requirements:
 - Authorization: IHL requires that, prior to applying them, emblem issuers must seek authorizing from a competent authority, which is a state.
     The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
 
-Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all bearers my have domain names associated with them.
+Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all bearers may have domain names associated with them.
 
 ## Organization for the Prohibition of Chemical Weapons (OPCW)
 
