@@ -159,7 +159,7 @@ If emblem discovery were detectable by the bearer, issuer, or by an authorizing 
 
 ### Validation
 
-Digital emblems MAY require validation. Validation MUST support verification of all the emblem’s data and its context.
+Digital emblems MAY require validation. Validation MUST support verification of all the emblem's data and its context.
 In particular, validation MUST ensure that the emblem was issued for the respective bearer.
 Some use cases MAY use unverified digital emblems.
 
