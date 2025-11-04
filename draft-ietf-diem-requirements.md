@@ -234,14 +234,27 @@ Similar use case as OPCW.
 ## International Humanitarian Law
 
 The Geneva Conventions and their Additional Protocols constitute the core of International Humanitarian Law (IHL).
-Some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
+Under IHL, some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
 
 - The emblems of the Red Cross, Red Crescent, and Red Crystal
 - The Blue Shield emblem
 - The emblem for the protection of civil defense marks
 - The dangerous forces emblem
 
-Digital emblems under IHL could be extended to digital, network-connected and network-addressable assets that enjoy aforementioned specific protections under IHL.
+However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
+A digital emblem using the DIEM architecture could address this gap, and we call such emblems digital emblems for IHL.
+
+Digital emblems for IHL have many of the requirements listed above, and they could directly use the DIEM architecture.
+Particularly relevant are the requirements:
+- Removable: Bearing an emblem can increase the risk for targeted attacks.
+    Bearers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits.
+- Undetectable Validation: Those wishing to authenticate assets must be able to discover and validate emblems in a way that does not call attention to the fact that they are screening potential targets.
+    If their targets could detect the emblem verification, they could use that information for their defense, which would ultimately deter validators from using the digital emblems.
+- Validation: Bearers must not be able to fake protection.
+- Authorization: IHL requires that, prior to applying them, emblem issuers must seek authorizing from a competent authority, which is a state.
+    The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
+
+Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all bearers my have domain names associated with them.
 
 ## Organization for the Prohibition of Chemical Weapons (OPCW)
 
