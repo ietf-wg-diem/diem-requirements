@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-02T01:02:32.650917+00:00",
+  "timestamp": "2025-11-06T00:59:29.869486+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -95,7 +95,7 @@
       "labels": [],
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
-      "updatedAt": "2025-10-15T05:25:03Z",
+      "updatedAt": "2025-11-04T19:18:06Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
@@ -290,6 +290,19 @@
               "updatedAt": "2025-10-02T09:33:38Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7LvyTY",
+          "commit": {
+            "abbreviatedOid": "c5054bc"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "For easier reference, here my opinion as a review. I think, we're best off not aiming to define the term \"digital emblem.\" Defining that term will just be a rabit chase without any benefit.\r\n\r\nIf we simply drop references to that term in this PR, I'm good with merging it!",
+          "createdAt": "2025-11-04T19:18:06Z",
+          "updatedAt": "2025-11-04T19:18:06Z",
+          "comments": []
         }
       ]
     },
@@ -298,20 +311,88 @@
       "id": "PR_kwDOPTNEDc6wpSrZ",
       "title": "Ready to Submit draft-ietf-diem-requirements-00 ??",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "If the authors are ready to submit draft-ietf-diem-requirements-00 after the draft submission pause, just merge this PR and manually submit versioned/draft-ietf-diem-requirements-00.xml.\r\n",
       "createdAt": "2025-10-30T15:13:42Z",
-      "updatedAt": "2025-10-30T15:38:11Z",
+      "updatedAt": "2025-11-04T13:52:32Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "8961c17add83b473f521fe467ec9260ffa1968a5",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "submit-ietf-00",
       "headRefOid": "59157b956c8d14f34352e05cbb05ed5916a16e10",
+      "closedAt": "2025-11-04T13:52:32Z",
+      "mergedAt": "2025-11-04T13:52:32Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "7539ba47d3b27647d2738a78c8f33ddc3ab8dd1e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7LpPbO",
+          "commit": {
+            "abbreviatedOid": "59157b9"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-04T13:52:24Z",
+          "updatedAt": "2025-11-04T13:52:24Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOPTNEDc6xfTNn",
+      "title": "Simpler phrasing of undetectable validation",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/4",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The old phrasing could have suggested that only *actual* bearers (and other parties) must not be able to detect validation. This is not what was intended. I now phrase undetectable validation w.r.t. to the discovery requirement. This should make it clear that also non-bearers must not be able to detect when someone is checking whether they are a bearer.",
+      "createdAt": "2025-11-04T19:16:12Z",
+      "updatedAt": "2025-11-04T19:16:13Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "undetectable-validation",
+      "headRefOid": "6292ec4610446e7128a3d88e095da5cb3c9c8bfd",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOPTNEDc6xhaZJ",
+      "title": "Details on IHL Use Case",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/5",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-11-05T00:16:23Z",
+      "updatedAt": "2025-11-05T00:16:24Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "ihl-details",
+      "headRefOid": "12c92db152cd324b0a00806065cadfdabd68f257",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
