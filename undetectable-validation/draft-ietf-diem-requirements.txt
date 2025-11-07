@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 8 May 2026                                              JHU/APL
+Expires: 11 May 2026                                             JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 8 May 2026                                              JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                         4 November 2025
+                                                         7 November 2025
 
 
               Digital Emblems - Use Cases and Requirements
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 May 2026.
+   This Internet-Draft will expire on 11 May 2026.
 
 Copyright Notice
 
@@ -187,13 +187,12 @@ Table of Contents
 
 3.2.3.  Undetectable Validation
 
-   Digital emblem discovery MAY require that potential bearers (in the
-   sense of the Discovery requirement) are unable to detect when an
-   emblem is being discovered or validated.  This requirement is
-   motivated by emblems that mark its bearer as protected and ask
-   validators to not attack the bearer.  If emblem discovery were
-   detectable by the potential bearer, malicious parties could misuse
-   the digital emblem as an intrusion detection system.
+   Digital emblem discovery MAY require that potential bearers are
+   unable to detect when an emblem is being discovered or validated.
+   This requirement is motivated by emblems that mark its bearer as
+   protected and ask validators to not attack the bearer.  If emblem
+   discovery were detectable by the potential bearer, malicious parties
+   could misuse the digital emblem as an intrusion detection system.
 
 3.3.  Validation Requirements
 
