@@ -151,7 +151,7 @@ That is, emblems do not count as removed when they become invalid.
 
 ### Undetectable Validation
 
-Digital emblem discovery MAY require that potential bearers (in the sense of the Discovery requirement) are unable to detect when an emblem is being discovered or validated.
+Digital emblem discovery MAY require that potential bearers are unable to detect when an emblem is being discovered or validated.
 This requirement is motivated by emblems that mark its bearer as protected and ask validators to not attack the bearer.
 If emblem discovery were detectable by the potential bearer, malicious parties could misuse the digital emblem as an intrusion detection system.
 
