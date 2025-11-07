@@ -474,7 +474,7 @@ Table of Contents
               regulations-rev-23>.
 
 Acknowledgments
-   This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributor included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of ontributors to the gathering of use case information includes Samit Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela.  TODO - get this complete.
+   This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributors included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of contributors to the gathering of use case information includes Samit Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela.  TODO - get this complete.
 
 Authors' Addresses
 
