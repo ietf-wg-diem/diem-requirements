@@ -137,9 +137,14 @@ The definitions for terms "(digital) emblem," "bearer," and "validation" are rep
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Bearer:
-: "To bear an emblem" means to present and be identified by a digital emblem.
+: "To bear an emblem" means to present a digital emblem.
   The entity that bears the emblem is the bearer or emblem holder.
   This is often a separate entity from the creator or original designer of the emblem.
+
+Asset:
+: Digital emblems apply to assets.
+Often times, the asset and bearer of an emblem will be the same entity, but the bearer and the assets of an emblem may be different.
+For example, emblems could apply to multiple assets or the bearer could only distribute the emblem and not be identified by it.
 
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
@@ -151,7 +156,10 @@ often by checking its details against a known standard or reference point.
 
 # Requirements
 
-The DIEM architecture will allow validators to discover and validate digital emblems that are associated with bearers. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
+The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets and presented by bearers.
+This section contains the requirements that this architecture will address.
+They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements.
+We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
 ## Digital Emblem Requirements
 
@@ -159,7 +167,9 @@ The DIEM architecture will allow validators to discover and validate digital emb
 Digital emblems MUST identify their bearer and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify their bearer by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
-Individual use cases MUST specify the semantics of the emblem and the bearer. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
+
+Individual use cases MUST specify the semantics of the emblem.
+It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
 
