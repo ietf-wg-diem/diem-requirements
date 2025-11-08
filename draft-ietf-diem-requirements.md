@@ -153,7 +153,7 @@ That is, emblems do not count as removed when they become invalid.
 
 A digital emblem MAY require that its discovery and validation is undetectable.
 This requirement is motivated by emblems that mark its bearer as protected and ask validators to not disrupt the bearer.
-If emblem discovery were detectable by the potential bearer, malicious parties could misuse the digital emblem as an intrusion detection system.
+If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.
 
 For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
 Concrete designs MUST specify a threat model for undetectable validation.
