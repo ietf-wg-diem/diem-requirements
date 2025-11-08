@@ -137,9 +137,14 @@ The definitions for terms "(digital) emblem," "bearer," and "validation" are rep
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Bearer:
-: "To bear an emblem" means to present and be identified by a digital emblem.
+: "To bear an emblem" means to present a digital emblem.
   The entity that bears the emblem is the bearer or emblem holder.
   This is often a separate entity from the creator or original designer of the emblem.
+
+Asset:
+: Digital emblems apply to assets.
+Often times, the asset and bearer of an emblem will be the same entity, but the bearer and the assets of an emblem may be different.
+For example, emblems could apply to multiple assets or the bearer could only distribute the emblem and not be identified by it.
 
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
