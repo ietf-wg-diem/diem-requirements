@@ -119,15 +119,10 @@ This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
 We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
-These definitions have been reproduced in section Conventions and Definitions.
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
-
-The definitions for terms "(digital) emblem," "bearer," and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
-
 
 (Digital) Emblem:
 : Emblems such as the Red Cross, Red Crescent, Red Crystal, and Blue Shield can be symbols of protection governed by International Humanitarian Law (IHL).
@@ -158,9 +153,6 @@ Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
 often by checking its details against a known standard or reference point.
   Validation may include ensuring that the bearer has not forged, stolen, or tampered with an emblem.
-  Emblems may be observed by validators without the knowledge of the bearer presenting the emblem, or may be presented to a specific validator upon request.
-  Cryptographic verification may or may not be used based on the in-place security mechanisms of the communication channel bearing the emblem.
-  Which attributes an emblem contains, and how a digital emblem is secured and presented impacts how a validator interprets and trusts the assertions made within the emblem.
 
 # Requirements
 
