@@ -156,7 +156,10 @@ often by checking its details against a known standard or reference point.
 
 # Requirements
 
-The DIEM architecture will allow validators to discover and validate digital emblems that are associated with bearers. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
+The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets and presented by bearers.
+This section contains the requirements that this architecture will address.
+They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements.
+We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
 ## Digital Emblem Requirements
 
@@ -164,7 +167,9 @@ The DIEM architecture will allow validators to discover and validate digital emb
 Digital emblems MUST identify their bearer and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify their bearer by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
-Individual use cases MUST specify the semantics of the emblem and the bearer. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
+
+Individual use cases MUST specify the semantics of the emblem.
+It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
 
