@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-06T00:59:29.869486+00:00",
+  "timestamp": "2025-11-09T01:02:08.956306+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -47,6 +47,41 @@
       "name": "wontfix",
       "description": "This will not be worked on",
       "color": "ffffff"
+    },
+    {
+      "name": "no-consensus",
+      "description": "",
+      "color": "a21581"
+    },
+    {
+      "name": "has-PR",
+      "description": "",
+      "color": "d93f0b"
+    },
+    {
+      "name": "resolve-conflict-and-merge",
+      "description": "",
+      "color": "6444C8"
+    },
+    {
+      "name": "placeholder",
+      "description": "",
+      "color": "F93FAA"
+    },
+    {
+      "name": "design-team",
+      "description": null,
+      "color": "aaaaaa"
+    },
+    {
+      "name": "needs-author-discussion",
+      "description": null,
+      "color": "aaaaaa"
+    },
+    {
+      "name": "needs-permission",
+      "description": "",
+      "color": "7A445D"
     }
   ],
   "issues": [
@@ -58,11 +93,13 @@
       "state": "OPEN",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
+      "assignees": [
+        "amankin"
+      ],
       "labels": [],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
       "createdAt": "2025-10-01T16:36:15Z",
-      "updatedAt": "2025-10-03T14:16:42Z",
+      "updatedAt": "2025-11-07T20:11:06Z",
       "closedAt": null,
       "comments": [
         {
@@ -78,6 +115,216 @@
           "body": "3. For Digital Emblems that require Authentication of the Digital Emblem, origin authentication or other authentication of the Bearer, or Authorization of the Digital Emblem (the MUSTs in Section 3),  the threat model addressed is presentation of falsified Digital Emblems. Both 1 and 2 above will require addressing this threat model.",
           "createdAt": "2025-10-03T14:16:42Z",
           "updatedAt": "2025-10-03T14:16:42Z"
+        },
+        {
+          "author": "ohmantics",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Several of the use cases would probably want to plan for forensics capabilities, such as a history of creation and modification of an emblem, associating it with internal references for identity of the creator/modifier, etc. This is not outward security, but merits some thinking about how external or encrypted-in-place metadata can be associated with an emblem.",
+          "createdAt": "2025-11-07T19:25:39Z",
+          "updatedAt": "2025-11-07T19:25:39Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOPTNEDc7Wq2TL",
+      "title": "Bearer and asset question",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/6",
+      "state": "OPEN",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "amankin"
+      ],
+      "labels": [
+        "design-team"
+      ],
+      "body": "This is an issue raised to me by Bill Woodcock, as he's tied up right now, but the paraphrase is mine:  could we clarify if there is a difference in meaning between a bearer of a digital emblem versus an asset that bears a digital emblem?  Since we are thinking of our definitions very much as working definitions, can we think of these as the same and in some cases use \"asset?\"",
+      "createdAt": "2025-11-07T18:39:06Z",
+      "updatedAt": "2025-11-07T20:42:04Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I have thought about this too. In my head, the difference between bearer and asset is similar as in syntax/semantics. The bearer is, e.g., a domain name. The asset that is marked is identified by the bearer, and, e.g., could be the webserver identified by that domain name. But I agree, the two terms could benefit from clarification.",
+          "createdAt": "2025-11-07T19:19:45Z",
+          "updatedAt": "2025-11-07T19:19:45Z"
+        },
+        {
+          "author": "dkg",
+          "authorAssociation": "NONE",
+          "body": "I think all bearers are assets, but not all assets are bearers.  For example, an asset that doesn't have an emblem isn't a bearer.",
+          "createdAt": "2025-11-07T20:24:32Z",
+          "updatedAt": "2025-11-07T20:24:32Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "substantial discussion on the difference between an asset and a bearer. Some examples were given of likely differences.\n\naction item to copy examples into comments in this issue.\n\nex: passport vs person it identifies, @dkg comments about things related to an asset, wetland might be an asset but not a bearer.\n",
+          "createdAt": "2025-11-07T20:24:36Z",
+          "updatedAt": "2025-11-07T20:24:36Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Stuart Cuard quoted from Black's law dictionary \"A bearer is a **person** who....\"  (indicating that a bearer is considered distinct from the things getting the special treatment.)\n\ndistinction between the thing entitled to special treatment and what presents it?",
+          "createdAt": "2025-11-07T20:27:04Z",
+          "updatedAt": "2025-11-07T20:31:33Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Samit and Allison to propose text",
+          "createdAt": "2025-11-07T20:37:33Z",
+          "updatedAt": "2025-11-07T20:37:33Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOPTNEDc7WrmZJ",
+      "title": "Need to add a security considerations",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/9",
+      "state": "CLOSED",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "duplicate"
+      ],
+      "body": "",
+      "createdAt": "2025-11-07T19:39:53Z",
+      "updatedAt": "2025-11-07T21:06:24Z",
+      "closedAt": "2025-11-07T21:06:23Z",
+      "comments": [
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "PR presented as a start",
+          "createdAt": "2025-11-07T19:41:26Z",
+          "updatedAt": "2025-11-07T19:41:26Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "propose merging with Issue #2 . ",
+          "createdAt": "2025-11-07T21:06:23Z",
+          "updatedAt": "2025-11-07T21:06:23Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOPTNEDc7Wrm9i",
+      "title": "Need to start keeping track of acknowledgements",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/10",
+      "state": "OPEN",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "has-PR"
+      ],
+      "body": "Need to start keeping track of acknowledgements - PR presented",
+      "createdAt": "2025-11-07T19:40:43Z",
+      "updatedAt": "2025-11-07T20:41:38Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Addressed in PR #8 . Requires consent of the acknowledged",
+          "createdAt": "2025-11-07T20:38:13Z",
+          "updatedAt": "2025-11-07T20:38:13Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOPTNEDc7WrpEy",
+      "title": "More details on use cases and requirements",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/11",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This issue is practically me crossposting my comments on the mailing list: https://mailarchive.ietf.org/arch/msg/diem/nAX4K9D2HM5HNr92ozcQCs_J70o/\n\nThe use cases section is not detailed enough for actionable work in my opinion. We need to:\n\n- Understand how each use case relates to the requirements on the architecture\n- Decide whether use cases have received sufficient stakeholder evaluation and invite for that\n\nThe current version of the document is not specific enough to address both these goals.",
+      "createdAt": "2025-11-07T19:43:48Z",
+      "updatedAt": "2025-11-07T20:02:45Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Example of the level of detail that @felixlinker proposes is in PR #5 ",
+          "createdAt": "2025-11-07T20:02:45Z",
+          "updatedAt": "2025-11-07T20:02:45Z"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "I_kwDOPTNEDc7WsVZj",
+      "title": "Do we want to respect the 5 author suggested limit?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/12",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "felixlinker",
+        "rahelFain"
+      ],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-11-07T20:39:03Z",
+      "updatedAt": "2025-11-07T20:42:39Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOPTNEDc7Wsg8G",
+      "title": "Is there a need for forensic records of emblems for some emblem types?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/13",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "amankin",
+        "felixlinker"
+      ],
+      "labels": [
+        "needs-author-discussion"
+      ],
+      "body": "Suggested by @amankin \n\n@felixlinker said they intended to address this in Section 4.5",
+      "createdAt": "2025-11-07T20:55:41Z",
+      "updatedAt": "2025-11-07T20:56:27Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOPTNEDc7Ws3WH",
+      "title": "Attacker and authorizing party roles and operations in use cases",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/14",
+      "state": "OPEN",
+      "author": "dkg",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "When describing a use case for a digital protocol, i'm used to seeing use cases presented from every party involved in a transaction.\n\nFor example, in digital id discussions, we need to talk about how a verifier operates, as well as how an issuer operates, and how a holder operates.\n\nThe use cases i'm seeing in the current document are all split out by talking about different bearer scenarios.\n\nBut i don't see any discussion of an attacker's perspective, or an authorizing party's perspective.  Should we detail those perspectives within each use case?  or should we detail them as their own distinct use case?",
+      "createdAt": "2025-11-07T21:28:01Z",
+      "updatedAt": "2025-11-08T17:13:48Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks for suggesting that, dkg! What you raise here mirrors some issues I noticed when talking about the architecture to Jim on the hallway.\n\nI think we should add those details to each use cases, but we should consider group very similar use cases together, and generalizing where possible. Depending on the feedback on individual use cases (e.g., press use case mostly received negative feedback), we might also save ourselves some work for use cases that we anticipate will not be in a WGLC draft.",
+          "createdAt": "2025-11-08T17:13:48Z",
+          "updatedAt": "2025-11-08T17:13:48Z"
         }
       ]
     }
@@ -88,24 +335,28 @@
       "id": "PR_kwDOPTNEDc6rl4Fu",
       "title": "Add charter definitions",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "resolve-conflict-and-merge"
+      ],
       "body": "Explicitly adds the definitions for terms \"(digital) emblem,\" bearer\" and \"validations\" from the current charter.  ",
       "createdAt": "2025-10-01T16:06:01Z",
-      "updatedAt": "2025-11-04T19:18:06Z",
+      "updatedAt": "2025-11-08T12:24:57Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "6793195ccb8cd241427c3944137cb8a1a3e399be",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "add_charter_def",
       "headRefOid": "c5054bc67eaf5fb7cf7f3fc236afd8d27874d5dd",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-11-08T12:24:57Z",
+      "mergedAt": "2025-11-08T12:24:57Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6"
+      },
       "comments": [
         {
           "author": "rahelFain",
@@ -148,6 +399,13 @@
           "body": "> You could also use terms like \"working definition\" or \"temporary definition\" for now.\r\n\r\n\"Working definition\" maybe, but \"temporary\" suggests we may want to revisit it. I think we shouldn't. This will just distract the working group without any benefit.",
           "createdAt": "2025-10-15T05:25:03Z",
           "updatedAt": "2025-10-15T05:25:03Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Conflicts to be addressed, then OK to merge per IETF 124 discussion",
+          "createdAt": "2025-11-07T19:49:23Z",
+          "updatedAt": "2025-11-07T19:49:23Z"
         }
       ],
       "reviews": [
@@ -357,22 +615,66 @@
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "no-consensus"
+      ],
       "body": "The old phrasing could have suggested that only *actual* bearers (and other parties) must not be able to detect validation. This is not what was intended. I now phrase undetectable validation w.r.t. to the discovery requirement. This should make it clear that also non-bearers must not be able to detect when someone is checking whether they are a bearer.",
       "createdAt": "2025-11-04T19:16:12Z",
-      "updatedAt": "2025-11-04T19:16:13Z",
+      "updatedAt": "2025-11-08T12:37:07Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "undetectable-validation",
-      "headRefOid": "6292ec4610446e7128a3d88e095da5cb3c9c8bfd",
+      "headRefOid": "b26d64a742f2c6552bb1ab34bbff4b258339a2f1",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "dkg",
+          "authorAssociation": "NONE",
+          "body": "I agree that we should change \"bearers\" to \"potential bearers\".\r\n\r\nI don't see why we should drop issuers or authorizing parties.\r\n",
+          "createdAt": "2025-11-07T19:53:46Z",
+          "updatedAt": "2025-11-07T19:53:46Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7MWxhm",
+          "commit": {
+            "abbreviatedOid": "6292ec4"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-06T14:41:07Z",
+          "updatedAt": "2025-11-06T14:41:07Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7Mzkri",
+          "commit": {
+            "abbreviatedOid": "6292ec4"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-07T19:55:37Z",
+          "updatedAt": "2025-11-07T19:55:37Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\nDigital emblem discovery MAY require that potential bearers are unable to detect when an emblem is being discovered or validated.\r\n```",
+              "createdAt": "2025-11-07T19:55:37Z",
+              "updatedAt": "2025-11-07T19:55:38Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 5,
@@ -383,10 +685,12 @@
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "placeholder"
+      ],
       "body": "",
       "createdAt": "2025-11-05T00:16:23Z",
-      "updatedAt": "2025-11-05T00:16:24Z",
+      "updatedAt": "2025-11-07T20:04:46Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
@@ -398,6 +702,255 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7MWwif",
+          "commit": {
+            "abbreviatedOid": "12c92db"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-06T14:40:29Z",
+          "updatedAt": "2025-11-06T14:40:29Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7MX-1D",
+          "commit": {
+            "abbreviatedOid": "12c92db"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-06T15:30:12Z",
+          "updatedAt": "2025-11-06T15:30:12Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7Mzru4",
+          "commit": {
+            "abbreviatedOid": "12c92db"
+          },
+          "author": "dkg",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-07T20:01:57Z",
+          "updatedAt": "2025-11-07T20:01:57Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "this now says \"under IHL\" in two places. if the goal is to move it forward, perhaps we remove the second copy?",
+              "createdAt": "2025-11-07T20:01:57Z",
+              "updatedAt": "2025-11-07T20:01:57Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOPTNEDc6yNNcX",
+      "title": "Initial cut for security considerations",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/7",
+      "state": "OPEN",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\"Security TODO\" is replaced with an initial cut of a Security Considerations Section, because desired security properties (and thus threats) are implied in many of the Requirements.",
+      "createdAt": "2025-11-07T19:03:57Z",
+      "updatedAt": "2025-11-07T20:07:25Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "add-security-considerations-section-instead-of-placeholder",
+      "headRefOid": "b4d1c57e12b54d786e34e36d7c1dc7c4ff96d12c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7My21A",
+          "commit": {
+            "abbreviatedOid": "b4d1c57"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-07T19:18:00Z",
+          "updatedAt": "2025-11-07T19:18:00Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7Mzxg_",
+          "commit": {
+            "abbreviatedOid": "b4d1c57"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-11-07T20:07:25Z",
+          "updatedAt": "2025-11-07T20:07:25Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOPTNEDc6yNZBo",
+      "title": "Initiate the Acknowledgments section",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/8",
+      "state": "OPEN",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "needs-permission"
+      ],
+      "body": "Initiate the Acknowledgements section, to be split later into Acknowledgments and Contributors",
+      "createdAt": "2025-11-07T19:19:06Z",
+      "updatedAt": "2025-11-07T21:05:15Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "amankin-patch-1",
+      "headRefOid": "d6fe57e7f86b82839439dcc6febd6280ec1b17da",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7My9Ee",
+          "commit": {
+            "abbreviatedOid": "ec9be2c"
+          },
+          "author": "ohmantics",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-07T19:22:46Z",
+          "updatedAt": "2025-11-07T19:22:46Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "This is marked not complete, but I notice two typos: \"Other IETF contributor\" should be plural and \"incomplete list of ontributors\" is missing the 'c'.",
+              "createdAt": "2025-11-07T19:22:46Z",
+              "updatedAt": "2025-11-07T19:22:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7Mz3CA",
+          "commit": {
+            "abbreviatedOid": "ec9be2c"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-07T20:12:13Z",
+          "updatedAt": "2025-11-07T20:12:13Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n   This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributors included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of contributors to the gathering of use case information includes Samit Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Guti\u00e9rrez, and Guilherme Canela.  TODO - get this complete.\r\n```",
+              "createdAt": "2025-11-07T20:12:13Z",
+              "updatedAt": "2025-11-07T20:12:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7Mz3QR",
+          "commit": {
+            "abbreviatedOid": "ec9be2c"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-07T20:12:22Z",
+          "updatedAt": "2025-11-07T20:12:23Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "He's called \"D'Cunha\" :)\r\n```suggestion\r\n   This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributor included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of ontributors to the gathering of use case information includes Samit D'Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Guti\u00e9rrez, and Guilherme Canela.  TODO - get this complete.\r\n```",
+              "createdAt": "2025-11-07T20:12:22Z",
+              "updatedAt": "2025-11-07T20:12:36Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOPTNEDc6yTQdY",
+      "title": "Simplify terminology",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/15",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Some simple changes, motivated by comments from @rohanmahy.\r\n\r\n- Remove references to charter. I think this just complicates the document and serves no purpose.\r\n- Remove references to requirements from charter.\r\n\r\nJust makes everything tighter!",
+      "createdAt": "2025-11-08T12:27:09Z",
+      "updatedAt": "2025-11-08T12:27:10Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "terminology",
+      "headRefOid": "b3db72bd007ba8ec5d93d3d796fc520d34285932",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOPTNEDc6yTUEP",
+      "title": "Asset/bearer",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/16",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I think we're best off defining asset/bearer in terms of who presents the emblem (bearer) and who the emblem applies to (asset).\r\n\r\nFor example, initially, bearers will always be domain names. However, the asset that is identified by them may not be domain names.",
+      "createdAt": "2025-11-08T12:40:14Z",
+      "updatedAt": "2025-11-08T12:40:27Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "asset-bearer",
+      "headRefOid": "18e6c0f44ea1b830d0e82fc030d6cb7c12e36cb9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closes #6 ",
+          "createdAt": "2025-11-08T12:40:27Z",
+          "updatedAt": "2025-11-08T12:40:27Z"
+        }
+      ],
       "reviews": []
     }
   ]
