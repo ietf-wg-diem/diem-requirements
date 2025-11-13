@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-09T01:02:08.956306+00:00",
+  "timestamp": "2025-11-13T00:59:52.154735+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -818,7 +818,7 @@
       ],
       "body": "Initiate the Acknowledgements section, to be split later into Acknowledgments and Contributors",
       "createdAt": "2025-11-07T19:19:06Z",
-      "updatedAt": "2025-11-07T21:05:15Z",
+      "updatedAt": "2025-11-12T18:39:52Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
@@ -888,6 +888,26 @@
               "body": "He's called \"D'Cunha\" :)\r\n```suggestion\r\n   This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributor included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of ontributors to the gathering of use case information includes Samit D'Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Guti\u00e9rrez, and Guilherme Canela.  TODO - get this complete.\r\n```",
               "createdAt": "2025-11-07T20:12:22Z",
               "updatedAt": "2025-11-07T20:12:36Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7N7elD",
+          "commit": {
+            "abbreviatedOid": "ec9be2c"
+          },
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-11-12T18:39:52Z",
+          "updatedAt": "2025-11-12T18:39:52Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I'm checking the consent of the acknowledged, and also wish to know if there are missing names.",
+              "createdAt": "2025-11-12T18:39:52Z",
+              "updatedAt": "2025-11-12T18:39:52Z"
             }
           ]
         }
