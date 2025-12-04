@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-13T00:59:52.154735+00:00",
+  "timestamp": "2025-12-04T01:01:06.072417+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -327,6 +327,22 @@
           "updatedAt": "2025-11-08T17:13:48Z"
         }
       ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOPTNEDc7bzJsS",
+      "title": "Diplomatic bag rules",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/17",
+      "state": "OPEN",
+      "author": "ohmantics",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
+      "createdAt": "2025-12-02T21:32:40Z",
+      "updatedAt": "2025-12-02T21:32:40Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
