@@ -152,44 +152,44 @@ Validator:
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
 often by checking its details against a known standard or reference point.
-  Validation may include ensuring that the bearer has not forged, stolen, or tampered with an emblem.
+  Validation may include ensuring that the emblem has not been forged, stolen, or tampered with.
 
 # Requirements
 
-The DIEM architecture will allow validators to discover and validate digital emblems that are associated with bearers. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
+The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
-Digital emblems MUST identify their bearer and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify their bearer by a Fully Qualified Domain Name (FQDN).
+Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
-Individual use cases MUST specify the semantics of the emblem and the bearer. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
+Individual use cases MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
 
 ### Discovery
 
-Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given a potential bearer a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.
+Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given an asset a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.
 
 ### Removable
 
-Digital emblems MAY require to be removable in that checking for the presence of an emblem associated with a bearer results in no emblem.
+Digital emblems MAY require to be removable in that checking for the presence of an asset's emblems results in no emblem.
 Note that checking for emblem presence is independent of its validation.
 That is, emblems do not count as removed when they become invalid.
 
 ### Undetectable Validation
 
-Digital emblem discovery MAY require that bearers, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated.
-This requirement is motivated by emblems that mark its bearer as protected and ask validators to not attack the bearer.
-If emblem discovery were detectable by the bearer, issuer, or by an authorizing party, malicious parties could misuse the digital emblem as an intrusion detection system.
+Digital emblem discovery MAY require that assets, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated.
+This requirement is motivated by emblems that mark its asset as protected and ask validators to not attack the asset.
+If emblem discovery were detectable by the asset, issuer, or by an authorizing party, malicious parties could misuse the digital emblem as an intrusion detection system.
 
 ## Validation Requirements
 
 ### Validation
 
 Digital emblems MAY require validation. Validation MUST support verification of all the emblem's data and its context.
-In particular, validation MUST ensure that the emblem was issued for the respective bearer.
+In particular, validation MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
 ### Authorization
@@ -212,17 +212,17 @@ In this section, we sketch how the digital emblem architecture could be extended
 ## Data Formats
 Emblems for additional use cases may be defined via new profiles in future standards, potentially including new types of atomic data elements requiring additional specification.
 
-## Bearer Discovery
+## Asset Identifier Discovery
 
-It may be non-obvious for some use cases to identify the bearer that is associated with an asset, and thus impossible to fetch emblems associated with that asset.
-To accommodate for such use cases, one could specify means to discover bearers for different types of assets.
+It may be non-obvious for some use cases to learn the identifier associated with an asset, and thus impossible to discover emblems associated with that asset.
+To accommodate for such use cases, one could specify means to discover identifiers for different types of assets.
 
 ## Implicit Discovery
 
-An alternative approach to the above problem would be to bind emblems implicitly to their bearer.
-Implicit binding would identify the bearer by the emblem's location.
-For example, if emblems were distributed via NFC, the bearer could be the asset to which the NFC chip was attached.
-As of this writing, the current charter scope requires that digital emblems explicitly identify their bearer, but such discovery mechanisms could be investigated in future WG work.
+An alternative approach to the above problem would be to bind emblems implicitly to the marked asset.
+Implicit binding could identify the marked asset by the emblem's location.
+For example, if emblems were distributed via NFC, the marked asset could be the asset to which the NFC chip was attached.
+As of this writing, the current charter scope requires that digital emblems explicitly identify their asset, but such discovery mechanisms could be investigated in future WG work.
 
 ## Confidentiality
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
@@ -289,14 +289,14 @@ Such authorizations must be issued by a state, other party to an armed conflict,
 Digital emblems for IHL have many of the requirements listed above, and they could directly use the DIEM architecture.
 Particularly relevant are the requirements:
 - Removable: Bearing an emblem can increase the risk for targeted attacks.
-    Bearers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits.
+    Emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits.
 - Undetectable Validation: Those wishing to authenticate assets must be able to discover and validate emblems in a way that does not call attention to the fact that they are screening potential targets.
     If their targets could detect the emblem verification, they could use that information for their defense, which would ultimately deter validators from using the digital emblems.
-- Validation: Bearers must not be able to fake protection.
+- Validation: Assets must not be able to fake protection.
 - Authorization: IHL requires that, prior to applying them, emblem issuers must seek authorizing from a competent authority, which is a state.
     The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
 
-Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all bearers may have domain names associated with them.
+Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
 
 ## Organization for the Prohibition of Chemical Weapons (OPCW)
 
