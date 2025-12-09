@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 9 May 2026                                              JHU/APL
+Expires: 12 June 2026                                            JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 9 May 2026                                              JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                         5 November 2025
+                                                         9 December 2025
 
 
               Digital Emblems - Use Cases and Requirements
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 May 2026.
+   This Internet-Draft will expire on 12 June 2026.
 
 Copyright Notice
 
@@ -312,11 +312,11 @@ Table of Contents
 5.4.  International Humanitarian Law
 
    The Geneva Conventions and their Additional Protocols constitute the
-   core of International Humanitarian Law (IHL).  Under IHL, some assets
-   enjoy certain specific protections under IHL, including that they
-   must not be attacked, and IHL codifies four types of protective
-   emblems for armed conflict, which inform other parties that marked
-   assets benefit from one or several of these specific protections:
+   core of International Humanitarian Law (IHL).  Some assets enjoy
+   certain specific protections under IHL, including that they must not
+   be attacked, and IHL codifies four types of protective emblems for
+   armed conflict, which inform other parties that marked assets benefit
+   from one or several of these specific protections:
 
    *  The emblems of the Red Cross, Red Crescent, and Red Crystal
 
