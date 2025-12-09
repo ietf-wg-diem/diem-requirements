@@ -136,10 +136,23 @@ The definitions for terms "(digital) emblem," "bearer," and "validation" are rep
   Emblems presented in such ways are called digital emblems.
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
-Bearer:
-: "To bear an emblem" means to present and be identified by a digital emblem.
-  The entity that bears the emblem is the bearer or emblem holder.
-  This is often a separate entity from the creator or original designer of the emblem.
+Asset:
+: A digital resource, system, or service—such as a server, data repository, or networked device—that can display a digital emblem.
+  An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.
+
+Emblem issuer:
+: The entity that operates or controls an asset that bears a digital emblem.
+  Depending on the applicable emblem, the issuer may have received authorization to issue emblems, and in such cases, emblem issuers are also called *authorized entities*.
+  For example, emblem issuers could be a medical or humanitarian organization, a cultural institution, or an operator of installations containing dangerous forces, among others.
+
+Authorizing entity:
+: An entity competent to grant authorization for the use, by an authorized entity, of a digital emblem.
+  The authorizing entity ensures that such authorization is issued and recorded in accordance with applicable legal requirements, enabling technical and operational verification.
+  In certain specific cases, the authorizing entity is also the authorized entity.
+
+Validator:
+: An entity that queries, inspects, or otherwise interacts with assets to determine whether they are marked with a valid digital emblem.
+  Validators may include technical systems, network operators, or other actors implementing protective or non-interference measures consistent with the emblem’s purpose.
 
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
