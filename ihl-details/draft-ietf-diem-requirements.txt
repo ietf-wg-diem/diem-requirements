@@ -91,7 +91,7 @@ Table of Contents
        3.4.1.  Extensibility
    4.  Extensions
      4.1.  Data Formats
-     4.2.  Bearer Discovery
+     4.2.  Asset Identifier Discovery
      4.3.  Implicit Discovery
      4.4.  Confidentiality
      4.5.  Proof of Presence
@@ -100,6 +100,9 @@ Table of Contents
      5.2.  Ramsar Convention on the Wetlands
      5.3.  International Atomic Energy Agency (IAEA)
      5.4.  International Humanitarian Law
+       5.4.1.  Background
+       5.4.2.  Domain Model and Stakeholders
+       5.4.3.  Requirements
      5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
      5.6.  Press
      5.7.  United Nations Economic and Social Council (ECOSOC)
@@ -128,8 +131,6 @@ Table of Contents
    across different use cases.  Not all use cases share all
    requirements.  We envision an architecture system comprising multiple
    standards, which can be flexibly profiled for different use cases.
-   We use the terms "(digital) emblem," "bearer," and "validation" in
-   accordance with the DIEM charter as of writing [CHARTER].
 
 2.  Conventions and Definitions
 
@@ -139,10 +140,53 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
+   (Digital) Emblem:  Emblems such as the Red Cross, Red Crescent, Red
+      Crystal, and Blue Shield can be symbols of protection governed by
+      International Humanitarian Law (IHL).  Emblems can also be
+      identified by other laws, agreements, or standards.  There is a
+      need to present emblems through digital communication channels.
+      Emblems presented in such ways are called digital emblems.
+      Digital emblems extend the range of identifying marks from the
+      physical (visual and tactile) to the digital realm.
+
+   Asset:  A digital resource, system, or service—such as a server, data
+      repository, or networked device—that can display a digital emblem.
+      An asset represents the digital equivalent of an object,
+      installation, or service that would be designated by a physical
+      emblem.
+
+   Emblem issuer:  The entity that operates or controls an asset that
+      bears a digital emblem.  Depending on the applicable emblem, the
+      issuer may have received authorization to issue emblems, and in
+      such cases, emblem issuers are also called _authorized entities_.
+      For example, emblem issuers could be a medical or humanitarian
+      organization, a cultural institution, or an operator of
+      installations containing dangerous forces, among others.
+
+   Authorizing entity:  An entity competent to grant authorization for
+      the use, by an authorized entity, of a digital emblem.  The
+      authorizing entity ensures that such authorization is issued and
+      recorded in accordance with applicable legal requirements,
+      enabling technical and operational verification.  In certain
+      specific cases, the authorizing entity is also the authorized
+      entity.
+
+   Validator:  An entity that queries, inspects, or otherwise interacts
+      with assets to determine whether they are marked with a valid
+      digital emblem.  Validators may include technical systems, network
+      operators, or other actors implementing protective or non-
+      interference measures consistent with the emblem’s purpose.
+
+   Validation:  "To validate an emblem" means to confirm the
+      authenticity or legitimacy of a particular symbol or design, often
+      by checking its details against a known standard or reference
+      point.  Validation may include ensuring that the emblem has not
+      been forged, stolen, or tampered with.
+
 3.  Requirements
 
    The DIEM architecture will allow validators to discover and validate
-   digital emblems that are associated with bearers.  This section
+   digital emblems that are associated with assets.  This section
    contains the requirements that this architecture will address.  They
    are based on use cases identified thus far (see Section Use Cases),
    but note that not all use cases share all requirements.  We
@@ -154,46 +198,45 @@ Table of Contents
 
 3.1.1.  Digital Emblem Format
 
-   Digital emblems MUST identify their bearer and their kind of digital
-   emblem.  Beyond that, digital emblems MAY include other data, for
-   example, an issuer or a validity window.  As of writing, the DIEM
-   charter requires that digital emblems MUST explicitly identify their
-   bearer by a Fully Qualified Domain Name (FQDN).
+   Digital emblems MUST identify the marked asset and their kind of
+   digital emblem.  Beyond that, digital emblems MAY include other data,
+   for example, an issuer or a validity window.  As of writing, the DIEM
+   charter requires that digital emblems MUST explicitly identify the
+   marked asset by a Fully Qualified Domain Name (FQDN).
 
 3.1.2.  Emblem Semantics
 
-   Individual use cases MUST specify the semantics of the emblem and the
-   bearer.  It must be clearly stated how discovery and validation of a
-   digital emblem should inform validator behavior.
+   Individual use cases MUST specify the semantics of the emblem.  It
+   must be clearly stated how discovery and validation of a digital
+   emblem should inform validator behavior.
 
 3.2.  Discovery Requirements
 
 3.2.1.  Discovery
 
    Digital emblems MUST specify how validators can check for the
-   presence of a digital emblem.  That is, given a potential bearer a
-   validator must be able to determine whether it has an associated
-   emblem.  For example, verifying whether a FQDN has an emblem
-   associated with it could be realized by fetching digital emblem-
-   associated records for said FQDN.
+   presence of a digital emblem.  That is, given an asset a validator
+   must be able to determine whether it has an associated emblem.  For
+   example, verifying whether a FQDN has an emblem associated with it
+   could be realized by fetching digital emblem-associated records for
+   said FQDN.
 
 3.2.2.  Removable
 
    Digital emblems MAY require to be removable in that checking for the
-   presence of an emblem associated with a bearer results in no emblem.
-   Note that checking for emblem presence is independent of its
-   validation.  That is, emblems do not count as removed when they
-   become invalid.
+   presence of an asset's emblems results in no emblem.  Note that
+   checking for emblem presence is independent of its validation.  That
+   is, emblems do not count as removed when they become invalid.
 
 3.2.3.  Undetectable Validation
 
-   Digital emblem discovery MAY require that bearers, issuers, and
+   Digital emblem discovery MAY require that assets, issuers, and
    authorizing parties be unable to detect when an emblem is being
    discovered or validated.  This requirement is motivated by emblems
-   that mark its bearer as protected and ask validators to not attack
-   the bearer.  If emblem discovery were detectable by the bearer,
-   issuer, or by an authorizing party, malicious parties could misuse
-   the digital emblem as an intrusion detection system.
+   that mark its asset as protected and ask validators to not attack the
+   asset.  If emblem discovery were detectable by the asset, issuer, or
+   by an authorizing party, malicious parties could misuse the digital
+   emblem as an intrusion detection system.
 
 3.3.  Validation Requirements
 
@@ -202,8 +245,7 @@ Table of Contents
    Digital emblems MAY require validation.  Validation MUST support
    verification of all the emblem's data and its context.  In
    particular, validation MUST ensure that the emblem was issued for the
-   respective bearer.  Some use cases MAY use unverified digital
-   emblems.
+   respective asset.  Some use cases MAY use unverified digital emblems.
 
 3.3.2.  Authorization
 
@@ -234,22 +276,22 @@ Table of Contents
    future standards, potentially including new types of atomic data
    elements requiring additional specification.
 
-4.2.  Bearer Discovery
+4.2.  Asset Identifier Discovery
 
-   It may be non-obvious for some use cases to identify the bearer that
-   is associated with an asset, and thus impossible to fetch emblems
+   It may be non-obvious for some use cases to learn the identifier
+   associated with an asset, and thus impossible to discover emblems
    associated with that asset.  To accommodate for such use cases, one
-   could specify means to discover bearers for different types of
+   could specify means to discover identifiers for different types of
    assets.
 
 4.3.  Implicit Discovery
 
    An alternative approach to the above problem would be to bind emblems
-   implicitly to their bearer.  Implicit binding would identify the
-   bearer by the emblem's location.  For example, if emblems were
-   distributed via NFC, the bearer could be the asset to which the NFC
-   chip was attached.  As of this writing, the current charter scope
-   requires that digital emblems explicitly identify their bearer, but
+   implicitly to the marked asset.  Implicit binding could identify the
+   marked asset by the emblem's location.  For example, if emblems were
+   distributed via NFC, the marked asset could be the asset to which the
+   NFC chip was attached.  As of this writing, the current charter scope
+   requires that digital emblems explicitly identify their asset, but
    such discovery mechanisms could be investigated in future WG work.
 
 4.4.  Confidentiality
@@ -311,6 +353,8 @@ Table of Contents
 
 5.4.  International Humanitarian Law
 
+5.4.1.  Background
+
    The Geneva Conventions and their Additional Protocols constitute the
    core of International Humanitarian Law (IHL).  Some assets enjoy
    certain specific protections under IHL, including that they must not
@@ -332,18 +376,32 @@ Table of Contents
    using the DIEM architecture could address this gap, and we call such
    emblems digital emblems for IHL.
 
+5.4.2.  Domain Model and Stakeholders
+
+   In context of emblems under International Humanitarian Law (IHL),
+   assets are exclusively protected, digital services (for example, a
+   medical unit, a cultural site, or an installation containing
+   dangerous forces).  Emblem issuers can mark assets that they control
+   to signal that they must be respected and protected.  Emblem must
+   only be issued by entities that have been authorized to bear a
+   digital emblem or other distinctive sign under international law.
+   Such authorizations must be issued by a state, other party to an
+   armed conflict, or other entity competent under international law.
+
+5.4.3.  Requirements
+
    Digital emblems for IHL have many of the requirements listed above,
    and they could directly use the DIEM architecture.  Particularly
    relevant are the requirements: - Removable: Bearing an emblem can
-   increase the risk for targeted attacks.  Bearers must be able to
-   individually assess that risk and remove emblems whenever they see
+   increase the risk for targeted attacks.  Emblem issuers must be able
+   to individually assess that risk and remove emblems whenever they see
    the risks to outweigh the benefits. - Undetectable Validation: Those
    wishing to authenticate assets must be able to discover and validate
    emblems in a way that does not call attention to the fact that they
    are screening potential targets.  If their targets could detect the
    emblem verification, they could use that information for their
    defense, which would ultimately deter validators from using the
-   digital emblems. - Validation: Bearers must not be able to fake
+   digital emblems. - Validation: Assets must not be able to fake
    protection. - Authorization: IHL requires that, prior to applying
    them, emblem issuers must seek authorizing from a competent
    authority, which is a state.  The authorization must be
@@ -352,7 +410,7 @@ Table of Contents
 
    Beyond the DIEM architecture as described in this document, digital
    emblems under IHL would benefit from other discovery mechanisms than
-   the DNS, as not all bearers may have domain names associated with
+   the DNS, as not all assets may have domain names associated with
    them.
 
 5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
