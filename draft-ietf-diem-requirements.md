@@ -234,7 +234,7 @@ Similar use case as OPCW.
 ## International Humanitarian Law
 
 The Geneva Conventions and their Additional Protocols constitute the core of International Humanitarian Law (IHL).
-Under IHL, some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
+Some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
 
 - The emblems of the Red Cross, Red Crescent, and Red Crystal
 - The Blue Shield emblem
