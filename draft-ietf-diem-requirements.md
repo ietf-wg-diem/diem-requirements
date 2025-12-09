@@ -270,6 +270,8 @@ Similar use case as OPCW.
 
 ## International Humanitarian Law
 
+### Background
+
 The Geneva Conventions and their Additional Protocols constitute the core of International Humanitarian Law (IHL).
 Some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
 
@@ -280,6 +282,17 @@ Some assets enjoy certain specific protections under IHL, including that they mu
 
 However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
 A digital emblem using the DIEM architecture could address this gap, and we call such emblems digital emblems for IHL.
+
+### Domain Model and Stakeholders
+
+In context of emblems under International Humanitarian Law (IHL), assets are exclusively protected, digital services (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+Emblem issuers can mark assets that they control to signal that they must be respected and protected.
+Emblem must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
+Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
+
+<!-- TODO: Write about validators -->
+
+### Requirements
 
 Digital emblems for IHL have many of the requirements listed above, and they could directly use the DIEM architecture.
 Particularly relevant are the requirements:
