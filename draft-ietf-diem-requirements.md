@@ -282,7 +282,10 @@ Emblem issuers can mark assets that they control to signal that they must be res
 Emblem must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
 
-<!-- TODO: Write about validators -->
+For digital emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
+In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
+Similarly, other malicious ICT actors, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
+Concretely, we can assume that they will typically first identify an asset that they plan to engage with and then check whether that asset bears an emblem.
 
 ### Requirements
 
