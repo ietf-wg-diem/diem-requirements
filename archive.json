@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-04T01:01:06.072417+00:00",
+  "timestamp": "2025-12-11T01:03:30.448220+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -695,29 +695,35 @@
     {
       "number": 5,
       "id": "PR_kwDOPTNEDc6xhaZJ",
-      "title": "Details on IHL Use Case",
+      "title": "Terminology and details on IHL use case",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/5",
       "state": "OPEN",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [
-        "placeholder"
-      ],
+      "labels": [],
       "body": "",
       "createdAt": "2025-11-05T00:16:23Z",
-      "updatedAt": "2025-11-07T20:04:46Z",
+      "updatedAt": "2025-12-09T21:03:23Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-details",
-      "headRefOid": "12c92db152cd324b0a00806065cadfdabd68f257",
+      "headRefOid": "8cb095753887bad98594c643b4735502e8ff915e",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This pull request now incorporates a bunch of changes. I found it impossible to micro-manage parallel PRs, so this PR includes a bunch of changes to keep things simple. I think it's easier to iterate the document this way!\r\n\r\n- It includes some terminology suggestions (edited by me, so re-review required) by Natasha Chabbra from the Australian Red Cross and Samit D'Cunha from the ICRC. Thus, addressing #6.\r\n- It includes commits from now closed #15 to simplify some terminology.\r\n- It partially addresses #14 and #11 for the IHL use case. There is now a stakeholder and domain model section, but critically, details on validators are missing. I will sync with Samit to get his input here.",
+          "createdAt": "2025-12-09T21:03:23Z",
+          "updatedAt": "2025-12-09T21:03:23Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOPTNEDc7MWwif",
@@ -762,6 +768,26 @@
               "body": "this now says \"under IHL\" in two places. if the goal is to move it forward, perhaps we remove the second copy?",
               "createdAt": "2025-11-07T20:01:57Z",
               "updatedAt": "2025-11-07T20:01:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7UJU5F",
+          "commit": {
+            "abbreviatedOid": "12c92db"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-09T19:01:19Z",
+          "updatedAt": "2025-12-09T19:01:19Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Thanks!",
+              "createdAt": "2025-12-09T19:01:19Z",
+              "updatedAt": "2025-12-09T19:01:19Z"
             }
           ]
         }
@@ -934,21 +960,21 @@
       "id": "PR_kwDOPTNEDc6yTQdY",
       "title": "Simplify terminology",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/15",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Some simple changes, motivated by comments from @rohanmahy.\r\n\r\n- Remove references to charter. I think this just complicates the document and serves no purpose.\r\n- Remove references to requirements from charter.\r\n\r\nJust makes everything tighter!",
       "createdAt": "2025-11-08T12:27:09Z",
-      "updatedAt": "2025-11-08T12:27:10Z",
+      "updatedAt": "2025-12-09T20:56:45Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "terminology",
       "headRefOid": "b3db72bd007ba8ec5d93d3d796fc520d34285932",
-      "closedAt": null,
+      "closedAt": "2025-12-09T20:56:45Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -960,21 +986,21 @@
       "id": "PR_kwDOPTNEDc6yTUEP",
       "title": "Asset/bearer",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/16",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "I think we're best off defining asset/bearer in terms of who presents the emblem (bearer) and who the emblem applies to (asset).\r\n\r\nFor example, initially, bearers will always be domain names. However, the asset that is identified by them may not be domain names.",
       "createdAt": "2025-11-08T12:40:14Z",
-      "updatedAt": "2025-11-08T12:40:27Z",
+      "updatedAt": "2025-12-09T19:02:02Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "asset-bearer",
       "headRefOid": "18e6c0f44ea1b830d0e82fc030d6cb7c12e36cb9",
-      "closedAt": null,
+      "closedAt": "2025-12-09T19:02:02Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
