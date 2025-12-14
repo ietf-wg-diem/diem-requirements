@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-11T01:03:30.448220+00:00",
+  "timestamp": "2025-12-14T01:07:45.946031+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -704,13 +704,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-11-05T00:16:23Z",
-      "updatedAt": "2025-12-09T21:03:23Z",
+      "updatedAt": "2025-12-11T09:01:29Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-details",
-      "headRefOid": "8cb095753887bad98594c643b4735502e8ff915e",
+      "headRefOid": "a746c84586a84699e24d370552f413ada80ead73",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
