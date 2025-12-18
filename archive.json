@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-14T01:07:45.946031+00:00",
+  "timestamp": "2025-12-18T01:00:12.523468+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -341,6 +341,22 @@
       "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
       "createdAt": "2025-12-02T21:32:40Z",
       "updatedAt": "2025-12-02T21:32:40Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOPTNEDc7e5tKn",
+      "title": "ISO shipping containers and related systems",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/18",
+      "state": "OPEN",
+      "author": "ohmantics",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Early pre-WG use cases discussions included ISO shipping containers. They're covered by ISO 6346 with owner codes registered with [Bureau International des Containers](https://bic-code.org). The International Convention for Safe Containers established the [CSC Combined Data Plate](https://www.bic-code.org/csc-combined-data-plate/) which labels them for safety. Those come from the UN and International Maritime Organization.\n\nhttps://www.bic-code.org/marking-of-containers/ goes into more detail about the ISO codes, CSC Combined Data Plate and includes an existing geofencing database used by IoT-enabled containers including a facility coding system established in ISO 9897, which itself is a coding system to describe the condition of a container including damage.",
+      "createdAt": "2025-12-17T16:51:13Z",
+      "updatedAt": "2025-12-17T16:51:13Z",
       "closedAt": null,
       "comments": []
     }
