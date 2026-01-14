@@ -172,13 +172,13 @@ Individual use cases MUST specify the semantics of the emblem. It must be clearl
 
 Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given an asset a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.
 
-### Removable
+### Removable {#removable}
 
 Digital emblems MAY require to be removable in that checking for the presence of an asset's emblems results in no emblem.
 Note that checking for emblem presence is independent of its validation.
 That is, emblems do not count as removed when they become invalid.
 
-### Undetectable Validation
+### Undetectable Validation {#undet-validation}
 
 A digital emblem MAY require that its discovery and validation is undetectable.
 This requirement is motivated by emblems that mark its asset as protected and ask validators to not disrupt the marked asset.
@@ -190,13 +190,13 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 ## Validation Requirements
 
-### Validation
+### Validation {#validation}
 
 Digital emblems MAY require validation. Validation MUST support verification of all the emblem's data and its context.
 In particular, validation MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
-### Authorization
+### Authorization {#authorization}
 
 Digital emblems MAY require authorization by third-parties.
 Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
@@ -279,11 +279,11 @@ Some assets enjoy certain specific protections under IHL, including that they mu
 However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
 A digital emblem using the DIEM architecture could address this gap, and we call such emblems digital emblems for IHL.
 
-### Domain Model and Stakeholders
+### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, assets are exclusively protected, digital services (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
-Emblem issuers can mark assets that they control to signal that they must be respected and protected.
-Emblem must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
+In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
+Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
 
 For digital emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
@@ -293,15 +293,16 @@ Concretely, we can assume that they will typically first identify an asset that 
 
 ### Requirements
 
-Digital emblems for IHL have many of the requirements listed above, and they could directly use the DIEM architecture.
-Particularly relevant are the requirements:
-- Removable: Bearing an emblem can increase the risk for targeted attacks.
-    Emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits.
-- Undetectable Validation: Those wishing to authenticate assets must be able to discover and validate emblems in a way that does not call attention to the fact that they are screening potential targets.
-    If their targets could detect the emblem verification, they could use that information for their defense, which would ultimately deter validators from using the digital emblems.
-- Validation: Assets must not be able to fake protection.
-- Authorization: IHL requires that, prior to applying them, emblem issuers must seek authorizing from a competent authority, which is a state.
-    The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
+The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
+Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
+As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
+Therefore, digital emblems under IHL require validation for authenticity ({{validation}}) that is undetectable ({{undet-validation}}).
+
+At the same time, digital emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
+First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see {{authorization}} and {{ihl-stakeholders}}).
+The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
+Second, bearing an emblem can increase the risk for targeted attacks.
+We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable ({{removable}}).
 
 Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
 
