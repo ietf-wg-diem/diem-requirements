@@ -1444,7 +1444,7 @@ Note that checking for emblem presence is independent of its validation.
 That is, emblems do not count as removed when they become invalid.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="undetectable-validation">
+<div id="undet-validation">
 <section id="section-3.2.3">
           <h4 id="name-undetectable-validation">
 <a href="#section-3.2.3" class="section-number selfRef">3.2.3. </a><a href="#name-undetectable-validation" class="section-name selfRef">Undetectable Validation</a>
@@ -1637,14 +1637,14 @@ Some assets enjoy certain specific protections under IHL, including that they mu
 A digital emblem using the DIEM architecture could address this gap, and we call such emblems digital emblems for IHL.<a href="#section-5.4.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="domain-model-and-stakeholders">
+<div id="ihl-stakeholders">
 <section id="section-5.4.2">
           <h4 id="name-domain-model-and-stakeholde">
 <a href="#section-5.4.2" class="section-number selfRef">5.4.2. </a><a href="#name-domain-model-and-stakeholde" class="section-name selfRef">Domain Model and Stakeholders</a>
           </h4>
-<p id="section-5.4.2-1">In context of emblems under IHL, assets are exclusively protected, digital services (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
-Emblem issuers can mark assets that they control to signal that they must be respected and protected.
-Emblem must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
+<p id="section-5.4.2-1">In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
+Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.<a href="#section-5.4.2-1" class="pilcrow">¶</a></p>
 <p id="section-5.4.2-2">For digital emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
 In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
@@ -1657,16 +1657,16 @@ Concretely, we can assume that they will typically first identify an asset that 
           <h4 id="name-requirements-2">
 <a href="#section-5.4.3" class="section-number selfRef">5.4.3. </a><a href="#name-requirements-2" class="section-name selfRef">Requirements</a>
           </h4>
-<p id="section-5.4.3-1">Digital emblems for IHL have many of the requirements listed above, and they could directly use the DIEM architecture.
-Particularly relevant are the requirements:
-- Removable: Bearing an emblem can increase the risk for targeted attacks.
-    Emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits.
-- Undetectable Validation: Those wishing to authenticate assets must be able to discover and validate emblems in a way that does not call attention to the fact that they are screening potential targets.
-    If their targets could detect the emblem verification, they could use that information for their defense, which would ultimately deter validators from using the digital emblems.
-- Validation: Assets must not be able to fake protection.
-- Authorization: IHL requires that, prior to applying them, emblem issuers must seek authorizing from a competent authority, which is a state.
-    The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.<a href="#section-5.4.3-1" class="pilcrow">¶</a></p>
-<p id="section-5.4.3-2">Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.<a href="#section-5.4.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.4.3-1">The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
+Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
+As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
+Therefore, digital emblems under IHL require validation for authenticity (<a href="#validation" class="auto internal xref">Section 3.3.1</a>) that is undetectable (<a href="#undet-validation" class="auto internal xref">Section 3.2.3</a>).<a href="#section-5.4.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.4.3-2">At the same time, digital emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
+First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see <a href="#authorization" class="auto internal xref">Section 3.3.2</a> and <a href="#ihl-stakeholders" class="auto internal xref">Section 5.4.2</a>).
+The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
+Second, bearing an emblem can increase the risk for targeted attacks.
+We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable (<a href="#removable" class="auto internal xref">Section 3.2.2</a>).<a href="#section-5.4.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.4.3-3">Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.<a href="#section-5.4.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
