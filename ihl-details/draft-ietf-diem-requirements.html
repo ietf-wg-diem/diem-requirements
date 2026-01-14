@@ -1336,7 +1336,9 @@ The DIEM WG will define a set of standards for an architecture that enables disc
 This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
-We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.<a href="#section-1-1" class="pilcrow">¶</a></p>
+We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
+We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of this writing <span>[<a href="#CHARTER" class="cite xref">CHARTER</a>]</span>.
+These definitions have been reproduced in section Conventions and Definitions.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1348,47 +1350,48 @@ We envision an architecture system comprising multiple standards, which can be f
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
 described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-2-2">
-        <dt id="section-2-2.1">(Digital) Emblem:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.2">
-          <p id="section-2-2.2.1">Emblems such as the Red Cross, Red Crescent, Red Crystal, and Blue Shield can be symbols of protection governed by International Humanitarian Law (IHL).
+<p id="section-2-2">The definitions for terms "(digital) emblem," "bearer," and "validation" are reproduced from the charter <span>[<a href="#CHARTER" class="cite xref">CHARTER</a>]</span> as of this writing.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-2-3">
+        <dt id="section-2-3.1">(Digital) Emblem:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.2">
+          <p id="section-2-3.2.1">Emblems such as the Red Cross, Red Crescent, Red Crystal, and Blue Shield can be symbols of protection governed by International Humanitarian Law (IHL).
 Emblems can also be identified by other laws, agreements, or standards.
 There is a need to present emblems through digital communication channels.
 Emblems presented in such ways are called digital emblems.
-Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
+Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.3">Asset:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.4">
-          <p id="section-2-2.4.1">A digital resource, system, or service—such as a server, data repository, or networked device—that can display a digital emblem.
-An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+<dt id="section-2-3.3">Asset:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.4">
+          <p id="section-2-3.4.1">A digital resource, system, or service—such as a server, data repository, or networked device—that can display a digital emblem.
+An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.5">Emblem issuer:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.6">
-          <p id="section-2-2.6.1">The entity that operates or controls an asset that bears a digital emblem.
+<dt id="section-2-3.5">Emblem issuer:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.6">
+          <p id="section-2-3.6.1">The entity that operates or controls an asset that bears a digital emblem.
 Depending on the applicable emblem, the issuer may have received authorization to issue emblems, and in such cases, emblem issuers are also called <em>authorized entities</em>.
-For example, emblem issuers could be a medical or humanitarian organization, a cultural institution, or an operator of installations containing dangerous forces, among others.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
+For example, emblem issuers could be a medical or humanitarian organization, a cultural institution, or an operator of installations containing dangerous forces, among others.<a href="#section-2-3.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.7">Authorizing entity:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.8">
-          <p id="section-2-2.8.1">An entity competent to grant authorization for the use, by an authorized entity, of a digital emblem.
+<dt id="section-2-3.7">Authorizing entity:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.8">
+          <p id="section-2-3.8.1">An entity competent to grant authorization for the use, by an authorized entity, of a digital emblem.
 The authorizing entity ensures that such authorization is issued and recorded in accordance with applicable legal requirements, enabling technical and operational verification.
-In certain specific cases, the authorizing entity is also the authorized entity.<a href="#section-2-2.8.1" class="pilcrow">¶</a></p>
+In certain specific cases, the authorizing entity is also the authorized entity.<a href="#section-2-3.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.9">Validator:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.10">
-          <p id="section-2-2.10.1">An entity that queries, inspects, or otherwise interacts with assets to determine whether they are marked with a valid digital emblem.
-Validators may include technical systems, network operators, or other actors implementing protective or non-interference measures consistent with the emblem’s purpose.<a href="#section-2-2.10.1" class="pilcrow">¶</a></p>
+<dt id="section-2-3.9">Validator:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.10">
+          <p id="section-2-3.10.1">An entity that queries, inspects, or otherwise interacts with assets to determine whether they are marked with a valid digital emblem.
+Validators may include technical systems, network operators, or other actors implementing protective or non-interference measures consistent with the emblem’s purpose.<a href="#section-2-3.10.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.11">Validation:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.12">
-          <p id="section-2-2.12.1">"To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
+<dt id="section-2-3.11">Validation:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-3.12">
+          <p id="section-2-3.12.1">"To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
 often by checking its details against a known standard or reference point.
-Validation may include ensuring that the emblem has not been forged, stolen, or tampered with.<a href="#section-2-2.12.1" class="pilcrow">¶</a></p>
+Validation may include ensuring that the emblem has not been forged, stolen, or tampered with.<a href="#section-2-3.12.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
