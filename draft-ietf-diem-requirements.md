@@ -143,7 +143,7 @@ Individual use cases MUST specify the semantics of the emblem and the bearer. It
 
 Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given a potential bearer a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.
 
-### Removable
+### Removable {#removable}
 
 Digital emblems MAY require to be removable in that checking for the presence of an emblem associated with a bearer results in no emblem.
 Note that checking for emblem presence is independent of its validation.
@@ -289,8 +289,11 @@ Potential need for the emblem to reference a limited or partially redacted fligh
 
 # Security Considerations
 
-TODO Security
-
+Because this is a requirements document, it does not directly have security considerations.
+However, multiple of the defined requirements include security properties.
+The architecture and standards developed need to detail the security properties of validation and authorization especially.
+Use cases have threat models and discussion of mitigating specific threats is needed.
+For example, in a use case where removability ({{removable}}) is needed, there are security considerations such as the potential for replay of removed emblems.
 
 # IANA Considerations
 
