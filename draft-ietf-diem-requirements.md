@@ -106,8 +106,8 @@ informative:
 
 --- abstract
 
-TODO Abstract
-
+Digital emblems are a means for digital assets to signal that they should be treated in a specific way by reference to some normative framework.
+This document lists the requirements and use cases that an architecture for digital emblems must accommodate.
 
 --- middle
 
