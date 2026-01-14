@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 14 June 2026                                            JHU/APL
+Expires: 18 July 2026                                            JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 14 June 2026                                            JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                        11 December 2025
+                                                         14 January 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -56,11 +56,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 June 2026.
+   This Internet-Draft will expire on 18 July 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -230,13 +230,20 @@ Table of Contents
 
 3.2.3.  Undetectable Validation
 
-   Digital emblem discovery MAY require that assets, issuers, and
-   authorizing parties be unable to detect when an emblem is being
-   discovered or validated.  This requirement is motivated by emblems
-   that mark its asset as protected and ask validators to not attack the
-   asset.  If emblem discovery were detectable by the asset, issuer, or
-   by an authorizing party, malicious parties could misuse the digital
-   emblem as an intrusion detection system.
+   A digital emblem MAY require that its discovery and validation is
+   undetectable.  This requirement is motivated by emblems that mark its
+   asset as protected and ask validators to not disrupt the marked
+   asset.  If emblem discovery were detectable, malicious parties could
+   misuse the digital emblem as an intrusion detection system.
+
+   For specific use cases and designs, it may be acceptable that certain
+   parties can detect emblem discovery and validation, for example, when
+   the validator can hide in a sufficiently large anonymity set, or it
+   is acceptable that the given party could detect the discovery or
+   validation.  Concrete designs MUST specify a threat model for
+   undetectable validation.  This threat model must detail which parties
+   can detect emblem discovery and validation, under which conditions,
+   and to what extent.
 
 3.3.  Validation Requirements
 
