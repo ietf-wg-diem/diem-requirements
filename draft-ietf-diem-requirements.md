@@ -180,9 +180,13 @@ That is, emblems do not count as removed when they become invalid.
 
 ### Undetectable Validation
 
-Digital emblem discovery MAY require that assets, issuers, and authorizing parties be unable to detect when an emblem is being discovered or validated.
-This requirement is motivated by emblems that mark its asset as protected and ask validators to not attack the asset.
-If emblem discovery were detectable by the asset, issuer, or by an authorizing party, malicious parties could misuse the digital emblem as an intrusion detection system.
+A digital emblem MAY require that its discovery and validation is undetectable.
+This requirement is motivated by emblems that mark its asset as protected and ask validators to not disrupt the marked asset.
+If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.
+
+For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
+Concrete designs MUST specify a threat model for undetectable validation.
+This threat model must detail which parties can detect emblem discovery and validation, under which conditions, and to what extent.
 
 ## Validation Requirements
 
