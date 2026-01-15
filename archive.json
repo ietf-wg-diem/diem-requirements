@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-18T01:00:12.523468+00:00",
+  "timestamp": "2026-01-15T01:03:17.965546+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -96,10 +96,12 @@
       "assignees": [
         "amankin"
       ],
-      "labels": [],
+      "labels": [
+        "has-PR"
+      ],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
       "createdAt": "2025-10-01T16:36:15Z",
-      "updatedAt": "2025-11-07T20:11:06Z",
+      "updatedAt": "2026-01-14T13:32:54Z",
       "closedAt": null,
       "comments": [
         {
@@ -122,6 +124,13 @@
           "body": "Several of the use cases would probably want to plan for forensics capabilities, such as a history of creation and modification of an emblem, associating it with internal references for identity of the creator/modifier, etc. This is not outward security, but merits some thinking about how external or encrypted-in-place metadata can be associated with an emblem.",
           "createdAt": "2025-11-07T19:25:39Z",
           "updatedAt": "2025-11-07T19:25:39Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Partially addressed in #7 ",
+          "createdAt": "2026-01-14T13:32:54Z",
+          "updatedAt": "2026-01-14T13:32:54Z"
         }
       ]
     },
@@ -137,11 +146,11 @@
         "amankin"
       ],
       "labels": [
-        "design-team"
+        "has-PR"
       ],
       "body": "This is an issue raised to me by Bill Woodcock, as he's tied up right now, but the paraphrase is mine:  could we clarify if there is a difference in meaning between a bearer of a digital emblem versus an asset that bears a digital emblem?  Since we are thinking of our definitions very much as working definitions, can we think of these as the same and in some cases use \"asset?\"",
       "createdAt": "2025-11-07T18:39:06Z",
-      "updatedAt": "2025-11-07T20:42:04Z",
+      "updatedAt": "2026-01-14T08:52:22Z",
       "closedAt": null,
       "comments": [
         {
@@ -249,10 +258,12 @@
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-PR"
+      ],
       "body": "This issue is practically me crossposting my comments on the mailing list: https://mailarchive.ietf.org/arch/msg/diem/nAX4K9D2HM5HNr92ozcQCs_J70o/\n\nThe use cases section is not detailed enough for actionable work in my opinion. We need to:\n\n- Understand how each use case relates to the requirements on the architecture\n- Decide whether use cases have received sufficient stakeholder evaluation and invite for that\n\nThe current version of the document is not specific enough to address both these goals.",
       "createdAt": "2025-11-07T19:43:48Z",
-      "updatedAt": "2025-11-07T20:02:45Z",
+      "updatedAt": "2026-01-14T13:32:16Z",
       "closedAt": null,
       "comments": [
         {
@@ -313,10 +324,12 @@
       "author": "dkg",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "has-PR"
+      ],
       "body": "When describing a use case for a digital protocol, i'm used to seeing use cases presented from every party involved in a transaction.\n\nFor example, in digital id discussions, we need to talk about how a verifier operates, as well as how an issuer operates, and how a holder operates.\n\nThe use cases i'm seeing in the current document are all split out by talking about different bearer scenarios.\n\nBut i don't see any discussion of an attacker's perspective, or an authorizing party's perspective.  Should we detail those perspectives within each use case?  or should we detail them as their own distinct use case?",
       "createdAt": "2025-11-07T21:28:01Z",
-      "updatedAt": "2025-11-08T17:13:48Z",
+      "updatedAt": "2026-01-14T08:52:56Z",
       "closedAt": null,
       "comments": [
         {
@@ -643,7 +656,7 @@
       "id": "PR_kwDOPTNEDc6xfTNn",
       "title": "Simpler phrasing of undetectable validation",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/4",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -652,14 +665,14 @@
       ],
       "body": "The old phrasing could have suggested that only *actual* bearers (and other parties) must not be able to detect validation. This is not what was intended. I now phrase undetectable validation w.r.t. to the discovery requirement. This should make it clear that also non-bearers must not be able to detect when someone is checking whether they are a bearer.",
       "createdAt": "2025-11-04T19:16:12Z",
-      "updatedAt": "2025-11-08T12:37:07Z",
+      "updatedAt": "2026-01-14T08:50:16Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "undetectable-validation",
       "headRefOid": "b26d64a742f2c6552bb1ab34bbff4b258339a2f1",
-      "closedAt": null,
+      "closedAt": "2026-01-14T08:50:16Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -720,13 +733,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-11-05T00:16:23Z",
-      "updatedAt": "2025-12-11T09:01:29Z",
+      "updatedAt": "2026-01-14T17:07:12Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
-      "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
+      "baseRefOid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-details",
-      "headRefOid": "a746c84586a84699e24d370552f413ada80ead73",
+      "headRefOid": "3b6a7b76fe01e5fa7559cbc33709c96013e069be",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -738,6 +751,20 @@
           "body": "This pull request now incorporates a bunch of changes. I found it impossible to micro-manage parallel PRs, so this PR includes a bunch of changes to keep things simple. I think it's easier to iterate the document this way!\r\n\r\n- It includes some terminology suggestions (edited by me, so re-review required) by Natasha Chabbra from the Australian Red Cross and Samit D'Cunha from the ICRC. Thus, addressing #6.\r\n- It includes commits from now closed #15 to simplify some terminology.\r\n- It partially addresses #14 and #11 for the IHL use case. There is now a stakeholder and domain model section, but critically, details on validators are missing. I will sync with Samit to get his input here.",
           "createdAt": "2025-12-09T21:03:23Z",
           "updatedAt": "2025-12-09T21:03:23Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Merged PR #4 into this one for clarity.",
+          "createdAt": "2026-01-14T08:51:03Z",
+          "updatedAt": "2026-01-14T08:51:03Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@ohmantics I added more background for the requirements of the IHL use case (as you suggested in our last call)! :)",
+          "createdAt": "2026-01-14T13:22:51Z",
+          "updatedAt": "2026-01-14T13:22:51Z"
         }
       ],
       "reviews": [
@@ -821,18 +848,26 @@
       "labels": [],
       "body": "\"Security TODO\" is replaced with an initial cut of a Security Considerations Section, because desired security properties (and thus threats) are implied in many of the Requirements.",
       "createdAt": "2025-11-07T19:03:57Z",
-      "updatedAt": "2025-11-07T20:07:25Z",
+      "updatedAt": "2026-01-14T12:37:53Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "add-security-considerations-section-instead-of-placeholder",
-      "headRefOid": "b4d1c57e12b54d786e34e36d7c1dc7c4ff96d12c",
+      "headRefOid": "cdb5f7d5a0fa9e847fb9608e7a55d5ee69c30e43",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@amankin I took the liberty to fix this PR slightly. You had edited `versioned/...-00`, i.e., the already submitted version. I moved your text into the source file. While I was added, I replaced the section reference with one that will get compiled and hence does not require keeping track of section numbering.",
+          "createdAt": "2026-01-14T12:37:53Z",
+          "updatedAt": "2026-01-14T12:37:53Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOPTNEDc7My21A",
@@ -876,13 +911,13 @@
       ],
       "body": "Initiate the Acknowledgements section, to be split later into Acknowledgments and Contributors",
       "createdAt": "2025-11-07T19:19:06Z",
-      "updatedAt": "2025-11-12T18:39:52Z",
+      "updatedAt": "2026-01-14T12:30:18Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "amankin-patch-1",
-      "headRefOid": "d6fe57e7f86b82839439dcc6febd6280ec1b17da",
+      "headRefOid": "61d4cbe4eff634b7c9431e87c7b0128563c0ad71",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -966,6 +1001,26 @@
               "body": "I'm checking the consent of the acknowledged, and also wish to know if there are missing names.",
               "createdAt": "2025-11-12T18:39:52Z",
               "updatedAt": "2025-11-12T18:39:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7aLtya",
+          "commit": {
+            "abbreviatedOid": "d6fe57e"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-14T12:29:54Z",
+          "updatedAt": "2026-01-14T12:29:54Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n   This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributors included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of contributors to the gathering of use case information includes Samit D'Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Guti\u00e9rrez, and Guilherme Canela.  TODO - get this complete.\r\n```",
+              "createdAt": "2026-01-14T12:29:54Z",
+              "updatedAt": "2026-01-14T12:29:54Z"
             }
           ]
         }
