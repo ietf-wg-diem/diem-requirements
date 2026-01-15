@@ -152,7 +152,7 @@ Authorizing entity:
 
 Validator:
 : An entity that queries, inspects, or otherwise interacts with assets to determine whether they are marked with a valid digital emblem.
-  Validators may include technical systems, network operators, or other actors implementing protective or non-interference measures consistent with the emblem’s purpose.
+  Validators may include technical systems, network operators, or other actors implementing protective or non-interference measures consistent with the emblem's purpose.
 
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
