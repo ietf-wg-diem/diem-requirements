@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-15T01:03:17.965546+00:00",
+  "timestamp": "2026-01-18T01:10:27.791415+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -311,9 +311,17 @@
       ],
       "body": "Suggested by @amankin \n\n@felixlinker said they intended to address this in Section 4.5",
       "createdAt": "2025-11-07T20:55:41Z",
-      "updatedAt": "2025-11-07T20:56:27Z",
+      "updatedAt": "2026-01-15T16:43:09Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@amankin Regarding this issue, we intend to discuss this as \"Proof of Presence\" in the \"Extensions\" section. Is there anything you're missing from that section?",
+          "createdAt": "2026-01-15T16:43:09Z",
+          "updatedAt": "2026-01-15T16:43:09Z"
+        }
+      ]
     },
     {
       "number": 14,
@@ -726,24 +734,26 @@
       "id": "PR_kwDOPTNEDc6xhaZJ",
       "title": "Terminology and details on IHL use case",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/5",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-11-05T00:16:23Z",
-      "updatedAt": "2026-01-14T17:07:12Z",
+      "updatedAt": "2026-01-15T16:08:40Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "9b8c969cdd4e7e1021ac3434e57cbe3e71d8f1a6",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-details",
       "headRefOid": "3b6a7b76fe01e5fa7559cbc33709c96013e069be",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-01-15T16:08:39Z",
+      "mergedAt": "2026-01-15T16:08:39Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "1c66de9add11cc690a54749cc62a080cb7cb0d84"
+      },
       "comments": [
         {
           "author": "felixlinker",
@@ -774,7 +784,7 @@
             "abbreviatedOid": "12c92db"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "APPROVED",
           "body": "",
           "createdAt": "2025-11-06T14:40:29Z",
@@ -841,24 +851,26 @@
       "id": "PR_kwDOPTNEDc6yNNcX",
       "title": "Initial cut for security considerations",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/7",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "amankin",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "\"Security TODO\" is replaced with an initial cut of a Security Considerations Section, because desired security properties (and thus threats) are implied in many of the Requirements.",
       "createdAt": "2025-11-07T19:03:57Z",
-      "updatedAt": "2026-01-14T12:37:53Z",
+      "updatedAt": "2026-01-15T16:09:06Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "add-security-considerations-section-instead-of-placeholder",
       "headRefOid": "cdb5f7d5a0fa9e847fb9608e7a55d5ee69c30e43",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-01-15T16:09:06Z",
+      "mergedAt": "2026-01-15T16:09:06Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "ce459b09396ebfd32420dea78042b4e3a7c46c40"
+      },
       "comments": [
         {
           "author": "felixlinker",
@@ -888,7 +900,7 @@
             "abbreviatedOid": "b4d1c57"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "APPROVED",
           "body": "",
           "createdAt": "2025-11-07T20:07:25Z",
