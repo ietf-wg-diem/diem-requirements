@@ -45,7 +45,7 @@ author:
     organization: Packet Clearing House
     email: allison@pch.net
 
-contributors:
+contributor:
   -
     fullname: Bill Woodcock
     organization: Packet Clearing House
