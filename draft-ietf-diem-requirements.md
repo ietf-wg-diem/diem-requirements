@@ -36,11 +36,6 @@ author:
     email: linkerfelix@gmail.com
 
   -
-    fullname: Jim Reid
-    organization: RTFM llp
-    email: jim@rfc1035.com
-
-  -
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
@@ -49,6 +44,17 @@ author:
     fullname: Allison Mankin
     organization: Packet Clearing House
     email: allison@pch.net
+
+contributors:
+  -
+    fullname: Bill Woodcock
+    organization: Packet Clearing House
+    email: woody@pch.net
+
+  -
+    fullname: Jim Reid
+    organization: RTFM llp
+    email: jim@rfc1035.com
 
 normative:
   CHARTER:
