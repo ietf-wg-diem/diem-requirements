@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-18T01:10:27.791415+00:00",
+  "timestamp": "2026-01-25T01:12:36.127694+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -82,6 +82,16 @@
       "name": "needs-permission",
       "description": "",
       "color": "7A445D"
+    },
+    {
+      "name": "needs-text",
+      "description": "",
+      "color": "b616f4"
+    },
+    {
+      "name": "in-progress",
+      "description": null,
+      "color": "aaaaaa"
     }
   ],
   "issues": [
@@ -97,11 +107,12 @@
         "amankin"
       ],
       "labels": [
-        "has-PR"
+        "has-PR",
+        "in-progress"
       ],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
       "createdAt": "2025-10-01T16:36:15Z",
-      "updatedAt": "2026-01-14T13:32:54Z",
+      "updatedAt": "2026-01-22T16:57:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -139,7 +150,7 @@
       "id": "I_kwDOPTNEDc7Wq2TL",
       "title": "Bearer and asset question",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "amankin",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -150,8 +161,8 @@
       ],
       "body": "This is an issue raised to me by Bill Woodcock, as he's tied up right now, but the paraphrase is mine:  could we clarify if there is a difference in meaning between a bearer of a digital emblem versus an asset that bears a digital emblem?  Since we are thinking of our definitions very much as working definitions, can we think of these as the same and in some cases use \"asset?\"",
       "createdAt": "2025-11-07T18:39:06Z",
-      "updatedAt": "2026-01-14T08:52:22Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-22T16:54:31Z",
+      "closedAt": "2026-01-22T16:54:31Z",
       "comments": [
         {
           "author": "felixlinker",
@@ -187,6 +198,13 @@
           "body": "Samit and Allison to propose text",
           "createdAt": "2025-11-07T20:37:33Z",
           "updatedAt": "2025-11-07T20:37:33Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Believed to be incorporated in -01",
+          "createdAt": "2026-01-22T16:54:31Z",
+          "updatedAt": "2026-01-22T16:54:31Z"
         }
       ]
     },
@@ -263,7 +281,7 @@
       ],
       "body": "This issue is practically me crossposting my comments on the mailing list: https://mailarchive.ietf.org/arch/msg/diem/nAX4K9D2HM5HNr92ozcQCs_J70o/\n\nThe use cases section is not detailed enough for actionable work in my opinion. We need to:\n\n- Understand how each use case relates to the requirements on the architecture\n- Decide whether use cases have received sufficient stakeholder evaluation and invite for that\n\nThe current version of the document is not specific enough to address both these goals.",
       "createdAt": "2025-11-07T19:43:48Z",
-      "updatedAt": "2026-01-14T13:32:16Z",
+      "updatedAt": "2026-01-22T16:00:01Z",
       "closedAt": null,
       "comments": [
         {
@@ -272,6 +290,20 @@
           "body": "Example of the level of detail that @felixlinker proposes is in PR #5 ",
           "createdAt": "2025-11-07T20:02:45Z",
           "updatedAt": "2025-11-07T20:02:45Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@felixlinker since PR #5 was merged is this issue still relevant? If so, what is remaining to do?",
+          "createdAt": "2026-01-22T15:57:42Z",
+          "updatedAt": "2026-01-22T15:57:42Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy Yes, this issue is still relevant. Other use cases still miss the level of detail that is provided for the IHL use case. Also, we're still missing an understanding of which use case received stakeholder evaluation. But I did not add this for the IHL use case either. I guess this is best discusse on list.",
+          "createdAt": "2026-01-22T16:00:01Z",
+          "updatedAt": "2026-01-22T16:00:01Z"
         }
       ]
     },
@@ -290,9 +322,24 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-11-07T20:39:03Z",
-      "updatedAt": "2025-11-07T20:42:39Z",
+      "updatedAt": "2026-01-22T17:51:30Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mcr",
+          "authorAssociation": "NONE",
+          "body": "No. Whomever is holding the pen needs to publish new documents, do needs to be in the author list.\nFigure out if/what the authors need to be at the end.   The IETF actively discourages authorship to indicate endorsement.\nBut, other entities have different rules, and if we need someone listed as an author, then we should facilitate this.\n",
+          "createdAt": "2026-01-22T17:12:32Z",
+          "updatedAt": "2026-01-22T17:12:32Z"
+        },
+        {
+          "author": "ohmantics",
+          "authorAssociation": "COLLABORATOR",
+          "body": "#19 resolves this by adding a contributors section and moving Jim to it with his permission, leaving us at 5 authors.",
+          "createdAt": "2026-01-22T17:51:30Z",
+          "updatedAt": "2026-01-22T17:51:30Z"
+        }
+      ]
     },
     {
       "number": 13,
@@ -304,14 +351,14 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
         "amankin",
-        "felixlinker"
+        "rahelFain"
       ],
       "labels": [
         "needs-author-discussion"
       ],
       "body": "Suggested by @amankin \n\n@felixlinker said they intended to address this in Section 4.5",
       "createdAt": "2025-11-07T20:55:41Z",
-      "updatedAt": "2026-01-15T16:43:09Z",
+      "updatedAt": "2026-01-22T16:51:15Z",
       "closedAt": null,
       "comments": [
         {
@@ -331,13 +378,15 @@
       "state": "OPEN",
       "author": "dkg",
       "authorAssociation": "NONE",
-      "assignees": [],
+      "assignees": [
+        "amankin"
+      ],
       "labels": [
         "has-PR"
       ],
       "body": "When describing a use case for a digital protocol, i'm used to seeing use cases presented from every party involved in a transaction.\n\nFor example, in digital id discussions, we need to talk about how a verifier operates, as well as how an issuer operates, and how a holder operates.\n\nThe use cases i'm seeing in the current document are all split out by talking about different bearer scenarios.\n\nBut i don't see any discussion of an attacker's perspective, or an authorizing party's perspective.  Should we detail those perspectives within each use case?  or should we detail them as their own distinct use case?",
       "createdAt": "2025-11-07T21:28:01Z",
-      "updatedAt": "2026-01-14T08:52:56Z",
+      "updatedAt": "2026-01-22T17:01:34Z",
       "closedAt": null,
       "comments": [
         {
@@ -357,13 +406,25 @@
       "state": "OPEN",
       "author": "ohmantics",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
-      "labels": [],
+      "assignees": [
+        "ohmantics"
+      ],
+      "labels": [
+        "needs-text"
+      ],
       "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
       "createdAt": "2025-12-02T21:32:40Z",
-      "updatedAt": "2025-12-02T21:32:40Z",
+      "updatedAt": "2026-01-22T17:10:12Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mcr",
+          "authorAssociation": "NONE",
+          "body": "What is the digital footprint of a diplomatic bag.\n",
+          "createdAt": "2026-01-22T17:10:11Z",
+          "updatedAt": "2026-01-22T17:10:11Z"
+        }
+      ]
     },
     {
       "number": 18,
@@ -373,13 +434,25 @@
       "state": "OPEN",
       "author": "ohmantics",
       "authorAssociation": "COLLABORATOR",
-      "assignees": [],
-      "labels": [],
+      "assignees": [
+        "ohmantics"
+      ],
+      "labels": [
+        "needs-text"
+      ],
       "body": "Early pre-WG use cases discussions included ISO shipping containers. They're covered by ISO 6346 with owner codes registered with [Bureau International des Containers](https://bic-code.org). The International Convention for Safe Containers established the [CSC Combined Data Plate](https://www.bic-code.org/csc-combined-data-plate/) which labels them for safety. Those come from the UN and International Maritime Organization.\n\nhttps://www.bic-code.org/marking-of-containers/ goes into more detail about the ISO codes, CSC Combined Data Plate and includes an existing geofencing database used by IoT-enabled containers including a facility coding system established in ISO 9897, which itself is a coding system to describe the condition of a container including damage.",
       "createdAt": "2025-12-17T16:51:13Z",
-      "updatedAt": "2025-12-17T16:51:13Z",
+      "updatedAt": "2026-01-22T17:09:21Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mcr",
+          "authorAssociation": "NONE",
+          "body": "1. Are these containers in motion, or ones sitting in some compound?\n2. RFC7744.  The container is not the important part.  It's the communication to the tracking system, and the tracking system.\n3. If the goal is to prevent digital attack on containers en-route, then the emblem will wind up applying to the ship.\n\nI would make it out of scope.  \n",
+          "createdAt": "2026-01-22T17:09:21Z",
+          "updatedAt": "2026-01-22T17:09:21Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -923,7 +996,7 @@
       ],
       "body": "Initiate the Acknowledgements section, to be split later into Acknowledgments and Contributors",
       "createdAt": "2025-11-07T19:19:06Z",
-      "updatedAt": "2026-01-14T12:30:18Z",
+      "updatedAt": "2026-01-22T16:45:07Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
@@ -1094,6 +1167,40 @@
           "body": "Closes #6 ",
           "createdAt": "2025-11-08T12:40:27Z",
           "updatedAt": "2025-11-08T12:40:27Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 19,
+      "id": "PR_kwDOPTNEDc6-wW6E",
+      "title": "Add contributors section",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/19",
+      "state": "OPEN",
+      "author": "ohmantics",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add in Bill and move Jim over with his permission.",
+      "createdAt": "2026-01-22T17:50:24Z",
+      "updatedAt": "2026-01-23T09:13:51Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "headRepository": "ohmantics/diem-requirements",
+      "headRefName": "main",
+      "headRefOid": "820194436429efc36298238849a494ca554584a0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think this should be merged with #8. Samit D'Cunha and Natasha Chabbra, for example, should also be contributors. Probably others too!",
+          "createdAt": "2026-01-23T09:13:51Z",
+          "updatedAt": "2026-01-23T09:13:51Z"
         }
       ],
       "reviews": []
