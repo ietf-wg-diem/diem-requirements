@@ -286,8 +286,10 @@ A digital emblem using the DIEM architecture could address this gap, and we call
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
-Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
+Digital emblems under IHL will mark digital services that must be respected and protected as such, i.e., they signal in particular that these services must not be disrupted.
+For example, digital services can be websites, databases, or any other kind of server application.
+Digital emblems under IHL will identify marked assets by their network address, which crucially must only be used for services that enjoy the specific protections under IHL.
+Such emblems will be issued by the party controlling the marked service.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
 
