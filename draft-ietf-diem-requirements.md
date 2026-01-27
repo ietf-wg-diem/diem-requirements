@@ -209,7 +209,7 @@ Individual profiles MUST standardize a trust model that describes how validators
 
 ## Other Requirements
 
-### Extensibility
+### Extensibility {#extensibility}
 
 The digital emblem architecture should be extensible.
 The initial work should not preclude future extensions and individual standards should be designed as general as possible.
@@ -241,14 +241,21 @@ For example, this could be realized with encryption of the general emblem data f
 
 For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
 
-# Use Cases
+# Use Cases for Initial Architecture
 
 Different use cases have different requirements.
 The purpose of this document is to list the requirements that will be addressed with the initial architecture.
-The use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions.
-We alphabetically list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
+In this section, we list use cases that we explicitly target within the initial architecture.
+We present domain model of each use case and discuss how their individual requirements fit the requirements discussed above.
+
+During the formation of the DIEM WG and the writing of this document, plenty of other use cases were proposed and discussed, which we list for future reference in {{use-cases-ref}}.
+These use cases can be targeted in future extensions of the DIEM architecture, and should be considered for the extensibility requirement ({{extensibility}}).
 
 We provide auxiliary material under Informative References.
+
+# Use Cases for Future Reference {#use-cases-ref}
+
+We list additional use cases here for future reference.
 
 ## Basel Convention
 
@@ -286,8 +293,10 @@ A digital emblem using the DIEM architecture could address this gap, and we call
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
-Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
+Digital emblems under IHL will mark digital services that must be respected and protected as such, i.e., they signal in particular that these services must not be disrupted.
+For example, digital services can be websites, databases, or any other kind of server application.
+Digital emblems under IHL will identify marked assets by their network address, which crucially must only be used for services that enjoy the specific protections under IHL.
+Such emblems will be issued by the party controlling the marked service.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
 
