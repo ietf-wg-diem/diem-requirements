@@ -21,11 +21,7 @@ venue:
   latest: "https://ietf-wg-diem.github.io/diem-requirements/draft-ietf-diem-requirements.html"
 
 author:
-  -
-    fullname: Casey Deccio
-    organization: Brigham Young University
-    email: casey@byu.edu
-
+  
   -
     fullname: Rahel A. Fainchtein
     organization: JHU/APL
@@ -44,6 +40,11 @@ author:
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
+    
+  -
+    fullname: Casey Deccio
+    organization: Brigham Young University
+    email: casey@byu.edu
 
   -
     fullname: Allison Mankin
