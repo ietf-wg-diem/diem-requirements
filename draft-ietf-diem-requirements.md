@@ -241,14 +241,18 @@ For example, this could be realized with encryption of the general emblem data f
 
 For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
 
-# Use Cases
+# Evaluated Use Cases
 
 Different use cases have different requirements.
 The purpose of this document is to list the requirements that will be addressed with the initial architecture.
 The use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions.
-We alphabetically list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
+In this section, we list individual use cases and discuss which requirements they have and their concrete terminology, e.g., what assets would be concretely.
+We only list use cases for which we have reasonable confidence that our understanding of them is correct, for example, from interactions with relevant stakeholders.
 
-We provide auxiliary material under Informative References.
+During the formation of the DIEM WG and WG work, multiple other use cases have been proposed.
+We comprehensively list all use cases that have been brought to the WG in {{use-cases-ref}} and provide auxiliary material under Informative References.
+
+# Use Cases for Future Reference {#use-cases-ref}
 
 ## Basel Convention
 
@@ -286,8 +290,10 @@ A digital emblem using the DIEM architecture could address this gap, and we call
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
-Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
+Digital emblems under IHL will mark digital services that must be respected and protected as such, i.e., they signal in particular that these services must not be disrupted.
+For example, digital services can be websites, databases, or any other kind of server application.
+Digital emblems under IHL will identify marked assets by their network address, which crucially must only be used for services that enjoy the specific protections under IHL.
+Such emblems will be issued by the party controlling the marked service.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
 
