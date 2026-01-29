@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 31 July 2026                                            JHU/APL
+Expires: 2 August 2026                                           JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 31 July 2026                                            JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                         27 January 2026
+                                                         29 January 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 July 2026.
+   This Internet-Draft will expire on 2 August 2026.
 
 Copyright Notice
 
@@ -98,7 +98,7 @@ Table of Contents
      4.3.  Implicit Discovery
      4.4.  Confidentiality
      4.5.  Proof of Presence
-   5.  Use Cases for Initial Architecture
+   5.  Evaluated Use Cases
    6.  Use Cases for Future Reference
      6.1.  Basel Convention
      6.2.  Ramsar Convention on the Wetlands
@@ -328,26 +328,25 @@ Table of Contents
    different distributions mechanisms, e.g., using decentralized
    authenticated data structures.
 
-5.  Use Cases for Initial Architecture
+5.  Evaluated Use Cases
 
    Different use cases have different requirements.  The purpose of this
    document is to list the requirements that will be addressed with the
-   initial architecture.  In this section, we list use cases that we
-   explicitly target within the initial architecture.  We present domain
-   model of each use case and discuss how their individual requirements
-   fit the requirements discussed above.
+   initial architecture.  The use cases overlap and would benefit from a
+   DIEM architecture developed to provide the requirements listed above,
+   though some may require additional extensions.  In this section, we
+   list individual use cases and discuss which requirements they have
+   and their concrete terminology, e.g., what assets would be
+   concretely.  We only list use cases for which we have reasonable
+   confidence that our understanding of them is correct, for example,
+   from interactions with relevant stakeholders.
 
-   During the formation of the DIEM WG and the writing of this document,
-   plenty of other use cases were proposed and discussed, which we list
-   for future reference in Section 6.  These use cases can be targeted
-   in future extensions of the DIEM architecture, and should be
-   considered for the extensibility requirement (Section 3.4.1).
-
-   We provide auxiliary material under Informative References.
+   During the formation of the DIEM WG and WG work, multiple other use
+   cases have been proposed.  We comprehensively list all use cases that
+   have been brought to the WG in Section 6 and provide auxiliary
+   material under Informative References.
 
 6.  Use Cases for Future Reference
-
-   We list additional use cases here for future reference.
 
 6.1.  Basel Convention
 
