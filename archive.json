@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-25T01:12:36.127694+00:00",
+  "timestamp": "2026-01-29T01:15:55.280102+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -453,6 +453,24 @@
           "updatedAt": "2026-01-22T17:09:21Z"
         }
       ]
+    },
+    {
+      "number": 23,
+      "id": "I_kwDOPTNEDc7mO9pF",
+      "title": "How should this draft expand on the Press case?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/23",
+      "state": "OPEN",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "needs-text"
+      ],
+      "body": "The draft currently has a placeholder:\n\n   Journalists in conflict zones use protective markings that indicate\n   their status as a non-combatant.  Digital assets belonging to the\n   press could be digitally marked, and protective markings in conflict\n   zones could be digitized.\n\nThis does not even say clearly something that was articulated at IETF 124 by a stakeholder there\nare distinct use cases here:  1. a digital emblem form of the PRESS marking worn by a person to mark\nbeing a non-combatant; 2. a digital emblem marking on equipment (whether it about networked\ncomputers/databases etc or about physical cameras, computers, sound equipment etc).  Let's use comments \non this issue to flesh out 1. and 2. and also to reflect by the stakeholders about how much to develop these \ntwo sub-use-cases.\n\n\n ",
+      "createdAt": "2026-01-27T22:25:05Z",
+      "updatedAt": "2026-01-27T22:26:09Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -1204,6 +1222,120 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "number": 20,
+      "id": "PR_kwDOPTNEDc6_n3Y4",
+      "title": "New phrasing for assets under IHL",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/20",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@ohmantics mentioned that he found the text on assets of emblems under IHL unclear. This PR is an attempt at clarifying that. Feedback appreciated!",
+      "createdAt": "2026-01-27T14:43:41Z",
+      "updatedAt": "2026-01-27T14:43:49Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "ihl-assets",
+      "headRefOid": "3416f521e94632ad8593b8fc18e1f4b2e1528c4b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 21,
+      "id": "PR_kwDOPTNEDc6_oC_b",
+      "title": "Refactor use cases section",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/21",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR depends on #20.\r\n\r\nTwo thoughts were expressed by different participants:\r\n\r\n1. We should list as many use cases as possible.\r\n2. We should be clear which use cases has received sufficient stake holder input, in particular, when it comes to evaluating whether its requirements are accurate and there is interest in deployment.\r\n\r\nThis PR splits the use cases section in two: One for use cases with stakeholder evaluation, and one for use cases for future reference. This split allows us to track which use case received evaluation of its requirements, but also allows us to keep use cases for future reference, as well as be explicit about what we aim to target for the extensibility requirement.",
+      "createdAt": "2026-01-27T14:56:55Z",
+      "updatedAt": "2026-01-27T22:01:30Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "refactor-use-cases-section",
+      "headRefOid": "d5aaa7d39db0bb37d7d75d6beab6d36982e54d05",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It is not yet a meaningful change to create a section separating out use cases like this.  I support reviewing a table of use cases versus requirements that can include a column about whether there is currently a stakeholder who has approved acknowledgement and/or has been listed in contributors - and then the WG can determine if this split is useful enough.",
+          "createdAt": "2026-01-27T22:01:30Z",
+          "updatedAt": "2026-01-27T22:01:30Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7dWYNL",
+          "commit": {
+            "abbreviatedOid": "d5aaa7d"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "I think this restructuring is premature.\r\n\r\nAs I see it there are use cases within the initial architecture/initial scope and others we can work on later. Prioritizing them seems to go against the entire point of this document.\r\nAs noted in the minutes from 123\r\n\r\n\"Chairs - Expect use cases and requirements doc to be relatively\r\ncomprehensive and not restricted to the charter. Prioritisation will\r\ntake place as the protocol specification is worked on, and the protocol\r\nspecification will be constrained by the charter.\"\r\n(from IETF 123 minutes: https://datatracker.ietf.org/doc/minutes-123-diem-202507221500/ )\r\nIn practice I do think it is worth distinguishing between use cases where we have received stakeholder input and those where we haven't but would like the tone of this to be more neutral - i.e. simply stating factually that we did/did not get stakeholder input and possibly the extent of input we received.",
+          "createdAt": "2026-01-27T21:53:27Z",
+          "updatedAt": "2026-01-27T21:53:27Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "id": "PR_kwDOPTNEDc6_tdQf",
+      "title": "Update draft-ietf-diem-requirements.md to put Rahel and Felix names f\u2026",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/22",
+      "state": "OPEN",
+      "author": "amankin",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "\u2026irst in editors\r\n\r\nThis is in response to a discussion among those of us working on the JHUAPL/PCH prototype project",
+      "createdAt": "2026-01-27T21:56:48Z",
+      "updatedAt": "2026-01-28T08:43:06Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "amankin-patch-2",
+      "headRefOid": "92b8febc5bcd225759a9e341a693619560e8fbee",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7dczOF",
+          "commit": {
+            "abbreviatedOid": "92b8feb"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "I don't mind this change, but does it change anything? I'm not aware of any semantics being attached to the order of authors.",
+          "createdAt": "2026-01-28T08:43:06Z",
+          "updatedAt": "2026-01-28T08:43:06Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
