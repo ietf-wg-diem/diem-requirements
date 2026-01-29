@@ -241,14 +241,18 @@ For example, this could be realized with encryption of the general emblem data f
 
 For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
 
-# Use Cases
+# Evaluated Use Cases
 
 Different use cases have different requirements.
 The purpose of this document is to list the requirements that will be addressed with the initial architecture.
 The use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions.
-We alphabetically list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
+In this section, we list individual use cases and discuss which requirements they have and their concrete terminology, e.g., what assets would be concretely.
+We only list use cases for which we have reasonable confidence that our understanding of them is correct, for example, from interactions with relevant stakeholders.
 
-We provide auxiliary material under Informative References.
+During the formation of the DIEM WG and WG work, multiple other use cases have been proposed.
+We comprehensively list all use cases that have been brought to the WG in {{use-cases-ref}} and provide auxiliary material under Informative References.
+
+# Use Cases for Future Reference {#use-cases-ref}
 
 ## Basel Convention
 
