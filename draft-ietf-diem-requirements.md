@@ -209,7 +209,7 @@ Individual profiles MUST standardize a trust model that describes how validators
 
 ## Other Requirements
 
-### Extensibility {#extensibility}
+### Extensibility
 
 The digital emblem architecture should be extensible.
 The initial work should not preclude future extensions and individual standards should be designed as general as possible.
@@ -241,21 +241,14 @@ For example, this could be realized with encryption of the general emblem data f
 
 For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
 
-# Use Cases for Initial Architecture
+# Use Cases
 
 Different use cases have different requirements.
 The purpose of this document is to list the requirements that will be addressed with the initial architecture.
-In this section, we list use cases that we explicitly target within the initial architecture.
-We present domain model of each use case and discuss how their individual requirements fit the requirements discussed above.
-
-During the formation of the DIEM WG and the writing of this document, plenty of other use cases were proposed and discussed, which we list for future reference in {{use-cases-ref}}.
-These use cases can be targeted in future extensions of the DIEM architecture, and should be considered for the extensibility requirement ({{extensibility}}).
+The use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions.
+We alphabetically list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.
 
 We provide auxiliary material under Informative References.
-
-# Use Cases for Future Reference {#use-cases-ref}
-
-We list additional use cases here for future reference.
 
 ## Basel Convention
 
