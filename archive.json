@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-29T01:15:55.280102+00:00",
+  "timestamp": "2026-02-01T01:27:46.032549+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1261,13 +1261,13 @@
       "labels": [],
       "body": "This PR depends on #20.\r\n\r\nTwo thoughts were expressed by different participants:\r\n\r\n1. We should list as many use cases as possible.\r\n2. We should be clear which use cases has received sufficient stake holder input, in particular, when it comes to evaluating whether its requirements are accurate and there is interest in deployment.\r\n\r\nThis PR splits the use cases section in two: One for use cases with stakeholder evaluation, and one for use cases for future reference. This split allows us to track which use case received evaluation of its requirements, but also allows us to keep use cases for future reference, as well as be explicit about what we aim to target for the extensibility requirement.",
       "createdAt": "2026-01-27T14:56:55Z",
-      "updatedAt": "2026-01-27T22:01:30Z",
+      "updatedAt": "2026-01-29T17:25:06Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "refactor-use-cases-section",
-      "headRefOid": "d5aaa7d39db0bb37d7d75d6beab6d36982e54d05",
+      "headRefOid": "155de2f54c12d126c745e8465a6360b67f0866ef",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1279,6 +1279,13 @@
           "body": "It is not yet a meaningful change to create a section separating out use cases like this.  I support reviewing a table of use cases versus requirements that can include a column about whether there is currently a stakeholder who has approved acknowledgement and/or has been listed in contributors - and then the WG can determine if this split is useful enough.",
           "createdAt": "2026-01-27T22:01:30Z",
           "updatedAt": "2026-01-27T22:01:30Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "What do you think about this phrasing @rahelFain ? I tried integrating your idea \"distinguishing between use cases where we have received stakeholder input and those where we haven't\" - including more neutral tone.\r\n\r\n@amankin I fear a table would lose too many details, so I prefer to suggestion from Rahel.",
+          "createdAt": "2026-01-29T17:25:06Z",
+          "updatedAt": "2026-01-29T17:25:06Z"
         }
       ],
       "reviews": [
