@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-01T01:27:46.032549+00:00",
+  "timestamp": "2026-02-05T01:16:17.758708+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -358,7 +358,7 @@
       ],
       "body": "Suggested by @amankin \n\n@felixlinker said they intended to address this in Section 4.5",
       "createdAt": "2025-11-07T20:55:41Z",
-      "updatedAt": "2026-01-22T16:51:15Z",
+      "updatedAt": "2026-02-04T07:43:06Z",
       "closedAt": null,
       "comments": [
         {
@@ -367,6 +367,13 @@
           "body": "@amankin Regarding this issue, we intend to discuss this as \"Proof of Presence\" in the \"Extensions\" section. Is there anything you're missing from that section?",
           "createdAt": "2026-01-15T16:43:09Z",
           "updatedAt": "2026-01-15T16:43:09Z"
+        },
+        {
+          "author": "ts5746",
+          "authorAssociation": "NONE",
+          "body": "As a suggestion for accountability or forensic use (probably need to find the proper terminology here), one approach could be to define different levels of proof to support different use cases and implementations, e.g.:\n\n1. Could an actor (that is held accountable) have obtained the emblem, i.e. can it be proven that the emblem was available/discoverable and verifiable for an actor at some relevant moment in time?\n\n2. Did the actor obtain the emblem, i.e. can it be proven that an actor actually discovered/accessed a verifiable emblem at a certain relevant moment in time?\n\n3. Did the actor correctly validate the emblem, i.e. can it be proven that an actor actually validated the emblem correctly?\n \nFor example, under IHL, armed forces have an obligation to make an effort to adhere to the principles of proportionality and distinction, and to the prohibition on causing unnecessary suffering. Therefore, the weaker proof (level 1) might be sufficient in certain cases, if it can be proven the emblem existed and was (easily) accessible/obtainable for anyone, regardless of whether the actor actually did obtain the emblem.\n\nAlso, level 2/3 might not be compatible with use cases where discovery and validation must be undetected, but very reasonable or even required for other cases.\n\n ",
+          "createdAt": "2026-02-04T07:43:06Z",
+          "updatedAt": "2026-02-04T07:43:06Z"
         }
       ]
     },
