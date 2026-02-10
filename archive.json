@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-08T01:51:35.703614+00:00",
+  "timestamp": "2026-02-10T01:44:45.873151+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1268,7 +1268,7 @@
       "labels": [],
       "body": "This PR depends on #20.\r\n\r\nTwo thoughts were expressed by different participants:\r\n\r\n1. We should list as many use cases as possible.\r\n2. We should be clear which use cases has received sufficient stake holder input, in particular, when it comes to evaluating whether its requirements are accurate and there is interest in deployment.\r\n\r\nThis PR splits the use cases section in two: One for use cases with stakeholder evaluation, and one for use cases for future reference. This split allows us to track which use case received evaluation of its requirements, but also allows us to keep use cases for future reference, as well as be explicit about what we aim to target for the extensibility requirement.",
       "createdAt": "2026-01-27T14:56:55Z",
-      "updatedAt": "2026-02-06T17:48:42Z",
+      "updatedAt": "2026-02-09T10:48:28Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1300,6 +1300,13 @@
           "body": "I wanted to be sure to follow up on this PR, since I have been looking it over and thinking about what changes I think still need to be made. \r\nFor the time being, I figured I'd share my thoughts. \r\nOverall, these changes largely seem to center on the balance between the inclusion of use cases where we are unable to get stakeholder input, or where stakeholder input is only obtained after this document has reached WG last call. \r\nLooking over the minutes from our previous meetings, particularly those from [IETF 123](https://datatracker.ietf.org/doc/minutes-123-diem-202507221500/), I do see that the majority of those who voted in the show of hands indicated that those use cases can be excluded (29 for, 13 against, 2 no opinion, 25 present but did not vote). \r\n\r\nHowever, the subsequent discussion raised the point that \r\n If a stakeholder comes at a later time (e.g. after the document has reached WG last call), we cannot say \"too late.\" This is particularly important as some stakeholders are very difficult to find and/or get ahold of. (In some cases merely identifying who the right stakeholders are  can prove challenging.)\r\n\r\nUltimately, the chairs determined they would need to work on a way to get more stakeholders involved. \r\nHowever, I do not remember us ever reaching any sort of consensus on how to handle cases where one or more stakeholders give us input on their (respective) use case's requirements after this document has been completed/has reached WG last call. \r\n\r\nTo this end, my best suggestion is that we first introduce all of the use cases and later on go into more detail about the extent of stakeholder input we have received as of this writing as well as more detailed descriptions of the use cases for which we have received more stakeholder input. \r\nI also think we need to devise a system through which input from stakeholders who join the conversation at a later date can still be noted and taken into account. \r\n\r\nComing back to the revisions at hand: What I am really wary of is listing the use cases for which we have received input first or putting more emphasis on these from the get-go (either explicitly or implicitly) because to the best of my understanding, the WG must not/ is expressly not allowed to state or imply that any use case is better or more worthy of being considered than another. \r\nTo that end, I like Allison's suggestion of including a matrix indicating the level of stakeholder input received as of this document's writing - perhaps as a way to introduce the more detailed accounts of the different use cases. ",
           "createdAt": "2026-02-06T17:48:42Z",
           "updatedAt": "2026-02-06T17:48:42Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "You write \"the WG must not/ is expressly not allowed to state or imply that any use case is better or more worthy of being considered than another.\" Where does that come from? My concern is that we *cannot* address certain use cases because they're underspecified. How are we supposed to account for the \"United Nations Peacekeepers\" use case if all we have in writing on it is: \"UN Peacekeepers use protective markings in theater as well as facilities associated with the mission.\" How does that inform protocol development? How does this use case relate to our requirements and domain model?\r\n\r\nYour concern seems to be that use cases may receive stakeholder evaluation after a WGLC. I think we can mitigate that risk easily because the WG is always free to change course. Should a stakeholder join the discussion one year into protocol development, we can simply write a new document that details that use case and have it adopted by the WG. So I don't see any risks here!",
+          "createdAt": "2026-02-09T10:48:28Z",
+          "updatedAt": "2026-02-09T10:48:28Z"
         }
       ],
       "reviews": [
