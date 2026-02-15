@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-10T01:44:45.873151+00:00",
+  "timestamp": "2026-02-15T01:23:58.747615+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -421,7 +421,7 @@
       ],
       "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
       "createdAt": "2025-12-02T21:32:40Z",
-      "updatedAt": "2026-01-22T17:10:12Z",
+      "updatedAt": "2026-02-12T15:06:25Z",
       "closedAt": null,
       "comments": [
         {
@@ -430,6 +430,27 @@
           "body": "What is the digital footprint of a diplomatic bag.\n",
           "createdAt": "2026-01-22T17:10:11Z",
           "updatedAt": "2026-01-22T17:10:11Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> What is the digital footprint of a diplomatic bag.\n\nThe eventual footprint of DIEM is not restricted to digital-only assets, just the scope of our first mechanism.",
+          "createdAt": "2026-02-12T13:28:26Z",
+          "updatedAt": "2026-02-12T13:28:52Z"
+        },
+        {
+          "author": "mcr",
+          "authorAssociation": "NONE",
+          "body": "> > What is the digital footprint of a diplomatic bag.\n> \n> The eventual footprint of DIEM is not restricted to digital-only assets, just the scope of our first mechanism.\n\nThat is very un-helpful.  \nYou are saying, the scope is larger than written, but then provide no guidance as to what the scope might be.\nI can't write code or write security Playbooks around such a statement.\nI can't evaluate if DNS can be used by a diplomatic bag.\n",
+          "createdAt": "2026-02-12T14:18:34Z",
+          "updatedAt": "2026-02-12T14:18:34Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> > > What is the digital footprint of a diplomatic bag.\n> > \n> > \n> > The eventual footprint of DIEM is not restricted to digital-only assets, just the scope of our first mechanism.\n> \n> That is very un-helpful. You are saying, the scope is larger than written, but then provide no guidance as to what the scope might be. I can't write code or write security Playbooks around such a statement. I can't evaluate if DNS can be used by a diplomatic bag.\n\nFeel free to complain to the IESG that they did not charter the full original scope if you would like.\n\nUltimately we will have some type of data format the contains things like the type of emblem, what it applies to, etc. \nIf the identity of the diplomatic bag is in the DNS, then there is no reason you couldn't use DNS to get a digital emblem for it.",
+          "createdAt": "2026-02-12T15:06:25Z",
+          "updatedAt": "2026-02-12T15:06:25Z"
         }
       ]
     },
@@ -476,6 +497,22 @@
       "body": "The draft currently has a placeholder:\n\n   Journalists in conflict zones use protective markings that indicate\n   their status as a non-combatant.  Digital assets belonging to the\n   press could be digitally marked, and protective markings in conflict\n   zones could be digitized.\n\nThis does not even say clearly something that was articulated at IETF 124 by a stakeholder there\nare distinct use cases here:  1. a digital emblem form of the PRESS marking worn by a person to mark\nbeing a non-combatant; 2. a digital emblem marking on equipment (whether it about networked\ncomputers/databases etc or about physical cameras, computers, sound equipment etc).  Let's use comments \non this issue to flesh out 1. and 2. and also to reflect by the stakeholders about how much to develop these \ntwo sub-use-cases.\n\n\n ",
       "createdAt": "2026-01-27T22:25:05Z",
       "updatedAt": "2026-01-27T22:26:09Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 24,
+      "id": "I_kwDOPTNEDc7qZSty",
+      "title": "Should we add CITES as a digital emblem use case?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/24",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "CITES: the Convention on International Trade in Endangered Species of Wild Fauna and Flora  includes a system for tracking the legal movement of endangered species. If we can get stakeholder involvement I think this would be another good use case.\n\n",
+      "createdAt": "2026-02-12T15:34:22Z",
+      "updatedAt": "2026-02-12T15:34:22Z",
       "closedAt": null,
       "comments": []
     }
@@ -1268,7 +1305,7 @@
       "labels": [],
       "body": "This PR depends on #20.\r\n\r\nTwo thoughts were expressed by different participants:\r\n\r\n1. We should list as many use cases as possible.\r\n2. We should be clear which use cases has received sufficient stake holder input, in particular, when it comes to evaluating whether its requirements are accurate and there is interest in deployment.\r\n\r\nThis PR splits the use cases section in two: One for use cases with stakeholder evaluation, and one for use cases for future reference. This split allows us to track which use case received evaluation of its requirements, but also allows us to keep use cases for future reference, as well as be explicit about what we aim to target for the extensibility requirement.",
       "createdAt": "2026-01-27T14:56:55Z",
-      "updatedAt": "2026-02-09T10:48:28Z",
+      "updatedAt": "2026-02-13T18:28:44Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1307,6 +1344,13 @@
           "body": "You write \"the WG must not/ is expressly not allowed to state or imply that any use case is better or more worthy of being considered than another.\" Where does that come from? My concern is that we *cannot* address certain use cases because they're underspecified. How are we supposed to account for the \"United Nations Peacekeepers\" use case if all we have in writing on it is: \"UN Peacekeepers use protective markings in theater as well as facilities associated with the mission.\" How does that inform protocol development? How does this use case relate to our requirements and domain model?\r\n\r\nYour concern seems to be that use cases may receive stakeholder evaluation after a WGLC. I think we can mitigate that risk easily because the WG is always free to change course. Should a stakeholder join the discussion one year into protocol development, we can simply write a new document that details that use case and have it adopted by the WG. So I don't see any risks here!",
           "createdAt": "2026-02-09T10:48:28Z",
           "updatedAt": "2026-02-09T10:48:28Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I want to make a distinction between saying a use case is more worthy of being considered for implementation and whether or not it's feasible for a use case to be implemented at a given time.  \r\n\r\nAs I understand it, the intent is for this document to be finalized upon reaching WG last call. This means that any statements about which use case is more worthy of being considered or implemented would outlast any changes in the WG's scope, and would therefore effectively be value statements saying _use case x is the more important or the most important_ regardless of what future information we may obtain surrounding the needs motivating other use cases and  the respective impacts of standardization of digital emblems for them. \r\n\r\nThink for example, if we had initially gotten extensive input and interest for the RAMSAR use case and less for that of ICRC one and therefore failed to mention the ICRC use case in the primary use cases and/or limited its mention to a single sentence in an appendix.  It seems pretty clear how these actions could convey an implicit message that the RAMSAR use case is in an absolute sense, a better use case, is more worthy of implementation than the ICRC's etc..\r\nGiven the extent of what we do know about the ICRC's pressing need for digital emblems, their interest in its standardization/development and the impact it stands to have, it seems pretty clear how conveying that sort of message would not only be unwise but also inflammatory and would constitute us overstepping our role as technologists. \r\n\r\nTo be clear, I am not saying the WG cannot or should not decide to first define or implement digital emblems for the use cases for which we currently have more stakeholder input or involvement and a better defined set of requirements. (After all it will be more feasible to do this in these cases.) All I am saying is that that decision should be independent of the extent to which we mention the other previously identified use cases in this document.",
+          "createdAt": "2026-02-13T18:28:44Z",
+          "updatedAt": "2026-02-13T18:28:44Z"
         }
       ],
       "reviews": [
