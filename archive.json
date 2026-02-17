@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-15T01:23:58.747615+00:00",
+  "timestamp": "2026-02-17T01:19:49.752696+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -421,7 +421,7 @@
       ],
       "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
       "createdAt": "2025-12-02T21:32:40Z",
-      "updatedAt": "2026-02-12T15:06:25Z",
+      "updatedAt": "2026-02-16T20:05:25Z",
       "closedAt": null,
       "comments": [
         {
@@ -451,6 +451,27 @@
           "body": "> > > What is the digital footprint of a diplomatic bag.\n> > \n> > \n> > The eventual footprint of DIEM is not restricted to digital-only assets, just the scope of our first mechanism.\n> \n> That is very un-helpful. You are saying, the scope is larger than written, but then provide no guidance as to what the scope might be. I can't write code or write security Playbooks around such a statement. I can't evaluate if DNS can be used by a diplomatic bag.\n\nFeel free to complain to the IESG that they did not charter the full original scope if you would like.\n\nUltimately we will have some type of data format the contains things like the type of emblem, what it applies to, etc. \nIf the identity of the diplomatic bag is in the DNS, then there is no reason you couldn't use DNS to get a digital emblem for it.",
           "createdAt": "2026-02-12T15:06:25Z",
           "updatedAt": "2026-02-12T15:06:25Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Below is some potential text, which doesn't have requirements language yet.  It was written a while back as part of research at my org.  We are discussing DIEM now with a couple of potential contributors (or at least quiet stakeholders) from foreign offices. \n\nDigital emblems can also protect diplomatic pouch shipments, diplomatic couriers, and diplomatic envoys, who are protected under the 1961 Vienna Convention on Diplomatic Relations, which states that they may not be stopped, delayed, or inspected. This creates the paradox that the validity of their credentials must be evaluated, yet doing so has historically compromised the very rights that are intended to be signaled. Diplomatic markings have also been misappropriated as cover for the smuggling of drugs and other contraband. Digital emblems, which can be validated instantaneously, at a distance, and without interrupting the subject, solve both of these problems, while streamlining and automating customs and immigrations processes.",
+          "createdAt": "2026-02-16T19:13:26Z",
+          "updatedAt": "2026-02-16T19:13:26Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> (or at least quiet stakeholders)\n\nBy this I mean one or more individuals who consent to be acknowledged.  ",
+          "createdAt": "2026-02-16T19:15:53Z",
+          "updatedAt": "2026-02-16T19:15:53Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@mcr, right now, an expert inspection of external physical wrappings is used to validate that it's a diplomatic wrapping (to greatly over-simplify).  A digital component in the wrapping (preceded by a non-technical process that manages how it is or isn't enclosed in the wrapping) could provide a link out to DE and be able to be validated. This isn't much different from processes still to be defined under IHL use cases that permit/deny authorization to publish a DE.  ",
+          "createdAt": "2026-02-16T20:05:25Z",
+          "updatedAt": "2026-02-16T20:05:25Z"
         }
       ]
     },
@@ -1305,7 +1326,7 @@
       "labels": [],
       "body": "This PR depends on #20.\r\n\r\nTwo thoughts were expressed by different participants:\r\n\r\n1. We should list as many use cases as possible.\r\n2. We should be clear which use cases has received sufficient stake holder input, in particular, when it comes to evaluating whether its requirements are accurate and there is interest in deployment.\r\n\r\nThis PR splits the use cases section in two: One for use cases with stakeholder evaluation, and one for use cases for future reference. This split allows us to track which use case received evaluation of its requirements, but also allows us to keep use cases for future reference, as well as be explicit about what we aim to target for the extensibility requirement.",
       "createdAt": "2026-01-27T14:56:55Z",
-      "updatedAt": "2026-02-13T18:28:44Z",
+      "updatedAt": "2026-02-16T08:38:55Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1351,6 +1372,13 @@
           "body": "I want to make a distinction between saying a use case is more worthy of being considered for implementation and whether or not it's feasible for a use case to be implemented at a given time.  \r\n\r\nAs I understand it, the intent is for this document to be finalized upon reaching WG last call. This means that any statements about which use case is more worthy of being considered or implemented would outlast any changes in the WG's scope, and would therefore effectively be value statements saying _use case x is the more important or the most important_ regardless of what future information we may obtain surrounding the needs motivating other use cases and  the respective impacts of standardization of digital emblems for them. \r\n\r\nThink for example, if we had initially gotten extensive input and interest for the RAMSAR use case and less for that of ICRC one and therefore failed to mention the ICRC use case in the primary use cases and/or limited its mention to a single sentence in an appendix.  It seems pretty clear how these actions could convey an implicit message that the RAMSAR use case is in an absolute sense, a better use case, is more worthy of implementation than the ICRC's etc..\r\nGiven the extent of what we do know about the ICRC's pressing need for digital emblems, their interest in its standardization/development and the impact it stands to have, it seems pretty clear how conveying that sort of message would not only be unwise but also inflammatory and would constitute us overstepping our role as technologists. \r\n\r\nTo be clear, I am not saying the WG cannot or should not decide to first define or implement digital emblems for the use cases for which we currently have more stakeholder input or involvement and a better defined set of requirements. (After all it will be more feasible to do this in these cases.) All I am saying is that that decision should be independent of the extent to which we mention the other previously identified use cases in this document.",
           "createdAt": "2026-02-13T18:28:44Z",
           "updatedAt": "2026-02-13T18:28:44Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I totally get your point on distinguishing use cases \"more\" and \"less\" worthy, which is why I changed the language on that. Now, the section only says that one section contains use cases that have been evaluated and use cases that have not.\r\n\r\nBut I also understand the WGLC, document writing process, and WG scope differently. My understanding is that you can always change scope, write new documents, etc. After WGLC, *this* document is finished, but I think nothing would change the WG to write a new document that lists additional use cases. Think about how many RFCs have been amended/superseded. I don't think there will be any issues with use cases that receive their evaluation after WGLC. But I will confirm my understanding with the chairs!",
+          "createdAt": "2026-02-16T08:38:55Z",
+          "updatedAt": "2026-02-16T08:38:55Z"
         }
       ],
       "reviews": [
