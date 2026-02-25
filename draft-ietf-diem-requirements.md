@@ -239,8 +239,14 @@ For example, this could be realized with encryption of the general emblem data f
 
 ## Proof of Presence
 
-For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
+Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically. This would be particularly poignant for use cases where emblems can be born or taken down dynamically and could be defined in three different levels, listed from weakest to strongest.
 
+Level 1 - presence and verifiability: Establishing that an actor or alleged violator was able to obtain the emblem at the time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the time of violation.
+
+Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the alleged
+violator accessed the digital emblem.
+
+Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the alleged violator verified the emblem upon accessing it.
 # Use Cases
 
 Different use cases have different requirements.
