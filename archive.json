@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-02-17T01:19:49.752696+00:00",
+  "timestamp": "2026-02-26T01:17:11.115618+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -354,11 +354,12 @@
         "rahelFain"
       ],
       "labels": [
+        "has-PR",
         "needs-author-discussion"
       ],
       "body": "Suggested by @amankin \n\n@felixlinker said they intended to address this in Section 4.5",
       "createdAt": "2025-11-07T20:55:41Z",
-      "updatedAt": "2026-02-04T07:43:06Z",
+      "updatedAt": "2026-02-25T18:38:44Z",
       "closedAt": null,
       "comments": [
         {
@@ -374,6 +375,13 @@
           "body": "As a suggestion for accountability or forensic use (probably need to find the proper terminology here), one approach could be to define different levels of proof to support different use cases and implementations, e.g.:\n\n1. Could an actor (that is held accountable) have obtained the emblem, i.e. can it be proven that the emblem was available/discoverable and verifiable for an actor at some relevant moment in time?\n\n2. Did the actor obtain the emblem, i.e. can it be proven that an actor actually discovered/accessed a verifiable emblem at a certain relevant moment in time?\n\n3. Did the actor correctly validate the emblem, i.e. can it be proven that an actor actually validated the emblem correctly?\n \nFor example, under IHL, armed forces have an obligation to make an effort to adhere to the principles of proportionality and distinction, and to the prohibition on causing unnecessary suffering. Therefore, the weaker proof (level 1) might be sufficient in certain cases, if it can be proven the emblem existed and was (easily) accessible/obtainable for anyone, regardless of whether the actor actually did obtain the emblem.\n\nAlso, level 2/3 might not be compatible with use cases where discovery and validation must be undetected, but very reasonable or even required for other cases.\n\n ",
           "createdAt": "2026-02-04T07:43:06Z",
           "updatedAt": "2026-02-04T07:43:06Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@ts5746 Thank you for the suggestion! \nI've created [a PR with some initial changes](https://github.com/ietf-wg-diem/diem-requirements/pull/25) based on it. \n",
+          "createdAt": "2026-02-25T18:38:44Z",
+          "updatedAt": "2026-02-25T18:38:44Z"
         }
       ]
     },
@@ -534,6 +542,22 @@
       "body": "CITES: the Convention on International Trade in Endangered Species of Wild Fauna and Flora  includes a system for tracking the legal movement of endangered species. If we can get stakeholder involvement I think this would be another good use case.\n\n",
       "createdAt": "2026-02-12T15:34:22Z",
       "updatedAt": "2026-02-12T15:34:22Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 26,
+      "id": "I_kwDOPTNEDc7t5YYm",
+      "title": "Should whether an emblem supports or mandates forensic tracing be an extension or core consideration?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/26",
+      "state": "OPEN",
+      "author": "rahelFain",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "2. I see the forensic tracking as a core requirement. That is to say, I don't think all use cases will need to support forensic tracing of emblem issuance/discoverability etc. but I think that every emblem's depiction should indicate whether or not it has an associated forensic tracing mechanism or ledger - and in cases where it does should include pointers to it.\r\n\r\n_Originally posted by @rahelFain in https://github.com/ietf-wg-diem/diem-requirements/issues/25#issuecomment-3961344021_\r\n\r\n2a. In addition to noting this as a core field, I think the question of whether or not a specific use case supports and/or requires the use of one or more forensic tracing mechanisms and the reasoning behind the decision(s) reached needs to be detailed in its security considerations. In cases where forensic tracing is optional I think the security considerations will also need to detail the risks vs. benefits of including it within the emblem",
+      "createdAt": "2026-02-25T19:10:13Z",
+      "updatedAt": "2026-02-25T19:10:13Z",
       "closedAt": null,
       "comments": []
     }
@@ -1436,6 +1460,61 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 25,
+      "id": "PR_kwDOPTNEDc7GT9iG",
+      "title": "expand upon proof of presence",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/25",
+      "state": "OPEN",
+      "author": "rahelFain",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
+      "createdAt": "2026-02-25T18:33:37Z",
+      "updatedAt": "2026-02-25T19:04:37Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "presence_forensics",
+      "headRefOid": "a6c82352c1f29bd4f0d14f33a9b439179ccc299e",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "For the time being I've left the placement and title of the section unchanged. However, I have a few additional changes and thoughts on this. I'll list them as separate comments - since I think many of them warrant their own discussion. ",
+          "createdAt": "2026-02-25T18:45:40Z",
+          "updatedAt": "2026-02-25T18:45:40Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "1. I think the section title needs to be updated:\r\nSince this update outlines three different levels of forensic tracking or of demonstrating a violation of an emblem's associated requirements, statutes or provisions, proof of presence does not seem to encompass the extent of what may be proven or established by these.  ",
+          "createdAt": "2026-02-25T18:50:53Z",
+          "updatedAt": "2026-02-25T18:50:53Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "2. I see the forensic tracking as a core requirement. That is to say, I don't think all use cases will need to support forensic tracing of emblem issuance/discoverability etc. but I think that every emblem's depiction should indicate whether or not it has an associated forensic tracing mechanism or ledger - and in cases where it does should include pointers to it. ",
+          "createdAt": "2026-02-25T18:58:31Z",
+          "updatedAt": "2026-02-25T18:58:31Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "2a. In addition to noting this as a core field, I think the question of whether or not a specific use case supports and/or requires the use of one or more forensic tracing mechanisms and the reasoning behind the decision(s) reached needs to be detailed in its security considerations. In cases where forensic tracing is optional I think the security considerations will also need to detail the risks vs. benefits of including it within the emblem. ",
+          "createdAt": "2026-02-25T19:04:37Z",
+          "updatedAt": "2026-02-25T19:04:37Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
