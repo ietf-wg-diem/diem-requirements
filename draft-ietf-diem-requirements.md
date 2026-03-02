@@ -251,8 +251,8 @@ querying party accessed the digital emblem.
 Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it.
 
 Note that Level 2 and Level 3 may conflict with requirements for undetectable validation. As such, use cases where
-support for forensic validation is needed 
-will need to determine which level of forensic validation must be supported.  
+support for forensic validation is needed
+will need to determine which level of forensic validation must be supported.
 
 # Use Cases
 
