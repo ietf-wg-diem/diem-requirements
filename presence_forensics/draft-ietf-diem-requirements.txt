@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 29 August 2026                                          JHU/APL
+Expires: 3 September 2026                                        JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 29 August 2026                                          JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                        25 February 2026
+                                                            2 March 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 August 2026.
+   This Internet-Draft will expire on 3 September 2026.
 
 Copyright Notice
 
@@ -98,27 +98,28 @@ Table of Contents
      4.3.  Implicit Discovery
      4.4.  Confidentiality
      4.5.  Proof of Presence
-     4.6.  Basel Convention
-     4.7.  Ramsar Convention on the Wetlands
-     4.8.  International Atomic Energy Agency (IAEA)
-     4.9.  International Humanitarian Law
-       4.9.1.  Background
-       4.9.2.  Domain Model and Stakeholders
-       4.9.3.  Requirements
-     4.10. Organization for the Prohibition of Chemical Weapons (OPCW)
-     4.11. Press
-     4.12. United Nations Economic and Social Council (ECOSOC)
-     4.13. United Nations Peacekeepers
-     4.14. World Customs Organization (WCO)
-     4.15. World Health Organization (WHO)
-     4.16. United Nations Food and Agriculture Organization (FAO)
-     4.17. World Intellectual Property Organization (WIPO)
-     4.18. International Civil Aviation Organization (ICAO)
-   5.  Security Considerations
-   6.  IANA Considerations
-   7.  References
-     7.1.  Normative References
-     7.2.  Informative References
+   5.  Use Cases
+     5.1.  Basel Convention
+     5.2.  Ramsar Convention on the Wetlands
+     5.3.  International Atomic Energy Agency (IAEA)
+     5.4.  International Humanitarian Law
+       5.4.1.  Background
+       5.4.2.  Domain Model and Stakeholders
+       5.4.3.  Requirements
+     5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
+     5.6.  Press
+     5.7.  United Nations Economic and Social Council (ECOSOC)
+     5.8.  United Nations Peacekeepers
+     5.9.  World Customs Organization (WCO)
+     5.10. World Health Organization (WHO)
+     5.11. United Nations Food and Agriculture Organization (FAO)
+     5.12. World Intellectual Property Organization (WIPO)
+     5.13. International Civil Aviation Organization (ICAO)
+   6.  Security Considerations
+   7.  IANA Considerations
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -340,7 +341,9 @@ Table of Contents
 
    Level 3 - presence, verifiability access and verification:
    Demonstrating presence verifiability and access and that the alleged
-   violator verified the emblem upon accessing it. # Use Cases
+   violator verified the emblem upon accessing it.
+
+5.  Use Cases
 
    Different use cases have different requirements.  The purpose of this
    document is to list the requirements that will be addressed with the
@@ -354,12 +357,12 @@ Table of Contents
 
    We provide auxiliary material under Informative References.
 
-4.6.  Basel Convention
+5.1.  Basel Convention
 
    Regulates the trans-boundary movement of hazardous wastes.  Use cases
    are functionally identical to OPCW and IAEA.
 
-4.7.  Ramsar Convention on the Wetlands
+5.2.  Ramsar Convention on the Wetlands
 
    The Convention on Wetlands of International Importance especially as
    Waterfowl Habitat "providees the single most global framework for
@@ -376,15 +379,15 @@ Table of Contents
 
    *  Ability to validate the presence or absence of Ramsar designation
 
-4.8.  International Atomic Energy Agency (IAEA)
+5.3.  International Atomic Energy Agency (IAEA)
 
    IAEA administers several treaties, especially related to the
    controlled shipment of atomic fuels and wastes across borders.
    Similar use case as OPCW.
 
-4.9.  International Humanitarian Law
+5.4.  International Humanitarian Law
 
-4.9.1.  Background
+5.4.1.  Background
 
    The Geneva Conventions and their Additional Protocols constitute the
    core of IHL.  Some assets enjoy certain specific protections under
@@ -407,7 +410,7 @@ Table of Contents
    using the DIEM architecture could address this gap, and we call such
    emblems digital emblems for IHL.
 
-4.9.2.  Domain Model and Stakeholders
+5.4.2.  Domain Model and Stakeholders
 
    In context of emblems under IHL, emblems will mark assets that are
    digital services and that solely serve protected purposes (for
@@ -430,7 +433,7 @@ Table of Contents
    identify an asset that they plan to engage with and then check
    whether that asset bears an emblem.
 
-4.9.3.  Requirements
+5.4.3.  Requirements
 
    The purpose of a digital emblem is to prevent disruptions of assets
    by informing verifiers that marked assets enjoy protection under IHL.
@@ -446,7 +449,7 @@ Table of Contents
    existing framework of IHL and not put emblem issuers at increased
    risk.  First, IHL requires that, emblem issuers must seek
    authorization from a competent authority prior to applying them (see
-   Section 3.3.2 and Section 4.9.2).  The authorization must be
+   Section 3.3.2 and Section 5.4.2).  The authorization must be
    decentralized, i.e., there must be no central authorities that govern
    the use or distribution of digital emblems.  Second, bearing an
    emblem can increase the risk for targeted attacks.  We require that
@@ -459,21 +462,21 @@ Table of Contents
    the DNS, as not all assets may have domain names associated with
    them.
 
-4.10.  Organization for the Prohibition of Chemical Weapons (OPCW)
+5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
 
    Requires protection of Schedule 1 chemicals in transit between
    signatory countries for research, medical, pharmaceutical, or
    protective purposes.  Emblem would identify place, date, and volume
    of production, and the emblem can contain confidential data.
 
-4.11.  Press
+5.6.  Press
 
    Journalists in conflict zones use protective markings that indicate
    their status as a non-combatant.  Digital assets belonging to the
    press could be digitally marked, and protective markings in conflict
    zones could be digitized.
 
-4.12.  United Nations Economic and Social Council (ECOSOC)
+5.7.  United Nations Economic and Social Council (ECOSOC)
 
    UN Model Regulations [UNMODELREGS] includes "Recommendations on the
    Transport of Dangerous Goods."  This includes labeling of items with
@@ -482,12 +485,12 @@ Table of Contents
    example, items containing lithium-based batteries are labeled with
    3480 or 3481 and accompanied by a specific "battery mark" emblem.
 
-4.13.  United Nations Peacekeepers
+5.8.  United Nations Peacekeepers
 
    UN Peacekeepers use protective markings in theater as well as
    facilities associated with the mission.
 
-4.14.  World Customs Organization (WCO)
+5.9.  World Customs Organization (WCO)
 
    Specifies "Harmonized Systems" codes [HARMONIZED] that classify items
    such as livestock, arms and ammunition, chemicals, plastics,
@@ -496,12 +499,12 @@ Table of Contents
    international trade agreements between individual nations and groups
    of nations.
 
-4.15.  World Health Organization (WHO)
+5.10.  World Health Organization (WHO)
 
    Similar to the use case of the Red Cross, Red Crystal, and Red
    Crescent.
 
-4.16.  United Nations Food and Agriculture Organization (FAO)
+5.11.  United Nations Food and Agriculture Organization (FAO)
 
    Among other things is responsible for the International Plant
    Protection Convention (IPPC) and International Standards for
@@ -510,14 +513,14 @@ Table of Contents
    treated or fumigated with methyl-bromide, and stamped or branded with
    a compliance mark known as a "wheat stamp."
 
-4.17.  World Intellectual Property Organization (WIPO)
+5.12.  World Intellectual Property Organization (WIPO)
 
    WIPO administers 26+ treaties with different protections for
    different things.  Brands that are protected under international law
    (e.g., Madrid Protocol) can mark their shipments with an emblem
    allowing customs agents to positively identify legitimate products.
 
-4.18.  International Civil Aviation Organization (ICAO)
+5.13.  International Civil Aviation Organization (ICAO)
 
    Requires protection of civil aviation flights and the ability to
    assert that they are not dual-use (i.e., not carrying military
@@ -526,7 +529,7 @@ Table of Contents
    (i.e., tail number).  Potential need for the emblem to reference a
    limited or partially redacted flight manifest.
 
-5.  Security Considerations
+6.  Security Considerations
 
    Because this is a requirements document, it does not directly have
    security considerations.  However, multiple of the defined
@@ -538,13 +541,13 @@ Table of Contents
    there are security considerations such as the potential for replay of
    removed emblems.
 
-6.  IANA Considerations
+7.  IANA Considerations
 
    This document has no IANA actions.
 
-7.  References
+8.  References
 
-7.1.  Normative References
+8.1.  Normative References
 
    [CHARTER]  "Digital Emblems", 27 May 2025,
               <https://datatracker.ietf.org/doc/charter-ietf-diem/01/>.
@@ -558,7 +561,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-7.2.  Informative References
+8.2.  Informative References
 
    [BLUEHELMET]
               Doctors Without Borders, "The Practical Guide to
