@@ -247,6 +247,7 @@ Level 2 - presence, verifiability and access: Establishing the emblem’s presen
 violator accessed the digital emblem.
 
 Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the alleged violator verified the emblem upon accessing it.
+
 # Use Cases
 
 Different use cases have different requirements.
