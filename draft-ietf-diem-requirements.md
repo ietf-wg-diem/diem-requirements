@@ -241,12 +241,18 @@ For example, this could be realized with encryption of the general emblem data f
 
 Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically. This would be particularly poignant for use cases where emblems can be born or taken down dynamically and could be defined in three different levels, listed from weakest to strongest.
 
-Level 1 - presence and verifiability: Establishing that an actor or alleged violator was able to obtain the emblem at the time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the time of violation.
+Level 1 - presence and verifiability: Establishing that an actor or querying party was able to obtain the emblem at the
+time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
+time of an alleged violation.
 
-Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the alleged
-violator accessed the digital emblem.
+Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the
+querying party accessed the digital emblem.
 
-Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the alleged violator verified the emblem upon accessing it.
+Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it.
+
+Note that Level 2 and Level 3 may conflict with requirements for undetectable validation. As such, use cases where
+support for forensic validation is needed 
+will need to determine which level of forensic validation must be supported.  
 
 # Use Cases
 
