@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-01T01:26:06.312332+00:00",
+  "timestamp": "2026-03-03T01:20:53.647801+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1103,7 +1103,7 @@
       ],
       "body": "Initiate the Acknowledgements section, to be split later into Acknowledgments and Contributors",
       "createdAt": "2025-11-07T19:19:06Z",
-      "updatedAt": "2026-01-22T16:45:07Z",
+      "updatedAt": "2026-03-02T12:28:14Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "39d141d19250b6554fa97f8cf5450a69f8b7cf6f",
@@ -1114,7 +1114,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@amankin could you please create a checklist for each of the folks that you can check off?",
+          "createdAt": "2026-03-02T12:28:14Z",
+          "updatedAt": "2026-03-02T12:28:14Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOPTNEDc7My9Ee",
@@ -1290,7 +1298,7 @@
       "labels": [],
       "body": "Add in Bill and move Jim over with his permission.",
       "createdAt": "2026-01-22T17:50:24Z",
-      "updatedAt": "2026-01-23T09:13:51Z",
+      "updatedAt": "2026-03-02T12:26:38Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1308,9 +1316,30 @@
           "body": "I think this should be merged with #8. Samit D'Cunha and Natasha Chabbra, for example, should also be contributors. Probably others too!",
           "createdAt": "2026-01-23T09:13:51Z",
           "updatedAt": "2026-01-23T09:13:51Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> I think this should be merged with #8. Samit D'Cunha and Natasha Chabbra, for example, should also be contributors. Probably others too!\r\n\r\nThe litmus test is if they contributed substantial text or not. Substantial text would be several paragraphs, a detailed outline, key ideas that were not independently contributed by someone else, a schema, a non-trivial example, etc.",
+          "createdAt": "2026-03-02T10:49:08Z",
+          "updatedAt": "2026-03-02T10:49:08Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7nBZjR",
+          "commit": {
+            "abbreviatedOid": "8201944"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-02T12:26:38Z",
+          "updatedAt": "2026-03-02T12:26:38Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 20,
@@ -1350,7 +1379,7 @@
       "labels": [],
       "body": "This PR depends on #20.\r\n\r\nTwo thoughts were expressed by different participants:\r\n\r\n1. We should list as many use cases as possible.\r\n2. We should be clear which use cases has received sufficient stake holder input, in particular, when it comes to evaluating whether its requirements are accurate and there is interest in deployment.\r\n\r\nThis PR splits the use cases section in two: One for use cases with stakeholder evaluation, and one for use cases for future reference. This split allows us to track which use case received evaluation of its requirements, but also allows us to keep use cases for future reference, as well as be explicit about what we aim to target for the extensibility requirement.",
       "createdAt": "2026-01-27T14:56:55Z",
-      "updatedAt": "2026-02-16T08:38:55Z",
+      "updatedAt": "2026-03-02T12:33:04Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1403,6 +1432,27 @@
           "body": "I totally get your point on distinguishing use cases \"more\" and \"less\" worthy, which is why I changed the language on that. Now, the section only says that one section contains use cases that have been evaluated and use cases that have not.\r\n\r\nBut I also understand the WGLC, document writing process, and WG scope differently. My understanding is that you can always change scope, write new documents, etc. After WGLC, *this* document is finished, but I think nothing would change the WG to write a new document that lists additional use cases. Think about how many RFCs have been amended/superseded. I don't think there will be any issues with use cases that receive their evaluation after WGLC. But I will confirm my understanding with the chairs!",
           "createdAt": "2026-02-16T08:38:55Z",
           "updatedAt": "2026-02-16T08:38:55Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I don't see any benefit to merging this PR. It is unlikely we will get stakeholder input if we make it seem as if some artificial deadline has passed. I suggest closing the PR.",
+          "createdAt": "2026-03-02T10:45:30Z",
+          "updatedAt": "2026-03-02T10:45:30Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "What deadline are you referring to? WGLC? I want \"evaluated\" be interpreted w.r.t. time of writing. I could clarify this. Does that mean you would also argue against, e.g., a table that documents stakeholder input?",
+          "createdAt": "2026-03-02T12:22:54Z",
+          "updatedAt": "2026-03-02T12:22:54Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@felixlinker \r\n\r\n> What deadline are you referring to? WGLC? I want \"evaluated\" be interpreted w.r.t. time of writing. I could clarify this. Does that mean you would also argue against, e.g., a table that documents stakeholder input?\r\n\r\nBy deadline I was referring to the draft submission deadline (today) or another similarly arbitrary date. If we are ready for WGLC that is another story.\r\n\r\nI think a table of stakeholder would be useful, possibly in an Appendix. \r\n\r\nHowever, I think the categorization you propose would just result in make-work without any particular clarity or benefit for the WG. We know we need to get more stakeholder input on several of the use cases, and that is happening (albeit slowly).",
+          "createdAt": "2026-03-02T12:33:04Z",
+          "updatedAt": "2026-03-02T12:33:04Z"
         }
       ],
       "reviews": [
@@ -1473,13 +1523,13 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-02-27T09:54:06Z",
+      "updatedAt": "2026-03-02T18:23:31Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "presence_forensics",
-      "headRefOid": "a6c82352c1f29bd4f0d14f33a9b439179ccc299e",
+      "headRefOid": "7edbd5d82b351d9951f6c30e880faa07c776cdbb",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1519,9 +1569,72 @@
           "body": "Hi Rahel!\r\n\r\nLevels 2 and 3 seem to conflict with undetectable validation. How do you see that conflict to play out? Also, I see a slight tension between the heading (_proof_ of presence) and the body, which simply says \"establish.\" That seems weaker. I don't think this is a problem really, because we probably want a weaker notion in general (requiring that something is provable is tough), but we may want to rephrase the header.",
           "createdAt": "2026-02-27T09:54:06Z",
           "updatedAt": "2026-02-27T09:54:06Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> Hi Rahel!\r\n> \r\n> Levels 2 and 3 seem to conflict with undetectable validation. How do you see that conflict to play out? Also, I see a slight tension between the heading (_proof_ of presence) and the body, which simply says \"establish.\" That seems weaker. I don't think this is a problem really, because we probably want a weaker notion in general (requiring that something is provable is tough), but we may want to rephrase the header.\r\n\r\nNot all requirements will be the same for every use case. We need to have a set of tools that will not all be able to be used simultaneously.",
+          "createdAt": "2026-03-02T10:53:04Z",
+          "updatedAt": "2026-03-02T10:53:04Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I am really not keen at all on the term \"violator\". If there is consensus to keep this section, could we please make this a bit more neutral, like \"accessor\" or \"querying party\"?",
+          "createdAt": "2026-03-02T10:55:36Z",
+          "updatedAt": "2026-03-02T10:55:36Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Not all requirements will be the same for every use case. We need to have a set of tools that will not all be able to be used simultaneously.\r\n\r\nAgreed, but the PR explicitly mentions emblems that mark assets as protected, hence, the risk for conflict with undetactable validation.",
+          "createdAt": "2026-03-02T12:24:20Z",
+          "updatedAt": "2026-03-02T12:24:20Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> > Not all requirements will be the same for every use case. We need to have a set of tools that will not all be able to be used simultaneously.\r\n> \r\n> Agreed, but the PR explicitly mentions emblems that mark assets as protected, hence, the risk for conflict with undetactable validation.\r\n\r\nI agree that some of the language in the PR is problematic. I suggested starting with \"violator\". Hopefully that will result in an improvement. Note also that \"protected\" does not always equal \"protected under IHL\".\r\n",
+          "createdAt": "2026-03-02T12:37:21Z",
+          "updatedAt": "2026-03-02T12:37:21Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks for the feedback. I went ahead and added a caveat noting the potential conflict between Level 2 and Level 3 and replaced the term \"alleged violator\" with \"querying party\".\r\n\r\nRegarding the conflict terminology - \"proof of presence\" vs \"establish\":\r\nI intentionally used the terms \"establish\" because I was not sure the term proof was appropriate. \r\nIf we agree to consider the term proof to be fully definitive as in the definition of a mathematical proof, I agree that the term is too strong. If we define proof more colloquially, then proving and establishing could be considered synonymous.   ",
+          "createdAt": "2026-03-02T18:17:54Z",
+          "updatedAt": "2026-03-02T18:17:54Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Regarding the conflict terminology - \"proof of presence\" vs \"establish\": I intentionally used the terms \"establish\" because I was not sure the term proof was appropriate. If we agree to consider the term proof to be fully definitive as in the definition of a mathematical proof, I agree that the term is too strong. If we define proof more colloquially, then proving and establishing could be considered synonymous.\r\n\r\nI should also clarify that as of this writing I have not come up with other more appropriate options for the section title. I will keep thinking about that and am also open to suggestions.",
+          "createdAt": "2026-03-02T18:23:31Z",
+          "updatedAt": "2026-03-02T18:23:31Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc7m_jub",
+          "commit": {
+            "abbreviatedOid": "a6c8235"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-02T10:50:36Z",
+          "updatedAt": "2026-03-02T10:50:36Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "PLEASE pay attention to whitespace. You need a newline between different types of markup.\n\n```suggestion\nLevel 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the alleged violator verified the emblem upon accessing it.\n\n```",
+              "createdAt": "2026-03-02T10:50:36Z",
+              "updatedAt": "2026-03-02T10:51:24Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
