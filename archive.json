@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-03T01:20:53.647801+00:00",
+  "timestamp": "2026-03-08T01:19:18.016072+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1523,7 +1523,7 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-03-02T18:23:31Z",
+      "updatedAt": "2026-03-06T11:41:11Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1611,6 +1611,13 @@
           "body": "> Regarding the conflict terminology - \"proof of presence\" vs \"establish\": I intentionally used the terms \"establish\" because I was not sure the term proof was appropriate. If we agree to consider the term proof to be fully definitive as in the definition of a mathematical proof, I agree that the term is too strong. If we define proof more colloquially, then proving and establishing could be considered synonymous.\r\n\r\nI should also clarify that as of this writing I have not come up with other more appropriate options for the section title. I will keep thinking about that and am also open to suggestions.",
           "createdAt": "2026-03-02T18:23:31Z",
           "updatedAt": "2026-03-02T18:23:31Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks for the changes, Rahel! Are you aware of any use cases that require levels 2+3?",
+          "createdAt": "2026-03-06T11:41:10Z",
+          "updatedAt": "2026-03-06T11:41:10Z"
         }
       ],
       "reviews": [
