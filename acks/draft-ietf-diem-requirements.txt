@@ -2,14 +2,14 @@
 
 
 
-Digital Emblems                                                C. Deccio
-Internet-Draft                                  Brigham Young University
-Intended status: Informational                          R. A. Fainchtein
-Expires: 16 September 2026                                       JHU/APL
-                                                               F. Linker
-                                                                        
+Digital Emblems                                         R. A. Fainchtein
+Internet-Draft                                                   JHU/APL
+Intended status: Informational                                 F. Linker
+Expires: 16 September 2026                                              
                                                             A. Rosenberg
                                                                 Veridigo
+                                                               C. Deccio
+                                                Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
                                                            15 March 2026
@@ -631,11 +631,6 @@ Contributors
 
 Authors' Addresses
 
-   Casey Deccio
-   Brigham Young University
-   Email: casey@byu.edu
-
-
    Rahel A. Fainchtein
    JHU/APL
    Email: rahel.fainchtein@jhuapl.edu
@@ -648,6 +643,11 @@ Authors' Addresses
    Alex Rosenberg
    Veridigo
    Email: alexr@veridigo.com
+
+
+   Casey Deccio
+   Brigham Young University
+   Email: casey@byu.edu
 
 
    Allison Mankin
