@@ -56,6 +56,16 @@ contributor:
     organization: RTFM llp
     email: jim@rfc1035.com
 
+  -
+    fullname: Samit D'Cunha
+    organization: International Committee of the Red Cross
+    email: sdcunha@icrc.org
+
+  -
+    fullname: Natasha Chabbra
+    organization: Australian Red Cross
+    email: nchabbra@redcross.org.au
+
 normative:
   CHARTER:
     target: https://datatracker.ietf.org/doc/charter-ietf-diem/01/
@@ -378,4 +388,6 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-This is a partial list of persons to acknowledge:  Brian Haberman and Bill Woodcock created an early version of the requirements and use cases document, from which this draws ideas.  Other IETF contributors included (not exhaustively) Eric Vynke and Suresh Krishan. An incomplete list of contributors to the gathering of use case information includes Samit D'Cunha, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela.  TODO - get this complete.
+This is a partial list of persons to acknowledge: Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
+Other IETF contributors included (not exhaustively) Eric Vynke and Suresh Krishan.
+An incomplete list of contributors to the gathering of use case information includes Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela.
