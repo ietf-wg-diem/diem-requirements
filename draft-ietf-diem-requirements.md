@@ -166,7 +166,9 @@ The DIEM architecture will allow validators to discover and validate digital emb
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
-Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
+Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduced minimal overhead size except for fields required to fulfil other requirements in this document. 
+
+As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
 Individual use cases MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
@@ -197,15 +199,15 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 ### Validation {#validation}
 
-Digital emblems MAY require validation. Validation MUST support verification of all the emblem's data and its context.
-In particular, validation MUST ensure that the emblem was issued for the respective asset.
+Digital emblems MAY require validation. The digital emblem architecture MUST allow individual standards to support verification of all the digital emblem's data or a defined subset without restriction. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
+In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
 ### Authorization {#authorization}
 
-Digital emblems MAY require authorization by third-parties.
+Digital emblems MAY require authorization by third-parties. When they do, they MUST define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblems standards can choose to take a dependency on Internet access or not. For example, a given digital emblem MAY use PKI or the DNS as a root of trust if they want, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
+
 Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
-Individual profiles MUST standardize a trust model that describes how validators can discover authorities and how the system selects authorities.
 
 ## Other Requirements
 
