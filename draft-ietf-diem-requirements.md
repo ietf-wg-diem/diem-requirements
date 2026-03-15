@@ -22,11 +22,6 @@ venue:
 
 author:
   -
-    fullname: Casey Deccio
-    organization: Brigham Young University
-    email: casey@byu.edu
-
-  -
     fullname: Rahel A. Fainchtein
     organization: JHU/APL
     email: rahel.fainchtein@jhuapl.edu
@@ -39,6 +34,11 @@ author:
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
+
+  -
+    fullname: Casey Deccio
+    organization: Brigham Young University
+    email: casey@byu.edu
 
   -
     fullname: Allison Mankin
