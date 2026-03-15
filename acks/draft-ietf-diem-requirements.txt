@@ -8,8 +8,6 @@ Intended status: Informational                          R. A. Fainchtein
 Expires: 16 September 2026                                       JHU/APL
                                                                F. Linker
                                                                         
-                                                                 J. Reid
-                                                                RTFM llp
                                                             A. Rosenberg
                                                                 Veridigo
                                                                A. Mankin
@@ -121,6 +119,7 @@ Table of Contents
      8.1.  Normative References
      8.2.  Informative References
    Acknowledgments
+   Contributors
    Authors' Addresses
 
 1.  Introduction
@@ -600,14 +599,35 @@ Table of Contents
 Acknowledgments
 
    This is a partial list of persons to acknowledge: Brian Haberman and
-   Bill Woodcock created an early version of the requirements and use
-   cases document, from which this draws ideas.  Other IETF contributors
-   included (not exhaustively) Eric Vynke and Suresh Krishan.  An
-   incomplete list of contributors to the gathering of use case
-   information includes Samit D'Cunha, Antonio DeSimone, Moez Chakchouk,
-   Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon
-   Williams, Paulina Gutiérrez, and Guilherme Canela.  TODO - get this
-   complete.
+   Bill Woodcock created an early version of a use cases and
+   requirements document, from which this draws ideas.  Other IETF
+   contributors included (not exhaustively) Eric Vynke and Suresh
+   Krishan.  An incomplete list of contributors to the gathering of use
+   case information includes Antonio DeSimone, Moez Chakchouk, Kerstin
+   Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams,
+   Paulina Gutiérrez, and Guilherme Canela.
+
+Contributors
+
+   Bill Woodcock
+   Packet Clearing House
+   Email: woody@pch.net
+
+
+   Jim Reid
+   RTFM llp
+   Email: jim@rfc1035.com
+
+
+   Samit D'Cunha
+   International Committee of the Red Cross
+   Email: sdcunha@icrc.org
+
+
+   Natasha Chabbra
+   Australian Red Cross
+   Email: nchabbra@redcross.org.au
+
 
 Authors' Addresses
 
@@ -623,11 +643,6 @@ Authors' Addresses
 
    Felix Linker
    Email: linkerfelix@gmail.com
-
-
-   Jim Reid
-   RTFM llp
-   Email: jim@rfc1035.com
 
 
    Alex Rosenberg
