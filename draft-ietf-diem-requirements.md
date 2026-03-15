@@ -388,6 +388,5 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-This is a partial list of persons to acknowledge: Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
-Other IETF contributors included (not exhaustively) Eric Vynke and Suresh Krishan.
-An incomplete list of contributors to the gathering of use case information includes Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela.
+Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
+We also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela for their valuable input.
