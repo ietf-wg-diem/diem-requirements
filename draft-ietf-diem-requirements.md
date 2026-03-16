@@ -167,7 +167,7 @@ The DIEM architecture will allow validators to discover and validate digital emb
 
 ### Digital Emblem Format
 
-Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduced minimal overhead size except for fields required to fulfil other requirements in this document. 
+Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduced minimal overhead size except for fields required to fulfil other requirements in this document.
 
 As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
