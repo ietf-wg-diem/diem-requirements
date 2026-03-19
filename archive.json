@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-17T01:19:32.522066+00:00",
+  "timestamp": "2026-03-19T01:23:11.614171+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1779,7 +1779,7 @@
       "labels": [],
       "body": "New PR as the one by @amankin overwrote versioned document.",
       "createdAt": "2026-03-15T06:44:16Z",
-      "updatedAt": "2026-03-17T00:15:48Z",
+      "updatedAt": "2026-03-18T08:49:45Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1839,6 +1839,20 @@
           "body": "Hi, I would suggest if we don't hear from anyone else by Friday, we merge this PR with the list of folks who have given their permission. If anyone wants to be added, they can reach out on the mailing list.",
           "createdAt": "2026-03-17T00:15:48Z",
           "updatedAt": "2026-03-17T00:15:48Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@amankin Would be great if you could reach out to the five names listed above!",
+          "createdAt": "2026-03-18T06:54:43Z",
+          "updatedAt": "2026-03-18T06:54:43Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'll try again, didn't get an initial response.\r\n\r\nOn Wed, Mar 18, 2026 at 02:55 Felix Linker ***@***.***> wrote:\r\n\r\n> *felixlinker* left a comment (ietf-wg-diem/diem-requirements#27)\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/27#issuecomment-4080166210>\r\n>\r\n> @amankin <https://github.com/amankin> Would be great if you could reach\r\n> out to the five names listed above!\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/27#issuecomment-4080166210>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/ABDU4EAT2BM2DZB2VNQ4MCT4RJB4TAVCNFSM6AAAAACWSKLS3SVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHM2DAOBQGE3DMMRRGA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2026-03-18T08:49:45Z",
+          "updatedAt": "2026-03-18T08:49:45Z"
         }
       ],
       "reviews": []
@@ -1938,7 +1952,7 @@
       "labels": [],
       "body": "This requirement expansion resulted from brainstorming with Rohan about the use cases that aren't well represented in WG participation but have been brought up as potential future uses of Digital Emblems.\r\n\r\nI believe with such an expansion, the continued expansion of use cases becomes unnecessary given this seems to account for the things required by the beyond-initial-scope cases without having to go through the controversy of debating appropriateness of each of these individually. The intention is to ensure the requirements on the architecture document specifically permit the flexibility needed for Deliverable 3 documents (specific digital emblem standards) to do whatever they need to without having to support arbitrary requirements of one another.\r\n\r\n@ohmantics @amankin  I especially want to hear your take as people passionately exploring other use cases.\r\n\r\nFYI @rohanmahy ",
       "createdAt": "2026-03-15T23:50:50Z",
-      "updatedAt": "2026-03-17T00:19:27Z",
+      "updatedAt": "2026-03-18T19:28:06Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -2196,6 +2210,59 @@
               "updatedAt": "2026-03-16T04:30:09Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7so9ug",
+          "commit": {
+            "abbreviatedOid": "8aca8f6"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-18T18:56:52Z",
+          "updatedAt": "2026-03-18T18:56:52Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\nTo accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduce minimal overhead size except for fields required to fulfil other requirements in this document.\n```\n(a nit, fixing a minor typo)",
+              "createdAt": "2026-03-18T18:56:52Z",
+              "updatedAt": "2026-03-18T18:56:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7speAF",
+          "commit": {
+            "abbreviatedOid": "8aca8f6"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-18T19:23:39Z",
+          "updatedAt": "2026-03-18T19:23:40Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "I like the content of what is being added here, but think the sentence ordering for lines 205-207 is a bit confusing. I think something like the following might be a bit easier for the reader to understand.\n\n```suggestion\nDigital emblems MAY require validation but are in no way required to do so.\nThat is to say, some  use cases MAY use use unverified digital emblems.\n\nTo ensure extensibility, the digital emblem architecture MUST allow individual standards to support verification of all the digital emblem's data or of a defined subset thereof without restriction. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data whose validation is not required by a given digital emblem type.\n```\n(I would then remove line 207.)",
+              "createdAt": "2026-03-18T19:23:39Z",
+              "updatedAt": "2026-03-18T19:25:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7spi-8",
+          "commit": {
+            "abbreviatedOid": "8aca8f6"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "I left a few nit type tweaks to phrasing, typos and the like, but otherwise like these changes. ",
+          "createdAt": "2026-03-18T19:28:06Z",
+          "updatedAt": "2026-03-18T19:28:06Z",
+          "comments": []
         }
       ]
     }
