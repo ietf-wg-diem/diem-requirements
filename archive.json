@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-19T01:23:11.614171+00:00",
+  "timestamp": "2026-03-22T01:23:07.767924+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1779,7 +1779,7 @@
       "labels": [],
       "body": "New PR as the one by @amankin overwrote versioned document.",
       "createdAt": "2026-03-15T06:44:16Z",
-      "updatedAt": "2026-03-18T08:49:45Z",
+      "updatedAt": "2026-03-19T04:28:46Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1794,9 +1794,9 @@
         {
           "author": "felixlinker",
           "authorAssociation": "COLLABORATOR",
-          "body": "Checklist for consent to being listed:\r\n\r\n- [x] Bill Woodcock\r\n- [x] Brian Haberman\r\n- [ ] Natasha Chabbra\r\n- [x] Samit D'Cunha\r\n- [x] Eric Vynke\r\n- [x] Suresh Krishnan\r\n- [x] Antonio DeSimone\r\n- [ ] Moez Chakchouk\r\n- [ ] Kerstin Vignard\r\n- [x] Nick Doty\r\n- [x] Tommy Jensen\r\n- [x] Michael Christie\r\n- [ ] Leon Williams\r\n- [ ] Paulina Guti\u00e9rrez\r\n- [ ] Guilherme Canela",
+          "body": "Checklist for consent to being listed:\r\n\r\n- [x] Bill Woodcock\r\n- [x] Brian Haberman\r\n- [x] Natasha Chabbra\r\n- [x] Samit D'Cunha\r\n- [x] Eric Vynke\r\n- [x] Suresh Krishnan\r\n- [x] Antonio DeSimone\r\n- [ ] Moez Chakchouk\r\n- [ ] Kerstin Vignard\r\n- [x] Nick Doty\r\n- [x] Tommy Jensen\r\n- [x] Michael Christie\r\n- [ ] Leon Williams\r\n- [ ] Paulina Guti\u00e9rrez\r\n- [ ] Guilherme Canela",
           "createdAt": "2026-03-15T06:54:58Z",
-          "updatedAt": "2026-03-16T03:52:02Z"
+          "updatedAt": "2026-03-19T04:28:46Z"
         },
         {
           "author": "felixlinker",
