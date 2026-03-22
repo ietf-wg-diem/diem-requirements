@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 17 September 2026                                       JHU/APL
+Expires: 23 September 2026                                       JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 17 September 2026                                       JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                           16 March 2026
+                                                           22 March 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 September 2026.
+   This Internet-Draft will expire on 23 September 2026.
 
 Copyright Notice
 
@@ -213,7 +213,7 @@ Table of Contents
    digital emblem.  Beyond that, digital emblems MAY include other data,
    for example, an issuer or a validity window.  To accommodate use
    cases requiring extensible data, a digital emblem architecture SHOULD
-   introduced minimal overhead size except for fields required to fulfil
+   introduce minimal overhead size except for fields required to fulfil
    other requirements in this document.
 
    As of writing, the DIEM charter requires that digital emblems MUST
