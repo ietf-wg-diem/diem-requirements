@@ -119,14 +119,14 @@ This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
 We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
+We use the terms "(digital) emblem" and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
 These definitions have been reproduced in section Conventions and Definitions.
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
-The definitions for terms "(digital) emblem," "bearer," and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
+The definitions for terms "(digital) emblem" and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
 
 
 (Digital) Emblem:
