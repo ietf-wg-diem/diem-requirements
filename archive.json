@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-22T01:23:07.767924+00:00",
+  "timestamp": "2026-03-24T01:16:50.838164+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1869,7 +1869,7 @@
       "labels": [],
       "body": "Many of the use cases require support for physical assets. Recent pull requests inadvertently restricted definitions to digital assets (our first charter items). ",
       "createdAt": "2026-03-15T22:42:06Z",
-      "updatedAt": "2026-03-16T09:45:50Z",
+      "updatedAt": "2026-03-22T08:19:28Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1915,6 +1915,13 @@
           "body": "> > IHL protects hospitals which use emblems other than the RedC* distinctive emblems. Unless you can track down all of them and have them agree that their emblems could not represent physical assets in the future, I think you need to remove the \"digital\" qualification.\r\n> \r\n> Sorry - I cannot follow. If they use non-Red Cr* emblems, that would be a different use case, no?\r\n\r\nI wouldn't think so. It is a different emblem but still an IHL use case. ",
           "createdAt": "2026-03-16T09:45:50Z",
           "updatedAt": "2026-03-16T09:45:50Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Heya! I don't understand your last sentence. IHL codifies a number of emblems. To me, you can only be an IHL use case if you use one of their emblems. Or do you mean: \"A use case is IHL if the marked asset has a special status under IHL\"? And in your case, you use a non-IHL emblem to mark that asset but to communicate that special status?\r\n\r\nSidenote: Perhaps we should start this discussion from scratch on list.",
+          "createdAt": "2026-03-22T08:19:28Z",
+          "updatedAt": "2026-03-22T08:19:28Z"
         }
       ],
       "reviews": [
@@ -1952,13 +1959,13 @@
       "labels": [],
       "body": "This requirement expansion resulted from brainstorming with Rohan about the use cases that aren't well represented in WG participation but have been brought up as potential future uses of Digital Emblems.\r\n\r\nI believe with such an expansion, the continued expansion of use cases becomes unnecessary given this seems to account for the things required by the beyond-initial-scope cases without having to go through the controversy of debating appropriateness of each of these individually. The intention is to ensure the requirements on the architecture document specifically permit the flexibility needed for Deliverable 3 documents (specific digital emblem standards) to do whatever they need to without having to support arbitrary requirements of one another.\r\n\r\n@ohmantics @amankin  I especially want to hear your take as people passionately exploring other use cases.\r\n\r\nFYI @rohanmahy ",
       "createdAt": "2026-03-15T23:50:50Z",
-      "updatedAt": "2026-03-18T19:28:06Z",
+      "updatedAt": "2026-03-22T07:56:25Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "tojens-generalizing-architecture-requirements",
-      "headRefOid": "8aca8f6948fbc240a7fcbe24e4b68cc2f1ccf9d4",
+      "headRefOid": "54613381d2294447cce50a61410c915cdd7bdbae",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
