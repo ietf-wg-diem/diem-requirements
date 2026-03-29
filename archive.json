@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-24T01:16:50.838164+00:00",
+  "timestamp": "2026-03-29T01:43:10.013007+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -619,6 +619,22 @@
           "updatedAt": "2026-03-15T05:55:35Z"
         }
       ]
+    },
+    {
+      "number": 30,
+      "id": "I_kwDOPTNEDc739qzY",
+      "title": "Additional potential emblems: Any missing requirements?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/30",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In chat during IETF 125, @ohmantics mentioned several additional potential emblem types. Please let us know if we are missing any requirements needed for these use cases.\n\n\n> For consideration, here are a list of use cases we haven't discussed:\n> \n> Wassenaar Arrangement / Export Controls \u2014 dual-use goods and technologies have export control markings; digital emblems could mark shipments or data transfers subject to export control regimes\n> Antarctic Treaty System \u2014 research stations and vessels in Antarctica have protected status; digital assets of Antarctic research programs could benefit from emblems\n> Outer Space Treaty / COPUOS \u2014 space objects, ground stations, and telemetry systems have registration and non-interference obligations; satellite ground infrastructure could bear digital emblems\n> Convention on Certain Conventional Weapons (CCW) \u2014 minefields and areas with unexploded ordnance carry physical markings; digital geodata could carry equivalent emblems\n> International Telecommunication Union (ITU) \u2014 frequency allocations and emergency telecommunications have protected status under the ITU Constitution; digital infrastructure supporting emergency comms could be marked\n> \n> Undersea cable systems \u2014 submarine cables have protected status under UNCLOS and the 1884 Convention for the Protection of Submarine Telegraph Cables; landing stations, management systems, and monitoring infrastructure could bear digital emblems\n> Critical infrastructure / CNI designations \u2014 many nations designate critical national infrastructure; while not treaty-based, mutual recognition frameworks could use digital emblems\n> Election infrastructure \u2014 some jurisdictions designate election systems as critical infrastructure; digital emblems could signal this status to potential attackers\n> Maritime vessels (IMO) \u2014 beyond containers, vessels themselves carry IMO numbers and safety certifications (SOLAS); their digital systems (AIS, ECDIS) could bear emblems\n> Pharmaceutical supply chain (WHO prequalification) \u2014 beyond WHO's Red Cross-like protection, WHO-prequalified medicines in transit could use digital emblems for anti-counterfeiting",
+      "createdAt": "2026-03-28T14:14:31Z",
+      "updatedAt": "2026-03-28T14:14:31Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
