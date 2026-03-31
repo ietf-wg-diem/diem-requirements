@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-29T01:43:10.013007+00:00",
+  "timestamp": "2026-03-31T01:28:19.245793+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1885,7 +1885,7 @@
       "labels": [],
       "body": "Many of the use cases require support for physical assets. Recent pull requests inadvertently restricted definitions to digital assets (our first charter items). ",
       "createdAt": "2026-03-15T22:42:06Z",
-      "updatedAt": "2026-03-22T08:19:28Z",
+      "updatedAt": "2026-03-30T13:32:14Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1938,6 +1938,13 @@
           "body": "Heya! I don't understand your last sentence. IHL codifies a number of emblems. To me, you can only be an IHL use case if you use one of their emblems. Or do you mean: \"A use case is IHL if the marked asset has a special status under IHL\"? And in your case, you use a non-IHL emblem to mark that asset but to communicate that special status?\r\n\r\nSidenote: Perhaps we should start this discussion from scratch on list.",
           "createdAt": "2026-03-22T08:19:28Z",
           "updatedAt": "2026-03-22T08:19:28Z"
+        },
+        {
+          "author": "bwoodcock",
+          "authorAssociation": "NONE",
+          "body": "> > My understanding was that Unesco cultural assets can be physical.\r\n> \r\n> Yes, they can be. Hospitals are physical too. But the plans for the digital emblem is to solve the problem of marking infrastructure that cannot be marked today. IIRC, the folks at UNESCO asked the ICRC to lead the digital emblems under IHL efforts, and our input so far was that physical emblems are completely sufficient to mark physical assets.\r\n\r\nFelix, the rumored existence of someone who does not need something does not negate the actual needs of actual constituents.  During the requirements interviews, UNESCO cultural division representatives clearly said that they wanted to mark paintings, buildings, sculptures, et cetera.",
+          "createdAt": "2026-03-30T13:32:14Z",
+          "updatedAt": "2026-03-30T13:32:14Z"
         }
       ],
       "reviews": [
