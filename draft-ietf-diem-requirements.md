@@ -22,11 +22,6 @@ venue:
 
 author:
   -
-    fullname: Casey Deccio
-    organization: Brigham Young University
-    email: casey@byu.edu
-
-  -
     fullname: Rahel A. Fainchtein
     organization: JHU/APL
     email: rahel.fainchtein@jhuapl.edu
@@ -36,19 +31,40 @@ author:
     email: linkerfelix@gmail.com
 
   -
-    fullname: Jim Reid
-    organization: RTFM llp
-    email: jim@rfc1035.com
-
-  -
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
 
   -
+    fullname: Casey Deccio
+    organization: Brigham Young University
+    email: casey@byu.edu
+
+  -
     fullname: Allison Mankin
     organization: Packet Clearing House
     email: allison@pch.net
+
+contributor:
+  -
+    fullname: Bill Woodcock
+    organization: Packet Clearing House
+    email: woody@pch.net
+
+  -
+    fullname: Jim Reid
+    organization: RTFM llp
+    email: jim@rfc1035.com
+
+  -
+    fullname: Samit D'Cunha
+    organization: International Committee of the Red Cross
+    email: sdcunha@icrc.org
+
+  -
+    fullname: Natasha Chabbra
+    organization: Australian Red Cross
+    email: nchabbra@redcross.org.au
 
 normative:
   CHARTER:
@@ -371,3 +387,6 @@ This document has no IANA actions.
 
 # Acknowledgments
 {:numbered="false"}
+
+Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
+We also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Nick Doty, Tommy Jensen, and Michael Christie for their valuable input.
