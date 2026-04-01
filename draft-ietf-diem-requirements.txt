@@ -2,19 +2,17 @@
 
 
 
-Digital Emblems                                                C. Deccio
-Internet-Draft                                  Brigham Young University
-Intended status: Informational                          R. A. Fainchtein
-Expires: 23 September 2026                                       JHU/APL
-                                                               F. Linker
-                                                                        
-                                                                 J. Reid
-                                                                RTFM llp
+Digital Emblems                                         R. A. Fainchtein
+Internet-Draft                                                   JHU/APL
+Intended status: Informational                                 F. Linker
+Expires: 3 October 2026                                                 
                                                             A. Rosenberg
                                                                 Veridigo
+                                                               C. Deccio
+                                                Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                           22 March 2026
+                                                            1 April 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -59,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 September 2026.
+   This Internet-Draft will expire on 3 October 2026.
 
 Copyright Notice
 
@@ -121,6 +119,7 @@ Table of Contents
      8.1.  Normative References
      8.2.  Informative References
    Acknowledgments
+   Contributors
    Authors' Addresses
 
 1.  Introduction
@@ -535,9 +534,14 @@ Table of Contents
    [CHARTER]  "Digital Emblems", 27 May 2025,
               <https://datatracker.ietf.org/doc/charter-ietf-diem/01/>.
 
-   [RFC2119]  "*** BROKEN REFERENCE ***".
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
 
-   [RFC8174]  "*** BROKEN REFERENCE ***".
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
 8.2.  Informative References
 
@@ -593,12 +597,34 @@ Table of Contents
 
 Acknowledgments
 
+   Brian Haberman and Bill Woodcock created an early version of a use
+   cases and requirements document, from which this draws ideas.  We
+   also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Nick Doty,
+   Tommy Jensen, and Michael Christie for their valuable input.
+
+Contributors
+
+   Bill Woodcock
+   Packet Clearing House
+   Email: woody@pch.net
+
+
+   Jim Reid
+   RTFM llp
+   Email: jim@rfc1035.com
+
+
+   Samit D'Cunha
+   International Committee of the Red Cross
+   Email: sdcunha@icrc.org
+
+
+   Natasha Chabbra
+   Australian Red Cross
+   Email: nchabbra@redcross.org.au
+
+
 Authors' Addresses
-
-   Casey Deccio
-   Brigham Young University
-   Email: casey@byu.edu
-
 
    Rahel A. Fainchtein
    JHU/APL
@@ -609,14 +635,14 @@ Authors' Addresses
    Email: linkerfelix@gmail.com
 
 
-   Jim Reid
-   RTFM llp
-   Email: jim@rfc1035.com
-
-
    Alex Rosenberg
    Veridigo
    Email: alexr@veridigo.com
+
+
+   Casey Deccio
+   Brigham Young University
+   Email: casey@byu.edu
 
 
    Allison Mankin
