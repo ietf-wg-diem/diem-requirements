@@ -389,4 +389,4 @@ This document has no IANA actions.
 {:numbered="false"}
 
 Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
-We also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Moez Chakchouk, Kerstin Vignard, Nick Doty, Tommy Jensen, Michael Christie, Leon Williams, Paulina Gutiérrez, and Guilherme Canela for their valuable input.
+We also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Nick Doty, Tommy Jensen, and Michael Christie for their valuable input.
