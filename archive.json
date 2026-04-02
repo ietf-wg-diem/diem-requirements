@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-31T01:28:19.245793+00:00",
+  "timestamp": "2026-04-02T01:25:12.482305+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1788,24 +1788,26 @@
       "id": "PR_kwDOPTNEDc7KsZHn",
       "title": "Authorship / Acknowledgements / Contributors",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/27",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "New PR as the one by @amankin overwrote versioned document.",
       "createdAt": "2026-03-15T06:44:16Z",
-      "updatedAt": "2026-03-19T04:28:46Z",
+      "updatedAt": "2026-04-01T10:14:24Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "acks",
-      "headRefOid": "fc4d1fd4a3cab317c27d1b56561ee222ad6ea8c4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d3acce70c50f6a9b9852728edd3e56151416c789",
+      "closedAt": "2026-04-01T10:14:07Z",
+      "mergedAt": "2026-04-01T10:14:07Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "f1e96f865df30162f9ccf04fc037b471eb65464a"
+      },
       "comments": [
         {
           "author": "felixlinker",
@@ -1869,6 +1871,13 @@
           "body": "I'll try again, didn't get an initial response.\r\n\r\nOn Wed, Mar 18, 2026 at 02:55 Felix Linker ***@***.***> wrote:\r\n\r\n> *felixlinker* left a comment (ietf-wg-diem/diem-requirements#27)\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/27#issuecomment-4080166210>\r\n>\r\n> @amankin <https://github.com/amankin> Would be great if you could reach\r\n> out to the five names listed above!\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/27#issuecomment-4080166210>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/ABDU4EAT2BM2DZB2VNQ4MCT4RJB4TAVCNFSM6AAAAACWSKLS3SVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHM2DAOBQGE3DMMRRGA>\r\n> .\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
           "createdAt": "2026-03-18T08:49:45Z",
           "updatedAt": "2026-03-18T08:49:45Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "PR merged. We can still add people in a separate PR that will respond later.",
+          "createdAt": "2026-04-01T10:14:23Z",
+          "updatedAt": "2026-04-01T10:14:23Z"
         }
       ],
       "reviews": []
@@ -1885,7 +1894,7 @@
       "labels": [],
       "body": "Many of the use cases require support for physical assets. Recent pull requests inadvertently restricted definitions to digital assets (our first charter items). ",
       "createdAt": "2026-03-15T22:42:06Z",
-      "updatedAt": "2026-03-30T13:32:14Z",
+      "updatedAt": "2026-03-31T20:28:40Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1945,6 +1954,20 @@
           "body": "> > My understanding was that Unesco cultural assets can be physical.\r\n> \r\n> Yes, they can be. Hospitals are physical too. But the plans for the digital emblem is to solve the problem of marking infrastructure that cannot be marked today. IIRC, the folks at UNESCO asked the ICRC to lead the digital emblems under IHL efforts, and our input so far was that physical emblems are completely sufficient to mark physical assets.\r\n\r\nFelix, the rumored existence of someone who does not need something does not negate the actual needs of actual constituents.  During the requirements interviews, UNESCO cultural division representatives clearly said that they wanted to mark paintings, buildings, sculptures, et cetera.",
           "createdAt": "2026-03-30T13:32:14Z",
           "updatedAt": "2026-03-30T13:32:14Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hey Bill,\r\n\r\nAs I said: I think we should have this discussion on list.\r\n\r\nCheers,\r\nFelix",
+          "createdAt": "2026-03-31T07:19:14Z",
+          "updatedAt": "2026-03-31T07:19:14Z"
+        },
+        {
+          "author": "ts5746",
+          "authorAssociation": "NONE",
+          "body": "\r\n> Heya! I don't understand your last sentence. IHL codifies a number of emblems. To me, you can only be an IHL use case if you use one of their emblems. Or do you mean: \"A use case is IHL if the marked asset has a special status under IHL\"? And in your case, you use a non-IHL emblem to mark that asset but to communicate that special status?\r\n\r\nThere are multiple organizations that do have the requirement to digitally mark physical assets, both IHL and non-IHL related. Use cases involve, for example, schools and medical cargo drones. And there is more to IHL than only the well-defined emblems. E.g., civil ambulances may use non-IHL markings, but that does not mean that IHL does not apply. \r\n\r\n> > My understanding was that Unesco cultural assets can be physical.\r\n>\r\n> Yes, they can be. Hospitals are physical too. But the plans for the digital emblem is to solve the problem of marking infrastructure that cannot be marked today. IIRC, the folks at UNESCO asked the ICRC to lead the digital emblems under IHL efforts, and our input so far was that physical emblems are completely sufficient to mark physical assets.\r\n\r\nWithout starting a discussion about the visibility of markings or emblems (nighttime, beyond line of sight, ,...!): it is also about authentication and accountability (proof-of-presence) for which we need digital emblems for physical things. \r\n\r\n> Sidenote: Perhaps we should start this discussion from scratch on list.\r\n\r\nSince we already had this discussion on the list, back to the text: i.m.h.o., use cases underpinning a technical standard - in this case for _how_ to bind a status (legal or otherwise) to an asset (digital or physical) - should take a non-exhaustive approach and should not contain any text that unnecessarily limits other use cases - in this case by restricting _what_ that status and those assets might be.",
+          "createdAt": "2026-03-31T20:28:40Z",
+          "updatedAt": "2026-03-31T20:28:40Z"
         }
       ],
       "reviews": [
