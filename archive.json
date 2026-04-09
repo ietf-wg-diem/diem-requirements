@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-02T01:25:12.482305+00:00",
+  "timestamp": "2026-04-09T01:22:05.481301+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1894,13 +1894,13 @@
       "labels": [],
       "body": "Many of the use cases require support for physical assets. Recent pull requests inadvertently restricted definitions to digital assets (our first charter items). ",
       "createdAt": "2026-03-15T22:42:06Z",
-      "updatedAt": "2026-03-31T20:28:40Z",
+      "updatedAt": "2026-04-07T06:47:36Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "asset-def",
-      "headRefOid": "b794de5ca1d8d0de094718b6969c3e42a65d1a8b",
+      "headRefOid": "8707f82fece1cb0aa3f5c04a121d9e95cbb1aee9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1988,6 +1988,26 @@
               "body": "```suggestion\nIn context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).\n```",
               "createdAt": "2026-03-16T01:03:57Z",
               "updatedAt": "2026-03-16T01:04:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc7yXaio",
+          "commit": {
+            "abbreviatedOid": "b794de5"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-07T06:47:25Z",
+          "updatedAt": "2026-04-07T06:47:26Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\n  A digital asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.\n```",
+              "createdAt": "2026-04-07T06:47:25Z",
+              "updatedAt": "2026-04-07T06:47:26Z"
             }
           ]
         }
