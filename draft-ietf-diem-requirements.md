@@ -138,7 +138,6 @@ The definitions for terms "(digital) emblem," "bearer," and "validation" are rep
 
 Asset:
 : A physical resource -- such as place or thing; or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
-  A digital asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.
 
 Emblem issuer:
 : The entity that operates or controls an asset that bears a digital emblem.
