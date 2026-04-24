@@ -88,6 +88,20 @@ informative:
     title: The Protection of the Red Cross / Red Crescent Emblems
     author:
        org: International Committee of the Red Cross
+  RCRCRES:
+    target: https://rcrcconference.org/app/uploads/2024/10/34IC_R2-ICT-EN.pdf
+    title: Protecting Civilians and Other Protected Persons and Objects Against the Potential Human Cost of ICT Activities During Armed Conflict
+    author:
+       org: 34th International Conference of the Red Cross and Red Crescent
+    date: 2024-10
+    seriesinfo:
+      - Document prepared by the International Committee of the Red Cross in consultation with the International Federation of Red Cross and Red Crescent Societies
+  UNESCORES:
+    target: https://unesdoc.unesco.org/ark:/48223/pf0000396721.locale=en
+    title: Resolutions Adopted During the 16th Meeting of the High Contracting Parties to the 1954 Hague Convention
+    author:
+       org: United Nations Educational, Scientific and Cultural Organization
+    date: 2025-12-01
   PRESS:
     target: https://safety.rsf.org/appendix-i-protection-of-journalists-in-war-zones/
     title: RSF Resource for Journalists' Safety
@@ -298,8 +312,8 @@ Some assets enjoy certain specific protections under IHL, including that they mu
 In other words, protective emblems under IHL signal the applicability of a specific or special protection under IHL.
 Namely, these emblems are:
 
-- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions
-- The Blue Shield emblem (a shield, pointed below, per saltire blue and white), defined in the 1954 Hague Convention
+- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{RCRCRES}}
+- The Blue Shield emblem (a shield, pointed below, per saltire blue and white), defined in the 1954 Hague Convention {{UNESCORES}}
 - The international distinctive sign of civil defence, an equilateral blue triangle on an orange ground, defined in Additional Protocol I of the Geneva Conventions
 - The dangerous forces special sign, consisting of a group of three bright orange circles placed on the same axis, defined in Additional Protocol I of the Geneva Conventions
 
