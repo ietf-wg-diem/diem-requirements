@@ -22,11 +22,6 @@ venue:
 
 author:
   -
-    fullname: Casey Deccio
-    organization: Brigham Young University
-    email: casey@byu.edu
-
-  -
     fullname: Rahel A. Fainchtein
     organization: JHU/APL
     email: rahel.fainchtein@jhuapl.edu
@@ -36,19 +31,40 @@ author:
     email: linkerfelix@gmail.com
 
   -
-    fullname: Jim Reid
-    organization: RTFM llp
-    email: jim@rfc1035.com
-
-  -
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
 
   -
+    fullname: Casey Deccio
+    organization: Brigham Young University
+    email: casey@byu.edu
+
+  -
     fullname: Allison Mankin
     organization: Packet Clearing House
     email: allison@pch.net
+
+contributor:
+  -
+    fullname: Bill Woodcock
+    organization: Packet Clearing House
+    email: woody@pch.net
+
+  -
+    fullname: Jim Reid
+    organization: RTFM llp
+    email: jim@rfc1035.com
+
+  -
+    fullname: Samit D'Cunha
+    organization: International Committee of the Red Cross
+    email: sdcunha@icrc.org
+
+  -
+    fullname: Natasha Chabbra
+    organization: Australian Red Cross
+    email: nchabbra@redcross.org.au
 
 normative:
   CHARTER:
@@ -106,7 +122,7 @@ informative:
 
 --- abstract
 
-Digital emblems are a means for digital assets to signal that they should be treated in a specific way by reference to some normative framework.
+Digital emblems are a means for assets to signal that they should be treated in a specific way by reference to some normative framework.
 This document lists the requirements and use cases that an architecture for digital emblems must accommodate.
 
 --- middle
@@ -119,14 +135,14 @@ This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
 We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
+We use the terms "(digital) emblem" and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
 These definitions have been reproduced in section Conventions and Definitions.
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
-The definitions for terms "(digital) emblem," "bearer," and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
+The definitions for terms "(digital) emblem" and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
 
 
 (Digital) Emblem:
@@ -137,8 +153,7 @@ The definitions for terms "(digital) emblem," "bearer," and "validation" are rep
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A digital resource, system, or service - such as a server, data repository, or networked device - that can display a digital emblem.
-  An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.
+: A physical resource -- such as place or thing; or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
 
 Emblem issuer:
 : The entity that operates or controls an asset that bears a digital emblem.
@@ -174,6 +189,7 @@ To accommodate use cases requiring extensible data, a digital emblem architectur
 As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
+
 Individual use cases MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
@@ -224,6 +240,7 @@ The initial work should not preclude future extensions and individual standards 
 In this section, we sketch how the digital emblem architecture could be extended by future standards to accommodate more use cases, but it is not a comprehensive list.
 
 ## Data Formats
+
 Emblems for additional use cases may be defined via new profiles in future standards, potentially including new types of atomic data elements requiring additional specification.
 
 ## Asset Identifier Discovery
@@ -239,6 +256,7 @@ For example, if emblems were distributed via NFC, the marked asset could be the 
 As of this writing, the current charter scope requires that digital emblems explicitly identify their asset, but such discovery mechanisms could be investigated in future WG work.
 
 ## Confidentiality
+
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
 For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or by only serving emblems over channels with access control mechanisms.
 
@@ -291,7 +309,7 @@ A digital emblem using the DIEM architecture could address this gap, and we call
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+In context of emblems under IHL, emblems will mark assets that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
 Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
@@ -324,7 +342,7 @@ Emblem would identify place, date, and volume of production, and the emblem can 
 ## Press
 
 Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
-Digital assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
+Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
 
 ## United Nations Economic and Social Council (ECOSOC)
 
@@ -376,3 +394,6 @@ This document has no IANA actions.
 
 # Acknowledgments
 {:numbered="false"}
+
+Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
+We also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Nick Doty, Tommy Jensen, and Michael Christie for their valuable input.
