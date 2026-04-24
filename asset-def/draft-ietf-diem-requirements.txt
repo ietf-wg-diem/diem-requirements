@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 9 October 2026                                          JHU/APL
+Expires: 26 October 2026                                         JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 9 October 2026                                          JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            7 April 2026
+                                                           24 April 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 October 2026.
+   This Internet-Draft will expire on 26 October 2026.
 
 Copyright Notice
 
@@ -162,10 +162,7 @@ Table of Contents
 
    Asset:  A physical resource -- such as place or thing; or a digital
       resource, system, or service - such as a server, data repository,
-      or networked device - that can present a digital emblem.  A
-      digital asset represents the digital equivalent of an object,
-      installation, or service that would be designated by a physical
-      emblem.
+      or networked device - that can present a digital emblem.
 
    Emblem issuer:  The entity that operates or controls an asset that
       bears a digital emblem.  Depending on the applicable emblem, the
