@@ -118,6 +118,11 @@ informative:
     title: "Harmonized System"
     author:
        org: World Customs Organization
+  VIENNACONV:
+    target: https://treaties.un.org/pages/Viewdetails.aspx/?src=TREATY&mtdsg_no=III-3&chapter=3&clang=en
+    title: "Vienna Convention on Diplomatic Relations"
+    author:
+       org: United Nations
 
 
 --- abstract
@@ -257,9 +262,40 @@ As of this writing, the current charter scope requires that digital emblems expl
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
 For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or by only serving emblems over channels with access control mechanisms.
 
-## Proof of Presence
+## Proof of Presence {#proof-pres}
 
-For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
+Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically. This would be particularly poignant for use cases where emblems can be born or taken down dynamically and could be defined in three different levels, listed from weakest to strongest.
+
+Level 1 - presence and verifiability: Establishing that an actor or querying party was able to obtain the emblem at the
+time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
+time of an alleged violation.
+
+Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the
+querying party accessed the digital emblem.
+
+Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it.
+
+Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation {{undet-validation}}.
+An example from the Diplomatic Pouch use case illustrates the Level 3 Proof of Presence requirement.
+
+The use case for diplomatic pouches involves the following entities:
+- Point of Entry Country/Customs Agent(s): Validator
+- Origin Country or Accredited Organization: Issuer and Authorizing entity
+- Diplomat: Agent of Country or Accredited Organization
+
+As described in more detail in Section {#diplo-pouch}, the 1961 Vienna Convention on Diplomatic Relations {{VIENNACONV}} prohibits the
+physical inspection of diplomatic pouches (e.g. via X-ray, opening or tampering with the pouch etc.) by customs agents
+of a Point of Entry country.
+Thus, a Level 3 Proof of Presence record for a digital emblem of this type would establish whether or not customs agent(s)
+in the Point of Entry country adhered to the treaty in processing the diplomatic pouch.
+That is to say that they validated the pouch's digital emblem and nothing else.
+To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
+
+- Specific point of entry
+- Time/Date of arrival at point of entry
+- identifier(s) of customs agent(s) validating the pouch
+- Record of the pouch's Digital Emblem Validation signed by the customs agent(s)
+
 
 # Use Cases
 
@@ -273,6 +309,16 @@ We provide auxiliary material under Informative References.
 ## Basel Convention
 
 Regulates the trans-boundary movement of hazardous wastes. Use cases are functionally identical to OPCW and IAEA.
+
+## Diplomatic Pouches (1961 Vienna Convention on Diplomatic Relations) {#diplo-pouch}
+
+Digital emblems can protect diplomatic pouch shipments, diplomatic couriers, and diplomatic envoys, who are protected
+under the 1961 Vienna Convention on Diplomatic Relations {{VIENNACONV}}, which states that they may not be stopped, delayed, or
+inspected. This creates the paradox that the validity of their credentials must be evaluated, yet doing so has
+historically compromised the very rights that are intended to be signaled. Diplomatic markings have also been
+misappropriated as cover for the smuggling of drugs and other contraband. Digital emblems, which can be validated
+instantaneously, at a distance, and without interrupting the subject, solve both of these problems, while streamlining
+and automating customs and immigrations processes. Pertinent requirements are discussed above {{proof-pres}}.
 
 ## Ramsar Convention on the Wetlands
 
