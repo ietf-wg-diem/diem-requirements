@@ -182,9 +182,11 @@ The DIEM architecture will allow validators to discover and validate digital emb
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
+
 Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
+
 Individual use cases MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
@@ -235,6 +237,7 @@ The initial work should not preclude future extensions and individual standards 
 In this section, we sketch how the digital emblem architecture could be extended by future standards to accommodate more use cases, but it is not a comprehensive list.
 
 ## Data Formats
+
 Emblems for additional use cases may be defined via new profiles in future standards, potentially including new types of atomic data elements requiring additional specification.
 
 ## Asset Identifier Discovery
@@ -250,6 +253,7 @@ For example, if emblems were distributed via NFC, the marked asset could be the 
 As of this writing, the current charter scope requires that digital emblems explicitly identify their asset, but such discovery mechanisms could be investigated in future WG work.
 
 ## Confidentiality
+
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
 For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or by only serving emblems over channels with access control mechanisms.
 
