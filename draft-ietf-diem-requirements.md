@@ -289,7 +289,7 @@ A digital emblem for the geographic areas potentially requires
 IAEA administers several treaties, especially related to the controlled shipment of atomic fuels and wastes across borders.
 Similar use case as OPCW.
 
-## International Humanitarian Law
+## Protective Emblems under International Humanitarian Law
 
 ### Background
 
