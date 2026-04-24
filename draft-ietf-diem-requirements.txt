@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 3 October 2026                                                 
+Expires: 26 October 2026                                                
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            1 April 2026
+                                                           24 April 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 October 2026.
+   This Internet-Draft will expire on 26 October 2026.
 
 Copyright Notice
 
