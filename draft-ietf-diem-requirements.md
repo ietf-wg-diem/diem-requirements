@@ -122,7 +122,7 @@ informative:
 
 --- abstract
 
-Digital emblems are a means for digital assets to signal that they should be treated in a specific way by reference to some normative framework.
+Digital emblems are a means for assets to signal that they should be treated in a specific way by reference to some normative framework.
 This document lists the requirements and use cases that an architecture for digital emblems must accommodate.
 
 --- middle
@@ -153,8 +153,7 @@ The definitions for terms "(digital) emblem" and "validation" are reproduced fro
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A digital resource, system, or service - such as a server, data repository, or networked device - that can display a digital emblem.
-  An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.
+: A physical resource -- such as place or thing; or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
 
 Emblem issuer:
 : The entity that operates or controls an asset that bears a digital emblem.
@@ -306,7 +305,7 @@ A digital emblem using the DIEM architecture could address this gap, and we call
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+In context of emblems under IHL, emblems will mark assets that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
 Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
@@ -339,7 +338,7 @@ Emblem would identify place, date, and volume of production, and the emblem can 
 ## Press
 
 Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
-Digital assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
+Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
 
 ## United Nations Economic and Social Council (ECOSOC)
 
