@@ -259,21 +259,21 @@ Note that Levels 2 and 3 are intended to be mutually exclusive requirements with
 An example from the Diplomatic Pouch use case illustrates the Level 3 Proof of Presence requirement.
 
 The use case for diplomatic pouches involves the following entities:
-- Point of Entry Country/Customs Agent(s): Validator 
-- Origin Country or Accredited Organization: Issuer and Authorizing entity  
+- Point of Entry Country/Customs Agent(s): Validator
+- Origin Country or Accredited Organization: Issuer and Authorizing entity
 - Diplomat: Agent of Country or Accredited Organization
 
 As described in more detail in Section {#diplo-pouch}, the 1961 Vienna Convention on Diplomatic Relations {{VIENNACONV}} prohibits the
 physical inspection of diplomatic pouches (e.g. via X-ray, opening or tampering with the pouch etc.) by customs agents
 of a Point of Entry country.
 Thus, a Level 3 Proof of Presence record for a digital emblem of this type would establish whether or not customs agent(s)
-in the Point of Entry country adhered to the treaty in processing the diplomatic pouch. 
+in the Point of Entry country adhered to the treaty in processing the diplomatic pouch.
 That is to say that they validated the pouch's digital emblem and nothing else.
 To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
 
 - Specific point of entry
 - Time/Date of arrival at point of entry
-- identifier(s) of customs agent(s) validating the pouch 
+- identifier(s) of customs agent(s) validating the pouch
 - Record of the pouch's Digital Emblem Validation signed by the customs agent(s)
 
 
