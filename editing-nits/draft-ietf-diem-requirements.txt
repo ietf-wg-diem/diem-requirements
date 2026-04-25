@@ -20,10 +20,11 @@ Expires: 27 October 2026
 
 Abstract
 
-   Digital emblems are a means for assets to signal that they should be
-   treated in a specific way by reference to some normative framework.
-   This document lists the requirements and use cases that an
-   architecture for digital emblems must accommodate.
+   Digital emblems are a means for an asset to signal to validating
+   entities that it should be protected or treated in a specific way,
+   using some normative framework.  This document lists the requirements
+   and use cases that an architecture for digital emblems must
+   accommodate.
 
 About This Document
 
