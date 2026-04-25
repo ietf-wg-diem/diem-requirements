@@ -277,20 +277,16 @@ We provide auxiliary material under Informative References.
 
 Regulates the trans-boundary movement of hazardous wastes. Use cases are functionally identical to OPCW and IAEA.
 
-## Ramsar Convention on the Wetlands
-
-The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
-A digital emblem for the geographic areas potentially requires
-
-* Indication of location
-* Access to presence or absence of Ramsar designation of a specified location
-* Textual description
-* Ability to validate the presence or absence of Ramsar designation
-
 ## International Atomic Energy Agency (IAEA)
 
 IAEA administers several treaties, especially related to the controlled shipment of atomic fuels and wastes across borders.
 Similar use case as OPCW.
+
+## International Civil Aviation Organization (ICAO)
+
+Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
+Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
+Potential need for the emblem to reference a limited or partially redacted flight manifest.
 
 ## International Humanitarian Law
 
@@ -344,11 +340,27 @@ Emblem would identify place, date, and volume of production, and the emblem can 
 Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
 Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
 
+## Ramsar Convention on the Wetlands
+
+The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
+A digital emblem for the geographic areas potentially requires
+
+* Indication of location
+* Access to presence or absence of Ramsar designation of a specified location
+* Textual description
+* Ability to validate the presence or absence of Ramsar designation
+
+
 ## United Nations Economic and Social Council (ECOSOC)
 
 UN Model Regulations {{UNMODELREGS}} includes "Recommendations on the Transport of Dangerous Goods."
 This includes labeling of items with a four digit "UN Number" that indicates the comounds contained within, such as chemicals, explosives, flammable liquids, etc.
 For example, items containing lithium-based batteries are labeled with 3480 or 3481 and accompanied by a specific "battery mark" emblem.
+
+
+## United Nations Food and Agriculture Organization (FAO)
+
+Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."
 
 ## United Nations Peacekeepers
 
@@ -363,20 +375,12 @@ They also provide a system for labeling origin of items and valuation of items, 
 
 Similar to the use case of the Red Cross, Red Crystal, and Red Crescent.
 
-## United Nations Food and Agriculture Organization (FAO)
-
-Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."
 
 ## World Intellectual Property Organization (WIPO)
 
 WIPO administers 26+ treaties with different protections for different things.
 Brands that are protected under international law (e.g., Madrid Protocol) can mark their shipments with an emblem allowing customs agents to positively identify legitimate products.
 
-## International Civil Aviation Organization (ICAO)
-
-Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
-Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
-Potential need for the emblem to reference a limited or partially redacted flight manifest.
 
 # Security Considerations
 
