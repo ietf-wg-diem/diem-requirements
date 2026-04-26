@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-09T01:22:05.481301+00:00",
+  "timestamp": "2026-04-26T01:56:00.577033+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -436,14 +436,16 @@
       "author": "ohmantics",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
-        "ohmantics"
+        "ohmantics",
+        "amankin"
       ],
       "labels": [
+        "has-PR",
         "needs-text"
       ],
       "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
       "createdAt": "2025-12-02T21:32:40Z",
-      "updatedAt": "2026-03-15T05:30:45Z",
+      "updatedAt": "2026-04-25T19:58:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -497,7 +499,7 @@
         },
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\n\n> Feel free to complain to the IESG that they did not charter the full original scope if you would like.\n\nWe all chartered that together, let's not pin the blame on the IESG of the time. For more concrete guidance, I would turn to WG consensus [from a previous meeting](https://datatracker.ietf.org/doc/minutes-123-diem-202507221500/) that told the editors to \"concentrate discussion on requirements covered by the initial scope\" but not forbidding \"inclusion of out-of-scope\nrequirements which are non controversial\". \n\nThat said, for this specific use case, I used [this text](https://www.lawglobalhub.com/article-27-vienna-convention-on-diplomatic-relations-1961/) since the original link wasn't loading for me. From this, I derive this is indeed a case where an emblem makes sense, and a digital emblem could offer additional benefits (e.g. making it removable). \n\nThat said, what is unique about this case is about how _humans_ behave (e.g. cannot open the bag) not how _emblems_ behave. Looking through our existing requirements, I do not see any missing for implementing this one, which seems pretty straightforward using Discovery, Removable, and Validation requirement subsections, along with the MAY for including additional data with the emblem (such as \"indicating [the courier's] status and the number of packages constituting the diplomatic bag\", from Article 27 subsection 5). Even with proximity discovery being beyond scope, I could imagine use in the opposite direction (email from one embassy to another: \"diplomat identified by <domain-name> is headed your way\" and we stay out of the way telling anybody how to bind domain names physically to somebody/something).\n\nDoes anyone else see a requirement currently missing this would need to have listed? My point being this document is **not** saying \"only included use cases matter\" but to use use cases we have active engagement from stakeholders on to help us validate design against requirements. We absolutely should hope that fulfilling their requirements will then make the mechanisms developed here usable by any other use cases with a subset of the same requirements. If there is a missing requirement, let's focus on that for guiding drafted text (right now I wouldn't know what to suggest that would expand the requirements list).",
           "createdAt": "2026-03-15T05:30:45Z",
           "updatedAt": "2026-03-15T05:30:45Z"
@@ -632,9 +634,17 @@
       "labels": [],
       "body": "In chat during IETF 125, @ohmantics mentioned several additional potential emblem types. Please let us know if we are missing any requirements needed for these use cases.\n\n\n> For consideration, here are a list of use cases we haven't discussed:\n> \n> Wassenaar Arrangement / Export Controls \u2014 dual-use goods and technologies have export control markings; digital emblems could mark shipments or data transfers subject to export control regimes\n> Antarctic Treaty System \u2014 research stations and vessels in Antarctica have protected status; digital assets of Antarctic research programs could benefit from emblems\n> Outer Space Treaty / COPUOS \u2014 space objects, ground stations, and telemetry systems have registration and non-interference obligations; satellite ground infrastructure could bear digital emblems\n> Convention on Certain Conventional Weapons (CCW) \u2014 minefields and areas with unexploded ordnance carry physical markings; digital geodata could carry equivalent emblems\n> International Telecommunication Union (ITU) \u2014 frequency allocations and emergency telecommunications have protected status under the ITU Constitution; digital infrastructure supporting emergency comms could be marked\n> \n> Undersea cable systems \u2014 submarine cables have protected status under UNCLOS and the 1884 Convention for the Protection of Submarine Telegraph Cables; landing stations, management systems, and monitoring infrastructure could bear digital emblems\n> Critical infrastructure / CNI designations \u2014 many nations designate critical national infrastructure; while not treaty-based, mutual recognition frameworks could use digital emblems\n> Election infrastructure \u2014 some jurisdictions designate election systems as critical infrastructure; digital emblems could signal this status to potential attackers\n> Maritime vessels (IMO) \u2014 beyond containers, vessels themselves carry IMO numbers and safety certifications (SOLAS); their digital systems (AIS, ECDIS) could bear emblems\n> Pharmaceutical supply chain (WHO prequalification) \u2014 beyond WHO's Red Cross-like protection, WHO-prequalified medicines in transit could use digital emblems for anti-counterfeiting",
       "createdAt": "2026-03-28T14:14:31Z",
-      "updatedAt": "2026-03-28T14:14:31Z",
+      "updatedAt": "2026-04-25T17:45:49Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "ohmantics",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I\u2019m not an expert in these use cases; they came up in an unrelated search effort.\n\nIn the mental model I\u2019ve posted, I believe that these use cases are mostly covered by existing requirements, including \u201cselective disclosure\u201d of portions of the dictionary. Perhaps some of these would need some kind of additional root of trust on top of a domain owner to tie the domain to authority from a central organization. I think that could be handled by application of a certificate/signature record on the domain that is signed by the central authority.",
+          "createdAt": "2026-04-25T17:45:49Z",
+          "updatedAt": "2026-04-25T17:45:49Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -1649,13 +1659,13 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-03-16T00:28:59Z",
+      "updatedAt": "2026-04-24T19:35:19Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "presence_forensics",
-      "headRefOid": "7edbd5d82b351d9951f6c30e880faa07c776cdbb",
+      "headRefOid": "ef1ed90b33aebd683213e0cb5add3311d0bd07c0",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1747,7 +1757,7 @@
         },
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\r\n\r\n> Agreed, but the PR explicitly mentions emblems that mark assets as protected, hence, the risk for conflict with undetactable validation.\r\n\r\nAgree with Rohan that:\r\n\r\n> Not all requirements will be the same for every use case. We need to have a set of tools that will not all be able to be used simultaneously.\r\n\r\nSo conflict between requirements is normal and expected. No big deal.\r\n\r\nI have a different question: this text talks about what \"could\" be needed but doesn't to me appear to be associated with a stakeholder need. Which stakeholder has this complex expansion of the previous requirement? Edit after catching up on the recording: glad to see we got Timo involved as discussed, but note that the draft text as it exists here leaves this very much ambiguous. ",
           "createdAt": "2026-03-15T05:49:43Z",
           "updatedAt": "2026-03-15T07:23:59Z"
@@ -1887,24 +1897,26 @@
       "id": "PR_kwDOPTNEDc7KxCfV",
       "title": "Allow physical assets again",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/28",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Many of the use cases require support for physical assets. Recent pull requests inadvertently restricted definitions to digital assets (our first charter items). ",
       "createdAt": "2026-03-15T22:42:06Z",
-      "updatedAt": "2026-04-07T06:47:36Z",
+      "updatedAt": "2026-04-24T21:49:56Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "asset-def",
-      "headRefOid": "8707f82fece1cb0aa3f5c04a121d9e95cbb1aee9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "ce0ed111966d30bb5eac012f838abc2678f77996",
+      "closedAt": "2026-04-24T21:47:05Z",
+      "mergedAt": "2026-04-24T21:47:05Z",
+      "mergedBy": "rahelFain",
+      "mergeCommit": {
+        "oid": "5e7fc1a213c2d610a5e1270260136b8ad8ee93a7"
+      },
       "comments": [
         {
           "author": "rohanmahy",
@@ -1968,6 +1980,13 @@
           "body": "\r\n> Heya! I don't understand your last sentence. IHL codifies a number of emblems. To me, you can only be an IHL use case if you use one of their emblems. Or do you mean: \"A use case is IHL if the marked asset has a special status under IHL\"? And in your case, you use a non-IHL emblem to mark that asset but to communicate that special status?\r\n\r\nThere are multiple organizations that do have the requirement to digitally mark physical assets, both IHL and non-IHL related. Use cases involve, for example, schools and medical cargo drones. And there is more to IHL than only the well-defined emblems. E.g., civil ambulances may use non-IHL markings, but that does not mean that IHL does not apply. \r\n\r\n> > My understanding was that Unesco cultural assets can be physical.\r\n>\r\n> Yes, they can be. Hospitals are physical too. But the plans for the digital emblem is to solve the problem of marking infrastructure that cannot be marked today. IIRC, the folks at UNESCO asked the ICRC to lead the digital emblems under IHL efforts, and our input so far was that physical emblems are completely sufficient to mark physical assets.\r\n\r\nWithout starting a discussion about the visibility of markings or emblems (nighttime, beyond line of sight, ,...!): it is also about authentication and accountability (proof-of-presence) for which we need digital emblems for physical things. \r\n\r\n> Sidenote: Perhaps we should start this discussion from scratch on list.\r\n\r\nSince we already had this discussion on the list, back to the text: i.m.h.o., use cases underpinning a technical standard - in this case for _how_ to bind a status (legal or otherwise) to an asset (digital or physical) - should take a non-exhaustive approach and should not contain any text that unnecessarily limits other use cases - in this case by restricting _what_ that status and those assets might be.",
           "createdAt": "2026-03-31T20:28:40Z",
           "updatedAt": "2026-03-31T20:28:40Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The decision to remove line 141 was by Rahel and me - it was extraneous and didn't make sense.\r\n\r\nAlso I didn't note, but I reviewed the overall PR, so this was reviewed by the two of us.",
+          "createdAt": "2026-04-24T21:49:56Z",
+          "updatedAt": "2026-04-24T21:49:56Z"
         }
       ],
       "reviews": [
@@ -2018,25 +2037,42 @@
       "id": "PR_kwDOPTNEDc7KxZWF",
       "title": "Expand requirements to flexibly account for less-understood use cases",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/29",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "tojens-ietf",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This requirement expansion resulted from brainstorming with Rohan about the use cases that aren't well represented in WG participation but have been brought up as potential future uses of Digital Emblems.\r\n\r\nI believe with such an expansion, the continued expansion of use cases becomes unnecessary given this seems to account for the things required by the beyond-initial-scope cases without having to go through the controversy of debating appropriateness of each of these individually. The intention is to ensure the requirements on the architecture document specifically permit the flexibility needed for Deliverable 3 documents (specific digital emblem standards) to do whatever they need to without having to support arbitrary requirements of one another.\r\n\r\n@ohmantics @amankin  I especially want to hear your take as people passionately exploring other use cases.\r\n\r\nFYI @rohanmahy ",
       "createdAt": "2026-03-15T23:50:50Z",
-      "updatedAt": "2026-03-22T07:56:25Z",
+      "updatedAt": "2026-04-24T22:21:51Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
-      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "baseRefOid": "5e7fc1a213c2d610a5e1270260136b8ad8ee93a7",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "tojens-generalizing-architecture-requirements",
-      "headRefOid": "54613381d2294447cce50a61410c915cdd7bdbae",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "affb3382804e046b05272b99a486165afc8ade90",
+      "closedAt": "2026-04-24T22:21:51Z",
+      "mergedAt": "2026-04-24T22:21:50Z",
+      "mergedBy": "rahelFain",
+      "mergeCommit": {
+        "oid": "276763a3158a3d6476d8e40002c4f021bafc21cb"
+      },
+      "comments": [
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Looking at the conflicts for this Pull Request - it seemed right to accept the changes from Tommy, and then it's fine to merge this PR.",
+          "createdAt": "2026-04-24T22:18:51Z",
+          "updatedAt": "2026-04-24T22:18:51Z"
+        },
+        {
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I don't have anything to click to show I approve the PR,  so take this comment as recording my approval.",
+          "createdAt": "2026-04-24T22:20:35Z",
+          "updatedAt": "2026-04-24T22:20:35Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOPTNEDc7rfad0",
@@ -2130,7 +2166,7 @@
             "abbreviatedOid": "41dbd30"
           },
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-03-16T02:08:18Z",
@@ -2190,7 +2226,7 @@
             "abbreviatedOid": "a4cd652"
           },
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-03-16T02:41:02Z",
@@ -2230,7 +2266,7 @@
             "abbreviatedOid": "41dbd30"
           },
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-03-16T04:09:13Z",
@@ -2270,7 +2306,7 @@
             "abbreviatedOid": "41dbd30"
           },
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-03-16T04:30:09Z",
@@ -2338,6 +2374,175 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 31,
+      "id": "PR_kwDOPTNEDc7VW28y",
+      "title": "More accurate phrasing of emblems under IHL",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/31",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
+      "createdAt": "2026-04-24T13:57:34Z",
+      "updatedAt": "2026-04-25T08:43:35Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "c21fe4dd99a20b74023e7e35984fcd9a0e9a539b",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "ihl-emblems-title",
+      "headRefOid": "3b9f73cc08b73a3e7cc9555a5e464a7aefd8d759",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc74xsVr",
+          "commit": {
+            "abbreviatedOid": "3b9f73c"
+          },
+          "author": "amankin",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-24T22:34:05Z",
+          "updatedAt": "2026-04-24T23:05:12Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "Adding a new term (Digital Protective Emblems is overkill - each use case is able to specify the specific requirement when they implement DEs, and how they will meet them,  so having two distinct types, the DE and the DPE, isn't necessary.  The four use cases  that received this new term are already well described here, and grouped already, so  the document giving them their own term is unnecessary as well as potentially confusing.  ",
+              "createdAt": "2026-04-24T22:34:05Z",
+              "updatedAt": "2026-04-24T23:11:01Z"
+            },
+            {
+              "originalPosition": 1,
+              "body": "I think that the term Digital Protective Emblem for four use cases must not be added to the draft.  See a further comment in this review. I also think that the new reference to the Unesco Blue Shield document (which I read through) is misleading, because there are two differing statements  in there, on page 16. One list uses with digital assets, and  aligns with the ICRC, but further down the page is a second statement: \"The digital Blue Shield emblem will also facilitate visualization on the UNESCO Sites Navigator of  cultural  properties\".   This appears to allow for a digital emblem for a physical location because Sites Navigator is a GIS database. So the UNESCO reference should not be included or used as is.  These two concerns lead me to rejecting this PR.",
+              "createdAt": "2026-04-24T23:04:32Z",
+              "updatedAt": "2026-04-24T23:05:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc74yKPt",
+          "commit": {
+            "abbreviatedOid": "3b9f73c"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "The new terminology seems to open the door for the ITU to define technical standards for DPEs. In light and what I see as the addition of potentially misleading references, I cannot approve the suggested changes.",
+          "createdAt": "2026-04-24T23:07:21Z",
+          "updatedAt": "2026-04-24T23:10:10Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "The references here were used in the mailing list as a means of arguing that the ICRC's definition of digital emblems on the mailing list. In light of this and the potential issues with the ITU I also feel I need to reject these changes. ",
+              "createdAt": "2026-04-24T23:07:21Z",
+              "updatedAt": "2026-04-24T23:10:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc743mIe",
+          "commit": {
+            "abbreviatedOid": "3b9f73c"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "I left some specific comments. If the scope of this is the emblems mentioned in the Geneva Conventions and its Additional Protocols, that should probably be the title of the section.",
+          "createdAt": "2026-04-25T08:13:56Z",
+          "updatedAt": "2026-04-25T08:43:35Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "- I like spelling out the locations of the definition of the emblems (ex: AP I, GP and AP III), but I think the description of the physical emblem is distracting.\n- the references should be to the original convention/treaty/law defining an emblem (GP, AP I, AP III, Hague Convention)\n",
+              "createdAt": "2026-04-25T08:13:57Z",
+              "updatedAt": "2026-04-25T08:43:35Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "This would be way clearer\n\n```suggestion\n## Protective Emblems under The Geneva Conventions and its Additional Protocols\n```",
+              "createdAt": "2026-04-25T08:14:43Z",
+              "updatedAt": "2026-04-25T08:43:35Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "```suggestion\nThe Geneva Conventions and their Additional Protocols constitute the core of International Humanitarian Law (IHL).\n```",
+              "createdAt": "2026-04-25T08:15:10Z",
+              "updatedAt": "2026-04-25T08:43:35Z"
+            },
+            {
+              "originalPosition": 32,
+              "body": "This clarifies the distinction between other signs like a white flag and the UN flag and logo, and the four emblems mentioned in the GP+APs.\n\n```suggestion\nSome assets enjoy certain specific protections under IHL, including that they must not be attacked. In addition to recognizing other signs, IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific or special protections.\n```",
+              "createdAt": "2026-04-25T08:20:08Z",
+              "updatedAt": "2026-04-25T08:43:35Z"
+            },
+            {
+              "originalPosition": 47,
+              "body": "Defining a new capitalized term in a non-normative section of the document is simply not appropriate. Why not just say in line 325: \n\"In context of the emblems above described in the GP...\"?",
+              "createdAt": "2026-04-25T08:42:22Z",
+              "updatedAt": "2026-04-25T08:43:35Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "id": "PR_kwDOPTNEDc7ViosG",
+      "title": "Editing nits",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/32",
+      "state": "OPEN",
+      "author": "rahelFain",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Minor, non-contentious edits and polishing. \r\nEach individual edit has an associated commit.",
+      "createdAt": "2026-04-25T04:04:48Z",
+      "updatedAt": "2026-04-25T04:04:49Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "editing-nits",
+      "headRefOid": "cd651855114efb221eff8a3679cc8ec92271926c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 33,
+      "id": "PR_kwDOPTNEDc7VpGTE",
+      "title": "Response requirements",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/33",
+      "state": "OPEN",
+      "author": "rahelFain",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Background: During IETF 125 it was pointed out that many of the digital emblem use cases seemed to assume that all queries for the digital emblem would always get the same response - which was not necessarily consistent with how DNS works. Further discussion about this highlighted that providing a proof of presence not only assumed that all queries would get the same response, but required that this be the case.\r\n This PR seeks to address that by requiring digital emblem use cases to specifically determine whether they require emblems to support assured response and/or consistent content in all responses and to detail the rationale for their determination. ",
+      "createdAt": "2026-04-25T20:46:56Z",
+      "updatedAt": "2026-04-25T20:46:59Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "response-requirements",
+      "headRefOid": "186e37112eadaaf7d4f52306ce71cd89ea1ed84b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
