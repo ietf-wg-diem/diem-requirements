@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 26 October 2026                                                
+Expires: 29 October 2026                                                
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                           24 April 2026
+                                                           27 April 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -20,10 +20,11 @@ Expires: 26 October 2026
 
 Abstract
 
-   Digital emblems are a means for assets to signal that they should be
-   treated in a specific way by reference to some normative framework.
-   This document lists the requirements and use cases that an
-   architecture for digital emblems must accommodate.
+   Digital emblems are a means for an asset to signal to validating
+   entities that it should be protected or treated in a specific way,
+   using some normative framework.  This document lists the requirements
+   and use cases that an architecture for digital emblems must
+   accommodate.
 
 About This Document
 
@@ -57,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 October 2026.
+   This Internet-Draft will expire on 29 October 2026.
 
 Copyright Notice
 
@@ -98,21 +99,21 @@ Table of Contents
      4.5.  Proof of Presence
    5.  Use Cases
      5.1.  Basel Convention
-     5.2.  Ramsar Convention on the Wetlands
-     5.3.  International Atomic Energy Agency (IAEA)
+     5.2.  International Atomic Energy Agency (IAEA)
+     5.3.  International Civil Aviation Organization (ICAO)
      5.4.  International Humanitarian Law
        5.4.1.  Background
        5.4.2.  Domain Model and Stakeholders
        5.4.3.  Requirements
      5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
      5.6.  Press
-     5.7.  United Nations Economic and Social Council (ECOSOC)
-     5.8.  United Nations Peacekeepers
-     5.9.  World Customs Organization (WCO)
-     5.10. World Health Organization (WHO)
-     5.11. United Nations Food and Agriculture Organization (FAO)
-     5.12. World Intellectual Property Organization (WIPO)
-     5.13. International Civil Aviation Organization (ICAO)
+     5.7.  Ramsar Convention on the Wetlands
+     5.8.  United Nations Economic and Social Council (ECOSOC)
+     5.9.  United Nations Food and Agriculture Organization (FAO)
+     5.10. United Nations Peacekeepers
+     5.11. World Customs Organization (WCO)
+     5.12. World Health Organization (WHO)
+     5.13. World Intellectual Property Organization (WIPO)
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -360,28 +361,20 @@ Table of Contents
    Regulates the trans-boundary movement of hazardous wastes.  Use cases
    are functionally identical to OPCW and IAEA.
 
-5.2.  Ramsar Convention on the Wetlands
-
-   The Convention on Wetlands of International Importance especially as
-   Waterfowl Habitat "providees the single most global framework for
-   intergovernmental cooperation on wetland issues" and it features a
-   list of geographic areas designated by Member States.  A digital
-   emblem for the geographic areas potentially requires
-
-   *  Indication of location
-
-   *  Access to presence or absence of Ramsar designation of a specified
-      location
-
-   *  Textual description
-
-   *  Ability to validate the presence or absence of Ramsar designation
-
-5.3.  International Atomic Energy Agency (IAEA)
+5.2.  International Atomic Energy Agency (IAEA)
 
    IAEA administers several treaties, especially related to the
    controlled shipment of atomic fuels and wastes across borders.
    Similar use case as OPCW.
+
+5.3.  International Civil Aviation Organization (ICAO)
+
+   Requires protection of civil aviation flights and the ability to
+   assert that they are not dual-use (i.e., not carrying military
+   cargo).  Digital emblem would carry a geographic description of the
+   flight plan, its current location, and an indicator of its identity
+   (i.e., tail number).  Potential need for the emblem to reference a
+   limited or partially redacted flight manifest.
 
 5.4.  International Humanitarian Law
 
@@ -473,7 +466,24 @@ Table of Contents
    be digitally marked, and protective markings in conflict zones could
    be digitized.
 
-5.7.  United Nations Economic and Social Council (ECOSOC)
+5.7.  Ramsar Convention on the Wetlands
+
+   The Convention on Wetlands of International Importance especially as
+   Waterfowl Habitat "providees the single most global framework for
+   intergovernmental cooperation on wetland issues" and it features a
+   list of geographic areas designated by Member States.  A digital
+   emblem for the geographic areas potentially requires
+
+   *  Indication of location
+
+   *  Access to presence or absence of Ramsar designation of a specified
+      location
+
+   *  Textual description
+
+   *  Ability to validate the presence or absence of Ramsar designation
+
+5.8.  United Nations Economic and Social Council (ECOSOC)
 
    UN Model Regulations [UNMODELREGS] includes "Recommendations on the
    Transport of Dangerous Goods."  This includes labeling of items with
@@ -482,26 +492,7 @@ Table of Contents
    example, items containing lithium-based batteries are labeled with
    3480 or 3481 and accompanied by a specific "battery mark" emblem.
 
-5.8.  United Nations Peacekeepers
-
-   UN Peacekeepers use protective markings in theater as well as
-   facilities associated with the mission.
-
-5.9.  World Customs Organization (WCO)
-
-   Specifies "Harmonized Systems" codes [HARMONIZED] that classify items
-   such as livestock, arms and ammunition, chemicals, plastics,
-   machinery, foodstuffs, etc.  They also provide a system for labeling
-   origin of items and valuation of items, all enforced by numerous
-   international trade agreements between individual nations and groups
-   of nations.
-
-5.10.  World Health Organization (WHO)
-
-   Similar to the use case of the Red Cross, Red Crystal, and Red
-   Crescent.
-
-5.11.  United Nations Food and Agriculture Organization (FAO)
+5.9.  United Nations Food and Agriculture Organization (FAO)
 
    Among other things is responsible for the International Plant
    Protection Convention (IPPC) and International Standards for
@@ -510,21 +501,31 @@ Table of Contents
    treated or fumigated with methyl-bromide, and stamped or branded with
    a compliance mark known as a "wheat stamp."
 
-5.12.  World Intellectual Property Organization (WIPO)
+5.10.  United Nations Peacekeepers
+
+   UN Peacekeepers use protective markings in theater as well as
+   facilities associated with the mission.
+
+5.11.  World Customs Organization (WCO)
+
+   Specifies "Harmonized Systems" codes [HARMONIZED] that classify items
+   such as livestock, arms and ammunition, chemicals, plastics,
+   machinery, foodstuffs, etc.  They also provide a system for labeling
+   origin of items and valuation of items, all enforced by numerous
+   international trade agreements between individual nations and groups
+   of nations.
+
+5.12.  World Health Organization (WHO)
+
+   Similar to the use case of the Red Cross, Red Crystal, and Red
+   Crescent.
+
+5.13.  World Intellectual Property Organization (WIPO)
 
    WIPO administers 26+ treaties with different protections for
    different things.  Brands that are protected under international law
    (e.g., Madrid Protocol) can mark their shipments with an emblem
    allowing customs agents to positively identify legitimate products.
-
-5.13.  International Civil Aviation Organization (ICAO)
-
-   Requires protection of civil aviation flights and the ability to
-   assert that they are not dual-use (i.e., not carrying military
-   cargo).  Digital emblem would carry a geographic description of the
-   flight plan, its current location, and an indicator of its identity
-   (i.e., tail number).  Potential need for the emblem to reference a
-   limited or partially redacted flight manifest.
 
 6.  Security Considerations
 
