@@ -336,13 +336,13 @@ Some assets enjoy certain specific protections under IHL, including that they mu
 In other words, protective emblems under IHL signal the applicability of a specific or special protection under IHL.
 Namely, these emblems are:
 
-- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}} {{RCRCRES}}
-- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}} {{UNESCORES}}
+- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}}
+- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}}
 - The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
 - The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
 
 However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
-A digital emblem using the DIEM architecture could address this gap.
+A digital emblem using the DIEM architecture could address this gap, and resolutions from UNESCO and the International Conference of the Red Cross and Red Crescent have expressed the support for such a digital emblem {{RCRCRES}} {{UNESCORES}}.
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
