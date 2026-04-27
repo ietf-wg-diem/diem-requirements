@@ -383,10 +383,10 @@ Table of Contents
 
    *  The emblems of the Red Cross, Red Crescent, and Red Crystal,
       defined in the Geneva Conventions and Additional Protocol III of
-      the Geneva Conventions [GCI1949] [APIII2005] [RCRCRES]
+      the Geneva Conventions [GCI1949] [APIII2005]
 
    *  The Blue Shield emblem, defined in the 1954 Hague Convention
-      [HAGUE1954] [UNESCORES]
+      [HAGUE1954]
 
    *  The international distinctive sign of civil defence, defined in
       Additional Protocol I of the Geneva Conventions [API1977]
@@ -397,7 +397,10 @@ Table of Contents
    However, these emblems can currently only be used to mark physical
    assets, and there is no way to mark digital, network-connected
    infrastructure that enjoys the same protections.  A digital emblem
-   using the DIEM architecture could address this gap.
+   using the DIEM architecture could address this gap, and resolutions
+   from UNESCO and the International Conference of the Red Cross and Red
+   Crescent have expressed the support for such a digital emblem
+   [RCRCRES] [UNESCORES].
 
 5.4.2.  Domain Model and Stakeholders
 
