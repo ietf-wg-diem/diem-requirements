@@ -73,6 +73,18 @@ normative:
     date: 2025-05-27
 
 informative:
+  API1977:
+    target: https://ihl-databases.icrc.org/assets/treaties/470-AP-I-EN.pdf
+    title: "Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Protection of Victims of International Armed Conflicts (Protocol I)"
+    author:
+       org: International Committee of the Red Cross
+    date: 1977-06-08
+  APIII2005:
+    target: https://ihl-databases.icrc.org/assets/treaties/615-AP-III-EN.pdf
+    title: "Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Adoption of an Additional Distinctive Emblem (Protocol III)"
+    author:
+       org: International Committee of the Red Cross
+    date: 2005-12-08
   BLUEHELMET:
     target: https://guide-humanitarian-law.org/content/article/3/peacekeeping/
     title: The Practical Guide to Humanitarian Law
@@ -112,6 +124,18 @@ informative:
     title: Personnel of Foreign Governments and International Organizations and Special Treatment for Returning Individuals
     author:
        org: Cornell Law School - Legal Information Institute
+  GCI1949:
+    target: https://ihl-databases.icrc.org/assets/treaties/365-GC-I-EN.pdf
+    title: "Geneva Convention for the Amelioration of the Condition of the Wounded and Sick in Armed Forces in the Field"
+    author:
+       org: International Committee of the Red Cross
+    date: 1949-08-12
+  HAGUE1954:
+    target: https://unesdoc.unesco.org/ark:/48223/pf0000082464
+    title: Convention for the Protection of Cultural Property in the Event of Armed Conflict
+    author:
+       org: United Nations Educational, Scientific and Cultural Organization
+    date: 1954-05-14
   RAMSAR:
     target: https://www.ramsar.org
     title: The Convention on Wetlands
@@ -312,10 +336,10 @@ Some assets enjoy certain specific protections under IHL, including that they mu
 In other words, protective emblems under IHL signal the applicability of a specific or special protection under IHL.
 Namely, these emblems are:
 
-- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{RCRCRES}}
-- The Blue Shield emblem, defined in the 1954 Hague Convention {{UNESCORES}}
-- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions
-- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions
+- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}} {{RCRCRES}}
+- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}} {{UNESCORES}}
+- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
+- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
 
 However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
 A digital emblem using the DIEM architecture could address this gap, and we call such emblems Digital Protective Emblems under IHL.
