@@ -187,7 +187,13 @@ Digital emblems MUST identify the marked asset and their kind of digital emblem.
 Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window.
 To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduce minimal overhead size except for fields required to fulfil other requirements in this document.
 
-As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
+Each emblem type will make use of a subset of the requirements set out in this document.
+The requirements for individual digital emblem types are independent and the requirements for an individual emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.
+
+Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation SHOULD be understood as reflecting current use case constraints only.
+It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem’s core semantics remain intact.
+
+As of this writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
 
