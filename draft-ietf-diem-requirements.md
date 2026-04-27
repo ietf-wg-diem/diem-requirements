@@ -199,6 +199,19 @@ Individual use cases MUST specify the semantics of the emblem. It must be clearl
 
 Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given an asset a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.
 
+
+### Query Response {#response-reqs}
+
+Specifications for each use case MUST each determine how responses to queries for Digital Emblems of their specified type are handled.
+Specifically, they must determine the responsiveness and consistency requirements for emblems of their given type and provide explanations of how the chosen requirements apply and rationales for their selection.
+
+For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).
+
+For consistency of response  specifications for a given type of digital emblem must denote whether consistent content is required for all responses provided (Consistent Content) or whether the contents of a response may vary based on specific requester attributes (Selective Content).
+
+While some use cases may be able to allow selective response and/or selective content, assured response and consistent
+content are  prerequisites for proof of presence.
+
 ### Removable {#removable}
 
 Digital emblems MAY require to be removable in that checking for the presence of an asset's emblems results in no emblem.
