@@ -383,16 +383,16 @@ Table of Contents
 
    *  The emblems of the Red Cross, Red Crescent, and Red Crystal,
       defined in the Geneva Conventions and Additional Protocol III of
-      the Geneva Conventions [RCRCRES]
+      the Geneva Conventions [GCI1949] [APIII2005] [RCRCRES]
 
    *  The Blue Shield emblem, defined in the 1954 Hague Convention
-      [UNESCORES]
+      [HAGUE1954] [UNESCORES]
 
    *  The international distinctive sign of civil defence, defined in
-      Additional Protocol I of the Geneva Conventions
+      Additional Protocol I of the Geneva Conventions [API1977]
 
    *  The dangerous forces special sign, defined in Additional Protocol
-      I of the Geneva Conventions
+      I of the Geneva Conventions [API1977]
 
    However, these emblems can currently only be used to mark physical
    assets, and there is no way to mark digital, network-connected
@@ -553,6 +553,19 @@ Table of Contents
 
 8.2.  Informative References
 
+   [API1977]  International Committee of the Red Cross, "Protocol
+              Additional to the Geneva Conventions of 12 August 1949,
+              and relating to the Protection of Victims of International
+              Armed Conflicts (Protocol I)", 8 June 1977, <https://ihl-
+              databases.icrc.org/assets/treaties/470-AP-I-EN.pdf>.
+
+   [APIII2005]
+              International Committee of the Red Cross, "Protocol
+              Additional to the Geneva Conventions of 12 August 1949,
+              and relating to the Adoption of an Additional Distinctive
+              Emblem (Protocol III)", 8 December 2005, <https://ihl-
+              databases.icrc.org/assets/treaties/615-AP-III-EN.pdf>.
+
    [BLUEHELMET]
               Doctors Without Borders, "The Practical Guide to
               Humanitarian Law", n.d., <https://guide-humanitarian-
@@ -571,6 +584,18 @@ Table of Contents
               Organizations and Special Treatment for Returning
               Individuals", n.d.,
               <https://www.law.cornell.edu/cfr/text/19/148.83>.
+
+   [GCI1949]  International Committee of the Red Cross, "Geneva
+              Convention for the Amelioration of the Condition of the
+              Wounded and Sick in Armed Forces in the Field", 12 August
+              1949, <https://ihl-databases.icrc.org/assets/treaties/365-
+              GC-I-EN.pdf>.
+
+   [HAGUE1954]
+              United Nations Educational, Scientific and Cultural
+              Organization, "Convention for the Protection of Cultural
+              Property in the Event of Armed Conflict", 14 May 1954,
+              <https://unesdoc.unesco.org/ark:/48223/pf0000082464>.
 
    [HARMONIZED]
               World Customs Organization, "Harmonized System", n.d.,
