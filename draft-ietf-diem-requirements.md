@@ -313,9 +313,9 @@ In other words, protective emblems under IHL signal the applicability of a speci
 Namely, these emblems are:
 
 - The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{RCRCRES}}
-- The Blue Shield emblem (a shield, pointed below, per saltire blue and white), defined in the 1954 Hague Convention {{UNESCORES}}
-- The international distinctive sign of civil defence, an equilateral blue triangle on an orange ground, defined in Additional Protocol I of the Geneva Conventions
-- The dangerous forces special sign, consisting of a group of three bright orange circles placed on the same axis, defined in Additional Protocol I of the Geneva Conventions
+- The Blue Shield emblem, defined in the 1954 Hague Convention {{UNESCORES}}
+- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions
+- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions
 
 However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
 A digital emblem using the DIEM architecture could address this gap, and we call such emblems Digital Protective Emblems under IHL.
