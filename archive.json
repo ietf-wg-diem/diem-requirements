@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-26T01:56:00.577033+00:00",
+  "timestamp": "2026-04-28T02:05:37.922823+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1659,7 +1659,7 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-04-24T19:35:19Z",
+      "updatedAt": "2026-04-27T07:54:33Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1788,6 +1788,32 @@
               "body": "PLEASE pay attention to whitespace. You need a newline between different types of markup.\n\n```suggestion\nLevel 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the alleged violator verified the emblem upon accessing it.\n\n```",
               "createdAt": "2026-03-02T10:50:36Z",
               "updatedAt": "2026-03-02T10:51:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75F1yN",
+          "commit": {
+            "abbreviatedOid": "ef1ed90"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "No strong opinion on these changes, but I see some technical issues in how the requirements interact with the use case.",
+          "createdAt": "2026-04-27T07:50:22Z",
+          "updatedAt": "2026-04-27T07:54:33Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "Editing nit: I would move this text into `#diplo-pouch` and simply forward ref here. It's good to have use cases descriptions be self-contained.",
+              "createdAt": "2026-04-27T07:50:22Z",
+              "updatedAt": "2026-04-27T07:54:33Z"
+            },
+            {
+              "originalPosition": 43,
+              "body": "I can see how level 3 can prove that an agent inspected a digital emblem. But I see two problems in how the requirements interact with the use case. Maybe, both can be addressed.\n\n1. Is it mandatory for bags to be inspected? If yes, then indeed, you can verify that procedure was followed by checking that when a bag crosses a border, its emblem was validated. If checking is not mandatory, there is little the emblem proof of access proves, right?\n2. I do not see how proof of access proves that the agent did \"nothing else.\" That would require some sort of seal of the bag, i.e., opening the bag destroys the emblem.",
+              "createdAt": "2026-04-27T07:53:57Z",
+              "updatedAt": "2026-04-27T07:54:33Z"
             }
           ]
         }
@@ -2387,18 +2413,47 @@
       "labels": [],
       "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
       "createdAt": "2026-04-24T13:57:34Z",
-      "updatedAt": "2026-04-25T08:43:35Z",
+      "updatedAt": "2026-04-27T17:48:27Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "c21fe4dd99a20b74023e7e35984fcd9a0e9a539b",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-emblems-title",
-      "headRefOid": "3b9f73cc08b73a3e7cc9555a5e464a7aefd8d759",
+      "headRefOid": "17cf6dc8d7e5aeebf34ed306081da02a2dd47eb3",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Merge conflict probably due to #32 (I expected that). I will fix that once changes are settled.",
+          "createdAt": "2026-04-27T07:57:08Z",
+          "updatedAt": "2026-04-27T07:57:08Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I removed the definition of a new, capitalized term. I rephrased occurences to make it clear that we only want to refer to the digital version of protective emblems under IHL.",
+          "createdAt": "2026-04-27T09:10:15Z",
+          "updatedAt": "2026-04-27T09:10:15Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The text says \"defined in\" and then there are the references where they are\r\ndefined. having other references there doesn't make sense and is likely to\r\ncause confusion.\r\n\r\n\r\n\r\nOn Mon, 27 Apr 2026, 15:08 Felix Linker, ***@***.***> wrote:\r\n\r\n> ***@***.**** commented on this pull request.\r\n> ------------------------------\r\n>\r\n> In draft-ietf-diem-requirements.md\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/31#discussion_r3147498647>\r\n> :\r\n>\r\n> > +- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}} {{RCRCRES}}\r\n> +- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}} {{UNESCORES}}\r\n> +- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions {{API1977}}\r\n> +- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions {{API1977}}\r\n>\r\n> Why do you want to remove these references?\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/31#discussion_r3147498647>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AADSQPV62QU6GNY5RCD3H5T4X5LT7AVCNFSM6AAAAACYFHK2ZCVHI2DSMVQWIX3LMV43YUDVNRWFEZLROVSXG5CSMV3GSZLXHM2DCOBRGEZTGNZRGY>\r\n> .\r\n> Triage notifications on the go with GitHub Mobile for iOS\r\n> <https://apps.apple.com/app/apple-store/id1477376905?ct=notification-email&mt=8&pt=524675>\r\n> or Android\r\n> <https://play.google.com/store/apps/details?id=com.github.android&referrer=utm_campaign%3Dnotification-email%26utm_medium%3Demail%26utm_source%3Dgithub>.\r\n>\r\n> You are receiving this because your review was requested.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2026-04-27T14:13:46Z",
+          "updatedAt": "2026-04-27T14:13:46Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy Moved the citation to address that!",
+          "createdAt": "2026-04-27T17:48:27Z",
+          "updatedAt": "2026-04-27T17:48:27Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOPTNEDc74xsVr",
@@ -2489,6 +2544,66 @@
               "updatedAt": "2026-04-25T08:43:35Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75HkhB",
+          "commit": {
+            "abbreviatedOid": "3b9f73c"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-27T08:59:44Z",
+          "updatedAt": "2026-04-27T08:59:44Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "Heya, agree and disagree at the same time. Agree: Listing the concrete laws is better and more accurate. Disagree: Blue shield is defined in the Hague Convention, so that's missing. Adding a third law/document/whatever to the text really becomes silly though.\r\n\r\nAs far as I'm aware, these emblems *are* the protective emblems under IHL, and that is how they are referred to, so I would leave it as is. The body of the section also is very accurate and clear about what we're referring to.",
+              "createdAt": "2026-04-27T08:59:44Z",
+              "updatedAt": "2026-04-27T08:59:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75MYQ0",
+          "commit": {
+            "abbreviatedOid": "3f8ad91"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-27T12:13:19Z",
+          "updatedAt": "2026-04-27T12:13:19Z",
+          "comments": [
+            {
+              "originalPosition": 82,
+              "body": "```suggestion\n- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}}\n- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}}\n- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions {{API1977}}\n- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions {{API1977}}\n```",
+              "createdAt": "2026-04-27T12:13:19Z",
+              "updatedAt": "2026-04-27T12:13:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75NwmU",
+          "commit": {
+            "abbreviatedOid": "3f8ad91"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-27T13:07:54Z",
+          "updatedAt": "2026-04-27T13:07:54Z",
+          "comments": [
+            {
+              "originalPosition": 82,
+              "body": "Why do you want to remove these references?",
+              "createdAt": "2026-04-27T13:07:54Z",
+              "updatedAt": "2026-04-27T13:07:54Z"
+            }
+          ]
         }
       ]
     },
@@ -2497,26 +2612,50 @@
       "id": "PR_kwDOPTNEDc7ViosG",
       "title": "Editing nits",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/32",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Minor, non-contentious edits and polishing. \r\nEach individual edit has an associated commit.",
       "createdAt": "2026-04-25T04:04:48Z",
-      "updatedAt": "2026-04-25T04:04:49Z",
+      "updatedAt": "2026-04-27T07:56:23Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "editing-nits",
       "headRefOid": "cd651855114efb221eff8a3679cc8ec92271926c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "closedAt": "2026-04-27T07:56:23Z",
+      "mergedAt": "2026-04-27T07:56:23Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "4785e31269977e0c192433672f84771c58e324c7"
+      },
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We can straight forward merge this as it's editorial.",
+          "createdAt": "2026-04-27T07:56:16Z",
+          "updatedAt": "2026-04-27T07:56:16Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc75F_RT",
+          "commit": {
+            "abbreviatedOid": "cd65185"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-04-27T07:56:02Z",
+          "updatedAt": "2026-04-27T07:56:02Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 33,
@@ -2530,13 +2669,112 @@
       "labels": [],
       "body": "Background: During IETF 125 it was pointed out that many of the digital emblem use cases seemed to assume that all queries for the digital emblem would always get the same response - which was not necessarily consistent with how DNS works. Further discussion about this highlighted that providing a proof of presence not only assumed that all queries would get the same response, but required that this be the case.\r\n This PR seeks to address that by requiring digital emblem use cases to specifically determine whether they require emblems to support assured response and/or consistent content in all responses and to detail the rationale for their determination. ",
       "createdAt": "2026-04-25T20:46:56Z",
-      "updatedAt": "2026-04-25T20:46:59Z",
+      "updatedAt": "2026-04-27T20:32:03Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "response-requirements",
       "headRefOid": "186e37112eadaaf7d4f52306ce71cd89ea1ed84b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc75GDIY",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Again, no strong opinion on these changes, but I see some technical issues.",
+          "createdAt": "2026-04-27T07:58:19Z",
+          "updatedAt": "2026-04-27T08:03:42Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "You first say that we must specify how responses are handled, but line 205 then comments on sending behavior. \"Responsiveness and consistency\" are about the sender, not the receiver.",
+              "createdAt": "2026-04-27T07:58:19Z",
+              "updatedAt": "2026-04-27T08:03:42Z"
+            },
+            {
+              "originalPosition": 12,
+              "body": "I think this phrasing is hard to map to our current list of requirements/use cases. It is underspecified what a \"request\" is. Without defining that, you also cannot define consistency. Maybe, it would be easier to define consistency not w.r.t. to requests, but to assets? One could meaningfully say that \"checking the emblem for asset X always results in the same emblems.\"\n\nIt also seems easier to me whether emblems should (or not) be publicly accessible.",
+              "createdAt": "2026-04-27T08:00:30Z",
+              "updatedAt": "2026-04-27T08:03:42Z"
+            },
+            {
+              "originalPosition": 15,
+              "body": "This is a technical nit, but I disagree that consistency is required for proof of presence. As a strawman example, let's say that we use a public log to mark assets (Merkle hash tree style construction). For level 1, you could prove that an emblem was verifiable by referring to a public root hash and showing the correct proofs of inclusion (let's assume it is public information that the root hash was public at the relevant point in time). But it could be that there are multiple emblems in the log, and you may be allowed to show different emblems to different parties. Each emblem was verifiable, but parties may have had an inconsistent view of an assets emblems.",
+              "createdAt": "2026-04-27T08:03:26Z",
+              "updatedAt": "2026-04-27T08:03:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75YcTR",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-27T20:20:00Z",
+          "updatedAt": "2026-04-27T20:20:00Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "A lot of the unusual phrasing is due to the fact that digital emblems will be deployed via DNS.\r\nDNS allows the deployment of multiple authoritative name servers across different geographical locations, and for them to point to different hosting or site servers. Additionally, an authoritative name server can employ specific logic to determine with which if any resolution response it replies to an incoming query.\r\n\r\nWhy not state \"whether emblems should (or not) be publicly accessible\"?\r\nThe phrasing you suggested does not account for the full range of ways an authoritative name server (or set of servers) could handle a search for emblem X. \r\nAn example of an allowed behavior that wouldn't be accounted for: \r\n- responses can vary based on the geographic origin of the request: This could mean everyone who searches for emblem E in country/region X gets response A, whereas everyone who searches for the same emblem X in country Y (or simply outside of country/region X) gets response B. In that case both responses A and B could be said to be publicly accessible, but not necessarily consistent. \r\n\r\n",
+              "createdAt": "2026-04-27T20:20:00Z",
+              "updatedAt": "2026-04-27T20:20:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75YrBI",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-27T20:32:03Z",
+          "updatedAt": "2026-04-27T20:32:03Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "This may be a case where the specific phrasing of the requirement needs to shift to something more like proof of presence and visibility or proof of presence and accessibility. \r\nThe basic premise is that anyone who checked for the emblem of asset S at point in time T should get the same emblem or response. That way, in the event of an alleged violation of the rules/standards/regulations denoted by a digital emblem there would be no doubt that had anyone checked the affected asset for an emblem before engaging, they would have seen it.\r\n\r\nWhy I had phrased it as the same response:\r\nPart of what I have found tricky about the phrasing is that we have not defined which attributes of a response need to remain consistent for them to be considered the same digital emblem - since that is a discussion for the architecture. My instinct was to say that the responses served/fields controlled by the authoritative name server need to be identical to try and limit confusion. \r\nWith that said, I can see how leaving the phrasing more flexible by simply saying they should be the same emblem - and waiting to define exactly what that means for now may be more appropriate.",
+              "createdAt": "2026-04-27T20:32:03Z",
+              "updatedAt": "2026-04-27T20:36:55Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "id": "PR_kwDOPTNEDc7WERw4",
+      "title": "Emblems requirements are distinct; Future proofing Section 3.1.1",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/34",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This proposed text from Sarah (as a chair) intends to clarify that each emblem type has distinct freedom with respect to other emblem types, and also to future proof the work of the DIEM WG.  \r\n@sarahjennings-ietf ",
+      "createdAt": "2026-04-27T18:03:26Z",
+      "updatedAt": "2026-04-27T18:03:41Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "add-in-sect3.1",
+      "headRefOid": "d9615f5d77b3440a2c6a4724ec1470225c2095e6",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
