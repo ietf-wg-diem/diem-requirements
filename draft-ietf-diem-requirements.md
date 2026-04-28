@@ -118,6 +118,19 @@ informative:
     title: "Harmonized System"
     author:
        org: World Customs Organization
+  CUSTOMARY:
+    target: https://ihl-databases.icrc.org/en/customary-ihl
+    title: "Customary IHL - IHL Databases"
+    author:
+       org: International Committe of the Red Cross
+  IHL-GUIDE:
+    target: https://guide-humanitarian-law.org/content/article/3/right-of-humanitarian-initiative/
+    title: ""
+  WHITEFLAG:
+    target: https://standard.whiteflagprotocol.org/
+    title: "Whiteflag Specification"
+    author:
+      org: Whiteflag Foundation
 
 
 --- abstract
@@ -335,6 +348,22 @@ Beyond the DIEM architecture as described in this document, digital emblems unde
 
 Requires protection of Schedule 1 chemicals in transit between signatory countries for research, medical, pharmaceutical, or protective purposes.
 Emblem would identify place, date, and volume of production, and the emblem can contain confidential data.
+
+## Other IHL-related use cases
+
+Many organizations use recognizable insignia or logos to mark staff, vehicles, buildings, and materials that derive protection from IHL and Customary IHL {{CUSTOMARY}}.
+Most humanitarian medical international non-governmental organizations (NGOs) use their own logos rather than using the Red Cross or Red Crescent emblem, even when they would have authorization to do so.
+
+As humanitarian NGOs have a "right of initiative" {{IHL-GUIDE}} established by IHL, and many NGOs have been operating for years in a location before conflict breaks out, their presence is natural and they are often first to provide medical care.
+Customary IHL requires combatants to provide the same protection to a marked hospital or identified medical staff as they would to one marked with a Red Cross or Red Crescent, provided the combatant reasonably understand that the mark is associated with a humanitarian medical function.
+Community acceptance of unarmed humanitarian staff requires awareness of their presence and identity, whether in time of conflict or in time of peace.
+
+IHL generally requires combatants to limit impact on civilians and infrastructure that civilians rely on.
+For example, destroying an electrical substation that serves a hospital and serves no military function, is usually prohibited by IHL.
+Other types of infrastructure important to civilians include drinking water reservoirs, water towers, and gas lines.
+Likewise schools and elder care facilities usually contain a high concentration of civilians.
+Digital emblems could be defined to identify such civilian infrastructure.
+The Whiteflag Protocol {{WHITEFLAG}} specifically identifies several categories of infrastructure.
 
 ## Press
 
