@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 29 October 2026                                                
+Expires: 30 October 2026                                                
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                           27 April 2026
+                                                           28 April 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 October 2026.
+   This Internet-Draft will expire on 30 October 2026.
 
 Copyright Notice
 
@@ -100,7 +100,8 @@ Table of Contents
      5.1.  Basel Convention
      5.2.  Ramsar Convention on the Wetlands
      5.3.  International Atomic Energy Agency (IAEA)
-     5.4.  Protective Emblems under International Humanitarian Law
+     5.4.  Protective Emblems under The Geneva Conventions, its
+            Additional Protocols, and the 1954 Hague Convention
        5.4.1.  Background
        5.4.2.  Domain Model and Stakeholders
        5.4.3.  Requirements
@@ -367,7 +368,8 @@ Table of Contents
    controlled shipment of atomic fuels and wastes across borders.
    Similar use case as OPCW.
 
-5.4.  Protective Emblems under International Humanitarian Law
+5.4.  Protective Emblems under The Geneva Conventions, its Additional
+      Protocols, and the 1954 Hague Convention
 
 5.4.1.  Background
 
