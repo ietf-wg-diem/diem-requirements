@@ -160,7 +160,8 @@ informative:
 
 --- abstract
 
-Digital emblems are a means for digital assets to signal that they should be treated in a specific way by reference to some normative framework.
+Digital emblems are a means for an asset to signal to validating entities that it should be protected or treated in a specific way,
+using some normative framework.
 This document lists the requirements and use cases that an architecture for digital emblems must accommodate.
 
 --- middle
@@ -191,8 +192,7 @@ The definitions for terms "(digital) emblem" and "validation" are reproduced fro
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A digital resource, system, or service - such as a server, data repository, or networked device - that can display a digital emblem.
-  An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.
+: A physical resource -- such as place or thing; or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
 
 Emblem issuer:
 : The entity that operates or controls an asset that bears a digital emblem.
@@ -221,7 +221,11 @@ The DIEM architecture will allow validators to discover and validate digital emb
 
 ### Digital Emblem Format
 
-Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
+Digital emblems MUST identify the marked asset and their kind of digital emblem.
+Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window.
+To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduce minimal overhead size except for fields required to fulfil other requirements in this document.
+
+As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
 
@@ -253,15 +257,15 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 ### Validation {#validation}
 
-Digital emblems MAY require validation. Validation MUST support verification of all the emblem's data and its context.
-In particular, validation MUST ensure that the emblem was issued for the respective asset.
+Digital emblems MAY require validation. The digital emblem architecture MUST allow individual standards to support verification of all the digital emblem's data or a defined subset without restriction. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
+In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
 ### Authorization {#authorization}
 
-Digital emblems MAY require authorization by third-parties.
+Digital emblems MAY require authorization by third-parties. When they do, they MUST define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblems standards can choose to take a dependency on Internet access or not. For example, a given digital emblem MAY use PKI or the DNS as a root of trust if they want, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
+
 Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
-Individual profiles MUST standardize a trust model that describes how validators can discover authorities and how the system selects authorities.
 
 ## Other Requirements
 
@@ -312,20 +316,16 @@ We provide auxiliary material under Informative References.
 
 Regulates the trans-boundary movement of hazardous wastes. Use cases are functionally identical to OPCW and IAEA.
 
-## Ramsar Convention on the Wetlands
-
-The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
-A digital emblem for the geographic areas potentially requires
-
-* Indication of location
-* Access to presence or absence of Ramsar designation of a specified location
-* Textual description
-* Ability to validate the presence or absence of Ramsar designation
-
 ## International Atomic Energy Agency (IAEA)
 
 IAEA administers several treaties, especially related to the controlled shipment of atomic fuels and wastes across borders.
 Similar use case as OPCW.
+
+## International Civil Aviation Organization (ICAO)
+
+Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
+Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
+Potential need for the emblem to reference a limited or partially redacted flight manifest.
 
 ## Protective Emblems under The Geneva Conventions, its Additional Protocols, and the 1954 Hague Convention
 
@@ -379,13 +379,29 @@ Emblem would identify place, date, and volume of production, and the emblem can 
 ## Press
 
 Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
-Digital assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
+Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
+
+## Ramsar Convention on the Wetlands
+
+The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
+A digital emblem for the geographic areas potentially requires
+
+* Indication of location
+* Access to presence or absence of Ramsar designation of a specified location
+* Textual description
+* Ability to validate the presence or absence of Ramsar designation
+
 
 ## United Nations Economic and Social Council (ECOSOC)
 
 UN Model Regulations {{UNMODELREGS}} includes "Recommendations on the Transport of Dangerous Goods."
 This includes labeling of items with a four digit "UN Number" that indicates the comounds contained within, such as chemicals, explosives, flammable liquids, etc.
 For example, items containing lithium-based batteries are labeled with 3480 or 3481 and accompanied by a specific "battery mark" emblem.
+
+
+## United Nations Food and Agriculture Organization (FAO)
+
+Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."
 
 ## United Nations Peacekeepers
 
@@ -400,20 +416,12 @@ They also provide a system for labeling origin of items and valuation of items, 
 
 Similar to the use case of the Red Cross, Red Crystal, and Red Crescent.
 
-## United Nations Food and Agriculture Organization (FAO)
-
-Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."
 
 ## World Intellectual Property Organization (WIPO)
 
 WIPO administers 26+ treaties with different protections for different things.
 Brands that are protected under international law (e.g., Madrid Protocol) can mark their shipments with an emblem allowing customs agents to positively identify legitimate products.
 
-## International Civil Aviation Organization (ICAO)
-
-Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
-Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
-Potential need for the emblem to reference a limited or partially redacted flight manifest.
 
 # Security Considerations
 
