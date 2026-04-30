@@ -73,6 +73,18 @@ normative:
     date: 2025-05-27
 
 informative:
+  API1977:
+    target: https://ihl-databases.icrc.org/assets/treaties/470-AP-I-EN.pdf
+    title: "Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Protection of Victims of International Armed Conflicts (Protocol I)"
+    author:
+       org: International Committee of the Red Cross
+    date: 1977-06-08
+  APIII2005:
+    target: https://ihl-databases.icrc.org/assets/treaties/615-AP-III-EN.pdf
+    title: "Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Adoption of an Additional Distinctive Emblem (Protocol III)"
+    author:
+       org: International Committee of the Red Cross
+    date: 2005-12-08
   BLUEHELMET:
     target: https://guide-humanitarian-law.org/content/article/3/peacekeeping/
     title: The Practical Guide to Humanitarian Law
@@ -88,6 +100,20 @@ informative:
     title: The Protection of the Red Cross / Red Crescent Emblems
     author:
        org: International Committee of the Red Cross
+  RCRCRES:
+    target: https://rcrcconference.org/app/uploads/2024/10/34IC_R2-ICT-EN.pdf
+    title: Protecting Civilians and Other Protected Persons and Objects Against the Potential Human Cost of ICT Activities During Armed Conflict
+    author:
+       org: 34th International Conference of the Red Cross and Red Crescent
+    date: 2024-10
+    seriesinfo:
+      - Document prepared by the International Committee of the Red Cross in consultation with the International Federation of Red Cross and Red Crescent Societies
+  UNESCORES:
+    target: https://unesdoc.unesco.org/ark:/48223/pf0000396721.locale=en
+    title: Resolutions Adopted During the 16th Meeting of the High Contracting Parties to the 1954 Hague Convention
+    author:
+       org: United Nations Educational, Scientific and Cultural Organization
+    date: 2025-12-01
   PRESS:
     target: https://safety.rsf.org/appendix-i-protection-of-journalists-in-war-zones/
     title: RSF Resource for Journalists' Safety
@@ -98,6 +124,18 @@ informative:
     title: Personnel of Foreign Governments and International Organizations and Special Treatment for Returning Individuals
     author:
        org: Cornell Law School - Legal Information Institute
+  GCI1949:
+    target: https://ihl-databases.icrc.org/assets/treaties/365-GC-I-EN.pdf
+    title: "Geneva Convention for the Amelioration of the Condition of the Wounded and Sick in Armed Forces in the Field"
+    author:
+       org: International Committee of the Red Cross
+    date: 1949-08-12
+  HAGUE1954:
+    target: https://unesdoc.unesco.org/ark:/48223/pf0000082464
+    title: Convention for the Protection of Cultural Property in the Event of Armed Conflict
+    author:
+       org: United Nations Educational, Scientific and Cultural Organization
+    date: 1954-05-14
   RAMSAR:
     target: https://www.ramsar.org
     title: The Convention on Wetlands
@@ -289,29 +327,31 @@ Requires protection of civil aviation flights and the ability to assert that the
 Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
 Potential need for the emblem to reference a limited or partially redacted flight manifest.
 
-## International Humanitarian Law
+## Protective Emblems under The Geneva Conventions, its Additional Protocols, and the 1954 Hague Convention
 
 ### Background
 
-The Geneva Conventions and their Additional Protocols constitute the core of IHL.
-Some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
+The Geneva Conventions and their Additional Protocols constitute the core of International Humanitarian Law (IHL).
+Some assets enjoy certain specific protections under IHL, including that they must not be attacked. In addition to recognizing other signs, IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific or special protections.
+In other words, protective emblems under IHL signal the applicability of a specific or special protection under IHL.
+Namely, these emblems are:
 
-- The emblems of the Red Cross, Red Crescent, and Red Crystal
-- The Blue Shield emblem
-- The emblem for the protection of civil defense marks
-- The dangerous forces emblem
+- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}}
+- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}}
+- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
+- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
 
 However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
-A digital emblem using the DIEM architecture could address this gap, and we call such emblems digital emblems for IHL.
+A digital emblem using the DIEM architecture could address this gap, and resolutions from UNESCO and the International Conference of the Red Cross and Red Crescent have expressed the support for such a digital emblem {{RCRCRES}} {{UNESCORES}}.
 
 ### Domain Model and Stakeholders {#ihl-stakeholders}
 
-In context of emblems under IHL, emblems will mark assets that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+In context of digital, protective emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
 Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
 
-For digital emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
+For digital, protective emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
 In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
 Similarly, other malicious ICT actors, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
 Concretely, we can assume that they will typically first identify an asset that they plan to engage with and then check whether that asset bears an emblem.
@@ -321,15 +361,15 @@ Concretely, we can assume that they will typically first identify an asset that 
 The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
 Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
 As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
-Therefore, digital emblems under IHL require validation for authenticity ({{validation}}) that is undetectable ({{undet-validation}}).
+Therefore, digital, protective emblems under IHL require validation for authenticity ({{validation}}) that is undetectable ({{undet-validation}}).
 
-At the same time, digital emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
+At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
 First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see {{authorization}} and {{ihl-stakeholders}}).
 The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
 Second, bearing an emblem can increase the risk for targeted attacks.
 We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable ({{removable}}).
 
-Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
+Beyond the DIEM architecture as described in this document, digital, protective emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
 
 ## Organization for the Prohibition of Chemical Weapons (OPCW)
 
