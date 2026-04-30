@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-28T02:05:37.922823+00:00",
+  "timestamp": "2026-04-30T02:06:48.965702+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -522,7 +522,7 @@
       ],
       "body": "Early pre-WG use cases discussions included ISO shipping containers. They're covered by ISO 6346 with owner codes registered with [Bureau International des Containers](https://bic-code.org). The International Convention for Safe Containers established the [CSC Combined Data Plate](https://www.bic-code.org/csc-combined-data-plate/) which labels them for safety. Those come from the UN and International Maritime Organization.\n\nhttps://www.bic-code.org/marking-of-containers/ goes into more detail about the ISO codes, CSC Combined Data Plate and includes an existing geofencing database used by IoT-enabled containers including a facility coding system established in ISO 9897, which itself is a coding system to describe the condition of a container including damage.",
       "createdAt": "2025-12-17T16:51:13Z",
-      "updatedAt": "2026-01-22T17:09:21Z",
+      "updatedAt": "2026-04-28T04:43:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -531,6 +531,13 @@
           "body": "1. Are these containers in motion, or ones sitting in some compound?\n2. RFC7744.  The container is not the important part.  It's the communication to the tracking system, and the tracking system.\n3. If the goal is to prevent digital attack on containers en-route, then the emblem will wind up applying to the ship.\n\nI would make it out of scope.  \n",
           "createdAt": "2026-01-22T17:09:21Z",
           "updatedAt": "2026-01-22T17:09:21Z"
+        },
+        {
+          "author": "ohmantics",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> 3\\. If the goal is to prevent digital attack on containers en-route, then the emblem will wind up applying to the ship.\n\nThe ship would have an emblem bundling all the emblems of its manifest.",
+          "createdAt": "2026-04-28T04:43:55Z",
+          "updatedAt": "2026-04-28T04:43:55Z"
         }
       ]
     },
@@ -610,15 +617,22 @@
       "labels": [],
       "body": "2. I see the forensic tracking as a core requirement. That is to say, I don't think all use cases will need to support forensic tracing of emblem issuance/discoverability etc. but I think that every emblem's depiction should indicate whether or not it has an associated forensic tracing mechanism or ledger - and in cases where it does should include pointers to it.\r\n\r\n_Originally posted by @rahelFain in https://github.com/ietf-wg-diem/diem-requirements/issues/25#issuecomment-3961344021_\r\n\r\n2a. In addition to noting this as a core field, I think the question of whether or not a specific use case supports and/or requires the use of one or more forensic tracing mechanisms and the reasoning behind the decision(s) reached needs to be detailed in its security considerations. In cases where forensic tracing is optional I think the security considerations will also need to detail the risks vs. benefits of including it within the emblem",
       "createdAt": "2026-02-25T19:10:13Z",
-      "updatedAt": "2026-03-15T05:55:35Z",
+      "updatedAt": "2026-04-28T04:42:25Z",
       "closedAt": null,
       "comments": [
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\n\nI think it should be defined as a possible extension. I can imagine it being useful, but I think requiring every other use of emblems to have to specify they do not in fact have an associated ledger is wasteful. There is already a requirement for emblems MAY having associated data. I think any use of that associated data should be viewed as an extension. That extension defining how a ledger is presented will allow implementations that check for ledgers identify when one is absent, and allow implementations that do not care about ledgers to not have to have parsing code to check for something they don't care about.\n\n> [...] needs to be detailed in its security considerations [...]\n\nCompletely agree.",
           "createdAt": "2026-03-15T05:55:35Z",
           "updatedAt": "2026-03-15T05:55:35Z"
+        },
+        {
+          "author": "ohmantics",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think forensic tracing establishes a need for \"selective disclosure\" as a requirement. This means that sub-dictionary portions of the emblem may be encrypted for specific viewers as they would contain 'internal' references such as an employee ID of the person who authorized the creation of the emblem record.",
+          "createdAt": "2026-04-28T04:42:25Z",
+          "updatedAt": "2026-04-28T04:42:25Z"
         }
       ]
     },
@@ -645,6 +659,22 @@
           "updatedAt": "2026-04-25T17:45:49Z"
         }
       ]
+    },
+    {
+      "number": 36,
+      "id": "I_kwDOPTNEDc8AAAABAt5PRQ",
+      "title": "Any requirements for post-DNS discovery mechanisms?",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/36",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Reflects this thread on the mailing list\n\nhttps://mailarchive.ietf.org/arch/msg/diem/ZBoyhqP91PkLktHGlaD3W2n2YMc/\n",
+      "createdAt": "2026-04-28T12:23:52Z",
+      "updatedAt": "2026-04-28T12:23:52Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -2413,13 +2443,13 @@
       "labels": [],
       "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
       "createdAt": "2026-04-24T13:57:34Z",
-      "updatedAt": "2026-04-27T17:48:27Z",
+      "updatedAt": "2026-04-28T14:54:36Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "c21fe4dd99a20b74023e7e35984fcd9a0e9a539b",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-emblems-title",
-      "headRefOid": "17cf6dc8d7e5aeebf34ed306081da02a2dd47eb3",
+      "headRefOid": "f4c4ee593883bd4b6eaee14213419ba69057d40b",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -2452,6 +2482,13 @@
           "body": "@rohanmahy Moved the citation to address that!",
           "createdAt": "2026-04-27T17:48:27Z",
           "updatedAt": "2026-04-27T17:48:27Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy Title now includes Hague Convention.",
+          "createdAt": "2026-04-28T14:54:36Z",
+          "updatedAt": "2026-04-28T14:54:36Z"
         }
       ],
       "reviews": [
@@ -2602,6 +2639,26 @@
               "body": "Why do you want to remove these references?",
               "createdAt": "2026-04-27T13:07:54Z",
               "updatedAt": "2026-04-27T13:07:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc75mcnL",
+          "commit": {
+            "abbreviatedOid": "3b9f73c"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-28T09:54:37Z",
+          "updatedAt": "2026-04-28T09:54:37Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "Without going into the gory details, International Humanitarian Law provides various levels of protection for a lot of things (ex: water treatment plants, schools), especially things that disproportionately impact civilians, that do not have explicit physical emblems defined. These rules are subtle. However if someone defined an emblem for schools, that Emblem would be intended to communicate this (limited) Protection under Internal Humanitarian Law. That is awfully close to the title. What is unique about the 4 emblems is that they are specifically called out as emblems in the Geneva Conventions + APs, and that 3 of them are defined there. ",
+              "createdAt": "2026-04-28T09:54:37Z",
+              "updatedAt": "2026-04-28T09:54:37Z"
             }
           ]
         }
@@ -2768,13 +2825,60 @@
       "labels": [],
       "body": "This proposed text from Sarah (as a chair) intends to clarify that each emblem type has distinct freedom with respect to other emblem types, and also to future proof the work of the DIEM WG.  \r\n@sarahjennings-ietf ",
       "createdAt": "2026-04-27T18:03:26Z",
-      "updatedAt": "2026-04-27T18:03:41Z",
+      "updatedAt": "2026-04-28T08:15:52Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "add-in-sect3.1",
       "headRefOid": "d9615f5d77b3440a2c6a4724ec1470225c2095e6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc75j4Yb",
+          "commit": {
+            "abbreviatedOid": "d9615f5"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-28T08:15:52Z",
+          "updatedAt": "2026-04-28T08:15:52Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "I have a hard time understanding what \"applying an emblem\" really means here.",
+              "createdAt": "2026-04-28T08:15:52Z",
+              "updatedAt": "2026-04-28T08:15:52Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "id": "PR_kwDOPTNEDc7WT2nR",
+      "title": "Add Other IHL use cases section",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/35",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This covers:\r\n-  humanitarian medical NGOs that have protection but that traditionally do not use Red C* physical emblems.\r\n- marking civilian infrastructure which has qualified protection under IHL.",
+      "createdAt": "2026-04-28T11:22:55Z",
+      "updatedAt": "2026-04-28T11:22:55Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "customary-ihl",
+      "headRefOid": "a419b4680295603dcc36d7d6658ab0a33ddd16c8",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
