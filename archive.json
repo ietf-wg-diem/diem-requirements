@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-30T02:06:48.965702+00:00",
+  "timestamp": "2026-05-03T02:02:08.083706+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -2443,13 +2443,13 @@
       "labels": [],
       "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
       "createdAt": "2026-04-24T13:57:34Z",
-      "updatedAt": "2026-04-28T14:54:36Z",
+      "updatedAt": "2026-04-30T12:54:35Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
-      "baseRefOid": "c21fe4dd99a20b74023e7e35984fcd9a0e9a539b",
+      "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-emblems-title",
-      "headRefOid": "f4c4ee593883bd4b6eaee14213419ba69057d40b",
+      "headRefOid": "0ab2d5cddb03a703d52ba772876e06ef3a40c828",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
