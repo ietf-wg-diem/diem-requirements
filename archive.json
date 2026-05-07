@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-03T02:02:08.083706+00:00",
+  "timestamp": "2026-05-07T02:04:26.294313+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1689,7 +1689,7 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-04-27T07:54:33Z",
+      "updatedAt": "2026-05-06T00:54:08Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1844,6 +1844,26 @@
               "body": "I can see how level 3 can prove that an agent inspected a digital emblem. But I see two problems in how the requirements interact with the use case. Maybe, both can be addressed.\n\n1. Is it mandatory for bags to be inspected? If yes, then indeed, you can verify that procedure was followed by checking that when a bag crosses a border, its emblem was validated. If checking is not mandatory, there is little the emblem proof of access proves, right?\n2. I do not see how proof of access proves that the agent did \"nothing else.\" That would require some sort of seal of the bag, i.e., opening the bag destroys the emblem.",
               "createdAt": "2026-04-27T07:53:57Z",
               "updatedAt": "2026-04-27T07:54:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc78RrnT",
+          "commit": {
+            "abbreviatedOid": "ef1ed90"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-06T00:54:08Z",
+          "updatedAt": "2026-05-06T00:54:08Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "Those are both fair points. My plan is to update the text to effectively give the two answers below.\r\n\r\n1. Since the emblem denotes that the contents of the pouch are exempt from the normal point of entry customs inspections and restrictions, it is mandatory for the point of entry customs officials to validate the emblem.  However, in the case that the emblem cannot be validated it may be acceptable to use physical markings that could be validated.  - That is to say that the validation of the digital emblem failing may not give the customs officials permission to open or inspect the pouch. Rather, that validation of a diplomatic pouch's digital or physical emblem succeeding indicates it enjoys the treaty's guaranteed protections.\r\n\r\n2. Proof of access does not prove that the agent did \"nothing else.\" \r\nIn all of the discussions I've had around this, my sense has been that mechanisms for guaranteeing \"nothing else\" was done is beyond the scope of what the emblem itself may be able to guarantee. To that end, the Level 3 validation may need to be part of an attested chain of custody (likely some form of SCITT record set or ledger) and/or accompanied by some physical mechanisms for tamper-proofing the pouch/making it impossible to open the pouch, x-ray it etc. without detection or the generation of forensic evidence.\r\n\r\n",
+              "createdAt": "2026-05-06T00:54:08Z",
+              "updatedAt": "2026-05-06T00:54:08Z"
             }
           ]
         }
