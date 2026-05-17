@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-07T02:04:26.294313+00:00",
+  "timestamp": "2026-05-17T02:12:32.766693+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -2892,7 +2892,7 @@
       "labels": [],
       "body": "This covers:\r\n-  humanitarian medical NGOs that have protection but that traditionally do not use Red C* physical emblems.\r\n- marking civilian infrastructure which has qualified protection under IHL.",
       "createdAt": "2026-04-28T11:22:55Z",
-      "updatedAt": "2026-04-28T11:22:55Z",
+      "updatedAt": "2026-05-16T22:42:25Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
@@ -2903,7 +2903,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "Thank you for opening this PR. I think this section is very important because it helps clarify that DIEM may need to address IHL-related use cases beyond the traditional Red Cross / Red Crescent / Red Crystal emblem context.\r\n\r\nI would like to support the general direction of this PR, especially the distinction between:\r\n\r\n1. humanitarian or medical actors/assets that may be protected under IHL but do not traditionally use the Red Cross, Red Crescent, or Red Crystal physical emblems; and\r\n\r\n2. civilian infrastructure that may have qualified protection under IHL.\r\n\r\nFrom a humanitarian law and technical architecture perspective, I think this distinction is important because not all IHL-protected civilian objects are humanitarian or medical assets.\r\n\r\nFor example, civilian water systems, energy infrastructure, food supply chains, civilian telecommunications, dams, and other services indispensable to the civilian population may be protected or specially relevant under IHL. However, these assets should not be semantically merged with humanitarian/medical digital emblem profiles, because doing so could dilute or confuse the protective meaning of the existing distinctive emblems.\r\n\r\nIt may be useful for the draft to make this profile separation explicit.\r\n\r\nA possible framing could be:\r\n\r\n- Digital humanitarian/medical emblem profiles: for protected medical units, services, and humanitarian organizations, especially where the logic of the existing distinctive emblems is directly relevant.\r\n- Other IHL-protected civilian infrastructure profiles: for civilian objects and services that may be protected or specially relevant under IHL, but should not reuse or be confused with humanitarian/medical emblem profiles.\r\n- Sector-specific protected-status profiles: for categories such as water, energy, food supply, dams, civilian communications, or other legally and operationally justified cases.\r\n\r\nThis may also help with architectural extensibility. A common DIEM discovery and validation architecture could support different profiles, while preserving clear semantic separation between humanitarian/medical emblems and other protected-status signals.\r\n\r\nThis distinction could also be relevant to the idea of a minimal presence indicator. For humanitarian/medical assets, a presence indicator could trigger validation of a Digital Emblem object. For other IHL-protected civilian infrastructure, a similar technical mechanism might trigger validation of a different protected-status profile, without calling it a humanitarian emblem and without reusing the same legal or symbolic meaning.\r\n\r\nIn short, I think the draft could benefit from explicitly stating that:\r\n\r\n- DIEM should avoid overloading humanitarian/medical emblems with all IHL-protected civilian infrastructure use cases;\r\n- the architecture should remain extensible enough to support clearly separated profiles where appropriate; and\r\n- any future non-humanitarian protected-status profiles should be carefully defined to avoid misuse, overbroad claims, or weakening of the protective value of the distinctive emblems.\r\n\r\nThis is not intended to expand the scope indiscriminately, but rather to preserve clarity between different IHL-related categories while keeping the architecture flexible enough for future profile-specific work.",
+          "createdAt": "2026-05-16T22:42:25Z",
+          "updatedAt": "2026-05-16T22:42:25Z"
+        }
+      ],
       "reviews": []
     }
   ]
