@@ -256,25 +256,9 @@ querying party accessed the digital emblem.
 Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it.
 
 Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation {{undet-validation}}.
-An example from the Diplomatic Pouch use case illustrates the Level 3 Proof of Presence requirement.
-
-The use case for diplomatic pouches involves the following entities:
-- Point of Entry Country/Customs Agent(s): Validator
-- Origin Country or Accredited Organization: Issuer and Authorizing entity
-- Diplomat: Agent of Country or Accredited Organization
-
-As described in more detail in Section {#diplo-pouch}, the 1961 Vienna Convention on Diplomatic Relations {{VIENNACONV}} prohibits the
-physical inspection of diplomatic pouches (e.g. via X-ray, opening or tampering with the pouch etc.) by customs agents
-of a Point of Entry country.
-Thus, a Level 3 Proof of Presence record for a digital emblem of this type would establish whether or not customs agent(s)
-in the Point of Entry country adhered to the treaty in processing the diplomatic pouch.
-That is to say that they validated the pouch's digital emblem and nothing else.
-To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
-
-- Specific point of entry
-- Time/Date of arrival at point of entry
-- identifier(s) of customs agent(s) validating the pouch
-- Record of the pouch's Digital Emblem Validation signed by the customs agent(s)
+An example from the Diplomatic Pouch use case, described in Section {{diplo-pouch}}, illustrates the
+Level 3 Proof of Presence requirement, and how it in some cases may need to be part of a chain of custody and/or
+ accompanied by additional security measures to provide adequate security guarantees.
 
 
 # Use Cases
@@ -298,7 +282,31 @@ inspected. This creates the paradox that the validity of their credentials must 
 historically compromised the very rights that are intended to be signaled. Diplomatic markings have also been
 misappropriated as cover for the smuggling of drugs and other contraband. Digital emblems, which can be validated
 instantaneously, at a distance, and without interrupting the subject, solve both of these problems, while streamlining
-and automating customs and immigrations processes. Pertinent requirements are discussed above {{proof-pres}}.
+and automating customs and immigrations processes. 
+
+The use case for diplomatic pouches involves the following entities:
+- Point of Entry Country/Customs Agent(s): Validator
+- Origin Country or Accredited Organization: Issuer and Authorizing entity
+- Diplomat: Agent of Country or Accredited Organization
+
+As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help establish 
+whether or not customs agent(s) in a Point of Entry country adhered to the treaty in processing the diplomatic pouch.
+That is to say that they validated the pouch's digital emblem and little to nothing else.
+To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
+
+- Specific point of entry
+- Time/Date of arrival at point of entry
+- identifier(s) of customs agent(s) validating the pouch
+- Record of the pouch's Digital Emblem Validation signed by the customs agent(s)
+
+
+### Limitations of proof of presence:
+As indicated in Section {{proof-pres}}, Level 3 Proof of Presence alone may not provide sufficient assurance that
+no tampering with the diplomatic pouch or inspection of its contents has occured.
+This is because a proof of presence neither provides a chain of custody nor any mechanisms to detect
+tampering should it occur. For this reason, Level 3 validation may need to be part of an attested
+chain of custody and/or accompanied by the use of physical mechanisms for tamper-proofing a physical asset.
+
 
 ## Ramsar Convention on the Wetlands
 
