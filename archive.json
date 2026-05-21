@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-17T02:12:32.766693+00:00",
+  "timestamp": "2026-05-21T02:33:01.700256+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1689,13 +1689,13 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-05-06T00:54:08Z",
+      "updatedAt": "2026-05-19T19:11:32Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "presence_forensics",
-      "headRefOid": "ef1ed90b33aebd683213e0cb5add3311d0bd07c0",
+      "headRefOid": "afc0b49f3bdb82c0e5cc3384bcbb0f33a45f452d",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
