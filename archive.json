@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-21T02:33:01.700256+00:00",
+  "timestamp": "2026-05-28T02:14:16.464029+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1689,7 +1689,7 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-05-19T19:11:32Z",
+      "updatedAt": "2026-05-27T02:11:46Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
@@ -1798,6 +1798,13 @@
           "body": "@rahelFain I was looking at the Issues yesterday. Rereading @dkg 's comments in Issue #14 , I think it would be useful to explain which party wants what at the various levels. For example, the querying party might want to prove that they queried and got not emblem of a particular type, while the target might want to prove that they got a query containing an emblem, or even that they received no queries (or enumerate all the queries they received) over a relevant period of time.",
           "createdAt": "2026-03-16T00:28:59Z",
           "updatedAt": "2026-03-16T00:28:59Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "# Proof of Presence: Evidentiary Concepts and Technical Validation Flows\r\n\r\nThank you for this PR. I think the discussion would benefit from separating several different evidentiary concepts that may otherwise be grouped under \u201cproof of presence\u201d.\r\n\r\nFrom a technical and legal/operational perspective, these seem to be different questions:\r\n\r\n1. **Proof of existence**  \r\n   Can it be established that DIEM data or an emblem record existed for asset X at time T?\r\n\r\n2. **Proof of discoverability**  \r\n   Can it be established that a DIEM-aware client could have discovered the emblem record through the expected discovery mechanism at time T?\r\n\r\n3. **Proof of access or query**  \r\n   Can it be established that a specific querying party queried the emblem or discovery mechanism?\r\n\r\n4. **Proof of validation**  \r\n   Can it be established that a specific querying party successfully validated the emblem object or binding?\r\n\r\n5. **Proof of response content**  \r\n   Can it be established what response or emblem content was returned to a querying party at time T?\r\n\r\n6. **Proof of subsequent conduct**  \r\n   Can it be established what the querying party did or did not do after validation?\r\n\r\nThese are related, but they are not the same. In particular, proof of validation does not necessarily prove subsequent lawful conduct. It may show that a party validated an emblem, but it does not prove that the party did nothing else unless combined with other mechanisms such as tamper-evident seals, chain-of-custody records, logs, attestations, or other forensic systems.\r\n\r\nIt may also be useful to state that some of these evidentiary goals can conflict with undetectable validation. For example, proof of access or proof of validation by a specific querying party may require logging or attestation, while undetectable validation may require that the bearer of the emblem cannot observe who validated it.\r\n\r\nTherefore, perhaps the draft could avoid treating \u201cproof of presence\u201d as a single concept and instead define which evidentiary property is required by each use case, who needs it, and what trade-offs it creates.\r\n\r\n## Physical Recognition vs. Digital Validation\r\n\r\nI also think the \u201cproof of presence\u201d discussion may benefit from a clearer separation between physical recognition and digital validation.\r\n\r\nIn the physical world, a protective emblem or distinctive sign is usually visible without interaction. For example, an observer can see a Red Cross emblem on a medical facility, a Blue Shield on cultural property, or the special sign for works containing dangerous forces, without the marked object knowing who observed it. The observer remains anonymous unless some additional interaction occurs.\r\n\r\nIn the digital environment, this changes. If proof of presence or validation requires querying an endpoint operated by the bearer of the emblem, by a State, by an issuing authority, or by another registry, then the act of validation itself may reveal metadata such as source IP address, timing, frequency, geography, or operational interest. This may conflict with undetectable validation.\r\n\r\nTherefore, it may be useful to distinguish several technical flows.\r\n\r\n## Possible Technical Flows\r\n\r\n### 1. Direct Bearer Validation\r\n\r\nA DIEM-aware client queries the protected asset directly.\r\n\r\n```text\r\nClient -> protected asset / bearer endpoint -> DIEM response\r\n```\r\n\r\nThis is simple, but it is detectable by the bearer. The protected asset may learn who queried, when, and from where.\r\n\r\n### 2. Issuer or Authority Validation\r\n\r\nA DIEM-aware client queries an authority endpoint.\r\n\r\n```text\r\nClient -> issuing authority endpoint -> validation response\r\n```\r\n\r\nThis avoids contacting the protected asset directly, but the issuing authority may still learn who is validating which asset.\r\n\r\n### 3. Cached or Replicated Validation\r\n\r\nA signed DIEM object is replicated through caches, resolvers, mirrors, or transparency-style distribution.\r\n\r\n```text\r\nIssuer signs DIEM object\r\n        |\r\n        v\r\nPublic cache / resolver / mirror\r\n        |\r\n        v\r\nClient validates signature locally\r\n```\r\n\r\nThis allows the client to validate without contacting the protected asset and without necessarily contacting the issuer at validation time.\r\n\r\n### 4. Offline Validation Bundle\r\n\r\nThe client receives a periodically updated signed dataset or bundle.\r\n\r\n```text\r\nIssuer/neutral registry -> signed bundle -> client\r\nClient validates locally\r\n```\r\n\r\nThis supports undetectable validation, because the client does not need to reveal which specific asset it is validating at the moment of use.\r\n\r\n### 5. Privacy-Preserving Query Model\r\n\r\nA neutral or trusted service could answer validation queries without learning the exact asset being queried, or without linking the query to the requester, using privacy-preserving mechanisms.\r\n\r\nPossible mechanisms could include:\r\n\r\n- hash-based lookup with salted or structured identifiers;\r\n- signed inclusion proofs;\r\n- transparency logs or Merkle-tree inclusion proofs;\r\n- private set membership techniques;\r\n- blind signatures or anonymous tokens;\r\n- resolver-side caching;\r\n- OCSP-stapling-like approaches, where the bearer presents a fresh signed status without the validator querying the authority;\r\n- CRLite-like approaches, where clients download compressed validity/revocation data and validate locally.\r\n\r\n## Abstract Flow\r\n\r\nA possible abstract flow could be:\r\n\r\n```text\r\n1. A competent authority or issuer authorizes a protected-status marking.\r\n2. The issuer signs a DIEM object for asset X.\r\n3. The signed object or its digest is published through DNS, a registry,\r\n   a transparency log, or a replicated cache.\r\n4. A DIEM-aware client discovers that DIEM data exists for asset X.\r\n5. The client obtains the signed object or an inclusion proof from a cache,\r\n   bundle, or privacy-preserving service.\r\n6. The client validates locally:\r\n   - asset binding;\r\n   - profile;\r\n   - issuer;\r\n   - signature;\r\n   - validity period;\r\n   - revocation or status;\r\n   - applicable proof or inclusion evidence.\r\n7. The client can determine that the marking existed or was discoverable\r\n   at time T without necessarily revealing the validation event to the bearer.\r\n```\r\n\r\n## Suggested Clarification for the Draft\r\n\r\nThis suggests that \u201cproof of presence\u201d may need to be decomposed into different evidentiary properties:\r\n\r\n- proof that a DIEM object existed at time T;\r\n- proof that it was discoverable through the expected mechanism;\r\n- proof that a specific response was available;\r\n- proof that a client queried or accessed it;\r\n- proof that a client successfully validated it;\r\n- proof that the client later acted or did not act in a certain way.\r\n\r\nThese are related, but they are not the same. Some of them may be compatible with undetectable validation, while others may not.\r\n\r\nFor example, proving that a DIEM object existed in a signed transparency log at time T may be compatible with undetectable validation. But proving that a specific military or CERT client queried the object at time T may require logging or attestation, which conflicts with undetectable validation.\r\n\r\nFor IHL-related use cases, this distinction may be important because physical emblem recognition is normally passive and anonymous. A digital equivalent should avoid turning every validation attempt into a detectable visit whenever the use case requires undetectable validation.\r\n\r\nSo perhaps the draft could clarify that proof of presence should not be treated as a single property. Each use case should define:\r\n\r\n- who needs the proof;\r\n- what exactly must be proven;\r\n- whether validation must be undetectable;\r\n- whether the proof is about existence, discoverability, access, validation, response content, or subsequent conduct;\r\n- and which publication or validation model is acceptable for that use case.\r\n",
+          "createdAt": "2026-05-27T02:01:05Z",
+          "updatedAt": "2026-05-27T02:11:46Z"
         }
       ],
       "reviews": [
@@ -2463,7 +2470,7 @@
       "labels": [],
       "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
       "createdAt": "2026-04-24T13:57:34Z",
-      "updatedAt": "2026-04-30T12:54:35Z",
+      "updatedAt": "2026-05-27T02:22:26Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
@@ -2509,6 +2516,13 @@
           "body": "@rohanmahy Title now includes Hague Convention.",
           "createdAt": "2026-04-28T14:54:36Z",
           "updatedAt": "2026-04-28T14:54:36Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "I think this PR raises an important terminology issue.\r\n\r\nFrom an IHL perspective, it may be useful to make clear that DIEM is not creating a new legal category of emblems. Rather, for IHL-related use cases, DIEM appears to be exploring how existing protective emblems, distinctive signs, or protected-status markings may be represented, discovered, and validated in the digital environment.\r\n\r\nIn that sense, I would be careful with any new umbrella term that could be understood as defining a new legal category. Names used in the draft for use cases could be descriptive and provisional, not normative.\r\n\r\nFor example, the draft could distinguish between use case labels such as:\r\n\r\n- digital representation of medical/humanitarian protective emblems;\r\n- digital representation of the civil defence distinctive sign;\r\n- digital representation of the cultural property emblem;\r\n- digital representation of the dangerous-forces special sign;\r\n- future protected-status markings for other IHL-related use cases, where legally and operationally justified.\r\n\r\nThese labels would only help describe use cases for technical analysis. They should not imply that the WG is creating new emblems or deciding final legal terminology.\r\n\r\nAny formal naming, recognition, or legal categorization of new protective emblems or signs should remain a matter for the relevant legal and diplomatic processes, including the competent authorities and, where applicable, the High Contracting Parties, not the technical contributors defining use cases.\r\n\r\nThis may help preserve the distinction between:\r\n\r\n- the legal status or protective meaning of an existing emblem/sign;\r\n- the technical mechanism for representing or validating it digitally;\r\n- and the descriptive label used in the draft for a use case.",
+          "createdAt": "2026-05-27T02:22:26Z",
+          "updatedAt": "2026-05-27T02:22:26Z"
         }
       ],
       "reviews": [
@@ -2746,7 +2760,7 @@
       "labels": [],
       "body": "Background: During IETF 125 it was pointed out that many of the digital emblem use cases seemed to assume that all queries for the digital emblem would always get the same response - which was not necessarily consistent with how DNS works. Further discussion about this highlighted that providing a proof of presence not only assumed that all queries would get the same response, but required that this be the case.\r\n This PR seeks to address that by requiring digital emblem use cases to specifically determine whether they require emblems to support assured response and/or consistent content in all responses and to detail the rationale for their determination. ",
       "createdAt": "2026-04-25T20:46:56Z",
-      "updatedAt": "2026-04-27T20:32:03Z",
+      "updatedAt": "2026-05-27T01:58:05Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
@@ -2830,6 +2844,26 @@
               "updatedAt": "2026-04-27T20:36:55Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBGdmOQ",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-27T01:58:04Z",
+          "updatedAt": "2026-05-27T01:58:05Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "Thank you for this PR. I think the response-requirements discussion is important, especially for use cases where visibility is part of the protective function of the emblem or protected-status marking.\r\n\r\nOne possible way to clarify the issue may be to distinguish response layers:\r\n\r\n1. discovery/existence of DIEM data for an asset;\r\n2. a minimal profile or category hint;\r\n3. a reference, digest, or locator for the full DIEM object;\r\n4. the full signed emblem or protected-status object;\r\n5. proof-of-presence or audit evidence, if required by the specific use case.\r\n\r\nUnder this model, a profile could require consistent discovery of the existence of DIEM data for asset X, while still allowing selective or variable full content depending on requester attributes, geography, authorization, access policy, or operational context.\r\n\r\nFor example, a minimal DNS/DIEM response could indicate only that DIEM data exists and that validation should be triggered:\r\n\r\n```dns\r\n_diem.hospital.example. IN DIEM \"v=1; presence=1; profile=ihl-medical-humanitarian; digest=sha256-abc123; ref=https://diem-authority.example/records/abc123\"\r\n```\r\n\r\nThis would not be the full emblem object. It would only tell a DIEM-aware client:\r\n\r\n```text\r\nDIEM data exists for this asset.\r\nThe profile is medical/humanitarian.\r\nValidation should be triggered.\r\nThe full signed object can be located or verified using the reference/digest.\r\n```\r\n\r\nA different IHL-related profile could use the same discovery pattern without reusing humanitarian or medical emblem semantics. For example, cultural property:\r\n\r\n```dns\r\n_diem.museum.example. IN DIEM \"v=1; presence=1; profile=ihl-cultural-property; digest=sha256-def456; ref=https://diem-authority.example/records/def456\"\r\n```\r\n\r\nIn that case, the full signed object could provide the profile-specific semantics:\r\n\r\n```json\r\n{\r\n  \"version\": \"DIEM1\",\r\n  \"asset\": {\r\n    \"id\": \"museum.example\",\r\n    \"type\": \"fqdn\"\r\n  },\r\n  \"profile\": {\r\n    \"id\": \"ihl-cultural-property\",\r\n    \"family\": \"ihl\"\r\n  },\r\n  \"marking\": {\r\n    \"kind\": \"protected-status\",\r\n    \"physical_equivalent\": \"blue-shield\"\r\n  },\r\n  \"issuer\": {\r\n    \"id\": \"cultural-authority.example\"\r\n  },\r\n  \"validity\": {\r\n    \"not_before\": \"2026-01-01T00:00:00Z\",\r\n    \"not_after\": \"2027-01-01T00:00:00Z\"\r\n  },\r\n  \"revocation\": {\r\n    \"status\": \"valid\",\r\n    \"uri\": \"https://diem-authority.example/status/def456\"\r\n  },\r\n  \"signature\": \"base64url-signature\"\r\n}\r\n```\r\n\r\nFor an installation containing dangerous forces, the discovery response could remain minimal, while the full content may need to be selective or minimized:\r\n\r\n```dns\r\n_diem.dam.example. IN DIEM \"v=1; presence=1; profile=ihl-dangerous-forces-installation; digest=sha256-ghi789; ref=https://diem-authority.example/records/ghi789\"\r\n```\r\n\r\nThe full object might identify the protected-status profile without exposing unnecessary technical details:\r\n\r\n```json\r\n{\r\n  \"version\": \"DIEM1\",\r\n  \"asset\": {\r\n    \"id\": \"dam.example\",\r\n    \"type\": \"fqdn\"\r\n  },\r\n  \"profile\": {\r\n    \"id\": \"ihl-dangerous-forces-installation\",\r\n    \"family\": \"ihl\"\r\n  },\r\n  \"marking\": {\r\n    \"kind\": \"protected-status\",\r\n    \"physical_equivalent\": \"three-bright-orange-circles\",\r\n    \"asset_category\": \"dam\"\r\n  },\r\n  \"issuer\": {\r\n    \"id\": \"authorized-infrastructure-authority.example\"\r\n  },\r\n  \"validation\": {\r\n    \"digest\": \"sha256-ghi789\",\r\n    \"revocation_uri\": \"https://diem-authority.example/status/ghi789\"\r\n  },\r\n  \"signature\": \"base64url-signature\"\r\n}\r\n```\r\n\r\nFor a civilian essential service that may not correspond to an existing physical emblem, the profile could avoid claiming humanitarian or medical emblem semantics:\r\n\r\n```dns\r\n_diem.water.example. IN DIEM \"v=1; presence=1; profile=ihl-civilian-essential-service; sector=water; digest=sha256-jkl012; ref=https://diem-authority.example/records/jkl012\"\r\n```\r\n\r\nThe full object could make the distinction explicit:\r\n\r\n```json\r\n{\r\n  \"version\": \"DIEM1\",\r\n  \"asset\": {\r\n    \"id\": \"water.example\",\r\n    \"type\": \"fqdn\"\r\n  },\r\n  \"profile\": {\r\n    \"id\": \"ihl-civilian-essential-service\",\r\n    \"family\": \"ihl\",\r\n    \"sector\": \"water\"\r\n  },\r\n  \"marking\": {\r\n    \"kind\": \"protected-status\",\r\n    \"physical_equivalent\": null,\r\n    \"not_humanitarian_emblem\": true\r\n  },\r\n  \"issuer\": {\r\n    \"id\": \"civilian-infrastructure-authority.example\"\r\n  },\r\n  \"validation\": {\r\n    \"digest\": \"sha256-jkl012\",\r\n    \"revocation_uri\": \"https://diem-authority.example/status/jkl012\"\r\n  },\r\n  \"signature\": \"base64url-signature\"\r\n}\r\n```\r\n\r\nThese examples are not proposed syntax. They are only intended to illustrate the distinction between:\r\n\r\n- a minimal discovery/existence response;\r\n- a profile/category hint;\r\n- a reference or digest for validation;\r\n- and the full signed object with profile-specific semantics.\r\n\r\nThis distinction may help separate two different questions:\r\n\r\n- \u201cCan a DIEM-aware client discover that DIEM data exists for this asset?\u201d\r\n- \u201cDoes every requester receive the same full emblem or protected-status object?\u201d\r\n\r\nFor some profiles, consistent discoverability of DIEM data for asset X may be important because visibility is part of the protective function. However, the full content may still be selective, minimized, or profile-dependent.\r\n\r\nIn short, perhaps the draft could distinguish between:\r\n\r\n- consistent discoverability of DIEM data for an asset;\r\n- consistency or selectivity of the full emblem/protected-status content;\r\n- and proof-of-presence or audit evidence, where required by the use case.\r\n\r\nThis might preserve the visibility function of certain emblems or protected-status markings while still allowing DNS-based deployments to support selective responses or selective content where a use case requires it.",
+              "createdAt": "2026-05-27T01:58:04Z",
+              "updatedAt": "2026-05-27T01:58:05Z"
+            }
+          ]
         }
       ]
     },
@@ -2845,7 +2879,7 @@
       "labels": [],
       "body": "This proposed text from Sarah (as a chair) intends to clarify that each emblem type has distinct freedom with respect to other emblem types, and also to future proof the work of the DIEM WG.  \r\n@sarahjennings-ietf ",
       "createdAt": "2026-04-27T18:03:26Z",
-      "updatedAt": "2026-04-28T08:15:52Z",
+      "updatedAt": "2026-05-27T01:36:30Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
@@ -2875,6 +2909,26 @@
               "body": "I have a hard time understanding what \"applying an emblem\" really means here.",
               "createdAt": "2026-04-28T08:15:52Z",
               "updatedAt": "2026-04-28T08:15:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBGX3oQ",
+          "commit": {
+            "abbreviatedOid": "d9615f5"
+          },
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-27T01:36:30Z",
+          "updatedAt": "2026-05-27T01:36:30Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "I understand \u201capplying an emblem\u201d in the physical world as placing a visible protective sign on a person, object, facility, vehicle, building, or infrastructure so that third parties can recognize, often without announcing themselves, that the marked bearer is claiming a specific protected status under an applicable legal framework.\r\n\r\nFor example, in the physical world an emblem may be painted on a building, displayed on a flag, marked on a vehicle, or placed on equipment. The point is visibility and recognition: an observer can see the sign and understand that the marked object or infrastructure is associated with a protected category.\r\n\r\nThe emblem itself does not create the legal protection. The legal protection comes from the applicable treaty, convention, or legal rule. The emblem makes that protection visible and helps others identify the object or infrastructure that must be respected, provided the emblem is used lawfully.\r\n\r\nExamples of physical protective signs/emblems include:\r\n\r\n- Red Cross, Red Crescent, and Red Crystal: identify protected medical services, medical units, medical transports, and authorized humanitarian actors.\r\n- Civil Defence distinctive sign: an equilateral blue triangle on an orange ground, used for civil defence organizations, personnel, buildings, material, and civilian shelters.\r\n- Blue Shield: identifies protected cultural property, such as museums, archives, monuments, libraries, and heritage sites.\r\n- Special sign for works and installations containing dangerous forces: three bright orange circles on the same axis, used for dams, dykes, and nuclear electrical generating stations.\r\n\r\nIn the DIEM context, I understand the goal as translating this physical concept into the digital environment. Instead of painting a symbol on a building or raising a flag, a digital emblem would be bound to a digital asset, service, domain, data system, or infrastructure component in a way that allows DIEM-aware clients to discover, validate, and interpret the claimed protected status.\r\n\r\nIn practice, parties to an armed conflict, especially States with trained armed forces and legal advisers, are already expected to recognize and interpret these physical signs under IHL. A similar expectation could emerge in the digital environment: technical tools, operators, CERT/CSIRT teams, military cyber units, and other DIEM-aware actors should be able to recognize and validate digital markings in a standardized way, rather than relying on ad hoc or hidden signals.\r\n\r\nSo, in this context, \u201capplying an emblem\u201d could mean binding a digital emblem or marking to a specific asset through the mechanisms defined by the relevant DIEM profile, while preserving the distinction between:\r\n\r\n- the visual or digital marker;\r\n- the underlying legal/protected status;\r\n- the authorization model;\r\n- and the validation process.",
+              "createdAt": "2026-05-27T01:36:30Z",
+              "updatedAt": "2026-05-27T01:36:31Z"
             }
           ]
         }
