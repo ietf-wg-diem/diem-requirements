@@ -282,14 +282,14 @@ inspected. This creates the paradox that the validity of their credentials must 
 historically compromised the very rights that are intended to be signaled. Diplomatic markings have also been
 misappropriated as cover for the smuggling of drugs and other contraband. Digital emblems, which can be validated
 instantaneously, at a distance, and without interrupting the subject, solve both of these problems, while streamlining
-and automating customs and immigrations processes. 
+and automating customs and immigrations processes.
 
 The use case for diplomatic pouches involves the following entities:
 - Point of Entry Country/Customs Agent(s): Validator
 - Origin Country or Accredited Organization: Issuer and Authorizing entity
 - Diplomat: Agent of Country or Accredited Organization
 
-As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help establish 
+As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help establish
 whether or not customs agent(s) in a Point of Entry country adhered to the treaty in processing the diplomatic pouch.
 That is to say that they validated the pouch's digital emblem and can reasonably be assumed to have done little to nothing else.
 To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
@@ -297,7 +297,7 @@ To that end, the Proof of Presence record of a diplomatic pouch's digital emblem
 - Specific point of entry
 - Time/Date of arrival at point of entry
 - identifier(s) of customs agent(s) validating the pouch
-- A baseline record establishing the Emblem's existence and accessibility (or a pointer thereto) 
+- A baseline record establishing the Emblem's existence and accessibility (or a pointer thereto)
 - Record of the customs agent's attempt to validate the Digital Emblem and its result signed by the customs agent(s)
 
 
