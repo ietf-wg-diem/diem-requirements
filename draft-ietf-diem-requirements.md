@@ -291,13 +291,14 @@ The use case for diplomatic pouches involves the following entities:
 
 As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help establish 
 whether or not customs agent(s) in a Point of Entry country adhered to the treaty in processing the diplomatic pouch.
-That is to say that they validated the pouch's digital emblem and little to nothing else.
+That is to say that they validated the pouch's digital emblem and can reasonably be assumed to have done little to nothing else.
 To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
 
 - Specific point of entry
 - Time/Date of arrival at point of entry
 - identifier(s) of customs agent(s) validating the pouch
-- Record of the pouch's Digital Emblem Validation signed by the customs agent(s)
+- A baseline record establishing the Emblem's existence and accessibility (or a pointer thereto) 
+- Record of the customs agent's attempt to validate the Digital Emblem and its result signed by the customs agent(s)
 
 
 ### Limitations of proof of presence:
