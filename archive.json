@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-28T02:14:16.464029+00:00",
+  "timestamp": "2026-05-31T02:38:49.034128+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -112,7 +112,7 @@
       ],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
       "createdAt": "2025-10-01T16:36:15Z",
-      "updatedAt": "2026-01-22T16:57:21Z",
+      "updatedAt": "2026-05-30T00:10:27Z",
       "closedAt": null,
       "comments": [
         {
@@ -142,6 +142,13 @@
           "body": "Partially addressed in #7 ",
           "createdAt": "2026-01-14T13:32:54Z",
           "updatedAt": "2026-01-14T13:32:54Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@rahelFain Speaking in my personal capacity.\n\nFrom the perspective of IHL-related use cases, I think the Security Considerations section could benefit from a short outline that separates different kinds of risk.\n\nIn particular, it may be useful to distinguish between:\n\n- **False or unauthorized claims of protected status.** A digital emblem or marking should not make it easy for an unauthorized actor to claim a protected status merely by publishing data.\n\n- **Over-reliance on the emblem.** A digital emblem does not itself create legal protection or actively defend an asset. It can make a claimed or authorized status visible and technically verifiable, but downstream legal or operational interpretation remains outside the protocol.\n\n- **Visibility versus exposure.** For some protected assets, visibility is part of the protective function. For others, publishing too much information may increase risk to the asset, staff, infrastructure, or affected population.\n\n- **Undetectable validation.** Some use cases, especially those involving protected assets in armed conflict, may require that discovery or validation not alert the asset operator or other observers.\n\n- **Authorization and revocation.** For legally-derived use cases, validators may need to distinguish between data that is merely self-published and data that is issued or authorized under an applicable trust model.\n\n- **Misuse and probing.** Adverse actors may ignore, falsify, misuse, or probe digital emblems. The draft does not need to model every attacker behavior, but the security considerations could acknowledge these categories when deriving requirements.\n\n- **Proof, audit, or forensic extensions.** Some use cases may need evidence that an emblem existed, was discoverable, or was validated at a relevant time. However, those mechanisms may be profile-specific or extension-specific and should be considered carefully against privacy and undetectable-validation requirements.\n\nI do not think the requirements document needs to resolve all of these issues in detail. But a short outline could help clarify which risks belong to the core DIEM architecture and which risks should be addressed by individual profiles, extensions, or downstream operational/legal processes.",
+          "createdAt": "2026-05-30T00:10:27Z",
+          "updatedAt": "2026-05-30T00:10:27Z"
         }
       ]
     },
@@ -408,7 +415,7 @@
       ],
       "body": "When describing a use case for a digital protocol, i'm used to seeing use cases presented from every party involved in a transaction.\n\nFor example, in digital id discussions, we need to talk about how a verifier operates, as well as how an issuer operates, and how a holder operates.\n\nThe use cases i'm seeing in the current document are all split out by talking about different bearer scenarios.\n\nBut i don't see any discussion of an attacker's perspective, or an authorizing party's perspective.  Should we detail those perspectives within each use case?  or should we detail them as their own distinct use case?",
       "createdAt": "2025-11-07T21:28:01Z",
-      "updatedAt": "2026-03-15T06:49:41Z",
+      "updatedAt": "2026-05-29T23:59:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -420,10 +427,17 @@
         },
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\n\n(After catching up on the interim recording and paging things back in... was this really only two months ago???)\n\nSo for anyone else who also forgot, the gist of the discussion was before we close this, we need more top-level text to guide the uses cases and then a little more detail on each use case.",
           "createdAt": "2026-03-15T06:42:18Z",
           "updatedAt": "2026-03-15T06:49:41Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@dkg  Speaking in my personal capacity.\n\nI think this issue is important, especially for use cases that are derived from existing legal or protective frameworks such as IHL.\n\nFrom that perspective, it may be useful for each use case to identify the relevant roles without turning those roles into separate legal conclusions or protocol obligations. For example, an IHL-related use case may need to distinguish between:\n\n- the protected asset or bearer;\n- the entity operating or controlling the asset;\n- the competent authorizing entity, where authorization is required;\n- the emblem issuer or entity publishing the digital marking;\n- the validator or party checking whether DIEM-interpretable data exists and can be validated;\n- and possible misuse or adverse actors, such as parties falsely claiming a protected status.\n\nI would be careful with trying to model the \u201cattacker\u201d perspective too fully. In contemporary armed conflicts, the range of possible actors, motivations, operational settings, and legal contexts can be very broad, so any such model would likely need to remain high-level and non-exhaustive.\n\nFor that reason, I think it may be more useful to capture only a minimal and non-canonical adverse-actor perspective, just enough to help derive technical requirements. For IHL-related use cases, that could include questions such as whether a party may try to ignore, misuse, falsify, or probe a digital emblem, and whether the design should account for false claims, revocation, authorization, or undetectable validation.\n\nSo perhaps the use cases could include a lightweight role model, while leaving legal, operational, and accountability conclusions outside the DIEM requirements document.\n",
+          "createdAt": "2026-05-29T23:59:33Z",
+          "updatedAt": "2026-05-29T23:59:33Z"
         }
       ]
     },
@@ -617,7 +631,7 @@
       "labels": [],
       "body": "2. I see the forensic tracking as a core requirement. That is to say, I don't think all use cases will need to support forensic tracing of emblem issuance/discoverability etc. but I think that every emblem's depiction should indicate whether or not it has an associated forensic tracing mechanism or ledger - and in cases where it does should include pointers to it.\r\n\r\n_Originally posted by @rahelFain in https://github.com/ietf-wg-diem/diem-requirements/issues/25#issuecomment-3961344021_\r\n\r\n2a. In addition to noting this as a core field, I think the question of whether or not a specific use case supports and/or requires the use of one or more forensic tracing mechanisms and the reasoning behind the decision(s) reached needs to be detailed in its security considerations. In cases where forensic tracing is optional I think the security considerations will also need to detail the risks vs. benefits of including it within the emblem",
       "createdAt": "2026-02-25T19:10:13Z",
-      "updatedAt": "2026-04-28T04:42:25Z",
+      "updatedAt": "2026-05-30T00:29:25Z",
       "closedAt": null,
       "comments": [
         {
@@ -633,6 +647,13 @@
           "body": "I think forensic tracing establishes a need for \"selective disclosure\" as a requirement. This means that sub-dictionary portions of the emblem may be encrypted for specific viewers as they would contain 'internal' references such as an employee ID of the person who authorized the creation of the emblem record.",
           "createdAt": "2026-04-28T04:42:25Z",
           "updatedAt": "2026-04-28T04:42:25Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@rahelFain Speaking in my personal capacity.\n\nI think this issue is delicate because forensic tracing may be important for some use cases, but it may also be outside the core scope of DIEM.\n\nFrom an IHL-related use case perspective, there may be situations where, after a cyber operation or other incident, different parties may want to reconstruct what information was available, discoverable, or technically verifiable at a relevant point in time. For example, the relevant question may not only be whether an emblem was valid, but whether DIEM-related data existed, was discoverable, could be validated, or was associated with an applicable authorization model.\n\nAt the same time, I do not want to suggest that the core DIEM mechanism should become a forensic, audit, or accountability system. That may belong to a later implementation stage, a profile-specific extension, an external registry/logging mechanism, or another system entirely.\n\nMaking forensic tracing a mandatory core property could create tension with:\n\n- undetectable validation;\n- minimization of sensitive information;\n- protection of staff, facilities, infrastructure, or affected populations;\n- and avoiding exposure of who queried or validated a protected asset.\n\nFor that reason, I would lean toward treating forensic tracing as outside the core DIEM mechanism, or at most as a profile-specific or extension-specific capability.\n\nHowever, I think the requirements document could still acknowledge the question at a high level, so implementers do not assume that DIEM itself provides forensic or evidentiary guarantees.\n\nCould the chairs/editors provide guidance on where this belongs?\n\nShould the requirements document:\n\n- merely acknowledge forensic/audit support as a possible use-case-specific need;\n- define an extension point for future profiles;\n- mention it only in Security Considerations;\n- or leave it entirely to external systems and later implementation work?",
+          "createdAt": "2026-05-30T00:29:25Z",
+          "updatedAt": "2026-05-30T00:29:25Z"
         }
       ]
     },
@@ -648,7 +669,7 @@
       "labels": [],
       "body": "In chat during IETF 125, @ohmantics mentioned several additional potential emblem types. Please let us know if we are missing any requirements needed for these use cases.\n\n\n> For consideration, here are a list of use cases we haven't discussed:\n> \n> Wassenaar Arrangement / Export Controls \u2014 dual-use goods and technologies have export control markings; digital emblems could mark shipments or data transfers subject to export control regimes\n> Antarctic Treaty System \u2014 research stations and vessels in Antarctica have protected status; digital assets of Antarctic research programs could benefit from emblems\n> Outer Space Treaty / COPUOS \u2014 space objects, ground stations, and telemetry systems have registration and non-interference obligations; satellite ground infrastructure could bear digital emblems\n> Convention on Certain Conventional Weapons (CCW) \u2014 minefields and areas with unexploded ordnance carry physical markings; digital geodata could carry equivalent emblems\n> International Telecommunication Union (ITU) \u2014 frequency allocations and emergency telecommunications have protected status under the ITU Constitution; digital infrastructure supporting emergency comms could be marked\n> \n> Undersea cable systems \u2014 submarine cables have protected status under UNCLOS and the 1884 Convention for the Protection of Submarine Telegraph Cables; landing stations, management systems, and monitoring infrastructure could bear digital emblems\n> Critical infrastructure / CNI designations \u2014 many nations designate critical national infrastructure; while not treaty-based, mutual recognition frameworks could use digital emblems\n> Election infrastructure \u2014 some jurisdictions designate election systems as critical infrastructure; digital emblems could signal this status to potential attackers\n> Maritime vessels (IMO) \u2014 beyond containers, vessels themselves carry IMO numbers and safety certifications (SOLAS); their digital systems (AIS, ECDIS) could bear emblems\n> Pharmaceutical supply chain (WHO prequalification) \u2014 beyond WHO's Red Cross-like protection, WHO-prequalified medicines in transit could use digital emblems for anti-counterfeiting",
       "createdAt": "2026-03-28T14:14:31Z",
-      "updatedAt": "2026-04-25T17:45:49Z",
+      "updatedAt": "2026-05-30T00:42:49Z",
       "closedAt": null,
       "comments": [
         {
@@ -657,6 +678,13 @@
           "body": "I\u2019m not an expert in these use cases; they came up in an unrelated search effort.\n\nIn the mental model I\u2019ve posted, I believe that these use cases are mostly covered by existing requirements, including \u201cselective disclosure\u201d of portions of the dictionary. Perhaps some of these would need some kind of additional root of trust on top of a domain owner to tie the domain to authority from a central organization. I think that could be handled by application of a certificate/signature record on the domain that is signed by the central authority.",
           "createdAt": "2026-04-25T17:45:49Z",
           "updatedAt": "2026-04-25T17:45:49Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@rohanmahy Speaking in my personal capacity.\n\nI think this issue is useful, but I would be careful about treating all listed examples as automatically within the same scope or as the same kind of \u201cemblem\u201d use case.\n\nSome examples may be connected to existing legal frameworks, treaties, conventions, regulatory regimes, or technical certification systems. Others may involve critical infrastructure or protected-status signaling in a broader sense. However, that does not necessarily mean that each example should be treated as a digital emblem use case in the same way, or that it should be included in this requirements draft.\n\nFrom an IHL-related perspective, I think this distinction matters because not every protected, regulated, critical, or sensitive asset has the same legal basis, protective meaning, authorization model, or expected validator behavior.\n\nFor that reason, could the chairs/editors provide guidance on the threshold for including additional potential emblem types in this draft?\n\nFor example, should a candidate use case identify at least:\n\n- the legal, treaty, regulatory, policy, or technical-standard source of the claimed status;\n- whether the mark is an existing emblem/sign, a regulated label, a certification signal, or a future protected-status marking;\n- who is competent to authorize, issue, or validate the marking;\n- what technical information the validator is expected to learn;\n- whether the use case requires public discoverability, selective disclosure, confidentiality, or undetectable validation;\n- and which legal, operational, or accountability conclusions remain outside DIEM.\n\nThis may help avoid merging very different categories into one broad \u201cemblem\u201d concept.\n\nI am not suggesting that the listed examples are invalid. I am only suggesting that additional use cases may need a scope filter before being added to the draft, so the architecture remains extensible without implying that all protected, regulated, or critical assets have the same legal meaning or should be handled under the same profile.",
+          "createdAt": "2026-05-30T00:42:49Z",
+          "updatedAt": "2026-05-30T00:42:49Z"
         }
       ]
     },
@@ -672,9 +700,17 @@
       "labels": [],
       "body": "Reflects this thread on the mailing list\n\nhttps://mailarchive.ietf.org/arch/msg/diem/ZBoyhqP91PkLktHGlaD3W2n2YMc/\n",
       "createdAt": "2026-04-28T12:23:52Z",
-      "updatedAt": "2026-04-28T12:23:52Z",
+      "updatedAt": "2026-05-30T00:03:28Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@rohanmahy Speaking in my personal capacity.\n\nI think this issue is useful because it may help separate different discovery questions without requiring the draft to prescribe a specific post-DNS mechanism at this stage.\n\nFor IHL-related or other legally-derived use cases, I would distinguish at least three conceptual layers:\n\n- discovering or identifying the relevant asset name or asset identifier;\n- determining whether the returned data, bundle, or associated material is interpretable as DIEM-related data;\n- validating that the DIEM-related data is properly bound to the relevant asset and issued or authorized under the applicable trust model.\n\nI am not proposing a new DNS label, a new RRtype, or any particular post-DNS discovery syntax. My point is only that future discovery mechanisms may need to preserve the same functional separation: asset identification, DIEM-data discovery, and technical validation.\n\nThis may be especially relevant for protected assets that do not map cleanly to a single FQDN, or where the physical-world protected object, the digital service, and the validating party do not all share the same operational view of the asset.\n\nSo perhaps the requirements could remain mechanism-neutral, while noting that any future post-DNS discovery mechanism should make clear:\n\n- what asset or identifier is being queried;\n- what makes the returned material interpretable as DIEM-related;\n- how the validator checks binding, authorization, and validity;\n- and which legal, operational, or policy interpretation remains outside the discovery mechanism itself.",
+          "createdAt": "2026-05-30T00:03:28Z",
+          "updatedAt": "2026-05-30T00:03:28Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -1689,13 +1725,13 @@
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-05-27T02:11:46Z",
+      "updatedAt": "2026-05-29T22:48:54Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "presence_forensics",
-      "headRefOid": "afc0b49f3bdb82c0e5cc3384bcbb0f33a45f452d",
+      "headRefOid": "83d18e657881f1592df61f01117fa792c8f3c44a",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1805,6 +1841,13 @@
           "body": "# Proof of Presence: Evidentiary Concepts and Technical Validation Flows\r\n\r\nThank you for this PR. I think the discussion would benefit from separating several different evidentiary concepts that may otherwise be grouped under \u201cproof of presence\u201d.\r\n\r\nFrom a technical and legal/operational perspective, these seem to be different questions:\r\n\r\n1. **Proof of existence**  \r\n   Can it be established that DIEM data or an emblem record existed for asset X at time T?\r\n\r\n2. **Proof of discoverability**  \r\n   Can it be established that a DIEM-aware client could have discovered the emblem record through the expected discovery mechanism at time T?\r\n\r\n3. **Proof of access or query**  \r\n   Can it be established that a specific querying party queried the emblem or discovery mechanism?\r\n\r\n4. **Proof of validation**  \r\n   Can it be established that a specific querying party successfully validated the emblem object or binding?\r\n\r\n5. **Proof of response content**  \r\n   Can it be established what response or emblem content was returned to a querying party at time T?\r\n\r\n6. **Proof of subsequent conduct**  \r\n   Can it be established what the querying party did or did not do after validation?\r\n\r\nThese are related, but they are not the same. In particular, proof of validation does not necessarily prove subsequent lawful conduct. It may show that a party validated an emblem, but it does not prove that the party did nothing else unless combined with other mechanisms such as tamper-evident seals, chain-of-custody records, logs, attestations, or other forensic systems.\r\n\r\nIt may also be useful to state that some of these evidentiary goals can conflict with undetectable validation. For example, proof of access or proof of validation by a specific querying party may require logging or attestation, while undetectable validation may require that the bearer of the emblem cannot observe who validated it.\r\n\r\nTherefore, perhaps the draft could avoid treating \u201cproof of presence\u201d as a single concept and instead define which evidentiary property is required by each use case, who needs it, and what trade-offs it creates.\r\n\r\n## Physical Recognition vs. Digital Validation\r\n\r\nI also think the \u201cproof of presence\u201d discussion may benefit from a clearer separation between physical recognition and digital validation.\r\n\r\nIn the physical world, a protective emblem or distinctive sign is usually visible without interaction. For example, an observer can see a Red Cross emblem on a medical facility, a Blue Shield on cultural property, or the special sign for works containing dangerous forces, without the marked object knowing who observed it. The observer remains anonymous unless some additional interaction occurs.\r\n\r\nIn the digital environment, this changes. If proof of presence or validation requires querying an endpoint operated by the bearer of the emblem, by a State, by an issuing authority, or by another registry, then the act of validation itself may reveal metadata such as source IP address, timing, frequency, geography, or operational interest. This may conflict with undetectable validation.\r\n\r\nTherefore, it may be useful to distinguish several technical flows.\r\n\r\n## Possible Technical Flows\r\n\r\n### 1. Direct Bearer Validation\r\n\r\nA DIEM-aware client queries the protected asset directly.\r\n\r\n```text\r\nClient -> protected asset / bearer endpoint -> DIEM response\r\n```\r\n\r\nThis is simple, but it is detectable by the bearer. The protected asset may learn who queried, when, and from where.\r\n\r\n### 2. Issuer or Authority Validation\r\n\r\nA DIEM-aware client queries an authority endpoint.\r\n\r\n```text\r\nClient -> issuing authority endpoint -> validation response\r\n```\r\n\r\nThis avoids contacting the protected asset directly, but the issuing authority may still learn who is validating which asset.\r\n\r\n### 3. Cached or Replicated Validation\r\n\r\nA signed DIEM object is replicated through caches, resolvers, mirrors, or transparency-style distribution.\r\n\r\n```text\r\nIssuer signs DIEM object\r\n        |\r\n        v\r\nPublic cache / resolver / mirror\r\n        |\r\n        v\r\nClient validates signature locally\r\n```\r\n\r\nThis allows the client to validate without contacting the protected asset and without necessarily contacting the issuer at validation time.\r\n\r\n### 4. Offline Validation Bundle\r\n\r\nThe client receives a periodically updated signed dataset or bundle.\r\n\r\n```text\r\nIssuer/neutral registry -> signed bundle -> client\r\nClient validates locally\r\n```\r\n\r\nThis supports undetectable validation, because the client does not need to reveal which specific asset it is validating at the moment of use.\r\n\r\n### 5. Privacy-Preserving Query Model\r\n\r\nA neutral or trusted service could answer validation queries without learning the exact asset being queried, or without linking the query to the requester, using privacy-preserving mechanisms.\r\n\r\nPossible mechanisms could include:\r\n\r\n- hash-based lookup with salted or structured identifiers;\r\n- signed inclusion proofs;\r\n- transparency logs or Merkle-tree inclusion proofs;\r\n- private set membership techniques;\r\n- blind signatures or anonymous tokens;\r\n- resolver-side caching;\r\n- OCSP-stapling-like approaches, where the bearer presents a fresh signed status without the validator querying the authority;\r\n- CRLite-like approaches, where clients download compressed validity/revocation data and validate locally.\r\n\r\n## Abstract Flow\r\n\r\nA possible abstract flow could be:\r\n\r\n```text\r\n1. A competent authority or issuer authorizes a protected-status marking.\r\n2. The issuer signs a DIEM object for asset X.\r\n3. The signed object or its digest is published through DNS, a registry,\r\n   a transparency log, or a replicated cache.\r\n4. A DIEM-aware client discovers that DIEM data exists for asset X.\r\n5. The client obtains the signed object or an inclusion proof from a cache,\r\n   bundle, or privacy-preserving service.\r\n6. The client validates locally:\r\n   - asset binding;\r\n   - profile;\r\n   - issuer;\r\n   - signature;\r\n   - validity period;\r\n   - revocation or status;\r\n   - applicable proof or inclusion evidence.\r\n7. The client can determine that the marking existed or was discoverable\r\n   at time T without necessarily revealing the validation event to the bearer.\r\n```\r\n\r\n## Suggested Clarification for the Draft\r\n\r\nThis suggests that \u201cproof of presence\u201d may need to be decomposed into different evidentiary properties:\r\n\r\n- proof that a DIEM object existed at time T;\r\n- proof that it was discoverable through the expected mechanism;\r\n- proof that a specific response was available;\r\n- proof that a client queried or accessed it;\r\n- proof that a client successfully validated it;\r\n- proof that the client later acted or did not act in a certain way.\r\n\r\nThese are related, but they are not the same. Some of them may be compatible with undetectable validation, while others may not.\r\n\r\nFor example, proving that a DIEM object existed in a signed transparency log at time T may be compatible with undetectable validation. But proving that a specific military or CERT client queried the object at time T may require logging or attestation, which conflicts with undetectable validation.\r\n\r\nFor IHL-related use cases, this distinction may be important because physical emblem recognition is normally passive and anonymous. A digital equivalent should avoid turning every validation attempt into a detectable visit whenever the use case requires undetectable validation.\r\n\r\nSo perhaps the draft could clarify that proof of presence should not be treated as a single property. Each use case should define:\r\n\r\n- who needs the proof;\r\n- what exactly must be proven;\r\n- whether validation must be undetectable;\r\n- whether the proof is about existence, discoverability, access, validation, response content, or subsequent conduct;\r\n- and which publication or validation model is acceptable for that use case.\r\n",
           "createdAt": "2026-05-27T02:01:05Z",
           "updatedAt": "2026-05-27T02:11:46Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "I agree with the concern that DIEM itself should not become a forensic, audit, or governance system.\r\n\r\nAt the same time, I think it may still be useful for the use cases and requirements document to identify when a use case has evidentiary expectations, so that future profile or implementation work does not accidentally assume that DIEM solved those questions.\r\n\r\nIn my view, \u201cproof of presence\u201d may be clearer if it is treated as a set of use-case-specific evidentiary questions, rather than as one mandatory protocol feature. For example, a use case may need to say whether it cares about:\r\n\r\n- existence of DIEM-interpretable data;\r\n- discoverability of that data;\r\n- access to the data;\r\n- validation of signatures or bindings;\r\n- response content at a relevant time;\r\n- or later conduct by a party.\r\n\r\nThese are different questions, and not all of them are compatible with undetectable validation.\r\n\r\nI would also avoid framing audit evidence as a mechanism to identify every visitor or validator. For IHL-related use cases, undetectable validation may be important precisely because a validator should be able to check an emblem or protected-status marking without alerting the asset.\r\n\r\nSo perhaps the core document only needs to say that proof/audit mechanisms, where required, are use-case-specific and may be external to the core DIEM mechanism. The core DIEM work can remain focused on discovery and technical validation, while the use case text makes clear that forensic or audit expectations are not automatically solved by the protocol.",
+          "createdAt": "2026-05-29T22:48:54Z",
+          "updatedAt": "2026-05-29T22:48:54Z"
         }
       ],
       "reviews": [
@@ -1871,6 +1914,72 @@
               "body": "Those are both fair points. My plan is to update the text to effectively give the two answers below.\r\n\r\n1. Since the emblem denotes that the contents of the pouch are exempt from the normal point of entry customs inspections and restrictions, it is mandatory for the point of entry customs officials to validate the emblem.  However, in the case that the emblem cannot be validated it may be acceptable to use physical markings that could be validated.  - That is to say that the validation of the digital emblem failing may not give the customs officials permission to open or inspect the pouch. Rather, that validation of a diplomatic pouch's digital or physical emblem succeeding indicates it enjoys the treaty's guaranteed protections.\r\n\r\n2. Proof of access does not prove that the agent did \"nothing else.\" \r\nIn all of the discussions I've had around this, my sense has been that mechanisms for guaranteeing \"nothing else\" was done is beyond the scope of what the emblem itself may be able to guarantee. To that end, the Level 3 validation may need to be part of an attested chain of custody (likely some form of SCITT record set or ledger) and/or accompanied by some physical mechanisms for tamper-proofing the pouch/making it impossible to open the pouch, x-ray it etc. without detection or the generation of forensic evidence.\r\n\r\n",
               "createdAt": "2026-05-06T00:54:08Z",
               "updatedAt": "2026-05-06T00:54:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBXduCg",
+          "commit": {
+            "abbreviatedOid": "afc0b49"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T04:51:17Z",
+          "updatedAt": "2026-05-29T04:52:43Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "Okay, I see that you now list in the limitations that it actually may not be possible to verify that \"little or nothing else\" was done, but why still list it here then as part of level 3 proof of presence?",
+              "createdAt": "2026-05-29T04:51:17Z",
+              "updatedAt": "2026-05-29T04:52:43Z"
+            },
+            {
+              "originalPosition": 49,
+              "body": "What is a proof of presence record?",
+              "createdAt": "2026-05-29T04:52:04Z",
+              "updatedAt": "2026-05-29T04:52:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBb4KdQ",
+          "commit": {
+            "abbreviatedOid": "afc0b49"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T16:42:57Z",
+          "updatedAt": "2026-05-29T16:42:57Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "Based on my understanding of your question, my best answer is that the record is a transcript of the proof... \r\nThinking about this I can see that there is a lack of clarity here. Within the confines of this example, I need to distinguish between:\r\n- proving the pouch's digital emblem existed/was accessible at the time of the pouch's arrival \r\n- proving that customs agents performed the requisite checks of the emblem. \r\n\r\nThe Baseline proof of presence would largely be the first thing. \r\nThis would then need to be accompanied by the signed validation attempt and its result to establish the second.\r\n\r\nEdit to note that I've made these changes.",
+              "createdAt": "2026-05-29T16:42:57Z",
+              "updatedAt": "2026-05-29T17:14:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBb-zHQ",
+          "commit": {
+            "abbreviatedOid": "afc0b49"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T17:01:14Z",
+          "updatedAt": "2026-05-29T17:01:14Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "I was trying to get at the fact that there was still value in establishing that the a digital emblem for the pouch existed and that the validation occurred even if no further protections or checks are used. This option may be chosen in cases where there was less concern about the risk posed by inspection or where further chain of custody and/or anti-tampering mechanisms were not feasible (e.g. possibly due to the size/weight of the contents, a lack of infrastructure or resources to support them, etc.). \n\nWould this be addressed by adjusting the phrasing to say the following?:\n`That is to say that they validated the pouch's digital emblem and can reasonably be assumed to have done little to nothing else.` ",
+              "createdAt": "2026-05-29T17:01:14Z",
+              "updatedAt": "2026-05-29T17:01:14Z"
             }
           ]
         }
@@ -2470,7 +2579,7 @@
       "labels": [],
       "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
       "createdAt": "2026-04-24T13:57:34Z",
-      "updatedAt": "2026-05-27T02:22:26Z",
+      "updatedAt": "2026-05-29T23:01:50Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
@@ -2523,6 +2632,20 @@
           "body": "I think this PR raises an important terminology issue.\r\n\r\nFrom an IHL perspective, it may be useful to make clear that DIEM is not creating a new legal category of emblems. Rather, for IHL-related use cases, DIEM appears to be exploring how existing protective emblems, distinctive signs, or protected-status markings may be represented, discovered, and validated in the digital environment.\r\n\r\nIn that sense, I would be careful with any new umbrella term that could be understood as defining a new legal category. Names used in the draft for use cases could be descriptive and provisional, not normative.\r\n\r\nFor example, the draft could distinguish between use case labels such as:\r\n\r\n- digital representation of medical/humanitarian protective emblems;\r\n- digital representation of the civil defence distinctive sign;\r\n- digital representation of the cultural property emblem;\r\n- digital representation of the dangerous-forces special sign;\r\n- future protected-status markings for other IHL-related use cases, where legally and operationally justified.\r\n\r\nThese labels would only help describe use cases for technical analysis. They should not imply that the WG is creating new emblems or deciding final legal terminology.\r\n\r\nAny formal naming, recognition, or legal categorization of new protective emblems or signs should remain a matter for the relevant legal and diplomatic processes, including the competent authorities and, where applicable, the High Contracting Parties, not the technical contributors defining use cases.\r\n\r\nThis may help preserve the distinction between:\r\n\r\n- the legal status or protective meaning of an existing emblem/sign;\r\n- the technical mechanism for representing or validating it digitally;\r\n- and the descriptive label used in the draft for a use case.",
           "createdAt": "2026-05-27T02:22:26Z",
           "updatedAt": "2026-05-27T02:22:26Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I do not see the text suggesting that we want to create a new, legal category of emblems. We clearly refer to IHL.",
+          "createdAt": "2026-05-29T04:54:24Z",
+          "updatedAt": "2026-05-29T04:54:24Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@felixlinker  @rohanmahy \r\n\r\nCould I ask for chair/editor guidance on the level of IHL terminology that is useful in this section?\r\n\r\nI agree that the draft should use concise wording and should avoid creating new legal categories or new umbrella terms that could be misunderstood as normative.\r\n\r\nAt the same time, because this use case is directly connected to IHL, I think it is important that the terminology remains legally aligned. IHL is not limited only to one instrument. Depending on the use case, the relevant baseline may include the Geneva Conventions and their Additional Protocols, other treaty law, customary IHL, and other applicable rules for armed conflict.\r\n\r\nRohan\u2019s suggestion to reference the original treaty or legal instrument defining a specific emblem or sign is helpful. My only concern is that the text should avoid implying that all IHL-related use cases derive from the same legal source or that DIEM is creating a new legal category.\r\n\r\nWould the chairs/editors prefer this section to include a short terminology note, or should that be handled only through precise references in each use case?\r\n\r\nFor context, I am participating here in my personal capacity. I am a Red Cross and Red Crescent Movement volunteer and have been recognized as an IHL Ambassador attached to the Regional IHL Center for the Americas, after completing an IHL course and dissemination project.\r\n\r\nI mention this only to explain the perspective from which I am reading these use cases: not as an attempt to speak on behalf of any institution, but as someone who is trying to help ensure that the technical use cases remain understandable and aligned with the applicable IHL background.\r\n\r\nI would be glad to provide contextual input where the chairs or editors think that IHL background may be useful, while fully deferring to the WG on protocol scope, terminology, and technical design.",
+          "createdAt": "2026-05-29T23:01:50Z",
+          "updatedAt": "2026-05-29T23:01:50Z"
         }
       ],
       "reviews": [
@@ -2760,7 +2883,7 @@
       "labels": [],
       "body": "Background: During IETF 125 it was pointed out that many of the digital emblem use cases seemed to assume that all queries for the digital emblem would always get the same response - which was not necessarily consistent with how DNS works. Further discussion about this highlighted that providing a proof of presence not only assumed that all queries would get the same response, but required that this be the case.\r\n This PR seeks to address that by requiring digital emblem use cases to specifically determine whether they require emblems to support assured response and/or consistent content in all responses and to detail the rationale for their determination. ",
       "createdAt": "2026-04-25T20:46:56Z",
-      "updatedAt": "2026-05-27T01:58:05Z",
+      "updatedAt": "2026-05-29T22:47:44Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
@@ -2864,6 +2987,86 @@
               "updatedAt": "2026-05-27T01:58:05Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBXfXiw",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T04:58:36Z",
+          "updatedAt": "2026-05-29T04:58:36Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "I don't find the phrasing \"unusual,\" I find it unclear. For \"selective content,\" your suggestion of \"publicly accessible\" could work.\r\n\r\nThe rest I still find unclear. For example, what is an \"emblem instance\" and why would you query it? Are we querying emblems actively or are we querying for emblems bound to an identifier? I would assume the latter. Anyway, I think my suggestion would address different responses based on geography. I don't see what geography adds. Responses are the same or not, no?",
+              "createdAt": "2026-05-29T04:58:36Z",
+              "updatedAt": "2026-05-29T04:58:36Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBcW5rg",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T18:07:17Z",
+          "updatedAt": "2026-05-29T18:07:18Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "OK I see how my phrasing (`how responses to queries...are handled`) made it sound like I was initially talking about the recipient. My intent was for both sentences to center on the sender and I will update the phrasing accordingly. Here's how I plan to rephrase it.\r\n `Specifications for each use case MUST each determine how servers must respond to queries for Digital Emblems of their specified type.\r\n Specifically , they must determine the responsiveness and consistency requirements for emblems of their given type and provide explanations of how the chosen requirements apply and rationales for their selection.`",
+              "createdAt": "2026-05-29T18:07:17Z",
+              "updatedAt": "2026-05-29T18:07:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBcc32A",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T18:23:59Z",
+          "updatedAt": "2026-05-29T18:23:59Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "@wnunezc These are all great suggestions, but I would argue that the specifics of what is the minimum content or representation of an emblem is a question that should be addressed in the architecture document rather than here. \r\n@felixlinker If there are multiple distinct Digital Emblems for a given asset (as will likely be denoted by a set keyword based domain name) they both need to be returned if consistent content is required. If two emblems are of the same type and ostensibly cover the same information/indicate the same protections/etc. it is likely that these are simply two versions of the same digital emblem.  To that end, I will be adding text stating that the exact definition for what constitutes a Digital Emblem (as well as a distinct one) will be defined in the architecture document.",
+              "createdAt": "2026-05-29T18:23:59Z",
+              "updatedAt": "2026-05-29T18:24:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBdxt6A",
+          "commit": {
+            "abbreviatedOid": "186e371"
+          },
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T22:47:44Z",
+          "updatedAt": "2026-05-29T22:47:44Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "@rahelFain  @felixlinker \r\n\r\nSmall clarification based on the mailing-list discussion:\r\n\r\nThe DNS snippets in my earlier comment were only illustrative. I am not proposing a `_diem` label, a `DIEM` RRtype, or a separate discovery mechanism.\r\n\r\nI would restate my point more narrowly:\r\n\r\nA DIEM-aware validator queries the relevant asset name, inspects the returned RRsets or bundle, determines whether the returned data is interpretable as DIEM, validates the relevant signatures or bindings, and then presents a limited technical result.\r\n\r\nThe distinction I was trying to make is between:\r\n\r\n- discovery that DIEM-interpretable data exists for an asset;\r\n- validation of the relevant signatures or bindings;\r\n- whether the full content is consistent or selective;\r\n- and proof or audit evidence, if required by a specific use case, which may belong outside the core DIEM mechanism.\r\n\r\nSo the point is not to prescribe DNS syntax. The point is to separate discovery, validation, response consistency, selective content, and downstream proof/audit concerns.\r\n\r\n",
+              "createdAt": "2026-05-29T22:47:44Z",
+              "updatedAt": "2026-05-29T22:47:44Z"
+            }
+          ]
         }
       ]
     },
@@ -2879,7 +3082,7 @@
       "labels": [],
       "body": "This proposed text from Sarah (as a chair) intends to clarify that each emblem type has distinct freedom with respect to other emblem types, and also to future proof the work of the DIEM WG.  \r\n@sarahjennings-ietf ",
       "createdAt": "2026-04-27T18:03:26Z",
-      "updatedAt": "2026-05-27T01:36:30Z",
+      "updatedAt": "2026-05-29T23:03:52Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
@@ -2929,6 +3132,26 @@
               "body": "I understand \u201capplying an emblem\u201d in the physical world as placing a visible protective sign on a person, object, facility, vehicle, building, or infrastructure so that third parties can recognize, often without announcing themselves, that the marked bearer is claiming a specific protected status under an applicable legal framework.\r\n\r\nFor example, in the physical world an emblem may be painted on a building, displayed on a flag, marked on a vehicle, or placed on equipment. The point is visibility and recognition: an observer can see the sign and understand that the marked object or infrastructure is associated with a protected category.\r\n\r\nThe emblem itself does not create the legal protection. The legal protection comes from the applicable treaty, convention, or legal rule. The emblem makes that protection visible and helps others identify the object or infrastructure that must be respected, provided the emblem is used lawfully.\r\n\r\nExamples of physical protective signs/emblems include:\r\n\r\n- Red Cross, Red Crescent, and Red Crystal: identify protected medical services, medical units, medical transports, and authorized humanitarian actors.\r\n- Civil Defence distinctive sign: an equilateral blue triangle on an orange ground, used for civil defence organizations, personnel, buildings, material, and civilian shelters.\r\n- Blue Shield: identifies protected cultural property, such as museums, archives, monuments, libraries, and heritage sites.\r\n- Special sign for works and installations containing dangerous forces: three bright orange circles on the same axis, used for dams, dykes, and nuclear electrical generating stations.\r\n\r\nIn the DIEM context, I understand the goal as translating this physical concept into the digital environment. Instead of painting a symbol on a building or raising a flag, a digital emblem would be bound to a digital asset, service, domain, data system, or infrastructure component in a way that allows DIEM-aware clients to discover, validate, and interpret the claimed protected status.\r\n\r\nIn practice, parties to an armed conflict, especially States with trained armed forces and legal advisers, are already expected to recognize and interpret these physical signs under IHL. A similar expectation could emerge in the digital environment: technical tools, operators, CERT/CSIRT teams, military cyber units, and other DIEM-aware actors should be able to recognize and validate digital markings in a standardized way, rather than relying on ad hoc or hidden signals.\r\n\r\nSo, in this context, \u201capplying an emblem\u201d could mean binding a digital emblem or marking to a specific asset through the mechanisms defined by the relevant DIEM profile, while preserving the distinction between:\r\n\r\n- the visual or digital marker;\r\n- the underlying legal/protected status;\r\n- the authorization model;\r\n- and the validation process.",
               "createdAt": "2026-05-27T01:36:30Z",
               "updatedAt": "2026-05-27T01:36:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABBd1C1Q",
+          "commit": {
+            "abbreviatedOid": "d9615f5"
+          },
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-05-29T23:03:52Z",
+          "updatedAt": "2026-05-29T23:03:52Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "@felixlinker \r\n\r\nA shorter way to frame \u201capplying an emblem\u201d in this context may be:\r\n\r\nApplying a digital emblem means binding an emblem or protected-status marking to a specific asset through the mechanisms defined by the relevant DIEM profile, so that a DIEM-aware validator can discover and validate the associated data.\r\n\r\nThat technical binding should not be understood as creating the legal protection by itself. The underlying status comes from the applicable legal framework and authorization model. The digital emblem makes the claimed status discoverable and technically verifiable.\r\n\r\nThis may help keep the distinction between:\r\n\r\n- the digital marker or representation;\r\n- the underlying protected status;\r\n- the authorization model;\r\n- and the validation process.",
+              "createdAt": "2026-05-29T23:03:52Z",
+              "updatedAt": "2026-05-29T23:03:52Z"
             }
           ]
         }
