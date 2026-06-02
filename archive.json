@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-31T02:38:49.034128+00:00",
+  "timestamp": "2026-06-02T02:45:24.328236+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -2883,13 +2883,13 @@
       "labels": [],
       "body": "Background: During IETF 125 it was pointed out that many of the digital emblem use cases seemed to assume that all queries for the digital emblem would always get the same response - which was not necessarily consistent with how DNS works. Further discussion about this highlighted that providing a proof of presence not only assumed that all queries would get the same response, but required that this be the case.\r\n This PR seeks to address that by requiring digital emblem use cases to specifically determine whether they require emblems to support assured response and/or consistent content in all responses and to detail the rationale for their determination. ",
       "createdAt": "2026-04-25T20:46:56Z",
-      "updatedAt": "2026-05-29T22:47:44Z",
+      "updatedAt": "2026-06-01T15:53:54Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "response-requirements",
-      "headRefOid": "186e37112eadaaf7d4f52306ce71cd89ea1ed84b",
+      "headRefOid": "aafc11f2630b1ae0e287df30012248f1c4db0394",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
