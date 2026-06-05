@@ -216,8 +216,6 @@ Emblem, and thus must remain consistent to attain Consistent Content has not bee
 Given the limited scope of this document, that definition as well as the mechanism to ensure its extensibility across
 newly defined emblem types will be outlined in the architecture document.
 
-While some use cases may be able to allow selective response and/or selective content, assured response and consistent
-content are  prerequisites for proof of presence.
 
 ### Removable {#removable}
 
