@@ -101,7 +101,8 @@ Table of Contents
      5.1.  Basel Convention
      5.2.  International Atomic Energy Agency (IAEA)
      5.3.  International Civil Aviation Organization (ICAO)
-     5.4.  International Humanitarian Law
+     5.4.  Protective Emblems under The Geneva Conventions, its
+            Additional Protocols, and the 1954 Hague Convention
        5.4.1.  Background
        5.4.2.  Domain Model and Stakeholders
        5.4.3.  Requirements
@@ -377,48 +378,60 @@ Table of Contents
    (i.e., tail number).  Potential need for the emblem to reference a
    limited or partially redacted flight manifest.
 
-5.4.  International Humanitarian Law
+5.4.  Protective Emblems under The Geneva Conventions, its Additional
+      Protocols, and the 1954 Hague Convention
 
 5.4.1.  Background
 
    The Geneva Conventions and their Additional Protocols constitute the
-   core of IHL.  Some assets enjoy certain specific protections under
-   IHL, including that they must not be attacked, and IHL codifies four
-   types of protective emblems for armed conflict, which inform other
-   parties that marked assets benefit from one or several of these
-   specific protections:
+   core of International Humanitarian Law (IHL).  Some assets enjoy
+   certain specific protections under IHL, including that they must not
+   be attacked.  In addition to recognizing other signs, IHL codifies
+   four types of protective emblems for armed conflict, which inform
+   other parties that marked assets benefit from one or several of these
+   specific or special protections.  In other words, protective emblems
+   under IHL signal the applicability of a specific or special
+   protection under IHL.  Namely, these emblems are:
 
-   *  The emblems of the Red Cross, Red Crescent, and Red Crystal
+   *  The emblems of the Red Cross, Red Crescent, and Red Crystal,
+      defined in the Geneva Conventions and Additional Protocol III of
+      the Geneva Conventions [GCI1949] [APIII2005]
 
-   *  The Blue Shield emblem
+   *  The Blue Shield emblem, defined in the 1954 Hague Convention
+      [HAGUE1954]
 
-   *  The emblem for the protection of civil defense marks
+   *  The international distinctive sign of civil defence, defined in
+      Additional Protocol I of the Geneva Conventions [API1977]
 
-   *  The dangerous forces emblem
+   *  The dangerous forces special sign, defined in Additional Protocol
+      I of the Geneva Conventions [API1977]
 
    However, these emblems can currently only be used to mark physical
    assets, and there is no way to mark digital, network-connected
    infrastructure that enjoys the same protections.  A digital emblem
-   using the DIEM architecture could address this gap, and we call such
-   emblems digital emblems for IHL.
+   using the DIEM architecture could address this gap, and resolutions
+   from UNESCO and the International Conference of the Red Cross and Red
+   Crescent have expressed the support for such a digital emblem
+   [RCRCRES] [UNESCORES].
 
 5.4.2.  Domain Model and Stakeholders
 
-   In context of emblems under IHL, emblems will mark assets that solely
-   serve protected purposes (for example, a medical unit, a cultural
-   site, or an installation containing dangerous forces).  Such emblems
-   will be issued by the party controlling the marked service, and they
-   signal that these assets must be respected and protected.  Emblems
-   must only be issued by entities that have been authorized to bear a
-   digital emblem or other distinctive sign under international law.
-   Such authorizations must be issued by a state, other party to an
-   armed conflict, or other entity competent under international law.
+   In context of digital, protective emblems under IHL, emblems will
+   mark assets that are digital services and that solely serve protected
+   purposes (for example, a medical unit, a cultural site, or an
+   installation containing dangerous forces).  Such emblems will be
+   issued by the party controlling the marked service, and they signal
+   that these assets must be respected and protected.  Emblems must only
+   be issued by entities that have been authorized to bear a digital
+   emblem or other distinctive sign under international law.  Such
+   authorizations must be issued by a state, other party to an armed
+   conflict, or other entity competent under international law.
 
-   For digital emblems under IHL, validators will typically be armed
-   forces under the command of either state or non-state actors.  In
-   situations of armed conflict, all such actors are under an obligation
-   to check whether assets subject to military activities bear an
-   emblem.  Similarly, other malicious ICT actors, whilst not
+   For digital, protective emblems under IHL, validators will typically
+   be armed forces under the command of either state or non-state
+   actors.  In situations of armed conflict, all such actors are under
+   an obligation to check whether assets subject to military activities
+   bear an emblem.  Similarly, other malicious ICT actors, whilst not
    necessarily obligated under IHL, may choose to respect assets bearing
    the emblem.  Concretely, we can assume that they will typically first
    identify an asset that they plan to engage with and then check
@@ -432,13 +445,13 @@ Table of Contents
    to pay attention to them.  As verifiers intend to attack assets that
    are not protected under IHL, this will only be the case they are
    confident that their targets cannot fake protection and that they do
-   not alert their target about an imminent attack.  Therefore, digital
-   emblems under IHL require validation for authenticity (Section 3.3.1)
-   that is undetectable (Section 3.2.3).
+   not alert their target about an imminent attack.  Therefore, digital,
+   protective emblems under IHL require validation for authenticity
+   (Section 3.3.1) that is undetectable (Section 3.2.3).
 
-   At the same time, digital emblems under IHL should fit well into the
-   existing framework of IHL and not put emblem issuers at increased
-   risk.  First, IHL requires that, emblem issuers must seek
+   At the same time, digital, protective emblems under IHL should fit
+   well into the existing framework of IHL and not put emblem issuers at
+   increased risk.  First, IHL requires that, emblem issuers must seek
    authorization from a competent authority prior to applying them (see
    Section 3.3.2 and Section 5.4.2).  The authorization must be
    decentralized, i.e., there must be no central authorities that govern
@@ -448,10 +461,10 @@ Table of Contents
    remove emblems whenever they see the risks to outweigh the benefits,
    i.e., we require that digital emblems are removable (Section 3.2.2).
 
-   Beyond the DIEM architecture as described in this document, digital
-   emblems under IHL would benefit from other discovery mechanisms than
-   the DNS, as not all assets may have domain names associated with
-   them.
+   Beyond the DIEM architecture as described in this document, digital,
+   protective emblems under IHL would benefit from other discovery
+   mechanisms than the DNS, as not all assets may have domain names
+   associated with them.
 
 5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
 
@@ -594,6 +607,19 @@ Table of Contents
 
 8.2.  Informative References
 
+   [API1977]  International Committee of the Red Cross, "Protocol
+              Additional to the Geneva Conventions of 12 August 1949,
+              and relating to the Protection of Victims of International
+              Armed Conflicts (Protocol I)", 8 June 1977, <https://ihl-
+              databases.icrc.org/assets/treaties/470-AP-I-EN.pdf>.
+
+   [APIII2005]
+              International Committee of the Red Cross, "Protocol
+              Additional to the Geneva Conventions of 12 August 1949,
+              and relating to the Adoption of an Additional Distinctive
+              Emblem (Protocol III)", 8 December 2005, <https://ihl-
+              databases.icrc.org/assets/treaties/615-AP-III-EN.pdf>.
+
    [BLUEHELMET]
               Doctors Without Borders, "The Practical Guide to
               Humanitarian Law", n.d., <https://guide-humanitarian-
@@ -617,6 +643,18 @@ Table of Contents
               Organizations and Special Treatment for Returning
               Individuals", n.d.,
               <https://www.law.cornell.edu/cfr/text/19/148.83>.
+
+   [GCI1949]  International Committee of the Red Cross, "Geneva
+              Convention for the Amelioration of the Condition of the
+              Wounded and Sick in Armed Forces in the Field", 12 August
+              1949, <https://ihl-databases.icrc.org/assets/treaties/365-
+              GC-I-EN.pdf>.
+
+   [HAGUE1954]
+              United Nations Educational, Scientific and Cultural
+              Organization, "Convention for the Protection of Cultural
+              Property in the Event of Armed Conflict", 14 May 1954,
+              <https://unesdoc.unesco.org/ark:/48223/pf0000082464>.
 
    [HARMONIZED]
               World Customs Organization, "Harmonized System", n.d.,
@@ -643,10 +681,28 @@ Table of Contents
    [RAMSAR]   Convention on Wetlands Secretariat, "The Convention on
               Wetlands", n.d., <https://www.ramsar.org>.
 
+   [RCRCRES]  34th International Conference of the Red Cross and Red
+              Crescent, "Protecting Civilians and Other Protected
+              Persons and Objects Against the Potential Human Cost of
+              ICT Activities During Armed Conflict", Document prepared
+              by the International Committee of the Red Cross in
+              consultation with the International Federation of Red
+              Cross and Red Crescent Societies , October 2024,
+              <https://rcrcconference.org/app/uploads/2024/10/34IC_R2-
+              ICT-EN.pdf>.
+
    [REDCROSS] International Committee of the Red Cross, "The Protection
               of the Red Cross / Red Crescent Emblems", n.d.,
               <https://www.icrc.org/en/doc/assets/files/other/
               protection_emblems.pdf>.
+
+   [UNESCORES]
+              United Nations Educational, Scientific and Cultural
+              Organization, "Resolutions Adopted During the 16th Meeting
+              of the High Contracting Parties to the 1954 Hague
+              Convention", 1 December 2025,
+              <https://unesdoc.unesco.org/ark:/48223/
+              pf0000396721.locale=en>.
 
    [UNMODELREGS]
               United Nations Economic and Social Council, "UN Model
