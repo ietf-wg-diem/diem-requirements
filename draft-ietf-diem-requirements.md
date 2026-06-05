@@ -235,6 +235,10 @@ often by checking its details against a known standard or reference point.
 
 The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
+DIEM supports discovery and technical validation of digital emblem data associated with assets. A successful validation result indicates that the returned data is technically valid according to the applicable DIEM mechanisms.
+
+Such a result does not, by itself, determine the downstream legal, operational, or policy consequence of the digital emblem. Those consequences are outside the scope of this document and remain the responsibility of the relevant user community, applicable framework, competent authorities, and operational processes.
+
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
