@@ -28,8 +28,8 @@ This document lists the requirements and use cases that an architecture for digi
     platformdirs 4.9.6
     pycountry 24.6.1
     PyYAML 6.0.3
-    requests 2.32.5
-    wcwidth 0.6.0
+    requests 2.33.1
+    wcwidth 0.7.0
 -->
 <link href="draft-ietf-diem-requirements.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -296,16 +296,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
   color: var(--title-color);
 }
-h1#title {
-  font-size: 32px;
-  line-height: 40px;
-  clear: both;
-}
-h1#title, h1#rfcnum {
-  margin: 1.5em 0 0.2em;
-}
-h1#rfcnum + h1#title {
-  margin: 0.2em 0;
+h1 {
+  &#title {
+    font-size: 32px;
+    line-height: 40px;
+    clear: both;
+    margin: 1.5em 0 0.2em;
+  }
+  &#rfcnum {
+    margin: 1.5em 0 0.2em;
+    & + h1#title {
+      margin: 0.2em 0;
+    }
+  }
 }
 
 h1, h2, h3 {
@@ -325,10 +328,10 @@ h4, h5, h6 {
 #abstract+p {
   font-size: 18px;
   line-height: 24px;
-}
-#abstract+p code, #abstract+p samp, #abstract+p tt {
-  font-size: 16px;
-  line-height: 0;
+  & code, & samp, & tt {
+    font-size: 16px;
+    line-height: 0;
+  }
 }
 
 p {
@@ -339,59 +342,59 @@ p {
 div {
   margin: 0;
 }
-.alignRight.art-text {
-  background-color: var(--highlight-color);
-  border: 1px solid var(--line-color);
-  border-radius: 3px;
-  padding: 0.5em 1em 0;
-  margin-bottom: 0.5em;
-}
-.alignRight.art-text pre {
-  padding: 0;
-  width: auto;
-}
 .alignRight {
   margin: 1em 0;
-}
-.alignRight > *:first-child {
-  border: none;
-  margin: 0;
-  float: right;
-  clear: both;
-}
-.alignRight > *:nth-child(2) {
-  clear: both;
-  display: block;
-  border: none;
+  &.art-text {
+    background-color: var(--highlight-color);
+    border: 1px solid var(--line-color);
+    border-radius: 3px;
+    padding: 0.5em 1em 0;
+    margin-bottom: 0.5em;
+    & pre {
+      padding: 0;
+      width: auto;
+    }
+  }
+  & > *:first-child {
+    border: none;
+    margin: 0;
+    float: right;
+    clear: both;
+  }
+  & > *:nth-child(2) {
+    clear: both;
+    display: block;
+    border: none;
+  }
 }
 svg {
   display: block;
-}
-/* font-family isn't space-separated, but =~ will have to do */
-svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
-  font-family: var(--font-mono);
-}
-.alignCenter.art-text {
-  background-color: var(--highlight-color);
-  border: 1px solid var(--line-color);
-  border-radius: 3px;
-  padding: 0.5em 1em 0;
-  margin-bottom: 0.5em;
-}
-.alignCenter.art-text pre {
-  padding: 0;
-  width: auto;
+  /* font-family isn't space-separated, but =~ will have to do */
+  &[font-family~="monospace" i], & [font-family~="monospace" i] {
+    font-family: var(--font-mono);
+  }
 }
 .alignCenter {
   margin: 1em 0;
-}
-.alignCenter > *:first-child {
-  border: none;
-  /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
-     support flexbox yet.
-  */
-  display: table;
-  margin: 0 auto;
+  &.art-text {
+    background-color: var(--highlight-color);
+    border: 1px solid var(--line-color);
+    border-radius: 3px;
+    padding: 0.5em 1em 0;
+    margin-bottom: 0.5em;
+    & pre {
+      padding: 0;
+      width: auto;
+    }
+  }
+  & > *:first-child {
+    border: none;
+    /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
+       support flexbox yet.
+    */
+    display: table;
+    margin: 0 auto;
+  }
 }
 
 /* lists */
@@ -429,26 +432,25 @@ dl {
     --indent: 5ch;
     & > dt {
       min-width: calc(var(--indent) - 2ch);
+      float: none;
     }
-  }
-  &.olPercent > dt {
-    float: none;
   }
 
   dl > dd > & {
     margin-top: 0.5em;
     margin-bottom: 0;
   }
-}
-dl:not(.dlNewline) > dt {
-  float: left;
-  margin-right: 2ch;
-  min-width: 8ch;
-}
-dl > dd {
-  margin-bottom: .8em;
-  margin-left: var(--indent) !important; /* stupid element overrides */
-  min-height: 2ex;
+
+  &:not(.dlNewline) > dt {
+    float: left;
+    margin-right: 2ch;
+    min-width: 8ch;
+  }
+  & > dd {
+    margin-bottom: .8em;
+    margin-left: var(--indent) !important; /* stupid element overrides */
+    min-height: 2ex;
+  }
 }
 :is(dl.compact, .dlCompact) > dd {
   margin-bottom: 0;
@@ -464,20 +466,22 @@ dl > dd {
 }
 
 /* links */
-a, a[href].selfRef:hover {
+a {
   text-decoration: none;
+  &[href] {
+    color: var(--link-color);
+    &:hover { text-decoration: underline; }
+    &.selfRef {
+      color: var(--text-color);
+      &:hover {
+        text-decoration: none;
+        background-color: var(--highlight-color);
+      }
+    }
+  }
 }
-a[href] {
-  color: var(--link-color);
-}
-a[href].selfRef, .iref + a[href].internal {
+.iref + a[href].internal {
   color: var(--text-color);
-}
-a[href]:hover {
-  text-decoration: underline;
-}
-a[href].selfRef:hover {
-  background-color: var(--highlight-color);
 }
 a.xref:is(.cite, .auto), :is(#status-of-memo, #copyright) a {
   white-space: nowrap;
@@ -513,9 +517,9 @@ img {
 figure {
   margin: 0.5em 0;
   padding: 0;
-}
-figure blockquote {
-  margin: 0.8em 0.4em 0.4em;
+  & blockquote {
+    margin: 0.8em 0.4em 0.4em;
+  }
 }
 figcaption, caption {
   font-style: italic;
@@ -525,17 +529,19 @@ figcaption, caption {
 }
 @media screen {
   /* Auto-collapse boilerplate. */
-  :is(#status-of-memo, #copyright) p {
-    margin: -2px 0;
-    max-height: 0;
-    transition: max-height 2s ease, margin 0.5s ease 0.5s;
-    overflow: hidden;
-  }
-  :is(#status-of-memo, #copyright):hover p,
-  :is(#status-of-memo, #copyright) h2:target ~ p {
-    margin: 0.5em 0;
-    max-height: 500px;
-    overflow: auto;
+  :is(#status-of-memo, #copyright) {
+    & p {
+      margin: -2px 0;
+      max-height: 0;
+      transition: max-height 2s ease, margin 0.5s ease 0.5s;
+      overflow: hidden;
+    }
+    &:hover p,
+    & h2:target ~ p {
+      margin: 0.5em 0;
+      max-height: 500px;
+      overflow: auto;
+    }
   }
   pre, svg {
     display: inline-block;
@@ -585,25 +591,17 @@ table {
   max-width: 100%;
   margin: 0 0 1em;
   border-collapse: collapse;
-}
-table.right {
-  margin-left: auto;
-}
-table.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-table.left {
-  margin-right: auto;
-}
-table .text-left {
-  text-align: left;
-}
-table .text-center {
-  text-align: center;
-}
-table .text-right {
-  text-align: right;
+  &.right { margin-left: auto; }
+  &.center { margin-left: auto; margin-right: auto; }
+  &.left { margin-right: auto; }
+  & .text-left { text-align: left; }
+  & .text-center { text-align: center; }
+  & .text-right { text-align: right; }
+  & caption {
+    margin: 0;
+    padding: 3px 0 3px 1em;
+  }
+  & p { margin: 0; }
 }
 
 thead, tbody {
@@ -623,13 +621,6 @@ th {
 :is(tr:nth-child(2n+1), thead+tbody > tr:nth-child(2n)) > td {
   background-color: var(--highlight-color);
 }
-table caption {
-  margin: 0;
-  padding: 3px 0 3px 1em;
-}
-table p {
-  margin: 0;
-}
 
 /* pilcrow */
 a.pilcrow {
@@ -640,18 +631,16 @@ a.pilcrow {
     color: var(--pilcrow-weak);
     &:hover { text-decoration: none; }
   }
-}
-@media not print {
-  :hover > a.pilcrow, a.pilcrow:focus {
-    opacity: 1;
+  @media not print {
+    :hover > &, &:focus {
+      opacity: 1;
+    }
+    &[href]:hover {
+      color: var(--pilcrow-strong);
+      background-color: transparent;
+    }
   }
-  a.pilcrow[href]:hover {
-    color: var(--pilcrow-strong);
-    background-color: transparent;
-  }
-}
-@media print {
-  a.pilcrow {
+  @media print {
     display: none;
   }
 }
@@ -710,9 +699,9 @@ sub, sup {
   font-size: 0.9em;
   font-style: italic;
   margin-top: 2em;
-}
-.docInfo .prepared {
-  float: right;
+  & .prepared {
+    float: right;
+  }
 }
 
 /* table of contents */
@@ -802,23 +791,27 @@ hr.addr {
   max-width: calc(100% - 16px);
 }
 @media (min-width: 500px) {
-  #authors-addresses > section {
-    column-count: 2;
-    column-gap: 20px;
-  }
-  #authors-addresses > section > h2 {
-    column-span: all;
-  }
-  /* hack for break-inside: avoid-column */
-  #authors-addresses address {
-    display: inline-block;
-    break-inside: avoid-column;
+  #authors-addresses {
+    & > section {
+      column-count: 2;
+      column-gap: 20px;
+    }
+    & > section > h2 {
+      column-span: all;
+    }
+    /* hack for break-inside: avoid-column */
+    & address {
+      display: inline-block;
+      break-inside: avoid-column;
+    }
   }
 }
 
 /* Comments */
-.rfcEditorRemove p:first-of-type {
-  font-style: italic;
+.rfcEditorRemove {
+  & p:first-of-type {
+    font-style: italic;
+  }
 }
 .cref {
   background-color: rgba(249, 232, 105, 0.3);
@@ -829,19 +822,21 @@ hr.addr {
 }
 
 @media screen {
-  #toc nav {
-    font-family: var(--font-title);
-    font-weight: 360;
-    & > ul { margin-bottom: 2em; }
-    & ul {
-      margin: 0 0 0 4px;
-      & :is(p, li) {
-        margin: 2px 0;
+  #toc {
+    & nav {
+      font-family: var(--font-title);
+      font-weight: 360;
+      & > ul { margin-bottom: 2em; }
+      & ul {
+        margin: 0 0 0 4px;
+        & :is(p, li) {
+          margin: 2px 0;
+        }
       }
     }
-  }
-  #toc a.toplink {
-    float: right;
+    & a.toplink {
+      float: right;
+    }
   }
 }
 @media not screen {
@@ -862,54 +857,54 @@ hr.addr {
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
-  }
-  #toc h2 {
-    margin: 0;
-    padding: 2px 0 2px 6px;
-    padding-right: 1em;
-    font-size: 18px;
-    line-height: 24px;
-    min-width: 190px;
-    text-align: right;
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-    &::before { /* css hamburger */
-      float: right;
-      position: relative;
-      width: 1em;
-      height: 1px;
-      left: -164px;
-      margin: 8px 0 0 0;
-      background: white none repeat scroll 0 0;
-      box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
-      content: "";
+    & h2 {
+      margin: 0;
+      padding: 2px 0 2px 6px;
+      padding-right: 1em;
+      font-size: 18px;
+      line-height: 24px;
+      min-width: 190px;
+      text-align: right;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+      &::before { /* css hamburger */
+        float: right;
+        position: relative;
+        width: 1em;
+        height: 1px;
+        left: -164px;
+        margin: 8px 0 0 0;
+        background: white none repeat scroll 0 0;
+        box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+        content: "";
+      }
     }
-  }
-  #toc nav {
-    display: none;
-    background-color: var(--background-color);
-    padding: 0.5em 1em 1em;
-    overflow: auto;
-    overscroll-behavior: contain;
-    height: calc(100vh - 48px);
-    border-left: 1px solid #ddd;
-  }
-  #toc.active {
-    opacity: 1;
-    & nav { display: block; }
-  }
-  /* Make the collapsed ToC header render white on gray also when it's a link */
-  #toc h2 a,
-  #toc h2 a:is(:link, :focus, :hover),
-  #toc a.toplink,
-  #toc a.toplink:hover {
-    color: white;
-    background-color: #444;
-    text-decoration: none;
-  }
-  #toc a.toplink {
-    margin: 2px 0.5em 0;
+    & nav {
+      display: none;
+      background-color: var(--background-color);
+      padding: 0.5em 1em 1em;
+      overflow: auto;
+      overscroll-behavior: contain;
+      height: calc(100vh - 48px);
+      border-left: 1px solid #ddd;
+    }
+    &.active {
+      opacity: 1;
+      & nav { display: block; }
+    }
+    /* Make the collapsed ToC header render white on gray also when it's a link */
+    & h2 a,
+    & h2 a:is(:link, :focus, :hover),
+    & a.toplink,
+    & a.toplink:hover {
+      color: white;
+      background-color: #444;
+      text-decoration: none;
+    }
+    & a.toplink {
+      margin: 2px 0.5em 0;
+    }
   }
 }
 
@@ -928,26 +923,26 @@ hr.addr {
     margin: 0;
     padding: 0;
     z-index: 1;
-  }
-  #toc h2 {
-    margin: 0;
-    padding: 0.25em 1em 1em 0;
-  }
-  #toc nav {
-    display: block;
-    height: calc(90vh - 84px);
-    bottom: 0;
-    padding: 0.5em 0 2em;
-    overflow: auto;
-    overscroll-behavior: contain;
-    scrollbar-width: thin;
+    & h2 {
+      margin: 0;
+      padding: 0.25em 1em 1em 0;
+    }
+    & nav {
+      display: block;
+      height: calc(90vh - 84px);
+      bottom: 0;
+      padding: 0.5em 0 2em;
+      overflow: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+    }
+    & a.toplink {
+      margin: 8px 0.5em 0;
+    }
   }
   img { /* future proofing */
     max-width: 100%;
     height: auto;
-  }
-  #toc a.toplink {
-    margin: 8px 0.5em 0;
   }
 }
 
@@ -963,12 +958,13 @@ hr.addr {
   #n-copyright-notice {
     border-bottom: none;
   }
-  #toc, #n-introduction {
-    page-break-before: always;
-  }
   #toc {
+    page-break-before: always;
     border-top: none;
     padding-top: 0;
+  }
+  #n-introduction {
+    page-break-before: always;
   }
   figure, pre, .vcard {
     page-break-inside: avoid;
@@ -1030,17 +1026,19 @@ hr.addr {
 }
 
 /* SVG Trick: a prefix match works because only black and white are allowed */
-svg :is([stroke="black"], [stroke^="#000"]) {
-  stroke: var(--text-color);
-}
-svg :is([stroke="white"], [stroke^="#fff"]) {
-  stroke: var(--background-color);
-}
-svg :is([fill="black"], [fill^="#000"], :not([fill])) {
-  fill: var(--text-color);
-}
-svg :is([fill="white"], [fill^="#fff"]) {
-  fill: var(--background-color);
+svg {
+  & :is([stroke="black"], [stroke^="#000"]) {
+    stroke: var(--text-color);
+  }
+  & :is([stroke="white"], [stroke^="#fff"]) {
+    stroke: var(--background-color);
+  }
+  & :is([fill="black"], [fill^="#000"], :not([fill])) {
+    fill: var(--text-color);
+  }
+  & :is([fill="white"], [fill^="#fff"]) {
+    fill: var(--background-color);
+  }
 }
 </style>
 
@@ -1050,11 +1048,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">DIEM Use Cases and Requirements</td>
-<td class="right">April 2026</td>
+<td class="right">June 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fainchtein, et al.</td>
-<td class="center">Expires 29 October 2026</td>
+<td class="center">Expires 7 December 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-diem-requirements-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-04-27" class="published">27 April 2026</time>
+<time datetime="2026-06-05" class="published">5 June 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-10-29">29 October 2026</time></dd>
+<dd class="expires"><time datetime="2026-12-07">7 December 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1139,7 +1137,7 @@ This document lists the requirements and use cases that an architecture for digi
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 29 October 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 7 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1273,28 +1271,31 @@ This document lists the requirements and use cases that an architecture for digi
                 <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-organization-for-the-prohib" class="internal xref">Organization for the Prohibition of Chemical Weapons (OPCW)</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.6">
-                <p id="section-toc.1-1.5.2.6.1"><a href="#section-5.6" class="auto internal xref">5.6</a>.  <a href="#name-press" class="internal xref">Press</a></p>
+                <p id="section-toc.1-1.5.2.6.1"><a href="#section-5.6" class="auto internal xref">5.6</a>.  <a href="#name-other-ihl-related-use-cases" class="internal xref">Other IHL-related use cases</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.7">
-                <p id="section-toc.1-1.5.2.7.1"><a href="#section-5.7" class="auto internal xref">5.7</a>.  <a href="#name-ramsar-convention-on-the-we" class="internal xref">Ramsar Convention on the Wetlands</a></p>
+                <p id="section-toc.1-1.5.2.7.1"><a href="#section-5.7" class="auto internal xref">5.7</a>.  <a href="#name-press" class="internal xref">Press</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.8">
-                <p id="section-toc.1-1.5.2.8.1"><a href="#section-5.8" class="auto internal xref">5.8</a>.  <a href="#name-united-nations-economic-and" class="internal xref">United Nations Economic and Social Council (ECOSOC)</a></p>
+                <p id="section-toc.1-1.5.2.8.1"><a href="#section-5.8" class="auto internal xref">5.8</a>.  <a href="#name-ramsar-convention-on-the-we" class="internal xref">Ramsar Convention on the Wetlands</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.9">
-                <p id="section-toc.1-1.5.2.9.1"><a href="#section-5.9" class="auto internal xref">5.9</a>.  <a href="#name-united-nations-food-and-agr" class="internal xref">United Nations Food and Agriculture Organization (FAO)</a></p>
+                <p id="section-toc.1-1.5.2.9.1"><a href="#section-5.9" class="auto internal xref">5.9</a>.  <a href="#name-united-nations-economic-and" class="internal xref">United Nations Economic and Social Council (ECOSOC)</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.10">
-                <p id="section-toc.1-1.5.2.10.1"><a href="#section-5.10" class="auto internal xref">5.10</a>. <a href="#name-united-nations-peacekeepers" class="internal xref">United Nations Peacekeepers</a></p>
+                <p id="section-toc.1-1.5.2.10.1"><a href="#section-5.10" class="auto internal xref">5.10</a>. <a href="#name-united-nations-food-and-agr" class="internal xref">United Nations Food and Agriculture Organization (FAO)</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.11">
-                <p id="section-toc.1-1.5.2.11.1"><a href="#section-5.11" class="auto internal xref">5.11</a>. <a href="#name-world-customs-organization-" class="internal xref">World Customs Organization (WCO)</a></p>
+                <p id="section-toc.1-1.5.2.11.1"><a href="#section-5.11" class="auto internal xref">5.11</a>. <a href="#name-united-nations-peacekeepers" class="internal xref">United Nations Peacekeepers</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.12">
-                <p id="section-toc.1-1.5.2.12.1"><a href="#section-5.12" class="auto internal xref">5.12</a>. <a href="#name-world-health-organization-w" class="internal xref">World Health Organization (WHO)</a></p>
+                <p id="section-toc.1-1.5.2.12.1"><a href="#section-5.12" class="auto internal xref">5.12</a>. <a href="#name-world-customs-organization-" class="internal xref">World Customs Organization (WCO)</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.13">
-                <p id="section-toc.1-1.5.2.13.1"><a href="#section-5.13" class="auto internal xref">5.13</a>. <a href="#name-world-intellectual-property" class="internal xref">World Intellectual Property Organization (WIPO)</a></p>
+                <p id="section-toc.1-1.5.2.13.1"><a href="#section-5.13" class="auto internal xref">5.13</a>. <a href="#name-world-health-organization-w" class="internal xref">World Health Organization (WHO)</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.14">
+                <p id="section-toc.1-1.5.2.14.1"><a href="#section-5.14" class="auto internal xref">5.14</a>. <a href="#name-world-intellectual-property" class="internal xref">World Intellectual Property Organization (WIPO)</a></p>
 </li>
             </ul>
 </li>
@@ -1675,88 +1676,106 @@ We require that emblem issuers must be able to individually assess that risk and
 Emblem would identify place, date, and volume of production, and the emblem can contain confidential data.<a href="#section-5.5-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="press">
+<div id="other-ihl-related-use-cases">
 <section id="section-5.6">
-        <h3 id="name-press">
-<a href="#section-5.6" class="section-number selfRef">5.6. </a><a href="#name-press" class="section-name selfRef">Press</a>
+        <h3 id="name-other-ihl-related-use-cases">
+<a href="#section-5.6" class="section-number selfRef">5.6. </a><a href="#name-other-ihl-related-use-cases" class="section-name selfRef">Other IHL-related use cases</a>
         </h3>
-<p id="section-5.6-1">Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
-Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.<a href="#section-5.6-1" class="pilcrow">¶</a></p>
+<p id="section-5.6-1">Many organizations use recognizable insignia or logos to mark staff, vehicles, buildings, and materials that derive protection from IHL and Customary IHL <span>[<a href="#CUSTOMARY" class="cite xref">CUSTOMARY</a>]</span>.
+Most humanitarian medical international non-governmental organizations (NGOs) use their own logos rather than using the Red Cross or Red Crescent emblem, even when they would have authorization to do so.<a href="#section-5.6-1" class="pilcrow">¶</a></p>
+<p id="section-5.6-2">As humanitarian NGOs have a "right of initiative" <span>[<a href="#IHL-GUIDE" class="cite xref">IHL-GUIDE</a>]</span> established by IHL, and many NGOs have been operating for years in a location before conflict breaks out, their presence is natural and they are often first to provide medical care.
+Customary IHL requires combatants to provide the same protection to a marked hospital or identified medical staff as they would to one marked with a Red Cross or Red Crescent, provided the combatant reasonably understand that the mark is associated with a humanitarian medical function.
+Community acceptance of unarmed humanitarian staff requires awareness of their presence and identity, whether in time of conflict or in time of peace.<a href="#section-5.6-2" class="pilcrow">¶</a></p>
+<p id="section-5.6-3">IHL generally requires combatants to limit impact on civilians and infrastructure that civilians rely on.
+For example, destroying an electrical substation that serves a hospital and serves no military function, is usually prohibited by IHL.
+Other types of infrastructure important to civilians include drinking water reservoirs, water towers, and gas lines.
+Likewise schools and elder care facilities usually contain a high concentration of civilians.
+Digital emblems could be defined to identify such civilian infrastructure.
+The Whiteflag Protocol <span>[<a href="#WHITEFLAG" class="cite xref">WHITEFLAG</a>]</span> specifically identifies several categories of infrastructure.<a href="#section-5.6-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="press">
+<section id="section-5.7">
+        <h3 id="name-press">
+<a href="#section-5.7" class="section-number selfRef">5.7. </a><a href="#name-press" class="section-name selfRef">Press</a>
+        </h3>
+<p id="section-5.7-1">Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
+Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.<a href="#section-5.7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="ramsar-convention-on-the-wetlands">
-<section id="section-5.7">
+<section id="section-5.8">
         <h3 id="name-ramsar-convention-on-the-we">
-<a href="#section-5.7" class="section-number selfRef">5.7. </a><a href="#name-ramsar-convention-on-the-we" class="section-name selfRef">Ramsar Convention on the Wetlands</a>
+<a href="#section-5.8" class="section-number selfRef">5.8. </a><a href="#name-ramsar-convention-on-the-we" class="section-name selfRef">Ramsar Convention on the Wetlands</a>
         </h3>
-<p id="section-5.7-1">The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
-A digital emblem for the geographic areas potentially requires<a href="#section-5.7-1" class="pilcrow">¶</a></p>
+<p id="section-5.8-1">The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
+A digital emblem for the geographic areas potentially requires<a href="#section-5.8-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.7-2.1">
-            <p id="section-5.7-2.1.1">Indication of location<a href="#section-5.7-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-5.8-2.1">
+            <p id="section-5.8-2.1.1">Indication of location<a href="#section-5.8-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.7-2.2">
-            <p id="section-5.7-2.2.1">Access to presence or absence of Ramsar designation of a specified location<a href="#section-5.7-2.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.8-2.2">
+            <p id="section-5.8-2.2.1">Access to presence or absence of Ramsar designation of a specified location<a href="#section-5.8-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.7-2.3">
-            <p id="section-5.7-2.3.1">Textual description<a href="#section-5.7-2.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.8-2.3">
+            <p id="section-5.8-2.3.1">Textual description<a href="#section-5.8-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.7-2.4">
-            <p id="section-5.7-2.4.1">Ability to validate the presence or absence of Ramsar designation<a href="#section-5.7-2.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-5.8-2.4">
+            <p id="section-5.8-2.4.1">Ability to validate the presence or absence of Ramsar designation<a href="#section-5.8-2.4.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
 </div>
 <div id="united-nations-economic-and-social-council-ecosoc">
-<section id="section-5.8">
+<section id="section-5.9">
         <h3 id="name-united-nations-economic-and">
-<a href="#section-5.8" class="section-number selfRef">5.8. </a><a href="#name-united-nations-economic-and" class="section-name selfRef">United Nations Economic and Social Council (ECOSOC)</a>
+<a href="#section-5.9" class="section-number selfRef">5.9. </a><a href="#name-united-nations-economic-and" class="section-name selfRef">United Nations Economic and Social Council (ECOSOC)</a>
         </h3>
-<p id="section-5.8-1">UN Model Regulations <span>[<a href="#UNMODELREGS" class="cite xref">UNMODELREGS</a>]</span> includes "Recommendations on the Transport of Dangerous Goods."
+<p id="section-5.9-1">UN Model Regulations <span>[<a href="#UNMODELREGS" class="cite xref">UNMODELREGS</a>]</span> includes "Recommendations on the Transport of Dangerous Goods."
 This includes labeling of items with a four digit "UN Number" that indicates the comounds contained within, such as chemicals, explosives, flammable liquids, etc.
-For example, items containing lithium-based batteries are labeled with 3480 or 3481 and accompanied by a specific "battery mark" emblem.<a href="#section-5.8-1" class="pilcrow">¶</a></p>
+For example, items containing lithium-based batteries are labeled with 3480 or 3481 and accompanied by a specific "battery mark" emblem.<a href="#section-5.9-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="united-nations-food-and-agriculture-organization-fao">
-<section id="section-5.9">
+<section id="section-5.10">
         <h3 id="name-united-nations-food-and-agr">
-<a href="#section-5.9" class="section-number selfRef">5.9. </a><a href="#name-united-nations-food-and-agr" class="section-name selfRef">United Nations Food and Agriculture Organization (FAO)</a>
+<a href="#section-5.10" class="section-number selfRef">5.10. </a><a href="#name-united-nations-food-and-agr" class="section-name selfRef">United Nations Food and Agriculture Organization (FAO)</a>
         </h3>
-<p id="section-5.9-1">Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."<a href="#section-5.9-1" class="pilcrow">¶</a></p>
+<p id="section-5.10-1">Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."<a href="#section-5.10-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="united-nations-peacekeepers">
-<section id="section-5.10">
+<section id="section-5.11">
         <h3 id="name-united-nations-peacekeepers">
-<a href="#section-5.10" class="section-number selfRef">5.10. </a><a href="#name-united-nations-peacekeepers" class="section-name selfRef">United Nations Peacekeepers</a>
+<a href="#section-5.11" class="section-number selfRef">5.11. </a><a href="#name-united-nations-peacekeepers" class="section-name selfRef">United Nations Peacekeepers</a>
         </h3>
-<p id="section-5.10-1">UN Peacekeepers use protective markings in theater as well as facilities associated with the mission.<a href="#section-5.10-1" class="pilcrow">¶</a></p>
+<p id="section-5.11-1">UN Peacekeepers use protective markings in theater as well as facilities associated with the mission.<a href="#section-5.11-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="world-customs-organization-wco">
-<section id="section-5.11">
+<section id="section-5.12">
         <h3 id="name-world-customs-organization-">
-<a href="#section-5.11" class="section-number selfRef">5.11. </a><a href="#name-world-customs-organization-" class="section-name selfRef">World Customs Organization (WCO)</a>
+<a href="#section-5.12" class="section-number selfRef">5.12. </a><a href="#name-world-customs-organization-" class="section-name selfRef">World Customs Organization (WCO)</a>
         </h3>
-<p id="section-5.11-1">Specifies "Harmonized Systems" codes <span>[<a href="#HARMONIZED" class="cite xref">HARMONIZED</a>]</span> that classify items such as livestock, arms and ammunition, chemicals, plastics, machinery, foodstuffs, etc.
-They also provide a system for labeling origin of items and valuation of items, all enforced by numerous international trade agreements between individual nations and groups of nations.<a href="#section-5.11-1" class="pilcrow">¶</a></p>
+<p id="section-5.12-1">Specifies "Harmonized Systems" codes <span>[<a href="#HARMONIZED" class="cite xref">HARMONIZED</a>]</span> that classify items such as livestock, arms and ammunition, chemicals, plastics, machinery, foodstuffs, etc.
+They also provide a system for labeling origin of items and valuation of items, all enforced by numerous international trade agreements between individual nations and groups of nations.<a href="#section-5.12-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="world-health-organization-who">
-<section id="section-5.12">
+<section id="section-5.13">
         <h3 id="name-world-health-organization-w">
-<a href="#section-5.12" class="section-number selfRef">5.12. </a><a href="#name-world-health-organization-w" class="section-name selfRef">World Health Organization (WHO)</a>
+<a href="#section-5.13" class="section-number selfRef">5.13. </a><a href="#name-world-health-organization-w" class="section-name selfRef">World Health Organization (WHO)</a>
         </h3>
-<p id="section-5.12-1">Similar to the use case of the Red Cross, Red Crystal, and Red Crescent.<a href="#section-5.12-1" class="pilcrow">¶</a></p>
+<p id="section-5.13-1">Similar to the use case of the Red Cross, Red Crystal, and Red Crescent.<a href="#section-5.13-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="world-intellectual-property-organization-wipo">
-<section id="section-5.13">
+<section id="section-5.14">
         <h3 id="name-world-intellectual-property">
-<a href="#section-5.13" class="section-number selfRef">5.13. </a><a href="#name-world-intellectual-property" class="section-name selfRef">World Intellectual Property Organization (WIPO)</a>
+<a href="#section-5.14" class="section-number selfRef">5.14. </a><a href="#name-world-intellectual-property" class="section-name selfRef">World Intellectual Property Organization (WIPO)</a>
         </h3>
-<p id="section-5.13-1">WIPO administers 26+ treaties with different protections for different things.
-Brands that are protected under international law (e.g., Madrid Protocol) can mark their shipments with an emblem allowing customs agents to positively identify legitimate products.<a href="#section-5.13-1" class="pilcrow">¶</a></p>
+<p id="section-5.14-1">WIPO administers 26+ treaties with different protections for different things.
+Brands that are protected under international law (e.g., Madrid Protocol) can mark their shipments with an emblem allowing customs agents to positively identify legitimate products.<a href="#section-5.14-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1821,6 +1840,10 @@ For example, in a use case where removability (<a href="#removable" class="auto 
         <dd>
 <span class="refAuthor">United Nations Educational, Scientific and Cultural Organization</span>, <span class="refTitle">"Enhanced Protection - Cultural Property of Highest Importance to Humanity"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.unesco.org/en/heritage-armed-conflicts/enhanced-protection-cultural-property-highest-importance-humanity">https://www.unesco.org/en/heritage-armed-conflicts/enhanced-protection-cultural-property-highest-importance-humanity</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="CUSTOMARY">[CUSTOMARY]</dt>
+        <dd>
+<span class="refAuthor">International Committe of the Red Cross</span>, <span class="refTitle">"Customary IHL - IHL Databases"</span>, <span>n.d.</span>, <span>&lt;<a href="https://ihl-databases.icrc.org/en/customary-ihl">https://ihl-databases.icrc.org/en/customary-ihl</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="DIPLOMAT">[DIPLOMAT]</dt>
         <dd>
 <span class="refAuthor">Cornell Law School - Legal Information Institute</span>, <span class="refTitle">"Personnel of Foreign Governments and International Organizations and Special Treatment for Returning Individuals"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.law.cornell.edu/cfr/text/19/148.83">https://www.law.cornell.edu/cfr/text/19/148.83</a>&gt;</span>. </dd>
@@ -1828,6 +1851,10 @@ For example, in a use case where removability (<a href="#removable" class="auto 
 <dt id="HARMONIZED">[HARMONIZED]</dt>
         <dd>
 <span class="refAuthor">World Customs Organization</span>, <span class="refTitle">"Harmonized System"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.wcotradetools.org/en/harmonized-system">https://www.wcotradetools.org/en/harmonized-system</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="IHL-GUIDE">[IHL-GUIDE]</dt>
+        <dd>
+<span class="refTitle">""</span>, <span>n.d.</span>, <span>&lt;<a href="https://guide-humanitarian-law.org/content/article/3/right-of-humanitarian-initiative/">https://guide-humanitarian-law.org/content/article/3/right-of-humanitarian-initiative/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="ISPM15">[ISPM15]</dt>
         <dd>
@@ -1846,8 +1873,12 @@ For example, in a use case where removability (<a href="#removable" class="auto 
 <span class="refAuthor">International Committee of the Red Cross</span>, <span class="refTitle">"The Protection of the Red Cross / Red Crescent Emblems"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.icrc.org/en/doc/assets/files/other/protection_emblems.pdf">https://www.icrc.org/en/doc/assets/files/other/protection_emblems.pdf</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="UNMODELREGS">[UNMODELREGS]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">United Nations Economic and Social Council</span>, <span class="refTitle">"UN Model Regulations on the Transport of Dangerous Goods"</span>, <span>n.d.</span>, <span>&lt;<a href="https://unece.org/transport/dangerous-goods/un-model-regulations-rev-23">https://unece.org/transport/dangerous-goods/un-model-regulations-rev-23</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="WHITEFLAG">[WHITEFLAG]</dt>
+      <dd>
+<span class="refAuthor">Whiteflag Foundation</span>, <span class="refTitle">"Whiteflag Specification"</span>, <span>n.d.</span>, <span>&lt;<a href="https://standard.whiteflagprotocol.org/">https://standard.whiteflagprotocol.org/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>

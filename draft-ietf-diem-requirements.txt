@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 29 October 2026                                                
+Expires: 7 December 2026                                                
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                           27 April 2026
+                                                             5 June 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 October 2026.
+   This Internet-Draft will expire on 7 December 2026.
 
 Copyright Notice
 
@@ -106,14 +106,15 @@ Table of Contents
        5.4.2.  Domain Model and Stakeholders
        5.4.3.  Requirements
      5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
-     5.6.  Press
-     5.7.  Ramsar Convention on the Wetlands
-     5.8.  United Nations Economic and Social Council (ECOSOC)
-     5.9.  United Nations Food and Agriculture Organization (FAO)
-     5.10. United Nations Peacekeepers
-     5.11. World Customs Organization (WCO)
-     5.12. World Health Organization (WHO)
-     5.13. World Intellectual Property Organization (WIPO)
+     5.6.  Other IHL-related use cases
+     5.7.  Press
+     5.8.  Ramsar Convention on the Wetlands
+     5.9.  United Nations Economic and Social Council (ECOSOC)
+     5.10. United Nations Food and Agriculture Organization (FAO)
+     5.11. United Nations Peacekeepers
+     5.12. World Customs Organization (WCO)
+     5.13. World Health Organization (WHO)
+     5.14. World Intellectual Property Organization (WIPO)
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -459,14 +460,46 @@ Table of Contents
    protective purposes.  Emblem would identify place, date, and volume
    of production, and the emblem can contain confidential data.
 
-5.6.  Press
+5.6.  Other IHL-related use cases
+
+   Many organizations use recognizable insignia or logos to mark staff,
+   vehicles, buildings, and materials that derive protection from IHL
+   and Customary IHL [CUSTOMARY].  Most humanitarian medical
+   international non-governmental organizations (NGOs) use their own
+   logos rather than using the Red Cross or Red Crescent emblem, even
+   when they would have authorization to do so.
+
+   As humanitarian NGOs have a "right of initiative" [IHL-GUIDE]
+   established by IHL, and many NGOs have been operating for years in a
+   location before conflict breaks out, their presence is natural and
+   they are often first to provide medical care.  Customary IHL requires
+   combatants to provide the same protection to a marked hospital or
+   identified medical staff as they would to one marked with a Red Cross
+   or Red Crescent, provided the combatant reasonably understand that
+   the mark is associated with a humanitarian medical function.
+   Community acceptance of unarmed humanitarian staff requires awareness
+   of their presence and identity, whether in time of conflict or in
+   time of peace.
+
+   IHL generally requires combatants to limit impact on civilians and
+   infrastructure that civilians rely on.  For example, destroying an
+   electrical substation that serves a hospital and serves no military
+   function, is usually prohibited by IHL.  Other types of
+   infrastructure important to civilians include drinking water
+   reservoirs, water towers, and gas lines.  Likewise schools and elder
+   care facilities usually contain a high concentration of civilians.
+   Digital emblems could be defined to identify such civilian
+   infrastructure.  The Whiteflag Protocol [WHITEFLAG] specifically
+   identifies several categories of infrastructure.
+
+5.7.  Press
 
    Journalists in conflict zones use protective markings that indicate
    their status as a non-combatant.  Assets belonging to the press could
    be digitally marked, and protective markings in conflict zones could
    be digitized.
 
-5.7.  Ramsar Convention on the Wetlands
+5.8.  Ramsar Convention on the Wetlands
 
    The Convention on Wetlands of International Importance especially as
    Waterfowl Habitat "providees the single most global framework for
@@ -483,7 +516,7 @@ Table of Contents
 
    *  Ability to validate the presence or absence of Ramsar designation
 
-5.8.  United Nations Economic and Social Council (ECOSOC)
+5.9.  United Nations Economic and Social Council (ECOSOC)
 
    UN Model Regulations [UNMODELREGS] includes "Recommendations on the
    Transport of Dangerous Goods."  This includes labeling of items with
@@ -492,7 +525,7 @@ Table of Contents
    example, items containing lithium-based batteries are labeled with
    3480 or 3481 and accompanied by a specific "battery mark" emblem.
 
-5.9.  United Nations Food and Agriculture Organization (FAO)
+5.10.  United Nations Food and Agriculture Organization (FAO)
 
    Among other things is responsible for the International Plant
    Protection Convention (IPPC) and International Standards for
@@ -501,12 +534,12 @@ Table of Contents
    treated or fumigated with methyl-bromide, and stamped or branded with
    a compliance mark known as a "wheat stamp."
 
-5.10.  United Nations Peacekeepers
+5.11.  United Nations Peacekeepers
 
    UN Peacekeepers use protective markings in theater as well as
    facilities associated with the mission.
 
-5.11.  World Customs Organization (WCO)
+5.12.  World Customs Organization (WCO)
 
    Specifies "Harmonized Systems" codes [HARMONIZED] that classify items
    such as livestock, arms and ammunition, chemicals, plastics,
@@ -515,12 +548,12 @@ Table of Contents
    international trade agreements between individual nations and groups
    of nations.
 
-5.12.  World Health Organization (WHO)
+5.13.  World Health Organization (WHO)
 
    Similar to the use case of the Red Cross, Red Crystal, and Red
    Crescent.
 
-5.13.  World Intellectual Property Organization (WIPO)
+5.14.  World Intellectual Property Organization (WIPO)
 
    WIPO administers 26+ treaties with different protections for
    different things.  Brands that are protected under international law
@@ -574,6 +607,11 @@ Table of Contents
               enhanced-protection-cultural-property-highest-importance-
               humanity>.
 
+   [CUSTOMARY]
+              International Committe of the Red Cross, "Customary IHL -
+              IHL Databases", n.d.,
+              <https://ihl-databases.icrc.org/en/customary-ihl>.
+
    [DIPLOMAT] Cornell Law School - Legal Information Institute,
               "Personnel of Foreign Governments and International
               Organizations and Special Treatment for Returning
@@ -583,6 +621,11 @@ Table of Contents
    [HARMONIZED]
               World Customs Organization, "Harmonized System", n.d.,
               <https://www.wcotradetools.org/en/harmonized-system>.
+
+   [IHL-GUIDE]
+              "", n.d., <https://guide-humanitarian-
+              law.org/content/article/3/right-of-humanitarian-
+              initiative/>.
 
    [ISPM15]   International Plant Protection Convention, Food and
               Agriculture Organization of the United Nations,
@@ -610,6 +653,10 @@ Table of Contents
               Regulations on the Transport of Dangerous Goods", n.d.,
               <https://unece.org/transport/dangerous-goods/un-model-
               regulations-rev-23>.
+
+   [WHITEFLAG]
+              Whiteflag Foundation, "Whiteflag Specification", n.d.,
+              <https://standard.whiteflagprotocol.org/>.
 
 Acknowledgments
 
