@@ -244,7 +244,9 @@ For example, this could be realized with encryption of the general emblem data f
 
 ## Proof of Presence {#proof-pres}
 
-Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically. This would be particularly poignant for use cases where emblems can be born or taken down dynamically and could be defined in three different levels, listed from weakest to strongest.
+Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically.
+This would be particularly relevant in cases where emblems can be applied and removed dynamically.
+These protections are defined in three different levels, listed from weakest to strongest.
 
 Level 1 - presence and verifiability: Establishing that an actor or querying party was able to obtain the emblem at the
 time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
