@@ -302,11 +302,12 @@ To that end, the Proof of Presence record of a diplomatic pouch's digital emblem
 
 
 ### Limitations of proof of presence:
-As indicated in Section {{proof-pres}}, Level 3 Proof of Presence alone may not provide sufficient assurance that
+As indicated in Section {{proof-pres}}, Level 3 Proof of Presence alone does not provide proof that
 no tampering with the diplomatic pouch or inspection of its contents has occured.
 This is because a proof of presence neither provides a chain of custody nor any mechanisms to detect
-tampering should it occur. For this reason, Level 3 validation may need to be part of an attested
+tampering should it occur. For this reason, Level 3 validation may be used along side or as part of an attested
 chain of custody and/or accompanied by the use of physical mechanisms for tamper-proofing a physical asset.
+Any such chain of custody specification or anti-tampering mechanism is out of the scope of the DIEM WG.
 
 
 ## Ramsar Convention on the Wetlands
