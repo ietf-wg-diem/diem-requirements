@@ -394,7 +394,7 @@ Table of Contents
    The use case for diplomatic pouches involves the following entities:
    - Point of Entry Country/Customs Agent(s): Validator - Origin Country
    or Accredited Organization: Issuer and Authorizing entity - Diplomat:
-   Agent of Country or Accredited Organization
+   Agent of Country or Accredited Organization - Pouch: Asset
 
    As noted in Section Section 4.5, a Level 3 Proof of presence record
    could help demonstrate, for the benefit of the customs service, that
