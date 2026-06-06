@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 7 December 2026                                                
+Expires: 8 December 2026                                                
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                             5 June 2026
+                                                             6 June 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 December 2026.
+   This Internet-Draft will expire on 8 December 2026.
 
 Copyright Notice
 
@@ -255,9 +255,9 @@ Table of Contents
    inclusion of emblems of type T in a response may vary based on
    specific requester attributes (Selective Content).
 
-   Note that as of this writing the baseline definition for the minimum
-   set of attributes that constitute a unique Digital Emblem, and thus
-   must remain consistent to attain Consistent Content has not been
+   Note that as of this writing, neither the baseline definition for the
+   minimum set of attributes that constitute a unique Digital Emblem,
+   nor the attributes needed to attain Consistent Content have been
    defined.  Given the limited scope of this document, that definition
    as well as the mechanism to ensure its extensibility across newly
    defined emblem types will be outlined in the architecture document.
