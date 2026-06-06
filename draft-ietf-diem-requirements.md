@@ -263,6 +263,11 @@ Level 3 Proof of Presence requirement, and how it in some cases may need to be p
  accompanied by additional security measures to provide adequate security guarantees.
 
 
+{:aside}
+> Level 2 validation could be available for the validator without violating Undetectable Validation {{undet-validation}}.
+> However, enabling Level 2 validation to the asset, issuer or authorizer would violate that requirement.
+
+
 # Use Cases
 
 Different use cases have different requirements.
