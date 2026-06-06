@@ -211,8 +211,8 @@ For consistency of response, specifications for a given type of Digital Emblem T
 asset's records (as denoted by its FQDN) must return all Digital Emblems of type T associated with the
 asset (Consistent Content), or whether the inclusion of emblems of type T in a response may vary based on specific requester attributes (Selective Content).
 
-Note that as of this writing the baseline definition for the minimum set of attributes that constitute a unique Digital
-Emblem, and thus must remain consistent to attain Consistent Content has not been defined.
+Note that as of this writing, neither the baseline definition for the minimum set of attributes that constitute a unique Digital
+Emblem, nor the attributes needed to attain Consistent Content have been defined.
 Given the limited scope of this document, that definition as well as the mechanism to ensure its extensibility across
 newly defined emblem types will be outlined in the architecture document.
 
