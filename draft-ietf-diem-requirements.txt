@@ -84,8 +84,9 @@ Table of Contents
        3.1.2.  Emblem Semantics
      3.2.  Discovery Requirements
        3.2.1.  Discovery
-       3.2.2.  Removable
-       3.2.3.  Undetectable Validation
+       3.2.2.  Query Response
+       3.2.3.  Removable
+       3.2.4.  Undetectable Validation
      3.3.  Validation Requirements
        3.3.1.  Validation
        3.3.2.  Authorization
@@ -251,14 +252,42 @@ Table of Contents
    could be realized by fetching digital emblem-associated records for
    said FQDN.
 
-3.2.2.  Removable
+3.2.2.  Query Response
+
+   Specifications for each use case MUST each determine how servers must
+   respond to queries for Digital Emblems of their specified type.
+   Specifically, they must determine the responsiveness and consistency
+   requirements for emblems of their given type and provide explanations
+   of how the chosen requirements apply and the rationales for their
+   selection.
+
+   For responsiveness, an instance of a specific type of digital emblem
+   can either be required to respond to all queries for it (Assured
+   Response), or allowed to selectively respond to a specific subset of
+   incoming queries (Selective Response).
+
+   For consistency of response, specifications for a given type of
+   Digital Emblem T must denote whether all queries for an asset's
+   records (as denoted by its FQDN) must return all Digital Emblems of
+   type T associated with the asset (Consistent Content), or whether the
+   inclusion of emblems of type T in a response may vary based on
+   specific requester attributes (Selective Content).
+
+   Note that as of this writing, neither the baseline definition for the
+   minimum set of attributes that constitute a unique Digital Emblem,
+   nor the attributes needed to attain Consistent Content have been
+   defined.  Given the limited scope of this document, that definition
+   as well as the mechanism to ensure its extensibility across newly
+   defined emblem types will be outlined in the architecture document.
+
+3.2.3.  Removable
 
    Digital emblems MAY require to be removable in that checking for the
    presence of an asset's emblems results in no emblem.  Note that
    checking for emblem presence is independent of its validation.  That
    is, emblems do not count as removed when they become invalid.
 
-3.2.3.  Undetectable Validation
+3.2.4.  Undetectable Validation
 
    A digital emblem MAY require that its discovery and validation is
    undetectable.  This requirement is motivated by emblems that mark its
@@ -462,7 +491,7 @@ Table of Contents
    confident that their targets cannot fake protection and that they do
    not alert their target about an imminent attack.  Therefore, digital,
    protective emblems under IHL require validation for authenticity
-   (Section 3.3.1) that is undetectable (Section 3.2.3).
+   (Section 3.3.1) that is undetectable (Section 3.2.4).
 
    At the same time, digital, protective emblems under IHL should fit
    well into the existing framework of IHL and not put emblem issuers at
@@ -474,7 +503,7 @@ Table of Contents
    emblem can increase the risk for targeted attacks.  We require that
    emblem issuers must be able to individually assess that risk and
    remove emblems whenever they see the risks to outweigh the benefits,
-   i.e., we require that digital emblems are removable (Section 3.2.2).
+   i.e., we require that digital emblems are removable (Section 3.2.3).
 
    Beyond the DIEM architecture as described in this document, digital,
    protective emblems under IHL would benefit from other discovery
@@ -596,7 +625,7 @@ Table of Contents
    standards developed need to detail the security properties of
    validation and authorization especially.  Use cases have threat
    models and discussion of mitigating specific threats is needed.  For
-   example, in a use case where removability (Section 3.2.2) is needed,
+   example, in a use case where removability (Section 3.2.3) is needed,
    there are security considerations such as the potential for replay of
    removed emblems.
 

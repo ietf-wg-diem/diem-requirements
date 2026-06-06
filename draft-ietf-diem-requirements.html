@@ -1193,10 +1193,13 @@ This document lists the requirements and use cases that an architecture for digi
                     <p id="section-toc.1-1.3.2.2.2.1.1"><a href="#section-3.2.1" class="auto internal xref">3.2.1</a>.  <a href="#name-discovery" class="internal xref">Discovery</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2.2.2">
-                    <p id="section-toc.1-1.3.2.2.2.2.1"><a href="#section-3.2.2" class="auto internal xref">3.2.2</a>.  <a href="#name-removable" class="internal xref">Removable</a></p>
+                    <p id="section-toc.1-1.3.2.2.2.2.1"><a href="#section-3.2.2" class="auto internal xref">3.2.2</a>.  <a href="#name-query-response" class="internal xref">Query Response</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2.2.3">
-                    <p id="section-toc.1-1.3.2.2.2.3.1"><a href="#section-3.2.3" class="auto internal xref">3.2.3</a>.  <a href="#name-undetectable-validation" class="internal xref">Undetectable Validation</a></p>
+                    <p id="section-toc.1-1.3.2.2.2.3.1"><a href="#section-3.2.3" class="auto internal xref">3.2.3</a>.  <a href="#name-removable" class="internal xref">Removable</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2.2.4">
+                    <p id="section-toc.1-1.3.2.2.2.4.1"><a href="#section-3.2.4" class="auto internal xref">3.2.4</a>.  <a href="#name-undetectable-validation" class="internal xref">Undetectable Validation</a></p>
 </li>
                 </ul>
 </li>
@@ -1448,27 +1451,45 @@ It <span class="bcp14">SHOULD NOT</span> be interpreted as precluding future use
 <p id="section-3.2.1-1">Digital emblems <span class="bcp14">MUST</span> specify how validators can check for the presence of a digital emblem. That is, given an asset a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="removable">
+<div id="response-reqs">
 <section id="section-3.2.2">
-          <h4 id="name-removable">
-<a href="#section-3.2.2" class="section-number selfRef">3.2.2. </a><a href="#name-removable" class="section-name selfRef">Removable</a>
+          <h4 id="name-query-response">
+<a href="#section-3.2.2" class="section-number selfRef">3.2.2. </a><a href="#name-query-response" class="section-name selfRef">Query Response</a>
           </h4>
-<p id="section-3.2.2-1">Digital emblems <span class="bcp14">MAY</span> require to be removable in that checking for the presence of an asset's emblems results in no emblem.
+<p id="section-3.2.2-1">Specifications for each use case <span class="bcp14">MUST</span> each determine how servers must respond to queries for Digital Emblems of their specified type.
+Specifically, they must determine the responsiveness and consistency requirements for emblems of their given type and
+provide explanations of how the chosen requirements apply and the rationales for their selection.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.2-2">For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).<a href="#section-3.2.2-2" class="pilcrow">¶</a></p>
+<p id="section-3.2.2-3">For consistency of response, specifications for a given type of Digital Emblem T must denote whether all queries for an
+asset's records (as denoted by its FQDN) must return all Digital Emblems of type T associated with the
+asset (Consistent Content), or whether the inclusion of emblems of type T in a response may vary based on specific requester attributes (Selective Content).<a href="#section-3.2.2-3" class="pilcrow">¶</a></p>
+<p id="section-3.2.2-4">Note that as of this writing, neither the baseline definition for the minimum set of attributes that constitute a unique Digital
+Emblem, nor the attributes needed to attain Consistent Content have been defined.
+Given the limited scope of this document, that definition as well as the mechanism to ensure its extensibility across
+newly defined emblem types will be outlined in the architecture document.<a href="#section-3.2.2-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="removable">
+<section id="section-3.2.3">
+          <h4 id="name-removable">
+<a href="#section-3.2.3" class="section-number selfRef">3.2.3. </a><a href="#name-removable" class="section-name selfRef">Removable</a>
+          </h4>
+<p id="section-3.2.3-1">Digital emblems <span class="bcp14">MAY</span> require to be removable in that checking for the presence of an asset's emblems results in no emblem.
 Note that checking for emblem presence is independent of its validation.
-That is, emblems do not count as removed when they become invalid.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
+That is, emblems do not count as removed when they become invalid.<a href="#section-3.2.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="undet-validation">
-<section id="section-3.2.3">
+<section id="section-3.2.4">
           <h4 id="name-undetectable-validation">
-<a href="#section-3.2.3" class="section-number selfRef">3.2.3. </a><a href="#name-undetectable-validation" class="section-name selfRef">Undetectable Validation</a>
+<a href="#section-3.2.4" class="section-number selfRef">3.2.4. </a><a href="#name-undetectable-validation" class="section-name selfRef">Undetectable Validation</a>
           </h4>
-<p id="section-3.2.3-1">A digital emblem <span class="bcp14">MAY</span> require that its discovery and validation is undetectable.
+<p id="section-3.2.4-1">A digital emblem <span class="bcp14">MAY</span> require that its discovery and validation is undetectable.
 This requirement is motivated by emblems that mark its asset as protected and ask validators to not disrupt the marked asset.
-If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.<a href="#section-3.2.3-1" class="pilcrow">¶</a></p>
-<p id="section-3.2.3-2">For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
+If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.<a href="#section-3.2.4-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.4-2">For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
 Concrete designs <span class="bcp14">MUST</span> specify a threat model for undetectable validation.
-This threat model must detail which parties can detect emblem discovery and validation, under which conditions, and to what extent.<a href="#section-3.2.3-2" class="pilcrow">¶</a></p>
+This threat model must detail which parties can detect emblem discovery and validation, under which conditions, and to what extent.<a href="#section-3.2.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1662,12 +1683,12 @@ Concretely, we can assume that they will typically first identify an asset that 
 <p id="section-5.4.3-1">The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
 Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
 As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
-Therefore, digital, protective emblems under IHL require validation for authenticity (<a href="#validation" class="auto internal xref">Section 3.3.1</a>) that is undetectable (<a href="#undet-validation" class="auto internal xref">Section 3.2.3</a>).<a href="#section-5.4.3-1" class="pilcrow">¶</a></p>
+Therefore, digital, protective emblems under IHL require validation for authenticity (<a href="#validation" class="auto internal xref">Section 3.3.1</a>) that is undetectable (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>).<a href="#section-5.4.3-1" class="pilcrow">¶</a></p>
 <p id="section-5.4.3-2">At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
 First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see <a href="#authorization" class="auto internal xref">Section 3.3.2</a> and <a href="#ihl-stakeholders" class="auto internal xref">Section 5.4.2</a>).
 The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
 Second, bearing an emblem can increase the risk for targeted attacks.
-We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable (<a href="#removable" class="auto internal xref">Section 3.2.2</a>).<a href="#section-5.4.3-2" class="pilcrow">¶</a></p>
+We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable (<a href="#removable" class="auto internal xref">Section 3.2.3</a>).<a href="#section-5.4.3-2" class="pilcrow">¶</a></p>
 <p id="section-5.4.3-3">Beyond the DIEM architecture as described in this document, digital, protective emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.<a href="#section-5.4.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1795,7 +1816,7 @@ Brands that are protected under international law (e.g., Madrid Protocol) can ma
 However, multiple of the defined requirements include security properties.
 The architecture and standards developed need to detail the security properties of validation and authorization especially.
 Use cases have threat models and discussion of mitigating specific threats is needed.
-For example, in a use case where removability (<a href="#removable" class="auto internal xref">Section 3.2.2</a>) is needed, there are security considerations such as the potential for replay of removed emblems.<a href="#section-6-1" class="pilcrow">¶</a></p>
+For example, in a use case where removability (<a href="#removable" class="auto internal xref">Section 3.2.3</a>) is needed, there are security considerations such as the potential for replay of removed emblems.<a href="#section-6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
