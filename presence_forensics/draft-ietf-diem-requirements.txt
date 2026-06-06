@@ -5,7 +5,7 @@
 Digital Emblems                                                C. Deccio
 Internet-Draft                                  Brigham Young University
 Intended status: Informational                          R. A. Fainchtein
-Expires: 30 November 2026                                        JHU/APL
+Expires: 8 December 2026                                         JHU/APL
                                                                F. Linker
                                                                         
                                                                  J. Reid
@@ -14,7 +14,7 @@ Expires: 30 November 2026                                        JHU/APL
                                                                 Veridigo
                                                                A. Mankin
                                                    Packet Clearing House
-                                                             29 May 2026
+                                                             6 June 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 November 2026.
+   This Internet-Draft will expire on 8 December 2026.
 
 Copyright Notice
 
@@ -418,13 +418,15 @@ Table of Contents
 5.2.1.  Limitations of proof of presence:
 
    As indicated in Section Section 4.5, Level 3 Proof of Presence alone
-   may not provide sufficient assurance that no tampering with the
-   diplomatic pouch or inspection of its contents has occured.  This is
-   because a proof of presence neither provides a chain of custody nor
-   any mechanisms to detect tampering should it occur.  For this reason,
-   Level 3 validation may need to be part of an attested chain of
+   does not provide proof that no tampering with the diplomatic pouch or
+   inspection of its contents has occured.  This is because a proof of
+   presence neither provides a chain of custody nor any mechanisms to
+   detect tampering should it occur.  For this reason, Level 3
+   validation may be used along side or as part of an attested chain of
    custody and/or accompanied by the use of physical mechanisms for
-   tamper-proofing a physical asset.
+   tamper-proofing a physical asset.  Any such chain of custody
+   specification or anti-tampering mechanism is out of the scope of the
+   DIEM WG.
 
 5.3.  Ramsar Convention on the Wetlands
 
