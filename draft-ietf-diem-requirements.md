@@ -309,6 +309,7 @@ To that end, the Proof of Presence record of processing a diplomatic pouch's dig
 
 
 ### Limitations of proof of presence:
+
 As indicated in Section {{proof-pres}}, Level 3 Proof of Presence alone does not provide proof that
 no tampering with the diplomatic pouch or inspection of its contents has occured.
 This is because a proof of presence neither provides a chain of custody nor any mechanisms to detect
