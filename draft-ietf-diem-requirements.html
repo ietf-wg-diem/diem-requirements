@@ -1052,7 +1052,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fainchtein, et al.</td>
-<td class="center">Expires 7 December 2026</td>
+<td class="center">Expires 8 December 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,12 +1065,12 @@ svg {
 <dd class="internet-draft">draft-ietf-diem-requirements-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-05" class="published">5 June 2026</time>
+<time datetime="2026-06-06" class="published">6 June 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-07">7 December 2026</time></dd>
+<dd class="expires"><time datetime="2026-12-08">8 December 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1137,7 +1137,7 @@ This document lists the requirements and use cases that an architecture for digi
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 7 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 8 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1418,7 +1418,11 @@ Validation may include ensuring that the emblem has not been forged, stolen, or 
 <p id="section-3.1.1-1">Digital emblems <span class="bcp14">MUST</span> identify the marked asset and their kind of digital emblem.
 Beyond that, digital emblems <span class="bcp14">MAY</span> include other data, for example, an issuer or a validity window.
 To accommodate use cases requiring extensible data, a digital emblem architecture <span class="bcp14">SHOULD</span> introduce minimal overhead size except for fields required to fulfil other requirements in this document.<a href="#section-3.1.1-1" class="pilcrow">¶</a></p>
-<p id="section-3.1.1-2">As of writing, the DIEM charter requires that digital emblems <span class="bcp14">MUST</span> explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).<a href="#section-3.1.1-2" class="pilcrow">¶</a></p>
+<p id="section-3.1.1-2">Each emblem type will make use of a subset of the requirements set out in this document.
+The requirements for individual digital emblem types are independent and the requirements for an individual emblem type <span class="bcp14">MUST NOT</span> constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.<a href="#section-3.1.1-2" class="pilcrow">¶</a></p>
+<p id="section-3.1.1-3">Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation <span class="bcp14">SHOULD</span> be understood as reflecting current use case constraints only.
+It <span class="bcp14">SHOULD NOT</span> be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem’s core semantics remain intact.<a href="#section-3.1.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1.1-4">As of this writing, the DIEM charter requires that digital emblems <span class="bcp14">MUST</span> explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).<a href="#section-3.1.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="emblem-semantics">

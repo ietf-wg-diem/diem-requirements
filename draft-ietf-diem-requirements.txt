@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 7 December 2026                                                
+Expires: 8 December 2026                                                
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                             5 June 2026
+                                                             6 June 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 December 2026.
+   This Internet-Draft will expire on 8 December 2026.
 
 Copyright Notice
 
@@ -215,9 +215,24 @@ Table of Contents
    introduce minimal overhead size except for fields required to fulfil
    other requirements in this document.
 
-   As of writing, the DIEM charter requires that digital emblems MUST
-   explicitly identify the marked asset by a Fully Qualified Domain Name
-   (FQDN).
+   Each emblem type will make use of a subset of the requirements set
+   out in this document.  The requirements for individual digital emblem
+   types are independent and the requirements for an individual emblem
+   type MUST NOT constrain, override, or otherwise affect the
+   requirements, design, or use of any other digital emblem.
+
+   Where a use case specifies a limited domain of application (e.g. only
+   digital or physical assets, a narrow scope of valid issuers or
+   validators, or specific discovery mechanism) for a particular emblem,
+   such a limitation SHOULD be understood as reflecting current use case
+   constraints only.  It SHOULD NOT be interpreted as precluding future
+   use cases from applying that emblem under a different or expanded
+   domain of application, provided that the emblem’s core semantics
+   remain intact.
+
+   As of this writing, the DIEM charter requires that digital emblems
+   MUST explicitly identify the marked asset by a Fully Qualified Domain
+   Name (FQDN).
 
 3.1.2.  Emblem Semantics
 
