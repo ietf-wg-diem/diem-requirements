@@ -255,7 +255,7 @@ time of an alleged violation.
 Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the
 querying party accessed the digital emblem.
 
-Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it.
+Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.
 
 Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation {{undet-validation}}.
 An example from the Diplomatic Pouch use case, described in Section {{diplo-pouch}}, illustrates the
@@ -278,12 +278,13 @@ Regulates the trans-boundary movement of hazardous wastes. Use cases are functio
 
 ## Diplomatic Pouches (1961 Vienna Convention on Diplomatic Relations) {#diplo-pouch}
 
-Digital emblems can protect diplomatic pouch shipments, diplomatic couriers, and diplomatic envoys, who are protected
+Digital emblems can protect diplomatic pouch shipments, diplomatic couriers, and diplomatic envoys.
+All three of these are protected
 under the 1961 Vienna Convention on Diplomatic Relations {{VIENNACONV}}, which states that they may not be stopped, delayed, or
 inspected. This creates the paradox that the validity of their credentials must be evaluated, yet doing so has
 historically compromised the very rights that are intended to be signaled. Diplomatic markings have also been
 misappropriated as cover for the smuggling of drugs and other contraband. Digital emblems, which can be validated
-instantaneously, at a distance, and without interrupting the subject, solve both of these problems, while streamlining
+instantaneously, at a distance, and without interrupting the subject, address both of these problems, while streamlining
 and automating customs and immigrations processes.
 
 The use case for diplomatic pouches involves the following entities:
@@ -291,10 +292,8 @@ The use case for diplomatic pouches involves the following entities:
 - Origin Country or Accredited Organization: Issuer and Authorizing entity
 - Diplomat: Agent of Country or Accredited Organization
 
-As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help establish
-whether or not customs agent(s) in a Point of Entry country adhered to the treaty in processing the diplomatic pouch.
-That is to say that they validated the pouch's digital emblem and can reasonably be assumed to have done little to nothing else.
-To that end, the Proof of Presence record of a diplomatic pouch's digital emblem could require the following fields
+As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help demonstrate, for the benefit of the customs service, that a customs agent(s) in a Point of Entry country validated the diplomatic pouch.
+To that end, the Proof of Presence record of processing a diplomatic pouch's digital emblem could include the following information.
 
 - Specific point of entry
 - Time/Date of arrival at point of entry
