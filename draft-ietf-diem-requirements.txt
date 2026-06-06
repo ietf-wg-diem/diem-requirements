@@ -100,23 +100,26 @@ Table of Contents
      4.5.  Proof of Presence
    5.  Use Cases
      5.1.  Basel Convention
-     5.2.  International Atomic Energy Agency (IAEA)
-     5.3.  International Civil Aviation Organization (ICAO)
-     5.4.  Protective Emblems under The Geneva Conventions, its
+     5.2.  Diplomatic Pouches (1961 Vienna Convention on Diplomatic
+            Relations)
+       5.2.1.  Limitations of proof of presence:
+     5.3.  International Atomic Energy Agency (IAEA)
+     5.4.  International Civil Aviation Organization (ICAO)
+     5.5.  Protective Emblems under The Geneva Conventions, its
             Additional Protocols, and the 1954 Hague Convention
-       5.4.1.  Background
-       5.4.2.  Domain Model and Stakeholders
-       5.4.3.  Requirements
-     5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
-     5.6.  Other IHL-related use cases
-     5.7.  Press
-     5.8.  Ramsar Convention on the Wetlands
-     5.9.  United Nations Economic and Social Council (ECOSOC)
-     5.10. United Nations Food and Agriculture Organization (FAO)
-     5.11. United Nations Peacekeepers
-     5.12. World Customs Organization (WCO)
-     5.13. World Health Organization (WHO)
-     5.14. World Intellectual Property Organization (WIPO)
+       5.5.1.  Background
+       5.5.2.  Domain Model and Stakeholders
+       5.5.3.  Requirements
+     5.6.  Organization for the Prohibition of Chemical Weapons (OPCW)
+     5.7.  Other IHL-related use cases
+     5.8.  Press
+     5.9.  Ramsar Convention on the Wetlands
+     5.10. United Nations Economic and Social Council (ECOSOC)
+     5.11. United Nations Food and Agriculture Organization (FAO)
+     5.12. United Nations Peacekeepers
+     5.13. World Customs Organization (WCO)
+     5.14. World Health Organization (WHO)
+     5.15. World Intellectual Property Organization (WIPO)
    6.  Security Considerations
    7.  IANA Considerations
    8.  References
@@ -383,10 +386,41 @@ Table of Contents
 
 4.5.  Proof of Presence
 
-   For some emblems, it may be relevant to track that an emblem has been
-   presented.  This could be achieved, for example, by standardizing
-   different distributions mechanisms, e.g., using decentralized
-   authenticated data structures.
+   Since emblems themselves are unable to directly protect assets
+   against attack, emblems indicating assets are entitled to protections
+   may require a mechanism through which violations of their laws or
+   provisions can be verified forensically.  This would be particularly
+   relevant in cases where emblems can be applied and removed
+   dynamically.  These protections are defined in three different
+   levels, listed from weakest to strongest.
+
+   Level 1 - presence and verifiability: Establishing that an actor or
+   querying party was able to obtain the emblem at the time of
+   violation.  That is forensically demonstrating/proving that the
+   emblem was discoverable and verifiable at the time of an alleged
+   violation.
+
+   Level 2 - presence, verifiability and access: Establishing the
+   emblem’s presence and verifiability and that the querying party
+   accessed the digital emblem.
+
+   Level 3 - presence, verifiability access and verification:
+   Demonstrating presence verifiability and access and that the querying
+   party verified the emblem upon accessing it.  This level of proof can
+   only be made by the querying party.
+
+   Note that Levels 2 and 3 are intended to be mutually exclusive
+   requirements with Undetectable Validation Section 3.2.4.  An example
+   from the Diplomatic Pouch use case, described in Section Section 5.2,
+   illustrates the Level 3 Proof of Presence requirement, and how it in
+   some cases may need to be part of a chain of custody and/or
+   accompanied by additional security measures to provide adequate
+   security guarantees.
+
+      |  Level 2 validation could be available for the validator without
+      |  violating Undetectable Validation Section 3.2.4.  However,
+      |  enabling Level 2 validation to the asset, issuer or authorizer
+      |  would violate that requirement.
 
 5.  Use Cases
 
@@ -407,13 +441,66 @@ Table of Contents
    Regulates the trans-boundary movement of hazardous wastes.  Use cases
    are functionally identical to OPCW and IAEA.
 
-5.2.  International Atomic Energy Agency (IAEA)
+5.2.  Diplomatic Pouches (1961 Vienna Convention on Diplomatic
+      Relations)
+
+   Digital emblems can protect diplomatic pouch shipments, diplomatic
+   couriers, and diplomatic envoys.  All three of these are protected
+   under the 1961 Vienna Convention on Diplomatic Relations
+   [VIENNACONV], which states that they may not be stopped, delayed, or
+   inspected.  This creates the paradox that the validity of their
+   credentials must be evaluated, yet doing so has historically
+   compromised the very rights that are intended to be signaled.
+   Diplomatic markings have also been misappropriated as cover for the
+   smuggling of drugs and other contraband.  Digital emblems, which can
+   be validated instantaneously, at a distance, and without interrupting
+   the subject, address both of these problems, while streamlining and
+   automating customs and immigrations processes.
+
+   The use case for diplomatic pouches involves the following entities:
+   - Point of Entry Country/Customs Agent(s): Validator - Origin Country
+   or Accredited Organization: Issuer and Authorizing entity - Diplomat:
+   Agent of Country or Accredited Organization - Pouch: Asset
+
+   As noted in Section Section 4.5, a Level 3 Proof of presence record
+   could help demonstrate, for the benefit of the customs service, that
+   a customs agent(s) in a Point of Entry country validated the
+   diplomatic pouch.  To that end, the Proof of Presence record of
+   processing a diplomatic pouch's digital emblem could include the
+   following information.
+
+   *  Specific point of entry
+
+   *  Time/Date of arrival at point of entry
+
+   *  identifier(s) of customs agent(s) validating the pouch
+
+   *  A baseline record establishing the Emblem's existence and
+      accessibility (or a pointer thereto)
+
+   *  Record of the customs agent's attempt to validate the Digital
+      Emblem and its result signed by the customs agent(s)
+
+5.2.1.  Limitations of proof of presence:
+
+   As indicated in Section Section 4.5, Level 3 Proof of Presence alone
+   does not provide proof that no tampering with the diplomatic pouch or
+   inspection of its contents has occured.  This is because a proof of
+   presence neither provides a chain of custody nor any mechanisms to
+   detect tampering should it occur.  For this reason, Level 3
+   validation may be used along side or as part of an attested chain of
+   custody and/or accompanied by the use of physical mechanisms for
+   tamper-proofing a physical asset.  Any such chain of custody
+   specification or anti-tampering mechanism is out of the scope of the
+   DIEM WG.
+
+5.3.  International Atomic Energy Agency (IAEA)
 
    IAEA administers several treaties, especially related to the
    controlled shipment of atomic fuels and wastes across borders.
    Similar use case as OPCW.
 
-5.3.  International Civil Aviation Organization (ICAO)
+5.4.  International Civil Aviation Organization (ICAO)
 
    Requires protection of civil aviation flights and the ability to
    assert that they are not dual-use (i.e., not carrying military
@@ -422,10 +509,10 @@ Table of Contents
    (i.e., tail number).  Potential need for the emblem to reference a
    limited or partially redacted flight manifest.
 
-5.4.  Protective Emblems under The Geneva Conventions, its Additional
+5.5.  Protective Emblems under The Geneva Conventions, its Additional
       Protocols, and the 1954 Hague Convention
 
-5.4.1.  Background
+5.5.1.  Background
 
    The Geneva Conventions and their Additional Protocols constitute the
    core of International Humanitarian Law (IHL).  Some assets enjoy
@@ -458,7 +545,7 @@ Table of Contents
    Crescent have expressed the support for such a digital emblem
    [RCRCRES] [UNESCORES].
 
-5.4.2.  Domain Model and Stakeholders
+5.5.2.  Domain Model and Stakeholders
 
    In context of digital, protective emblems under IHL, emblems will
    mark assets that are digital services and that solely serve protected
@@ -481,7 +568,7 @@ Table of Contents
    identify an asset that they plan to engage with and then check
    whether that asset bears an emblem.
 
-5.4.3.  Requirements
+5.5.3.  Requirements
 
    The purpose of a digital emblem is to prevent disruptions of assets
    by informing verifiers that marked assets enjoy protection under IHL.
@@ -497,7 +584,7 @@ Table of Contents
    well into the existing framework of IHL and not put emblem issuers at
    increased risk.  First, IHL requires that, emblem issuers must seek
    authorization from a competent authority prior to applying them (see
-   Section 3.3.2 and Section 5.4.2).  The authorization must be
+   Section 3.3.2 and Section 5.5.2).  The authorization must be
    decentralized, i.e., there must be no central authorities that govern
    the use or distribution of digital emblems.  Second, bearing an
    emblem can increase the risk for targeted attacks.  We require that
@@ -510,14 +597,14 @@ Table of Contents
    mechanisms than the DNS, as not all assets may have domain names
    associated with them.
 
-5.5.  Organization for the Prohibition of Chemical Weapons (OPCW)
+5.6.  Organization for the Prohibition of Chemical Weapons (OPCW)
 
    Requires protection of Schedule 1 chemicals in transit between
    signatory countries for research, medical, pharmaceutical, or
    protective purposes.  Emblem would identify place, date, and volume
    of production, and the emblem can contain confidential data.
 
-5.6.  Other IHL-related use cases
+5.7.  Other IHL-related use cases
 
    Many organizations use recognizable insignia or logos to mark staff,
    vehicles, buildings, and materials that derive protection from IHL
@@ -549,14 +636,14 @@ Table of Contents
    infrastructure.  The Whiteflag Protocol [WHITEFLAG] specifically
    identifies several categories of infrastructure.
 
-5.7.  Press
+5.8.  Press
 
    Journalists in conflict zones use protective markings that indicate
    their status as a non-combatant.  Assets belonging to the press could
    be digitally marked, and protective markings in conflict zones could
    be digitized.
 
-5.8.  Ramsar Convention on the Wetlands
+5.9.  Ramsar Convention on the Wetlands
 
    The Convention on Wetlands of International Importance especially as
    Waterfowl Habitat "providees the single most global framework for
@@ -573,7 +660,7 @@ Table of Contents
 
    *  Ability to validate the presence or absence of Ramsar designation
 
-5.9.  United Nations Economic and Social Council (ECOSOC)
+5.10.  United Nations Economic and Social Council (ECOSOC)
 
    UN Model Regulations [UNMODELREGS] includes "Recommendations on the
    Transport of Dangerous Goods."  This includes labeling of items with
@@ -582,7 +669,7 @@ Table of Contents
    example, items containing lithium-based batteries are labeled with
    3480 or 3481 and accompanied by a specific "battery mark" emblem.
 
-5.10.  United Nations Food and Agriculture Organization (FAO)
+5.11.  United Nations Food and Agriculture Organization (FAO)
 
    Among other things is responsible for the International Plant
    Protection Convention (IPPC) and International Standards for
@@ -591,12 +678,12 @@ Table of Contents
    treated or fumigated with methyl-bromide, and stamped or branded with
    a compliance mark known as a "wheat stamp."
 
-5.11.  United Nations Peacekeepers
+5.12.  United Nations Peacekeepers
 
    UN Peacekeepers use protective markings in theater as well as
    facilities associated with the mission.
 
-5.12.  World Customs Organization (WCO)
+5.13.  World Customs Organization (WCO)
 
    Specifies "Harmonized Systems" codes [HARMONIZED] that classify items
    such as livestock, arms and ammunition, chemicals, plastics,
@@ -605,12 +692,12 @@ Table of Contents
    international trade agreements between individual nations and groups
    of nations.
 
-5.13.  World Health Organization (WHO)
+5.14.  World Health Organization (WHO)
 
    Similar to the use case of the Red Cross, Red Crystal, and Red
    Crescent.
 
-5.14.  World Intellectual Property Organization (WIPO)
+5.15.  World Intellectual Property Organization (WIPO)
 
    WIPO administers 26+ treaties with different protections for
    different things.  Brands that are protected under international law
@@ -753,6 +840,12 @@ Table of Contents
               Regulations on the Transport of Dangerous Goods", n.d.,
               <https://unece.org/transport/dangerous-goods/un-model-
               regulations-rev-23>.
+
+   [VIENNACONV]
+              United Nations, "Vienna Convention on Diplomatic
+              Relations", n.d., <https://treaties.un.org/pages/
+              Viewdetails.aspx/?src=TREATY&mtdsg_no=III-
+              3&chapter=3&clang=en>.
 
    [WHITEFLAG]
               Whiteflag Foundation, "Whiteflag Specification", n.d.,
