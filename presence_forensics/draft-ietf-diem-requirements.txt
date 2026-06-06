@@ -356,6 +356,11 @@ Table of Contents
    accompanied by additional security measures to provide adequate
    security guarantees.
 
+      |  Level 2 validation could be available for the validator without
+      |  violating Undetectable Validation Section 3.2.3.  However,
+      |  enabling Level 2 validation to the asset, issuer or authorizer
+      |  would violate that requirement.
+
 5.  Use Cases
 
    Different use cases have different requirements.  The purpose of this
