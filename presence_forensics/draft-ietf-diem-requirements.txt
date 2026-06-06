@@ -329,9 +329,9 @@ Table of Contents
    against attack, emblems indicating assets are entitled to protections
    may require a mechanism through which violations of their laws or
    provisions can be verified forensically.  This would be particularly
-   poignant for use cases where emblems can be born or taken down
-   dynamically and could be defined in three different levels, listed
-   from weakest to strongest.
+   relevant in cases where emblems can be applied and removed
+   dynamically.  These protections are defined in three different
+   levels, listed from weakest to strongest.
 
    Level 1 - presence and verifiability: Establishing that an actor or
    querying party was able to obtain the emblem at the time of
