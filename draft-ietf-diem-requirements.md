@@ -235,10 +235,6 @@ often by checking its details against a known standard or reference point.
 
 The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
-DIEM supports discovery and technical validation of digital emblem data associated with assets. A successful validation result indicates that the returned data is technically valid according to the applicable DIEM mechanisms.
-
-Such a result does not, by itself, determine the downstream legal, operational, or policy consequence of the digital emblem. Those consequences are outside the scope of this document and remain the responsibility of the relevant user community, applicable framework, competent authorities, and operational processes.
-
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
@@ -306,6 +302,9 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 Digital emblems MAY require validation. The digital emblem architecture MUST allow individual standards to support verification of all the digital emblem's data or a defined subset without restriction. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
 In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
+Validation establishes only the properties defined by the relevant digital emblem type.
+Those properties can include authenticity, integrity, authorization, asset binding, validity period, or other properties required by that digital emblem type.
+Validation does not, by itself, establish that all asserted emblem data is factually true or correct unless that property is explicitly required by the relevant digital emblem type.
 Some use cases MAY use unverified digital emblems.
 
 ### Authorization {#authorization}
