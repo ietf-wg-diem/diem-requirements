@@ -156,6 +156,11 @@ informative:
     title: "Harmonized System"
     author:
        org: World Customs Organization
+  VIENNACONV:
+    target: https://treaties.un.org/pages/Viewdetails.aspx/?src=TREATY&mtdsg_no=III-3&chapter=3&clang=en
+    title: "Vienna Convention on Diplomatic Relations"
+    author:
+       org: United Nations
   CUSTOMARY:
     target: https://ihl-databases.icrc.org/en/customary-ihl
     title: "Customary IHL - IHL Databases"
@@ -337,9 +342,31 @@ As of this writing, the current charter scope requires that digital emblems expl
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
 For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or by only serving emblems over channels with access control mechanisms.
 
-## Proof of Presence
+## Proof of Presence {#proof-pres}
 
-For some emblems, it may be relevant to track that an emblem has been presented. This could be achieved, for example, by standardizing different distributions mechanisms, e.g., using decentralized authenticated data structures.
+Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically.
+This would be particularly relevant in cases where emblems can be applied and removed dynamically.
+These protections are defined in three different levels, listed from weakest to strongest.
+
+Level 1 - presence and verifiability: Establishing that an actor or querying party was able to obtain the emblem at the
+time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
+time of an alleged violation.
+
+Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the
+querying party accessed the digital emblem.
+
+Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.
+
+Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation {{undet-validation}}.
+An example from the Diplomatic Pouch use case, described in Section {{diplo-pouch}}, illustrates the
+Level 3 Proof of Presence requirement, and how it in some cases may need to be part of a chain of custody and/or
+ accompanied by additional security measures to provide adequate security guarantees.
+
+
+{:aside}
+> Level 2 validation could be available for the validator without violating Undetectable Validation {{undet-validation}}.
+> However, enabling Level 2 validation to the asset, issuer or authorizer would violate that requirement.
+
 
 # Use Cases
 
@@ -353,6 +380,44 @@ We provide auxiliary material under Informative References.
 ## Basel Convention
 
 Regulates the trans-boundary movement of hazardous wastes. Use cases are functionally identical to OPCW and IAEA.
+
+## Diplomatic Pouches (1961 Vienna Convention on Diplomatic Relations) {#diplo-pouch}
+
+Digital emblems can protect diplomatic pouch shipments, diplomatic couriers, and diplomatic envoys.
+All three of these are protected
+under the 1961 Vienna Convention on Diplomatic Relations {{VIENNACONV}}, which states that they may not be stopped, delayed, or
+inspected. This creates the paradox that the validity of their credentials must be evaluated, yet doing so has
+historically compromised the very rights that are intended to be signaled. Diplomatic markings have also been
+misappropriated as cover for the smuggling of drugs and other contraband. Digital emblems, which can be validated
+instantaneously, at a distance, and without interrupting the subject, address both of these problems, while streamlining
+and automating customs and immigrations processes.
+
+The use case for diplomatic pouches involves the following entities:
+- Point of Entry Country/Customs Agent(s): Validator
+- Origin Country or Accredited Organization: Issuer and Authorizing entity
+- Diplomat: Agent of Country or Accredited Organization
+- Pouch: Asset
+
+As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help demonstrate, for the benefit of the customs service, that a customs agent(s) in a Point of Entry country validated the diplomatic pouch.
+To that end, the Proof of Presence record of processing a diplomatic pouch's digital emblem could include the following information.
+
+- Specific point of entry
+- Time/Date of arrival at point of entry
+- identifier(s) of customs agent(s) validating the pouch
+- A baseline record establishing the Emblem's existence and accessibility (or a pointer thereto)
+- Record of the customs agent's attempt to validate the Digital Emblem and its result signed by the customs agent(s)
+
+
+### Limitations of proof of presence:
+
+As indicated in Section {{proof-pres}}, Level 3 Proof of Presence alone does not provide proof that
+no tampering with the diplomatic pouch or inspection of its contents has occured.
+This is because a proof of presence neither provides a chain of custody nor any mechanisms to detect
+tampering should it occur. For this reason, Level 3 validation may be used along side or as part of an attested
+chain of custody and/or accompanied by the use of physical mechanisms for tamper-proofing a physical asset.
+Any such chain of custody specification or anti-tampering mechanism is out of the scope of the DIEM WG.
+
+
 
 ## International Atomic Energy Agency (IAEA)
 
