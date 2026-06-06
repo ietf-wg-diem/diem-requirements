@@ -22,11 +22,6 @@ venue:
 
 author:
   -
-    fullname: Casey Deccio
-    organization: Brigham Young University
-    email: casey@byu.edu
-
-  -
     fullname: Rahel A. Fainchtein
     organization: JHU/APL
     email: rahel.fainchtein@jhuapl.edu
@@ -36,19 +31,40 @@ author:
     email: linkerfelix@gmail.com
 
   -
-    fullname: Jim Reid
-    organization: RTFM llp
-    email: jim@rfc1035.com
-
-  -
     fullname: Alex Rosenberg
     organization: Veridigo
     email: alexr@veridigo.com
 
   -
+    fullname: Casey Deccio
+    organization: Brigham Young University
+    email: casey@byu.edu
+
+  -
     fullname: Allison Mankin
     organization: Packet Clearing House
     email: allison@pch.net
+
+contributor:
+  -
+    fullname: Bill Woodcock
+    organization: Packet Clearing House
+    email: woody@pch.net
+
+  -
+    fullname: Jim Reid
+    organization: RTFM llp
+    email: jim@rfc1035.com
+
+  -
+    fullname: Samit D'Cunha
+    organization: International Committee of the Red Cross
+    email: sdcunha@icrc.org
+
+  -
+    fullname: Natasha Chabbra
+    organization: Australian Red Cross
+    email: nchabbra@redcross.org.au
 
 normative:
   CHARTER:
@@ -57,6 +73,18 @@ normative:
     date: 2025-05-27
 
 informative:
+  API1977:
+    target: https://ihl-databases.icrc.org/assets/treaties/470-AP-I-EN.pdf
+    title: "Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Protection of Victims of International Armed Conflicts (Protocol I)"
+    author:
+       org: International Committee of the Red Cross
+    date: 1977-06-08
+  APIII2005:
+    target: https://ihl-databases.icrc.org/assets/treaties/615-AP-III-EN.pdf
+    title: "Protocol Additional to the Geneva Conventions of 12 August 1949, and relating to the Adoption of an Additional Distinctive Emblem (Protocol III)"
+    author:
+       org: International Committee of the Red Cross
+    date: 2005-12-08
   BLUEHELMET:
     target: https://guide-humanitarian-law.org/content/article/3/peacekeeping/
     title: The Practical Guide to Humanitarian Law
@@ -72,6 +100,20 @@ informative:
     title: The Protection of the Red Cross / Red Crescent Emblems
     author:
        org: International Committee of the Red Cross
+  RCRCRES:
+    target: https://rcrcconference.org/app/uploads/2024/10/34IC_R2-ICT-EN.pdf
+    title: Protecting Civilians and Other Protected Persons and Objects Against the Potential Human Cost of ICT Activities During Armed Conflict
+    author:
+       org: 34th International Conference of the Red Cross and Red Crescent
+    date: 2024-10
+    seriesinfo:
+      - Document prepared by the International Committee of the Red Cross in consultation with the International Federation of Red Cross and Red Crescent Societies
+  UNESCORES:
+    target: https://unesdoc.unesco.org/ark:/48223/pf0000396721.locale=en
+    title: Resolutions Adopted During the 16th Meeting of the High Contracting Parties to the 1954 Hague Convention
+    author:
+       org: United Nations Educational, Scientific and Cultural Organization
+    date: 2025-12-01
   PRESS:
     target: https://safety.rsf.org/appendix-i-protection-of-journalists-in-war-zones/
     title: RSF Resource for Journalists' Safety
@@ -82,6 +124,18 @@ informative:
     title: Personnel of Foreign Governments and International Organizations and Special Treatment for Returning Individuals
     author:
        org: Cornell Law School - Legal Information Institute
+  GCI1949:
+    target: https://ihl-databases.icrc.org/assets/treaties/365-GC-I-EN.pdf
+    title: "Geneva Convention for the Amelioration of the Condition of the Wounded and Sick in Armed Forces in the Field"
+    author:
+       org: International Committee of the Red Cross
+    date: 1949-08-12
+  HAGUE1954:
+    target: https://unesdoc.unesco.org/ark:/48223/pf0000082464
+    title: Convention for the Protection of Cultural Property in the Event of Armed Conflict
+    author:
+       org: United Nations Educational, Scientific and Cultural Organization
+    date: 1954-05-14
   RAMSAR:
     target: https://www.ramsar.org
     title: The Convention on Wetlands
@@ -107,11 +161,25 @@ informative:
     title: "Vienna Convention on Diplomatic Relations"
     author:
        org: United Nations
+  CUSTOMARY:
+    target: https://ihl-databases.icrc.org/en/customary-ihl
+    title: "Customary IHL - IHL Databases"
+    author:
+       org: International Committe of the Red Cross
+  IHL-GUIDE:
+    target: https://guide-humanitarian-law.org/content/article/3/right-of-humanitarian-initiative/
+    title: ""
+  WHITEFLAG:
+    target: https://standard.whiteflagprotocol.org/
+    title: "Whiteflag Specification"
+    author:
+      org: Whiteflag Foundation
 
 
 --- abstract
 
-Digital emblems are a means for digital assets to signal that they should be treated in a specific way by reference to some normative framework.
+Digital emblems are a means for an asset to signal to validating entities that it should be protected or treated in a specific way,
+using some normative framework.
 This document lists the requirements and use cases that an architecture for digital emblems must accommodate.
 
 --- middle
@@ -124,14 +192,14 @@ This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
 We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem," "bearer," and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
+We use the terms "(digital) emblem" and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
 These definitions have been reproduced in section Conventions and Definitions.
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
-The definitions for terms "(digital) emblem," "bearer," and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
+The definitions for terms "(digital) emblem" and "validation" are reproduced from the charter {{CHARTER}} as of this writing.
 
 
 (Digital) Emblem:
@@ -142,8 +210,7 @@ The definitions for terms "(digital) emblem," "bearer," and "validation" are rep
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A digital resource, system, or service - such as a server, data repository, or networked device - that can display a digital emblem.
-  An asset represents the digital equivalent of an object, installation, or service that would be designated by a physical emblem.
+: A physical resource -- such as place or thing; or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
 
 Emblem issuer:
 : The entity that operates or controls an asset that bears a digital emblem.
@@ -171,9 +238,21 @@ The DIEM architecture will allow validators to discover and validate digital emb
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
-Digital emblems MUST identify the marked asset and their kind of digital emblem. Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window. As of writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
+
+Digital emblems MUST identify the marked asset and their kind of digital emblem.
+Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window.
+To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduce minimal overhead size except for fields required to fulfil other requirements in this document.
+
+Each emblem type will make use of a subset of the requirements set out in this document.
+The requirements for individual digital emblem types are independent and the requirements for an individual emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.
+
+Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation SHOULD be understood as reflecting current use case constraints only.
+It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem’s core semantics remain intact.
+
+As of this writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
 ### Emblem Semantics
+
 Individual use cases MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
@@ -181,6 +260,25 @@ Individual use cases MUST specify the semantics of the emblem. It must be clearl
 ### Discovery
 
 Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given an asset a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.
+
+
+### Query Response {#response-reqs}
+
+Specifications for each use case MUST each determine how servers must respond to queries for Digital Emblems of their specified type.
+Specifically, they must determine the responsiveness and consistency requirements for emblems of their given type and
+provide explanations of how the chosen requirements apply and the rationales for their selection.
+
+For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).
+
+For consistency of response, specifications for a given type of Digital Emblem T must denote whether all queries for an
+asset's records (as denoted by its FQDN) must return all Digital Emblems of type T associated with the
+asset (Consistent Content), or whether the inclusion of emblems of type T in a response may vary based on specific requester attributes (Selective Content).
+
+Note that as of this writing, neither the baseline definition for the minimum set of attributes that constitute a unique Digital
+Emblem, nor the attributes needed to attain Consistent Content have been defined.
+Given the limited scope of this document, that definition as well as the mechanism to ensure its extensibility across
+newly defined emblem types will be outlined in the architecture document.
+
 
 ### Removable {#removable}
 
@@ -202,15 +300,15 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 ### Validation {#validation}
 
-Digital emblems MAY require validation. Validation MUST support verification of all the emblem's data and its context.
-In particular, validation MUST ensure that the emblem was issued for the respective asset.
+Digital emblems MAY require validation. The digital emblem architecture MUST allow individual standards to support verification of all the digital emblem's data or a defined subset without restriction. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
+In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
 ### Authorization {#authorization}
 
-Digital emblems MAY require authorization by third-parties.
+Digital emblems MAY require authorization by third-parties. When they do, they MUST define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblems standards can choose to take a dependency on Internet access or not. For example, a given digital emblem MAY use PKI or the DNS as a root of trust if they want, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
+
 Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
-Individual profiles MUST standardize a trust model that describes how validators can discover authorities and how the system selects authorities.
 
 ## Other Requirements
 
@@ -224,6 +322,7 @@ The initial work should not preclude future extensions and individual standards 
 In this section, we sketch how the digital emblem architecture could be extended by future standards to accommodate more use cases, but it is not a comprehensive list.
 
 ## Data Formats
+
 Emblems for additional use cases may be defined via new profiles in future standards, potentially including new types of atomic data elements requiring additional specification.
 
 ## Asset Identifier Discovery
@@ -239,6 +338,7 @@ For example, if emblems were distributed via NFC, the marked asset could be the 
 As of this writing, the current charter scope requires that digital emblems explicitly identify their asset, but such discovery mechanisms could be investigated in future WG work.
 
 ## Confidentiality
+
 Some use cases may contain confidential or sensitive data, and may require mechanisms to protect such data.
 For example, this could be realized with encryption of the general emblem data format that will be part of the architecture or by only serving emblems over channels with access control mechanisms.
 
@@ -318,6 +418,88 @@ chain of custody and/or accompanied by the use of physical mechanisms for tamper
 Any such chain of custody specification or anti-tampering mechanism is out of the scope of the DIEM WG.
 
 
+
+## International Atomic Energy Agency (IAEA)
+
+IAEA administers several treaties, especially related to the controlled shipment of atomic fuels and wastes across borders.
+Similar use case as OPCW.
+
+## International Civil Aviation Organization (ICAO)
+
+Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
+Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
+Potential need for the emblem to reference a limited or partially redacted flight manifest.
+
+## Protective Emblems under The Geneva Conventions, its Additional Protocols, and the 1954 Hague Convention
+
+### Background
+
+The Geneva Conventions and their Additional Protocols constitute the core of International Humanitarian Law (IHL).
+Some assets enjoy certain specific protections under IHL, including that they must not be attacked. In addition to recognizing other signs, IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific or special protections.
+In other words, protective emblems under IHL signal the applicability of a specific or special protection under IHL.
+Namely, these emblems are:
+
+- The emblems of the Red Cross, Red Crescent, and Red Crystal, defined in the Geneva Conventions and Additional Protocol III of the Geneva Conventions {{GCI1949}} {{APIII2005}}
+- The Blue Shield emblem, defined in the 1954 Hague Convention {{HAGUE1954}}
+- The international distinctive sign of civil defence, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
+- The dangerous forces special sign, defined in Additional Protocol I of the Geneva Conventions {{API1977}}
+
+However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
+A digital emblem using the DIEM architecture could address this gap, and resolutions from UNESCO and the International Conference of the Red Cross and Red Crescent have expressed the support for such a digital emblem {{RCRCRES}} {{UNESCORES}}.
+
+### Domain Model and Stakeholders {#ihl-stakeholders}
+
+In context of digital, protective emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
+Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
+Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
+
+For digital, protective emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
+In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
+Similarly, other malicious ICT actors, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
+Concretely, we can assume that they will typically first identify an asset that they plan to engage with and then check whether that asset bears an emblem.
+
+### Requirements
+
+The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
+Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
+As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
+Therefore, digital, protective emblems under IHL require validation for authenticity ({{validation}}) that is undetectable ({{undet-validation}}).
+
+At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
+First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see {{authorization}} and {{ihl-stakeholders}}).
+The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
+Second, bearing an emblem can increase the risk for targeted attacks.
+We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable ({{removable}}).
+
+Beyond the DIEM architecture as described in this document, digital, protective emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
+
+## Organization for the Prohibition of Chemical Weapons (OPCW)
+
+Requires protection of Schedule 1 chemicals in transit between signatory countries for research, medical, pharmaceutical, or protective purposes.
+Emblem would identify place, date, and volume of production, and the emblem can contain confidential data.
+
+## Other IHL-related use cases
+
+Many organizations use recognizable insignia or logos to mark staff, vehicles, buildings, and materials that derive protection from IHL and Customary IHL {{CUSTOMARY}}.
+Most humanitarian medical international non-governmental organizations (NGOs) use their own logos rather than using the Red Cross or Red Crescent emblem, even when they would have authorization to do so.
+
+As humanitarian NGOs have a "right of initiative" {{IHL-GUIDE}} established by IHL, and many NGOs have been operating for years in a location before conflict breaks out, their presence is natural and they are often first to provide medical care.
+Customary IHL requires combatants to provide the same protection to a marked hospital or identified medical staff as they would to one marked with a Red Cross or Red Crescent, provided the combatant reasonably understand that the mark is associated with a humanitarian medical function.
+Community acceptance of unarmed humanitarian staff requires awareness of their presence and identity, whether in time of conflict or in time of peace.
+
+IHL generally requires combatants to limit impact on civilians and infrastructure that civilians rely on.
+For example, destroying an electrical substation that serves a hospital and serves no military function, is usually prohibited by IHL.
+Other types of infrastructure important to civilians include drinking water reservoirs, water towers, and gas lines.
+Likewise schools and elder care facilities usually contain a high concentration of civilians.
+Digital emblems could be defined to identify such civilian infrastructure.
+The Whiteflag Protocol {{WHITEFLAG}} specifically identifies several categories of infrastructure.
+
+## Press
+
+Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
+Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
+
 ## Ramsar Convention on the Wetlands
 
 The Convention on Wetlands of International Importance especially as Waterfowl Habitat "providees the single most global framework for intergovernmental cooperation on wetland issues" and it features a list of geographic areas designated by Member States.
@@ -328,68 +510,17 @@ A digital emblem for the geographic areas potentially requires
 * Textual description
 * Ability to validate the presence or absence of Ramsar designation
 
-## International Atomic Energy Agency (IAEA)
-
-IAEA administers several treaties, especially related to the controlled shipment of atomic fuels and wastes across borders.
-Similar use case as OPCW.
-
-## International Humanitarian Law
-
-### Background
-
-The Geneva Conventions and their Additional Protocols constitute the core of IHL.
-Some assets enjoy certain specific protections under IHL, including that they must not be attacked, and IHL codifies four types of protective emblems for armed conflict, which inform other parties that marked assets benefit from one or several of these specific protections:
-
-- The emblems of the Red Cross, Red Crescent, and Red Crystal
-- The Blue Shield emblem
-- The emblem for the protection of civil defense marks
-- The dangerous forces emblem
-
-However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
-A digital emblem using the DIEM architecture could address this gap, and we call such emblems digital emblems for IHL.
-
-### Domain Model and Stakeholders {#ihl-stakeholders}
-
-In context of emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
-Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
-Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
-Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.
-
-For digital emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
-In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
-Similarly, other malicious ICT actors, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
-Concretely, we can assume that they will typically first identify an asset that they plan to engage with and then check whether that asset bears an emblem.
-
-### Requirements
-
-The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
-Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
-As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
-Therefore, digital emblems under IHL require validation for authenticity ({{validation}}) that is undetectable ({{undet-validation}}).
-
-At the same time, digital emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
-First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see {{authorization}} and {{ihl-stakeholders}}).
-The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
-Second, bearing an emblem can increase the risk for targeted attacks.
-We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable ({{removable}}).
-
-Beyond the DIEM architecture as described in this document, digital emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
-
-## Organization for the Prohibition of Chemical Weapons (OPCW)
-
-Requires protection of Schedule 1 chemicals in transit between signatory countries for research, medical, pharmaceutical, or protective purposes.
-Emblem would identify place, date, and volume of production, and the emblem can contain confidential data.
-
-## Press
-
-Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
-Digital assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
 
 ## United Nations Economic and Social Council (ECOSOC)
 
 UN Model Regulations {{UNMODELREGS}} includes "Recommendations on the Transport of Dangerous Goods."
 This includes labeling of items with a four digit "UN Number" that indicates the comounds contained within, such as chemicals, explosives, flammable liquids, etc.
 For example, items containing lithium-based batteries are labeled with 3480 or 3481 and accompanied by a specific "battery mark" emblem.
+
+
+## United Nations Food and Agriculture Organization (FAO)
+
+Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."
 
 ## United Nations Peacekeepers
 
@@ -404,20 +535,12 @@ They also provide a system for labeling origin of items and valuation of items, 
 
 Similar to the use case of the Red Cross, Red Crystal, and Red Crescent.
 
-## United Nations Food and Agriculture Organization (FAO)
-
-Among other things is responsible for the International Plant Protection Convention (IPPC) and International Standards for Phytosanitary Measures standards including ISPM 15 that requires wood packaging materials (pallets, crates, dunnages) to be debarked, heat-treated or fumigated with methyl-bromide, and stamped or branded with a compliance mark known as a "wheat stamp."
 
 ## World Intellectual Property Organization (WIPO)
 
 WIPO administers 26+ treaties with different protections for different things.
 Brands that are protected under international law (e.g., Madrid Protocol) can mark their shipments with an emblem allowing customs agents to positively identify legitimate products.
 
-## International Civil Aviation Organization (ICAO)
-
-Requires protection of civil aviation flights and the ability to assert that they are not dual-use (i.e., not carrying military cargo).
-Digital emblem would carry a geographic description of the flight plan, its current location, and an indicator of its identity (i.e., tail number).
-Potential need for the emblem to reference a limited or partially redacted flight manifest.
 
 # Security Considerations
 
@@ -435,3 +558,6 @@ This document has no IANA actions.
 
 # Acknowledgments
 {:numbered="false"}
+
+Brian Haberman and Bill Woodcock created an early version of a use cases and requirements document, from which this draws ideas.
+We also thank Eric Vynke, Suresh Krishan, Antonio DeSimone, Nick Doty, Tommy Jensen, and Michael Christie for their valuable input.
