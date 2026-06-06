@@ -291,6 +291,7 @@ The use case for diplomatic pouches involves the following entities:
 - Point of Entry Country/Customs Agent(s): Validator
 - Origin Country or Accredited Organization: Issuer and Authorizing entity
 - Diplomat: Agent of Country or Accredited Organization
+- Pouch: Asset
 
 As noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help demonstrate, for the benefit of the customs service, that a customs agent(s) in a Point of Entry country validated the diplomatic pouch.
 To that end, the Proof of Presence record of processing a diplomatic pouch's digital emblem could include the following information.
