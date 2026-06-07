@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-02T02:45:24.328236+00:00",
+  "timestamp": "2026-06-07T02:42:34.452407+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -1718,24 +1718,26 @@
       "id": "PR_kwDOPTNEDc7GT9iG",
       "title": "expand upon proof of presence",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/25",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Add text to flesh out the definition(s) of proof of presence (currently \u00a74.5 of the draft). \r\nAdditional details and considerations are still needed. I will list these in subsequent comments and follow-up issues as necessary. ",
       "createdAt": "2026-02-25T18:33:37Z",
-      "updatedAt": "2026-05-29T22:48:54Z",
+      "updatedAt": "2026-06-06T18:42:06Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
-      "baseRefOid": "2d284f01d1127b6f1843200485c06df747f8509e",
+      "baseRefOid": "ef45854e888ecca952765bec4ac25b285f513717",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "presence_forensics",
-      "headRefOid": "83d18e657881f1592df61f01117fa792c8f3c44a",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "ec7dad536a217a7d2f1e6855fe189d898842061e",
+      "closedAt": "2026-06-06T18:42:05Z",
+      "mergedAt": "2026-06-06T18:42:05Z",
+      "mergedBy": "rahelFain",
+      "mergeCommit": {
+        "oid": "fa5a8bcc55568525ab89a04a2b1d402d35600e24"
+      },
       "comments": [
         {
           "author": "rahelFain",
@@ -1980,6 +1982,102 @@
               "body": "I was trying to get at the fact that there was still value in establishing that the a digital emblem for the pouch existed and that the validation occurred even if no further protections or checks are used. This option may be chosen in cases where there was less concern about the risk posed by inspection or where further chain of custody and/or anti-tampering mechanisms were not feasible (e.g. possibly due to the size/weight of the contents, a lack of infrastructure or resources to support them, etc.). \n\nWould this be addressed by adjusting the phrasing to say the following?:\n`That is to say that they validated the pouch's digital emblem and can reasonably be assumed to have done little to nothing else.` ",
               "createdAt": "2026-05-29T17:01:14Z",
               "updatedAt": "2026-05-29T17:01:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCHp9OQ",
+          "commit": {
+            "abbreviatedOid": "83d18e6"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-05T14:47:49Z",
+          "updatedAt": "2026-06-06T16:50:37Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\r\nSince emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically.\r\nThis would be particularly relevant in cases where emblems can be applied and removed dynamically.\r\nThese protections are defined in three different levels, listed from weakest to strongest.\r\n```",
+              "createdAt": "2026-06-05T14:47:49Z",
+              "updatedAt": "2026-06-06T16:52:35Z"
+            },
+            {
+              "originalPosition": 28,
+              "body": "@rahelFain do you want to explain that Level 3 would only possible for the querying party (how could I tell if you verified a claim or not?), whereas Levels 1 and 2 could be proven by either party depending on the design.\nThe querying party showing it accessed the emblem (or that definitively no emblem was present) might be a different requirement than the queried party showing that querying party asked for and received an emblem.\n\n```suggestion\nLevel 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.\n```",
+              "createdAt": "2026-06-05T14:52:21Z",
+              "updatedAt": "2026-06-06T16:50:37Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\nDigital emblems can protect diplomatic pouch shipments, diplomatic couriers, and diplomatic envoys.\nAll three of these are protected\n```",
+              "createdAt": "2026-06-05T14:53:03Z",
+              "updatedAt": "2026-06-06T16:50:37Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "```suggestion\ninstantaneously, at a distance, and without interrupting the subject, address both of these problems, while streamlining\n```",
+              "createdAt": "2026-06-05T14:53:47Z",
+              "updatedAt": "2026-06-06T16:50:37Z"
+            },
+            {
+              "originalPosition": 56,
+              "body": "\nWhat about the pouch itself?",
+              "createdAt": "2026-06-05T14:56:15Z",
+              "updatedAt": "2026-06-06T16:50:37Z"
+            },
+            {
+              "originalPosition": 61,
+              "body": "```suggestion\nAs noted in Section {{proof-pres}}, a Level 3 Proof of presence record could help demonstrate, for the benefit of the customs service, that a customs agent(s) in a Point of Entry country validated the diplomatic pouch.\nTo that end, the Proof of Presence record of processing a diplomatic pouch's digital emblem could include the following information.\n```",
+              "createdAt": "2026-06-05T15:00:55Z",
+              "updatedAt": "2026-06-06T16:50:37Z"
+            },
+            {
+              "originalPosition": 75,
+              "body": "```suggestion\nAs indicated in Section {{proof-pres}}, Level 3 Proof of Presence alone does not provide proof that no tampering with the diplomatic pouch or inspection of its contents has occurred.\nThis is because a proof of presence neither provides a chain of custody nor any mechanisms to detect tampering should it occur.\nFor this reason, Level 3 validation may be used along side or as part of an attested chain of custody and/or accompanied by the use of physical mechanisms for tamper-proofing a physical asset.\nAny such chain of custody specification or anti-tampering mechanism is out of the scope of the DIEM WG.\n```",
+              "createdAt": "2026-06-05T15:03:52Z",
+              "updatedAt": "2026-06-06T16:59:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCNjJEw",
+          "commit": {
+            "abbreviatedOid": "83d18e6"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-06T16:55:21Z",
+          "updatedAt": "2026-06-06T16:55:21Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "Just a small nit that Level 2 could be available for the querying party without contradicting any Undetectable Validation requirement, but having queried party Level 2 would contradict any Undetectable Validation requirement.",
+              "createdAt": "2026-06-06T16:55:21Z",
+              "updatedAt": "2026-06-06T16:55:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCNmurw",
+          "commit": {
+            "abbreviatedOid": "a9067f8"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-06T17:18:00Z",
+          "updatedAt": "2026-06-06T17:18:00Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "I'd be fine with adding a footnote to that effect, if it seems necessary.",
+              "createdAt": "2026-06-06T17:18:00Z",
+              "updatedAt": "2026-06-06T17:18:00Z"
             }
           ]
         }
@@ -2572,24 +2670,26 @@
       "id": "PR_kwDOPTNEDc7VW28y",
       "title": "More accurate phrasing of emblems under IHL",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/31",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Samit asked me to integrate some changes to the use case of now *protective emblems* under IHL. Previously, we just said \"emblems under IHL.\" These changes intend to clarify which emblems are being referred to in that use case.",
       "createdAt": "2026-04-24T13:57:34Z",
-      "updatedAt": "2026-05-29T23:01:50Z",
+      "updatedAt": "2026-06-05T14:45:27Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "ihl-emblems-title",
       "headRefOid": "0ab2d5cddb03a703d52ba772876e06ef3a40c828",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-06-05T14:45:26Z",
+      "mergedAt": "2026-06-05T14:45:26Z",
+      "mergedBy": "rohanmahy",
+      "mergeCommit": {
+        "oid": "eb71d002d3d12386f26e709fd6225501852f76fc"
+      },
       "comments": [
         {
           "author": "felixlinker",
@@ -2876,24 +2976,26 @@
       "id": "PR_kwDOPTNEDc7VpGTE",
       "title": "Response requirements",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/33",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Background: During IETF 125 it was pointed out that many of the digital emblem use cases seemed to assume that all queries for the digital emblem would always get the same response - which was not necessarily consistent with how DNS works. Further discussion about this highlighted that providing a proof of presence not only assumed that all queries would get the same response, but required that this be the case.\r\n This PR seeks to address that by requiring digital emblem use cases to specifically determine whether they require emblems to support assured response and/or consistent content in all responses and to detail the rationale for their determination. ",
       "createdAt": "2026-04-25T20:46:56Z",
-      "updatedAt": "2026-06-01T15:53:54Z",
+      "updatedAt": "2026-06-06T16:50:12Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "276763a3158a3d6476d8e40002c4f021bafc21cb",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "response-requirements",
-      "headRefOid": "aafc11f2630b1ae0e287df30012248f1c4db0394",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "5486f44556978f675f62eb1fc39c297f58a4dd21",
+      "closedAt": "2026-06-06T16:50:11Z",
+      "mergedAt": "2026-06-06T16:50:11Z",
+      "mergedBy": "rohanmahy",
+      "mergeCommit": {
+        "oid": "ef45854e888ecca952765bec4ac25b285f513717"
+      },
       "comments": [],
       "reviews": [
         {
@@ -3067,6 +3169,46 @@
               "updatedAt": "2026-05-29T22:47:44Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCHzNsg",
+          "commit": {
+            "abbreviatedOid": "aafc11f"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-05T15:10:16Z",
+          "updatedAt": "2026-06-05T15:10:16Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "This is super unclear, and it actually has nothing to do with requirements, which are clearly stated above. This sentence is a premature statement about the architecture. I'm going to just delete it. \n\n```suggestion\n```",
+              "createdAt": "2026-06-05T15:10:16Z",
+              "updatedAt": "2026-06-05T15:10:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCH0eRA",
+          "commit": {
+            "abbreviatedOid": "d2b873c"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-05T15:13:29Z",
+          "updatedAt": "2026-06-05T15:13:29Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\nNote that as of this writing, neither the baseline definition for the minimum set of attributes that constitute a unique Digital\nEmblem, nor the attributes needed to attain Consistent Content have been defined.\n```\n\noptional suggestion. @rahelFain Please either apply or reject; then merge this PR",
+              "createdAt": "2026-06-05T15:13:29Z",
+              "updatedAt": "2026-06-05T15:14:51Z"
+            }
+          ]
         }
       ]
     },
@@ -3075,24 +3217,26 @@
       "id": "PR_kwDOPTNEDc7WERw4",
       "title": "Emblems requirements are distinct; Future proofing Section 3.1.1",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/34",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This proposed text from Sarah (as a chair) intends to clarify that each emblem type has distinct freedom with respect to other emblem types, and also to future proof the work of the DIEM WG.  \r\n@sarahjennings-ietf ",
       "createdAt": "2026-04-27T18:03:26Z",
-      "updatedAt": "2026-05-29T23:03:52Z",
+      "updatedAt": "2026-06-06T01:32:29Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "add-in-sect3.1",
       "headRefOid": "d9615f5d77b3440a2c6a4724ec1470225c2095e6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-06-06T01:32:29Z",
+      "mergedAt": "2026-06-06T01:32:29Z",
+      "mergedBy": "rohanmahy",
+      "mergeCommit": {
+        "oid": "5387c9817b795c9712f73d5602c0e34c48271bf3"
+      },
       "comments": [],
       "reviews": [
         {
@@ -3154,6 +3298,66 @@
               "updatedAt": "2026-05-29T23:03:52Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCH1i-A",
+          "commit": {
+            "abbreviatedOid": "d9615f5"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-05T15:15:56Z",
+          "updatedAt": "2026-06-05T15:15:57Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "I think there's a tension between the words \"use case\" and \"emblem.\"\n\nIn the first sentence, \"use case\" and \"emblem\" seem to refer to the same thing. Example: Use case is emblems of type X, the use case says emblems of type X can only be applied to Y. Makes sense.\n\nIn the second sentence, \"future use cases\" seem to be different to \"previously defined use cases,\" such as emblems of type X in my previous example. Say, a feature use case pops up of emblems of type Z. This use case now ought to \"use that emblem (of type X) under a[n] [...] expanded domain of application.\" Doesn't make much sense to me - why would emblem of type Z use emblems of type X? Or are you referring to standards in the second sentence and not logical types of emblems?",
+              "createdAt": "2026-06-05T15:15:56Z",
+              "updatedAt": "2026-06-05T15:15:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCIrfqQ",
+          "commit": {
+            "abbreviatedOid": "d9615f5"
+          },
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-05T17:31:23Z",
+          "updatedAt": "2026-06-05T17:31:24Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "> @felixlinker is this better?\r\n\r\nPossible wording:\r\n\r\n\u201cThe requirements for individual digital emblem types are independent. Requirements defined for one emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem type.\r\n\r\nA use case describes a context of use. An emblem type identifies the kind of emblem, distinctive sign, or marking being represented. Where a use case specifies a limited domain of application for a particular emblem type, such limitation SHOULD be understood as reflecting the constraints of that use case only.\r\n\r\nIt SHOULD NOT be interpreted as preventing future use cases from defining a different or expanded domain of application for the same emblem type, provided that the emblem type\u2019s core semantics remain intact.\u201d",
+              "createdAt": "2026-06-05T17:31:24Z",
+              "updatedAt": "2026-06-05T17:31:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCLLG3g",
+          "commit": {
+            "abbreviatedOid": "d9615f5"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-06T01:32:08Z",
+          "updatedAt": "2026-06-06T01:32:08Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "retracting change",
+              "createdAt": "2026-06-06T01:32:08Z",
+              "updatedAt": "2026-06-06T01:32:08Z"
+            }
+          ]
         }
       ]
     },
@@ -3162,24 +3366,26 @@
       "id": "PR_kwDOPTNEDc7WT2nR",
       "title": "Add Other IHL use cases section",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/35",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This covers:\r\n-  humanitarian medical NGOs that have protection but that traditionally do not use Red C* physical emblems.\r\n- marking civilian infrastructure which has qualified protection under IHL.",
       "createdAt": "2026-04-28T11:22:55Z",
-      "updatedAt": "2026-05-16T22:42:25Z",
+      "updatedAt": "2026-06-05T14:39:54Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "4785e31269977e0c192433672f84771c58e324c7",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "customary-ihl",
       "headRefOid": "a419b4680295603dcc36d7d6658ab0a33ddd16c8",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-06-05T14:39:54Z",
+      "mergedAt": "2026-06-05T14:39:54Z",
+      "mergedBy": "rohanmahy",
+      "mergeCommit": {
+        "oid": "ce02d93712aad75e5078e237cfa4508418e68d1f"
+      },
       "comments": [
         {
           "author": "wnunezc",
@@ -3190,6 +3396,54 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "number": 37,
+      "id": "PR_kwDOPTNEDc7jNVOL",
+      "title": "Clarify validation and downstream interpretation boundary",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/37",
+      "state": "OPEN",
+      "author": "wnunezc",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR adds a short non-normative clarification about the boundary between DIEM technical validation and downstream interpretation.\n\nRecent mailing-list and GitHub discussions have highlighted the need to distinguish between:\n\n- discovering digital emblem data associated with an asset;\n- technically validating returned data according to DIEM mechanisms; and\n- interpreting downstream legal, operational, or policy consequences.\n\nThe proposed text does not change any protocol requirement. It only clarifies that a successful DIEM validation result is a technical result and does not, by itself, determine downstream legal or operational consequences.\n\nThis is intended to help keep the draft focused on discovery and technical validation, while leaving downstream interpretation to the relevant user community, applicable framework, competent authorities, and operational processes.",
+      "createdAt": "2026-06-05T18:07:53Z",
+      "updatedAt": "2026-06-06T21:19:15Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "fa5a8bcc55568525ab89a04a2b1d402d35600e24",
+      "headRepository": "wnunezc/diem-requirements",
+      "headRefName": "clarify-validation-boundary",
+      "headRefOid": "03d60e0eabd4c4a4ab4e046d3345d8e392946ec8",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "> General comment. Please have maximum one sentence per line.\r\n> \r\n> Line 233, This seems like it is saying nothing actionable. There is no definition of \"technically valid\". The second sentence isn't even true. If the emblem is valid it still means that the issuer of the emblem asserts the specific information in the emblem. Not that it is \"true\" or \"correct\".\r\n> \r\n> Line 235 does not seems related to its section heading, and in any case seems a more relevant comment for the architecture.\r\n\r\nThank you, Rohan.\r\n\r\nI revised the PR to remove the broad downstream-interpretation text and moved the clarification to the Validation section.\r\n\r\nI also removed \u201ctechnically valid\u201d and tried to express the narrower point: validation establishes only the properties defined by the relevant digital emblem type, and does not by itself establish that all asserted emblem data is factually true or correct unless that property is explicitly required.\r\n\r\nPlease let me know if this is closer to what you had in mind.",
+          "createdAt": "2026-06-06T04:25:50Z",
+          "updatedAt": "2026-06-06T04:25:50Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCLQPzA",
+          "commit": {
+            "abbreviatedOid": "ce37772"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "General comment. Please have maximum one sentence per line.\n\nLine 233, This seems like it is saying nothing actionable. There is no definition of \"technically valid\". The second sentence isn't even true. If the emblem is valid it still means that the issuer of the emblem asserts the specific information in the emblem. Not that it is \"true\" or \"correct\".\n\nLine 235 does not seems related to its section heading, and in any case seems a more relevant comment for the architecture.",
+          "createdAt": "2026-06-06T01:49:06Z",
+          "updatedAt": "2026-06-06T01:49:06Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
