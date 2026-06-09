@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-07T02:42:34.452407+00:00",
+  "timestamp": "2026-06-09T02:13:19.840042+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -3402,21 +3402,21 @@
       "id": "PR_kwDOPTNEDc7jNVOL",
       "title": "Clarify validation and downstream interpretation boundary",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/37",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "wnunezc",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "This PR adds a short non-normative clarification about the boundary between DIEM technical validation and downstream interpretation.\n\nRecent mailing-list and GitHub discussions have highlighted the need to distinguish between:\n\n- discovering digital emblem data associated with an asset;\n- technically validating returned data according to DIEM mechanisms; and\n- interpreting downstream legal, operational, or policy consequences.\n\nThe proposed text does not change any protocol requirement. It only clarifies that a successful DIEM validation result is a technical result and does not, by itself, determine downstream legal or operational consequences.\n\nThis is intended to help keep the draft focused on discovery and technical validation, while leaving downstream interpretation to the relevant user community, applicable framework, competent authorities, and operational processes.",
       "createdAt": "2026-06-05T18:07:53Z",
-      "updatedAt": "2026-06-06T21:19:15Z",
+      "updatedAt": "2026-06-08T02:55:04Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "fa5a8bcc55568525ab89a04a2b1d402d35600e24",
       "headRepository": "wnunezc/diem-requirements",
       "headRefName": "clarify-validation-boundary",
       "headRefOid": "03d60e0eabd4c4a4ab4e046d3345d8e392946ec8",
-      "closedAt": null,
+      "closedAt": "2026-06-07T16:48:06Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -3427,6 +3427,34 @@
           "body": "> General comment. Please have maximum one sentence per line.\r\n> \r\n> Line 233, This seems like it is saying nothing actionable. There is no definition of \"technically valid\". The second sentence isn't even true. If the emblem is valid it still means that the issuer of the emblem asserts the specific information in the emblem. Not that it is \"true\" or \"correct\".\r\n> \r\n> Line 235 does not seems related to its section heading, and in any case seems a more relevant comment for the architecture.\r\n\r\nThank you, Rohan.\r\n\r\nI revised the PR to remove the broad downstream-interpretation text and moved the clarification to the Validation section.\r\n\r\nI also removed \u201ctechnically valid\u201d and tried to express the narrower point: validation establishes only the properties defined by the relevant digital emblem type, and does not by itself establish that all asserted emblem data is factually true or correct unless that property is explicitly required.\r\n\r\nPlease let me know if this is closer to what you had in mind.",
           "createdAt": "2026-06-06T04:25:50Z",
           "updatedAt": "2026-06-06T04:25:50Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "\r\n\r\n@rohanmahy ok, Can you tell me where I can find the new document?",
+          "createdAt": "2026-06-07T16:48:06Z",
+          "updatedAt": "2026-06-07T16:48:06Z"
+        },
+        {
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The new draft can be found at\r\n[https://datatracker.ietf.org/doc/draft-ietf-diem-requirements/](https://datatracker.ietf.org/doc/draft-ietf-diem-requirements/ \r\n)\r\n",
+          "createdAt": "2026-06-07T22:41:52Z",
+          "updatedAt": "2026-06-08T01:11:38Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Of course. Apparently the posting was delayed. It is now available here:\r\nhttps://www.ietf.org/archive/id/draft-ietf-diem-requirements-02.html\r\n\r\nOn Sun, 7 Jun 2026, 18:48 Walter Nu\u00f1ez, ***@***.***> wrote:\r\n\r\n> *wnunezc* left a comment (ietf-wg-diem/diem-requirements#37)\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/37#issuecomment-4643306210>\r\n>\r\n> @rohanmahy <https://github.com/rohanmahy> ok, Can you tell me where I can\r\n> find the new document?\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-diem/diem-requirements/pull/37?email_source=notifications&email_token=AADSQPWUXKPTZLJH6ZZH7W346WMFZA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTINRUGMZTANRSGEYKM4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJLDGN5XXIZLSL5RWY2LDNM#issuecomment-4643306210>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AADSQPX3HOONZ44LF336D5L46WMFZAVCNFSM6AAAAACZ4GQTO2VHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHM2DMNBTGMYDMMRRGA>\r\n> .\r\n> Triage notifications, keep track of coding agent tasks and review pull\r\n> requests on the go with GitHub Mobile for iOS\r\n> <https://github.com/notifications/mobile/ios/AADSQPTUROBJD2SUGSRCEPT46WMFZA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTINRUGMZTANRSGEYKM4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJKTGN5XXIZLSL5UW64Y>\r\n> and Android\r\n> <https://github.com/notifications/mobile/android/AADSQPQHYEHFWXDJGUAKOZD46WMFZA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTINRUGMZTANRSGEYKM4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJLTGN5XXIZLSL5QW4ZDSN5UWI>.\r\n> Download it today!\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2026-06-08T02:48:56Z",
+          "updatedAt": "2026-06-08T02:48:56Z"
+        },
+        {
+          "author": "wnunezc",
+          "authorAssociation": "NONE",
+          "body": "@rahelFain @rohanmahy \r\n\r\nThank you, Rohan and Rahel.\r\n\r\nI understand the guidance. I have received the new document and I am reading it carefully from top to bottom before making any further comments, issues, or PRs.\r\n\r\nPlease excuse my enthusiasm. As a civilian and Red Cross volunteer contributing as an individual, the Digital Emblem topic is genuinely important to me.\r\n\r\nThanks again for your patience and guidance.",
+          "createdAt": "2026-06-08T02:55:04Z",
+          "updatedAt": "2026-06-08T02:55:04Z"
         }
       ],
       "reviews": [
@@ -3442,6 +3470,32 @@
           "createdAt": "2026-06-06T01:49:06Z",
           "updatedAt": "2026-06-06T01:49:06Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCOkVfw",
+          "commit": {
+            "abbreviatedOid": "03d60e0"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Walter, the authors of the requirements document just submitted a new document. Please give it a full top-to-bottom read before you make any more comments or submit any more Issues or PRs. If you have concerns about the contents of the document after reading it thoroughly, please reach out to Sarah and I. We can have a short conversation to figure out how best to address your concerns.\n\nI suggest we close this PR, and revisit the topic \"emblems don't provide special treatment (ex: protection), they signal it\" after folks have had time to review the new version of the document.\n\nThanks,\n-rohan\n",
+          "createdAt": "2026-06-07T05:19:22Z",
+          "updatedAt": "2026-06-07T06:09:44Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "The properties we are referring to are things like informational elements that appear in an emblem, not security properties.",
+              "createdAt": "2026-06-07T05:19:22Z",
+              "updatedAt": "2026-06-07T06:09:44Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "Validation NEVER establishes if something is factually true. It checks certain steps in a protocol and/or cryptographic algorithm.",
+              "createdAt": "2026-06-07T05:22:47Z",
+              "updatedAt": "2026-06-07T06:09:44Z"
+            }
+          ]
         }
       ]
     }
