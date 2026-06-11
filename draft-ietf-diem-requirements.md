@@ -235,6 +235,12 @@ often by checking its details against a known standard or reference point.
 
 The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
+Each emblem type will make use of a subset of the requirements set out in this document.
+The requirements for individual digital emblem types are independent and the requirements for an individual emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.
+
+Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation SHOULD be understood as reflecting current use case constraints only.
+It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem's core semantics remain intact.
+
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
@@ -242,12 +248,6 @@ The DIEM architecture will allow validators to discover and validate digital emb
 Digital emblems MUST identify the marked asset and their kind of digital emblem.
 Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window.
 To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduce minimal overhead size except for fields required to fulfil other requirements in this document.
-
-Each emblem type will make use of a subset of the requirements set out in this document.
-The requirements for individual digital emblem types are independent and the requirements for an individual emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.
-
-Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation SHOULD be understood as reflecting current use case constraints only.
-It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem’s core semantics remain intact.
 
 As of this writing, the DIEM charter requires that digital emblems MUST explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).
 
@@ -300,7 +300,7 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 ### Validation {#validation}
 
-Digital emblems MAY require validation. The digital emblem architecture MUST allow individual standards to support verification of all the digital emblem's data or a defined subset without restriction. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
+Digital emblems MAY require validation. The digital emblem architecture MUST, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
 In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
@@ -352,7 +352,7 @@ Level 1 - presence and verifiability: Establishing that an actor or querying par
 time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
 time of an alleged violation.
 
-Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the
+Level 2 - presence, verifiability and access: Establishing the emblem's presence and verifiability and that the
 querying party accessed the digital emblem.
 
 Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.
