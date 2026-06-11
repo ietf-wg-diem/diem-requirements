@@ -239,7 +239,7 @@ Each emblem type will make use of a subset of the requirements set out in this d
 The requirements for individual digital emblem types are independent and the requirements for an individual emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.
 
 Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation SHOULD be understood as reflecting current use case constraints only.
-It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem’s core semantics remain intact.
+It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem's core semantics remain intact.
 
 ## Digital Emblem Requirements
 
@@ -352,7 +352,7 @@ Level 1 - presence and verifiability: Establishing that an actor or querying par
 time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
 time of an alleged violation.
 
-Level 2 - presence, verifiability and access: Establishing the emblem’s presence and verifiability and that the
+Level 2 - presence, verifiability and access: Establishing the emblem's presence and verifiability and that the
 querying party accessed the digital emblem.
 
 Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.
