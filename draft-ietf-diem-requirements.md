@@ -282,9 +282,12 @@ newly defined emblem types will be outlined in the architecture document.
 
 ### Removable {#removable}
 
-Digital emblems MAY require to be removable in that checking for the presence of an asset's emblems results in no emblem.
-Note that checking for emblem presence is independent of its validation.
-That is, emblems do not count as removed when they become invalid.
+Digital emblems MAY require to be removable.
+"Removing" an emblem means that one cannot determine whether an emblem ever was applied to a particular asset.
+This means, in particular, emblems do not count as removed when they become invalid, e.g., due to expiry.
+
+Note that removability is a security requirement.
+Therefore, drafts that address removability MUST specify a threat model for removability that specifies when and under what conditions it is acceptable that someone can learn after the fact that an emblem was applied.
 
 ### Undetectable Validation {#undet-validation}
 
