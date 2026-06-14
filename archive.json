@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-09T02:13:19.840042+00:00",
+  "timestamp": "2026-06-14T02:47:05.613216+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -3494,6 +3494,53 @@
               "body": "Validation NEVER establishes if something is factually true. It checks certain steps in a protocol and/or cryptographic algorithm.",
               "createdAt": "2026-06-07T05:22:47Z",
               "updatedAt": "2026-06-07T06:09:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "id": "PR_kwDOPTNEDc7leaZd",
+      "title": "Editing",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/38",
+      "state": "OPEN",
+      "author": "felixlinker",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Hopefully, non-controversial changes. I think the text on use cases being independent is better placed in the intro to the requirements section rather than being placed in the section for a particular requirement.\r\n\r\nI explain one, less controversial text in-line.",
+      "createdAt": "2026-06-11T19:43:43Z",
+      "updatedAt": "2026-06-11T19:45:55Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "fa5a8bcc55568525ab89a04a2b1d402d35600e24",
+      "headRepository": "ietf-wg-diem/diem-requirements",
+      "headRefName": "editing",
+      "headRefOid": "824cbffc14224ba2fb0572f826fac0c988c982d6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABCwhqKA",
+          "commit": {
+            "abbreviatedOid": "824cbff"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-06-11T19:45:55Z",
+          "updatedAt": "2026-06-11T19:45:55Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "The \"without restriction\" bothered me in the original PR, and upon re-reading, it bothered me again. @tojens-ietf and I had discussed this change in the orignal PR already here: https://github.com/ietf-wg-diem/diem-requirements/pull/29#discussion_r2937810427\n\nRe-reading his explanation, I think I understood the issue for my confusion. I understood \"without restriction\" as applying to \"a defined subset\" whereas I believe it is Tommy's intention to have it apply to the entire sentence. Following that understanding, I moved the text more to the front.",
+              "createdAt": "2026-06-11T19:45:55Z",
+              "updatedAt": "2026-06-11T19:45:55Z"
             }
           ]
         }
