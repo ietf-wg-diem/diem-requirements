@@ -235,11 +235,12 @@ often by checking its details against a known standard or reference point.
 
 The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
-Each emblem type will make use of a subset of the requirements set out in this document.
-The requirements for individual digital emblem types are independent and the requirements for an individual emblem type MUST NOT constrain, override, or otherwise affect the requirements, design, or use of any other digital emblem.
+The requirements for individual use cases are independent, and the requirements for one use case MUST NOT constrain, override, or otherwise affect the requirements of any other use case.
+Where a use case specifies a limited domain of application for a particular emblem (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism), such a limitation SHOULD be understood as reflecting current use case constraints only.
 
-Where a use case specifies a limited domain of application (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism) for a particular emblem, such a limitation SHOULD be understood as reflecting current use case constraints only.
-It SHOULD NOT be interpreted as precluding future use cases from applying that emblem under a different or expanded domain of application, provided that the emblem's core semantics remain intact.
+Working group drafts will likely address a subset of the requirements set out in this document.
+Whenever working group drafts address one use case's requirement, this must not be interpreted as that draft inheriting all limitations of the respective use case.
+Future or different use cases should be able to reuse any draft or parts thereof, in particular, when the use case has a different or expanded domain of application.
 
 ## Digital Emblem Requirements
 
