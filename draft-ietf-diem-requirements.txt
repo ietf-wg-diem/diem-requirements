@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 8 December 2026                                                
+Expires: 29 December 2026                                               
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                             6 June 2026
+                                                            27 June 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 December 2026.
+   This Internet-Draft will expire on 29 December 2026.
 
 Copyright Notice
 
@@ -208,17 +208,6 @@ Table of Contents
    and their format, on their discovery, on their validation, and other
    requirements.
 
-3.1.  Digital Emblem Requirements
-
-3.1.1.  Digital Emblem Format
-
-   Digital emblems MUST identify the marked asset and their kind of
-   digital emblem.  Beyond that, digital emblems MAY include other data,
-   for example, an issuer or a validity window.  To accommodate use
-   cases requiring extensible data, a digital emblem architecture SHOULD
-   introduce minimal overhead size except for fields required to fulfil
-   other requirements in this document.
-
    Each emblem type will make use of a subset of the requirements set
    out in this document.  The requirements for individual digital emblem
    types are independent and the requirements for an individual emblem
@@ -231,8 +220,19 @@ Table of Contents
    such a limitation SHOULD be understood as reflecting current use case
    constraints only.  It SHOULD NOT be interpreted as precluding future
    use cases from applying that emblem under a different or expanded
-   domain of application, provided that the emblem’s core semantics
+   domain of application, provided that the emblem's core semantics
    remain intact.
+
+3.1.  Digital Emblem Requirements
+
+3.1.1.  Digital Emblem Format
+
+   Digital emblems MUST identify the marked asset and their kind of
+   digital emblem.  Beyond that, digital emblems MAY include other data,
+   for example, an issuer or a validity window.  To accommodate use
+   cases requiring extensible data, a digital emblem architecture SHOULD
+   introduce minimal overhead size except for fields required to fulfil
+   other requirements in this document.
 
    As of this writing, the DIEM charter requires that digital emblems
    MUST explicitly identify the marked asset by a Fully Qualified Domain
@@ -312,14 +312,14 @@ Table of Contents
 3.3.1.  Validation
 
    Digital emblems MAY require validation.  The digital emblem
-   architecture MUST allow individual standards to support verification
-   of all the digital emblem's data or a defined subset without
-   restriction.  This ensures digital emblems can support static or
-   dynamic data without having to account for the pain of frequent re-
-   signing of dynamic data if its validation is not required by a given
-   digital emblem type.  In particular, when validation is defined, it
-   MUST ensure that the emblem was issued for the respective asset.
-   Some use cases MAY use unverified digital emblems.
+   architecture MUST, without restriction, allow individual standards to
+   support verification of all the digital emblem's data or a defined
+   subset.  This ensures digital emblems can support static or dynamic
+   data without having to account for the pain of frequent re-signing of
+   dynamic data if its validation is not required by a given digital
+   emblem type.  In particular, when validation is defined, it MUST
+   ensure that the emblem was issued for the respective asset.  Some use
+   cases MAY use unverified digital emblems.
 
 3.3.2.  Authorization
 
@@ -401,7 +401,7 @@ Table of Contents
    violation.
 
    Level 2 - presence, verifiability and access: Establishing the
-   emblem’s presence and verifiability and that the querying party
+   emblem's presence and verifiability and that the querying party
    accessed the digital emblem.
 
    Level 3 - presence, verifiability access and verification:
