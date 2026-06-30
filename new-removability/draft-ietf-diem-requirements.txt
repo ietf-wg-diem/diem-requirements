@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 29 December 2026                                               
+Expires: 1 January 2027                                                 
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            27 June 2026
+                                                            30 June 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 December 2026.
+   This Internet-Draft will expire on 1 January 2027.
 
 Copyright Notice
 
@@ -285,10 +285,11 @@ Table of Contents
 
 3.2.3.  Removable
 
-   Digital emblems MAY require to be removable.  "Removing" an emblem
-   means that one cannot determine whether an emblem ever was applied to
-   a particular asset.  This means, in particular, emblems do not count
-   as removed when they become invalid, e.g., due to expiry.
+   Some use cases require that digital emblems are removable.
+   "Removing" an emblem means that one cannot determine whether an
+   emblem ever was applied to a particular asset.  This means, in
+   particular, emblems do not count as removed when they become invalid,
+   e.g., due to expiry.
 
    Note that removability is a security requirement.  Therefore, drafts
    that address removability MUST specify a threat model for
@@ -298,9 +299,9 @@ Table of Contents
 
 3.2.4.  Undetectable Validation
 
-   A digital emblem MAY require that its discovery and validation is
-   undetectable.  This requirement is motivated by emblems that mark its
-   asset as protected and ask validators to not disrupt the marked
+   Some use cases require that digital emblem discovery and validation
+   is undetectable.  This requirement is motivated by emblems that mark
+   its asset as protected and ask validators to not disrupt the marked
    asset.  If emblem discovery were detectable, malicious parties could
    misuse the digital emblem as an intrusion detection system.
 
@@ -317,28 +318,29 @@ Table of Contents
 
 3.3.1.  Validation
 
-   Digital emblems MAY require validation.  The digital emblem
-   architecture MUST, without restriction, allow individual standards to
-   support verification of all the digital emblem's data or a defined
-   subset.  This ensures digital emblems can support static or dynamic
-   data without having to account for the pain of frequent re-signing of
-   dynamic data if its validation is not required by a given digital
-   emblem type.  In particular, when validation is defined, it MUST
-   ensure that the emblem was issued for the respective asset.  Some use
-   cases MAY use unverified digital emblems.
+   Some use cases require that digital emblems can be validated.  The
+   digital emblem architecture MUST, without restriction, allow
+   individual standards to support verification of all the digital
+   emblem's data or a defined subset.  This ensures digital emblems can
+   support static or dynamic data without having to account for the pain
+   of frequent re-signing of dynamic data if its validation is not
+   required by a given digital emblem type.  In particular, when
+   validation is defined, it MUST ensure that the emblem was issued for
+   the respective asset.  Some use cases MAY use unverified digital
+   emblems.
 
 3.3.2.  Authorization
 
-   Digital emblems MAY require authorization by third-parties.  When
-   they do, they MUST define a trust model that describes how validators
-   can discover authorities and how the system selects authorities.  The
-   generalized digital emblem architecture MUST NOT assume that Internet
-   access is available or required so that individual digital emblems
-   standards can choose to take a dependency on Internet access or not.
-   For example, a given digital emblem MAY use PKI or the DNS as a root
-   of trust if they want, but the generalized digital emblem
-   architecture cannot mandate this or other options and MUST make this
-   a point of extensibility.
+   For some use cases, use of a digital emblem requires authorization by
+   third-parties.  When they do, they MUST define a trust model that
+   describes how validators can discover authorities and how the system
+   selects authorities.  The generalized digital emblem architecture
+   MUST NOT assume that Internet access is available or required so that
+   individual digital emblems standards can choose to take a dependency
+   on Internet access or not.  For example, a given digital emblem MAY
+   use PKI or the DNS as a root of trust if they want, but the
+   generalized digital emblem architecture cannot mandate this or other
+   options and MUST make this a point of extensibility.
 
    Any authorization mechanism MUST account for the possibility of
    compromise of cryptographic key material, for example, by specifying
