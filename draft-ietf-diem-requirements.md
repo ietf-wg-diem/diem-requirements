@@ -545,10 +545,14 @@ Brands that are protected under international law (e.g., Madrid Protocol) can ma
 # Security Considerations
 
 Because this is a requirements document, it does not directly have security considerations.
-However, multiple of the defined requirements include security properties.
-The architecture and standards developed need to detail the security properties of validation and authorization especially.
-Use cases have threat models and discussion of mitigating specific threats is needed.
-For example, in a use case where removability ({{removable}}) is needed, there are security considerations such as the potential for replay of removed emblems.
+However, multiple of the defined requirements have security implications, in particular, query response ({{response-reqs}}), removable ({{removable}}), undetectable validation ({{undet-validation}}), validation ({{validation}}), and authorization ({{authorization}}).
+The DIEM architecture and respective standards must define desired security guarantees and respective threat models.
+For example, in a use case where removability is needed, there are security considerations such as the potential for replay of removed emblems.
+Similarly, for emblems that require validation or authorization, specifications must address falsified presentation of emblems.
+
+Moreover, there may be use case specific risks.
+For example, one cannot assume that an adversary will respect a valid, protective emblem, and therefore such an emblem cannot actively stop or defend against an attack.
+Drafts that address specific use cases should consider such use-case specific risks and their consequences, for example, whether falsely denying as to never having seen an emblem may be a threat (see also {{proof-pres}}).
 
 # IANA Considerations
 
