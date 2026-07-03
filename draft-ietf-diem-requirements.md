@@ -544,7 +544,7 @@ Brands that are protected under international law (e.g., Madrid Protocol) can ma
 
 # Security Considerations
 
-However, multiple of the defined requirements have security implications, in particular, query response ({{response-reqs}}), removable ({{removable}}), undetectable validation ({{undet-validation}}), validation ({{validation}}), and authorization ({{authorization}}).
+Many of the requirements defined in this document have security implications: in particular, query response ({{response-reqs}}), removable ({{removable}}), undetectable validation ({{undet-validation}}), validation ({{validation}}), and authorization ({{authorization}}).
 The DIEM architecture and respective standards must define desired security guarantees and respective threat models.
 For example, in a use case where removability is needed, there are security considerations such as the potential for replay of removed emblems.
 Similarly, for emblems that require validation or authorization, specifications must address falsified presentation of emblems.
