@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 29 December 2026                                               
+Expires: 4 January 2027                                                 
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            27 June 2026
+                                                             3 July 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 December 2026.
+   This Internet-Draft will expire on 4 January 2027.
 
 Copyright Notice
 
@@ -257,12 +257,12 @@ Table of Contents
 
 3.2.2.  Query Response
 
-   Specifications for each use case MAY each determine how servers must
-   respond to queries for Digital Emblems of their specified type.
-   Specifically, they may determine the responsiveness and consistency
-   requirements for emblems of their given type and provide explanations
-   of how the chosen requirements apply and the rationales for their
-   selection.
+   Some use cases have certain responsiveness and consistency
+   requirements on server responses that answer queries for Digital
+   Emblems of their specified type.  When this is the case,
+   specifications must determine the precise responsiveness and
+   consistency requirements and provide explanations of how the chosen
+   requirements apply and the rationales for their selection.
 
    For responsiveness, an instance of a specific type of digital emblem
    can either be required to respond to all queries for it (Assured

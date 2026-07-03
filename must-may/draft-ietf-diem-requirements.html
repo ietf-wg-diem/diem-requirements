@@ -30,7 +30,7 @@ This document lists the requirements and use cases that an architecture for digi
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.1
+    wcwidth 0.8.2
 -->
 <link href="draft-ietf-diem-requirements.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1049,11 +1049,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">DIEM Use Cases and Requirements</td>
-<td class="right">June 2026</td>
+<td class="right">July 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fainchtein, et al.</td>
-<td class="center">Expires 29 December 2026</td>
+<td class="center">Expires 4 January 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg {
 <dd class="internet-draft">draft-ietf-diem-requirements-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-06-27" class="published">27 June 2026</time>
+<time datetime="2026-07-03" class="published">3 July 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-12-29">29 December 2026</time></dd>
+<dd class="expires"><time datetime="2027-01-04">4 January 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1138,7 +1138,7 @@ This document lists the requirements and use cases that an architecture for digi
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 29 December 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 4 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1465,8 +1465,8 @@ To accommodate use cases requiring extensible data, a digital emblem architectur
           <h4 id="name-query-response">
 <a href="#section-3.2.2" class="section-number selfRef">3.2.2. </a><a href="#name-query-response" class="section-name selfRef">Query Response</a>
           </h4>
-<p id="section-3.2.2-1">Specifications for each use case <span class="bcp14">MAY</span> each determine how servers must respond to queries for Digital Emblems of their specified type.
-Specifically, they may determine the responsiveness and consistency requirements for emblems of their given type and
+<p id="section-3.2.2-1">Some use cases have certain responsiveness and consistency requirements on server responses that answer queries for Digital Emblems of their specified type.
+When this is the case, specifications must determine the precise responsiveness and consistency requirements and
 provide explanations of how the chosen requirements apply and the rationales for their selection.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.2-2">For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).<a href="#section-3.2.2-2" class="pilcrow">¶</a></p>
 <p id="section-3.2.2-3">For consistency of response, specifications for a given type of Digital Emblem T must denote whether all queries for an
