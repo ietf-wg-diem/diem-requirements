@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 1 January 2027                                                 
+Expires: 4 January 2027                                                 
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            30 June 2026
+                                                             3 July 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 January 2027.
+   This Internet-Draft will expire on 4 January 2027.
 
 Copyright Notice
 
@@ -318,7 +318,7 @@ Table of Contents
 
 3.3.1.  Validation
 
-   Some use cases require that digital emblems can be validated.  The
+   Some use cases require that digital emblems be validated.  The
    digital emblem architecture MUST, without restriction, allow
    individual standards to support verification of all the digital
    emblem's data or a defined subset.  This ensures digital emblems can
