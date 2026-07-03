@@ -303,7 +303,7 @@ This threat model must detail which parties can detect emblem discovery and vali
 
 ### Validation {#validation}
 
-Some use cases require that digital emblems can be validated. The digital emblem architecture MUST, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
+Some use cases require that digital emblems be validated. The digital emblem architecture MUST, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
 In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
 
