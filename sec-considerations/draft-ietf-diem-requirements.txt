@@ -720,10 +720,10 @@ Table of Contents
    Moreover, there may be use case specific risks.  For example, one
    cannot assume that an adversary will respect a valid, protective
    emblem, and therefore such an emblem cannot actively stop or defend
-   against an attack.  Drafts that address specific use cases should
-   consider such use-case specific risks and their consequences, for
-   example, whether falsely denying as to never having seen an emblem
-   may be a threat (see also Section 4.5).
+   against an attack.  Specifications that address specific use cases
+   should consider such use-case-specific risks and their consequences.
+   For example, a party might claim that no emblem was presented, even
+   while an emblem was available (see also Section 4.5).
 
 7.  IANA Considerations
 
