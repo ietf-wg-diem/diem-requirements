@@ -264,8 +264,8 @@ Digital emblems MUST specify how validators can check for the presence of a digi
 
 ### Query Response {#response-reqs}
 
-Specifications for each use case MAY each determine how servers must respond to queries for Digital Emblems of their specified type.
-Specifically, they may determine the responsiveness and consistency requirements for emblems of their given type and
+Some use cases have certain responsiveness and consistency requirements on server responses that answer queries for Digital Emblems of their specified type.
+When this is the case, specifications must determine the precise responsiveness and consistency requirements and
 provide explanations of how the chosen requirements apply and the rationales for their selection.
 
 For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).
