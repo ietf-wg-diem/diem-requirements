@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 2 January 2027                                                 
+Expires: 4 January 2027                                                 
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                             1 July 2026
+                                                             3 July 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 January 2027.
+   This Internet-Draft will expire on 4 January 2027.
 
 Copyright Notice
 
@@ -706,18 +706,16 @@ Table of Contents
 
 6.  Security Considerations
 
-   Because this is a requirements document, it does not directly have
-   security considerations.  However, multiple of the defined
-   requirements have security implications, in particular, query
-   response (Section 3.2.2), removable (Section 3.2.3), undetectable
-   validation (Section 3.2.4), validation (Section 3.3.1), and
-   authorization (Section 3.3.2).  The DIEM architecture and respective
-   standards must define desired security guarantees and respective
-   threat models.  For example, in a use case where removability is
-   needed, there are security considerations such as the potential for
-   replay of removed emblems.  Similarly, for emblems that require
-   validation or authorization, specifications must address falsified
-   presentation of emblems.
+   Many of the requirements defined in this document have security
+   implications: in particular, query response (Section 3.2.2),
+   removable (Section 3.2.3), undetectable validation (Section 3.2.4),
+   validation (Section 3.3.1), and authorization (Section 3.3.2).  The
+   DIEM architecture and respective standards must define desired
+   security guarantees and respective threat models.  For example, in a
+   use case where removability is needed, there are security
+   considerations such as the potential for replay of removed emblems.
+   Similarly, for emblems that require validation or authorization,
+   specifications must address falsified presentation of emblems.
 
    Moreover, there may be use case specific risks.  For example, one
    cannot assume that an adversary will respect a valid, protective

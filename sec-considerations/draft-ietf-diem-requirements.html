@@ -30,7 +30,7 @@ This document lists the requirements and use cases that an architecture for digi
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.8.1
+    wcwidth 0.8.2
 -->
 <link href="draft-ietf-diem-requirements.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1053,7 +1053,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fainchtein, et al.</td>
-<td class="center">Expires 2 January 2027</td>
+<td class="center">Expires 4 January 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg {
 <dd class="internet-draft">draft-ietf-diem-requirements-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-07-01" class="published">1 July 2026</time>
+<time datetime="2026-07-03" class="published">3 July 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-01-02">2 January 2027</time></dd>
+<dd class="expires"><time datetime="2027-01-04">4 January 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1138,7 +1138,7 @@ This document lists the requirements and use cases that an architecture for digi
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 2 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 4 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1889,8 +1889,7 @@ Brands that are protected under international law (e.g., Madrid Protocol) can ma
       <h2 id="name-security-considerations">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-6-1">Because this is a requirements document, it does not directly have security considerations.
-However, multiple of the defined requirements have security implications, in particular, query response (<a href="#response-reqs" class="auto internal xref">Section 3.2.2</a>), removable (<a href="#removable" class="auto internal xref">Section 3.2.3</a>), undetectable validation (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>), validation (<a href="#validation" class="auto internal xref">Section 3.3.1</a>), and authorization (<a href="#authorization" class="auto internal xref">Section 3.3.2</a>).
+<p id="section-6-1">Many of the requirements defined in this document have security implications: in particular, query response (<a href="#response-reqs" class="auto internal xref">Section 3.2.2</a>), removable (<a href="#removable" class="auto internal xref">Section 3.2.3</a>), undetectable validation (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>), validation (<a href="#validation" class="auto internal xref">Section 3.3.1</a>), and authorization (<a href="#authorization" class="auto internal xref">Section 3.3.2</a>).
 The DIEM architecture and respective standards must define desired security guarantees and respective threat models.
 For example, in a use case where removability is needed, there are security considerations such as the potential for replay of removed emblems.
 Similarly, for emblems that require validation or authorization, specifications must address falsified presentation of emblems.<a href="#section-6-1" class="pilcrow">¶</a></p>
