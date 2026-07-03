@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 29 December 2026                                               
+Expires: 4 January 2027                                                 
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            27 June 2026
+                                                             3 July 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 December 2026.
+   This Internet-Draft will expire on 4 January 2027.
 
 Copyright Notice
 
@@ -217,13 +217,12 @@ Table of Contents
    limitation SHOULD be understood as reflecting current use case
    constraints only.
 
-   Working group drafts will likely address a subset of the requirements
-   set out in this document.  Whenever working group drafts address one
-   use case's requirement, this must not be interpreted as that draft
-   inheriting all limitations of the respective use case.  Future or
-   different use cases should be able to reuse any draft or parts
-   thereof, in particular, when the use case has a different or expanded
-   domain of application.
+   Drafts will likely address a subset of the requirements set out in
+   this document.  Whenever a draft address one use case's requirement,
+   this must not be interpreted as that draft inheriting all limitations
+   of the respective use case.  Future or different use cases should be
+   able to reuse any draft or parts thereof, in particular, when the use
+   case has a different or expanded domain of application.
 
 3.1.  Digital Emblem Requirements
 
