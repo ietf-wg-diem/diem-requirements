@@ -550,7 +550,9 @@ For example, in a use case where removability is needed, there are security cons
 Similarly, for emblems that require validation or authorization, specifications must address falsified presentation of emblems.
 
 Moreover, there may be use case specific risks.
-For example, one cannot assume that an adversary will respect a valid, protective emblem, and therefore such an emblem cannot actively stop or defend against an attack.
+Some emblem types are intended to signal specific rights or status by law, convention, or agreement.
+As with physical emblems, the presence of a digital emblem exists to inform; it does not ensure that the corresponding rights or status will be respected by those who are privy to the emblem.
+In some cases, the presentation of an emblem may even result in a greater likelihood of attack.
 Specifications that address specific use cases should consider such use-case-specific risks and their consequences.
 For example, a party might claim that no emblem was presented, even while an emblem was available (see also {{proof-pres}}).
 
