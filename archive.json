@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-02T02:29:37.076174+00:00",
+  "timestamp": "2026-07-05T02:11:21.835903+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -3560,18 +3560,33 @@
       "labels": [],
       "body": "New language for the text on use cases being independent. I check with Sarah, and she confirmed that the rephrasing still expresses what she wanted the initial text to say.\r\n\r\nThe main change is that I removed the term \"applying an emblem,\" which I found underspecified. The longer I thought about it, the less it was clear to me what it meant exactly. Now, the draft talks about \"drafts that address individual requirements.\" I think that has a much clearer semantics!\r\n\r\nI hope everyone agrees :)",
       "createdAt": "2026-06-27T10:27:55Z",
-      "updatedAt": "2026-06-27T10:27:55Z",
+      "updatedAt": "2026-07-03T08:22:40Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "indep-use-cases",
-      "headRefOid": "661885f6e454aa03b70e8e1340ea8bcb010b1214",
+      "headRefOid": "719a5b896d055b2a4943f2365bc2fa773565a2a2",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I want to caution that mentioning \"Working group drafts\" in an IETF document is often not what we want to say. For example if we define an IANA registration mechanism with Expert Review or Specification Required for emblems, there won't be a WG draft.  You might want \"Emblem specifications\" or something more generic.",
+          "createdAt": "2026-07-03T07:36:56Z",
+          "updatedAt": "2026-07-03T07:36:56Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy Fixed!",
+          "createdAt": "2026-07-03T08:22:40Z",
+          "updatedAt": "2026-07-03T08:22:40Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -3586,19 +3601,40 @@
       "labels": [],
       "body": "Text is not a major change, but I think my previous suggestion were too indirect. I think the new text is clearer, and it also highlights that removability must be considered w.r.t. an adversary.",
       "createdAt": "2026-06-27T10:28:28Z",
-      "updatedAt": "2026-06-30T19:53:06Z",
+      "updatedAt": "2026-07-03T08:33:46Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "new-removability",
-      "headRefOid": "f6b50dfb627d3b31136b5cff28057baa44af3b56",
+      "headRefOid": "0bd107e642813fc57ce9093958b9621bdb83fc83",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE5_81w",
+          "commit": {
+            "abbreviatedOid": "f6b50df"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T08:31:16Z",
+          "updatedAt": "2026-07-03T08:31:16Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\nSome use cases require that digital emblems be validated. The digital emblem architecture MUST, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.\n```",
+              "createdAt": "2026-07-03T08:31:16Z",
+              "updatedAt": "2026-07-03T08:31:16Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 41,
@@ -3612,19 +3648,142 @@
       "labels": [],
       "body": "Suggestion to make this MUST a MAY. I appreciate that some use cases have this requirement, but I think we should be careful about forcing drafts to address certain requirements. Let's not create \"doc debt.\"",
       "createdAt": "2026-06-27T10:31:32Z",
-      "updatedAt": "2026-06-27T10:31:33Z",
+      "updatedAt": "2026-07-03T18:38:48Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "must-may",
-      "headRefOid": "46b4cefe66e51407b3dfe3f9137d7c1d3682cec2",
+      "headRefOid": "48f72fb00c0a836adc452c342e50dabe3092dd8f",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think the intention of the text was that each emblem type needs to say what they need, but saying that they don't require anything is a perfectly valid result of that analysis. So maybe a MUST is still appropriate for the first part, but the analysis might be that no special responsiveness and consistency is needed.   The words \"if any\" come to mind.",
+          "createdAt": "2026-07-03T07:30:29Z",
+          "updatedAt": "2026-07-03T07:30:29Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy I agree that the writing leaves it flexible what each draft determines as a result, but the text later, for example, says:\r\n\r\n> For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).\r\n\r\nThis suggests you can only go with either requirement. But even if we were to interpret this more liberally, I find it odd for a draft to say that it doesn't have requirement X. There's an infinite space of requirements that it may not have. With all other requirements, we also say that \"a use case may or may not have this requirement.\" Let's not overly formalize the document writing process.",
+          "createdAt": "2026-07-03T08:28:20Z",
+          "updatedAt": "2026-07-03T08:51:06Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy Thinking longer about your comment, I think you did identify an issue. I just rephrased the text again. It is now closer to the wording in #40, i.e., we again say that some use cases have this requirement.",
+          "createdAt": "2026-07-03T11:00:35Z",
+          "updatedAt": "2026-07-03T11:00:35Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE8-PVQ",
+          "commit": {
+            "abbreviatedOid": "48f72fb"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "I would be OK with adding a statement that says that the result of the analysis does not need to be a binary - i.e. some instances of a use case may not require assured response or  consistent content while others could. However, I strongly believe future standards for any use case need to explicitly consider the consistency/responsiveness needs of the use case and the security implications of their mandate for responsiveness, and/or response consistency, or lack thereof. I'll add another comment to the discussion explaining my motivation for this in more detail.",
+          "createdAt": "2026-07-03T17:34:18Z",
+          "updatedAt": "2026-07-03T17:45:29Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "I do not agree that this should be changed from a MUST to a MAY. As was mentioned in Rohan's comment, performing this analysis and reaching the conclusion that either:\na. The use case does not require assured response and/or consistent content ever; Or\nb. Some but not all instances of the use case require assured response and/or consistent content\nare both valid conclusions. \n",
+              "createdAt": "2026-07-03T17:34:18Z",
+              "updatedAt": "2026-07-03T17:45:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE9JltQ",
+          "commit": {
+            "abbreviatedOid": "48f72fb"
+          },
+          "author": "rahelFain",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T18:29:25Z",
+          "updatedAt": "2026-07-03T18:29:26Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "On my motivation for requiring this: \r\nManipulation of DNS resolution responses is a widespread phenomenon.  So much so that it has been widely observed in the academic literature as both a mechanism for Internet censorship[1,2,3] and a mechanism for circumventing online resource access restrictions such as those imposed by geoblocking[4]. \r\nGiven that this is not theoretical, its impacts and the extent to which a specific type of digital emblem needs to be resistant to it (if at all) needs to be explicitly considered. \r\nWhile it is safe to say that a use case's standard requiring assured response and/or consistent content may not result in this truly being the case for instances of it implemented in the wild, it at least makes it clear that cases that fail to adhere to this requirement and of third party manipulation of the required responses are in violation of the standards. \r\n\r\n1. Hoang et al. How Great is the Great Firewall? Measuring China's DNS Censorship. In USENIX Security Symposium 2021. https://www.usenix.org/conference/usenixsecurity21/presentation/hoang\r\n\r\n2. Pearce et al. Global Measurement of DNS Manipulation. In USENIX Security Symposium 2017. https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/pearce\r\n\r\n3. Lin Jin, Shuai Hao, Haining Wang, and Chase Cotton. 2021. Understanding the Practices of Global Censorship through Accurate, End-to-End Measurements. Proc. ACM Meas. Anal. Comput. Syst. 5, 3, Article 43 (December 2021), https://doi.org/10.1145/3491055\r\n\r\n4. Fainchtein., et al. \"Holes in the Geofence: Privacy Vulnerabilities in \u201cSmart\u201d DNS Services.\" Proceedings on Privacy Enhancing Technologies 2 (2021): 151-172. https://petsymposium.org/2021/files/papers/issue2/popets-2021-0022.pdf",
+              "createdAt": "2026-07-03T18:29:25Z",
+              "updatedAt": "2026-07-03T18:29:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE9Kw5g",
+          "commit": {
+            "abbreviatedOid": "48f72fb"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T18:35:06Z",
+          "updatedAt": "2026-07-03T18:35:07Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "Manipulation of DNS responses should be covered by validation, shouldn't it?",
+              "createdAt": "2026-07-03T18:35:07Z",
+              "updatedAt": "2026-07-03T18:35:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE9LjfA",
+          "commit": {
+            "abbreviatedOid": "48f72fb"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T18:36:52Z",
+          "updatedAt": "2026-07-03T18:36:52Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "I don't find it obvious that every use case has some version of an assured response requirement. Every use case clearly needs to have a requirements analysis. That should go without saying. Why do we say that in particular we must discuss this one requirement? Why not say that every draft also needs to discuss validation, which is similarly \"fundamental\"?",
+              "createdAt": "2026-07-03T18:36:52Z",
+              "updatedAt": "2026-07-03T18:36:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE9MZJA",
+          "commit": {
+            "abbreviatedOid": "48f72fb"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T18:38:48Z",
+          "updatedAt": "2026-07-03T18:38:48Z",
+          "comments": [
+            {
+              "originalPosition": 1,
+              "body": "It could even be that we learn that every use case has an assured/consistent response requirement and it could also be that every draft will discuss this requirement at length. The change in language only gives us the flexibility to not discuss it when we feel like we don't need to discuss it. I think we should let the document writing process be as unconstrained as possible from the get go.",
+              "createdAt": "2026-07-03T18:38:48Z",
+              "updatedAt": "2026-07-03T18:38:48Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 42,
@@ -3638,19 +3797,120 @@
       "labels": [],
       "body": "",
       "createdAt": "2026-07-01T07:47:43Z",
-      "updatedAt": "2026-07-01T07:47:43Z",
+      "updatedAt": "2026-07-03T08:32:11Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "sec-considerations",
-      "headRefOid": "8171690a38db5d9236ceb24a0989baf01f16f06a",
+      "headRefOid": "834eabb49d8c0c5d39d86f6e773d0a3eb469e108",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE5XF-g",
+          "commit": {
+            "abbreviatedOid": "8171690"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T06:56:45Z",
+          "updatedAt": "2026-07-03T06:56:46Z",
+          "comments": [
+            {
+              "originalPosition": 3,
+              "body": "This is just a suggestion, but I would remove this sentence, and the word However below. \n\n```suggestion\n```",
+              "createdAt": "2026-07-03T06:56:45Z",
+              "updatedAt": "2026-07-03T06:57:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE5XtVQ",
+          "commit": {
+            "abbreviatedOid": "8171690"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T06:58:21Z",
+          "updatedAt": "2026-07-03T06:58:21Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "Rewording suggestion:\n\n```suggestion\nMany of the requirements defined in this document have security implications: in particular, query response ({{response-reqs}}), removable ({{removable}}), undetectable validation ({{undet-validation}}), validation ({{validation}}), and authorization ({{authorization}}).\n```",
+              "createdAt": "2026-07-03T06:58:21Z",
+              "updatedAt": "2026-07-03T06:58:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE5fctA",
+          "commit": {
+            "abbreviatedOid": "8171690"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T07:18:55Z",
+          "updatedAt": "2026-07-03T07:18:55Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "I'm not sure what you are trying to say here. An emblem isn't usually considered an actor that can stop or defend itself.\n\nIs the intention to say something like this?\n\"Some emblem types are intended to signal specific rights or status by law, convention, or agreement.\nAs with physical emblems, the presence of a digital emblem exists to inform; it does not insure that the corresponding rights or status will be respected by those who are privy to the emblem.\nIn some cases, the presentation of an emblem may even result in a greater likelihood of attack.\"",
+              "createdAt": "2026-07-03T07:18:55Z",
+              "updatedAt": "2026-07-03T07:18:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE5hzVg",
+          "commit": {
+            "abbreviatedOid": "8171690"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T07:24:54Z",
+          "updatedAt": "2026-07-03T07:24:55Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "There are too many negatives (3) in a row here.  Maybe \n\n\n```suggestion\nSpecifications that address specific use cases should consider such use-case-specific risks and their consequences.\nFor example, a party might claim that no emblem was presented, even while an emblem was available (see also {{proof-pres}}).\n```",
+              "createdAt": "2026-07-03T07:24:54Z",
+              "updatedAt": "2026-07-03T08:26:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABE6AEUw",
+          "commit": {
+            "abbreviatedOid": "61ac530"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-03T08:31:34Z",
+          "updatedAt": "2026-07-03T08:31:34Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "Yes! Using your text now.",
+              "createdAt": "2026-07-03T08:31:34Z",
+              "updatedAt": "2026-07-03T08:31:34Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
