@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 29 December 2026                                               
+Expires: 7 January 2027                                                 
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                            27 June 2026
+                                                             6 July 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -58,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 December 2026.
+   This Internet-Draft will expire on 7 January 2027.
 
 Copyright Notice
 
@@ -208,20 +208,21 @@ Table of Contents
    and their format, on their discovery, on their validation, and other
    requirements.
 
-   Each emblem type will make use of a subset of the requirements set
-   out in this document.  The requirements for individual digital emblem
-   types are independent and the requirements for an individual emblem
-   type MUST NOT constrain, override, or otherwise affect the
-   requirements, design, or use of any other digital emblem.
+   The requirements for individual use cases are independent, and the
+   requirements for one use case MUST NOT constrain, override, or
+   otherwise affect the requirements of any other use case.  Where a use
+   case specifies a limited domain of application for a particular
+   emblem (e.g. only digital or physical assets, a narrow scope of valid
+   issuers or validators, or specific discovery mechanism), such a
+   limitation SHOULD be understood as reflecting current use case
+   constraints only.
 
-   Where a use case specifies a limited domain of application (e.g. only
-   digital or physical assets, a narrow scope of valid issuers or
-   validators, or specific discovery mechanism) for a particular emblem,
-   such a limitation SHOULD be understood as reflecting current use case
-   constraints only.  It SHOULD NOT be interpreted as precluding future
-   use cases from applying that emblem under a different or expanded
-   domain of application, provided that the emblem's core semantics
-   remain intact.
+   Drafts will likely address a subset of the requirements set out in
+   this document.  Whenever a draft address one use case's requirement,
+   this must not be interpreted as that draft inheriting all limitations
+   of the respective use case.  Future or different use cases should be
+   able to reuse any draft or parts thereof, in particular, when the use
+   case has a different or expanded domain of application.
 
 3.1.  Digital Emblem Requirements
 
