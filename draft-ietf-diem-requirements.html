@@ -1266,7 +1266,7 @@ This document lists the requirements and use cases that an architecture for digi
                 <p id="section-toc.1-1.5.2.4.1"><a href="#section-5.4" class="auto internal xref">5.4</a>.  <a href="#name-international-civil-aviatio" class="internal xref">International Civil Aviation Organization (ICAO)</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.5">
-                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-protective-emblems-under-th" class="internal xref">Protective Emblems under The Geneva Conventions, its Additional Protocols, and the 1954 Hague Convention</a></p>
+                <p id="section-toc.1-1.5.2.5.1"><a href="#section-5.5" class="auto internal xref">5.5</a>.  <a href="#name-protective-emblems-under-th" class="internal xref">Protective Emblems under the Geneva Conventions, their Additional Protocols, and the 1954 Hague Convention</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.5.2.1">
                     <p id="section-toc.1-1.5.2.5.2.1.1"><a href="#section-5.5.1" class="auto internal xref">5.5.1</a>.  <a href="#name-background" class="internal xref">Background</a></p>
@@ -1351,12 +1351,12 @@ The DIEM WG will define a set of standards for an architecture that enables disc
 This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
-We envision an architecture system comprising multiple standards, which can be flexibly profiled for different use cases.
+We envision an architecture comprising multiple standards, which can be flexibly profiled for different use cases.
 We use the terms "(digital) emblem" and "validation" in accordance with the DIEM charter as of this writing <span>[<a href="#CHARTER" class="cite xref">CHARTER</a>]</span>.
-These definitions have been reproduced in section Conventions and Definitions.<a href="#section-1-1" class="pilcrow">¶</a></p>
+These definitions have been reproduced in <a href="#defs" class="auto internal xref">Section 2</a>.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="conventions-and-definitions">
+<div id="defs">
 <section id="section-2">
       <h2 id="name-conventions-and-definitions">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
@@ -1378,7 +1378,7 @@ Digital emblems extend the range of identifying marks from the physical (visual 
         <dd class="break"></dd>
 <dt id="section-2-3.3">Asset:</dt>
         <dd style="margin-left: 1.5em" id="section-2-3.4">
-          <p id="section-2-3.4.1">A physical resource -- such as place or thing; or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.4.1">A physical resource -- such as a place or thing -- or a digital resource, system, or service -- such as a server, data repository, or networked device -- that can present a digital emblem.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="section-2-3.5">Emblem issuer:</dt>
@@ -1418,9 +1418,9 @@ Validation may include ensuring that the emblem has not been forged, stolen, or 
       </h2>
 <p id="section-3-1">The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">The requirements for individual use cases are independent, and the requirements for one use case <span class="bcp14">MUST NOT</span> constrain, override, or otherwise affect the requirements of any other use case.
-Where a use case specifies a limited domain of application for a particular emblem (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or specific discovery mechanism), such a limitation <span class="bcp14">SHOULD</span> be understood as reflecting current use case constraints only.<a href="#section-3-2" class="pilcrow">¶</a></p>
+Where a use case specifies a limited domain of application for a particular emblem (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or a specific discovery mechanism), such a limitation <span class="bcp14">SHOULD</span> be understood as reflecting current use case constraints only.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">Drafts will likely address a subset of the requirements set out in this document.
-Whenever a draft address one use case's requirement, this must not be interpreted as that draft inheriting all limitations of the respective use case.
+Whenever a draft addresses one use case's requirement, this must not be interpreted as that draft inheriting all limitations of the respective use case.
 Future or different use cases should be able to reuse any draft or parts thereof, in particular, when the use case has a different or expanded domain of application.<a href="#section-3-3" class="pilcrow">¶</a></p>
 <div id="digital-emblem-requirements">
 <section id="section-3.1">
@@ -1434,7 +1434,7 @@ Future or different use cases should be able to reuse any draft or parts thereof
           </h4>
 <p id="section-3.1.1-1">Digital emblems <span class="bcp14">MUST</span> identify the marked asset and their kind of digital emblem.
 Beyond that, digital emblems <span class="bcp14">MAY</span> include other data, for example, an issuer or a validity window.
-To accommodate use cases requiring extensible data, a digital emblem architecture <span class="bcp14">SHOULD</span> introduce minimal overhead size except for fields required to fulfil other requirements in this document.<a href="#section-3.1.1-1" class="pilcrow">¶</a></p>
+To accommodate use cases requiring extensible data, a digital emblem architecture <span class="bcp14">SHOULD</span> introduce minimal size overhead except for fields required to fulfil other requirements in this document.<a href="#section-3.1.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1.1-2">As of this writing, the DIEM charter requires that digital emblems <span class="bcp14">MUST</span> explicitly identify the marked asset by a Fully Qualified Domain Name (FQDN).<a href="#section-3.1.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1458,7 +1458,7 @@ To accommodate use cases requiring extensible data, a digital emblem architectur
           <h4 id="name-discovery">
 <a href="#section-3.2.1" class="section-number selfRef">3.2.1. </a><a href="#name-discovery" class="section-name selfRef">Discovery</a>
           </h4>
-<p id="section-3.2.1-1">Digital emblems <span class="bcp14">MUST</span> specify how validators can check for the presence of a digital emblem. That is, given an asset a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for said FQDN.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.1-1">Digital emblems <span class="bcp14">MUST</span> specify how validators can check for the presence of a digital emblem. That is, given an asset, a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for that FQDN.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="response-reqs">
@@ -1466,7 +1466,7 @@ To accommodate use cases requiring extensible data, a digital emblem architectur
           <h4 id="name-query-response">
 <a href="#section-3.2.2" class="section-number selfRef">3.2.2. </a><a href="#name-query-response" class="section-name selfRef">Query Response</a>
           </h4>
-<p id="section-3.2.2-1">Specifications for each use case <span class="bcp14">MUST</span> each determine how servers must respond to queries for Digital Emblems of their specified type.
+<p id="section-3.2.2-1">Specifications for each use case <span class="bcp14">MUST</span> determine how servers must respond to queries for Digital Emblems of their specified type.
 Specifically, they must determine the responsiveness and consistency requirements for emblems of their given type and
 provide explanations of how the chosen requirements apply and the rationales for their selection.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.2-2">For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).<a href="#section-3.2.2-2" class="pilcrow">¶</a></p>
@@ -1497,7 +1497,7 @@ Therefore, drafts that address removability <span class="bcp14">MUST</span> spec
 <a href="#section-3.2.4" class="section-number selfRef">3.2.4. </a><a href="#name-undetectable-validation" class="section-name selfRef">Undetectable Validation</a>
           </h4>
 <p id="section-3.2.4-1">Some use cases require that digital emblem discovery and validation is undetectable.
-This requirement is motivated by emblems that mark its asset as protected and ask validators to not disrupt the marked asset.
+This requirement is motivated by emblems that mark their assets as protected and ask validators to not disrupt the marked asset.
 If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.<a href="#section-3.2.4-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.4-2">For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
 Concrete designs <span class="bcp14">MUST</span> specify a threat model for undetectable validation.
@@ -1526,7 +1526,7 @@ Some use cases <span class="bcp14">MAY</span> use unverified digital emblems.<a 
           <h4 id="name-authorization">
 <a href="#section-3.3.2" class="section-number selfRef">3.3.2. </a><a href="#name-authorization" class="section-name selfRef">Authorization</a>
           </h4>
-<p id="section-3.3.2-1">For some use cases, use of a digital emblem requires authorization by third-parties. When they do, they <span class="bcp14">MUST</span> define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture <span class="bcp14">MUST NOT</span> assume that Internet access is available or required so that individual digital emblems standards can choose to take a dependency on Internet access or not. For example, a given digital emblem <span class="bcp14">MAY</span> use PKI or the DNS as a root of trust if they want, but the generalized digital emblem architecture cannot mandate this or other options and <span class="bcp14">MUST</span> make this a point of extensibility.<a href="#section-3.3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.3.2-1">For some use cases, use of a digital emblem requires authorization by third parties. When a digital emblem requires authorization, standards <span class="bcp14">MUST</span> define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture <span class="bcp14">MUST NOT</span> assume that Internet access is available or required so that individual digital emblem standards can choose to take a dependency on Internet access or not. For example, a given digital emblem <span class="bcp14">MAY</span> use a PKI or the DNS as a root of trust if desired, but the generalized digital emblem architecture cannot mandate this or other options and <span class="bcp14">MUST</span> make this a point of extensibility.<a href="#section-3.3.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.3.2-2">Any authorization mechanism <span class="bcp14">MUST</span> account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.<a href="#section-3.3.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1543,7 +1543,7 @@ Some use cases <span class="bcp14">MAY</span> use unverified digital emblems.<a 
 <a href="#section-3.4.1" class="section-number selfRef">3.4.1. </a><a href="#name-extensibility" class="section-name selfRef">Extensibility</a>
           </h4>
 <p id="section-3.4.1-1">The digital emblem architecture should be extensible.
-The initial work should not preclude future extensions and individual standards should be designed as general as possible.<a href="#section-3.4.1-1" class="pilcrow">¶</a></p>
+The initial work should not preclude future extensions, and individual standards should be designed to be as general as possible.<a href="#section-3.4.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1570,7 +1570,7 @@ The initial work should not preclude future extensions and individual standards 
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-asset-identifier-discovery" class="section-name selfRef">Asset Identifier Discovery</a>
         </h3>
 <p id="section-4.2-1">It may be non-obvious for some use cases to learn the identifier associated with an asset, and thus impossible to discover emblems associated with that asset.
-To accommodate for such use cases, one could specify means to discover identifiers for different types of assets.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+To accommodate such use cases, one could specify means to discover identifiers for different types of assets.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="implicit-discovery">
@@ -1627,7 +1627,7 @@ However, enabling Level 2 validation to the asset, issuer or authorizer would vi
 <p id="section-5-1">Different use cases have different requirements.
 The purpose of this document is to list the requirements that will be addressed with the initial architecture.
 The use cases overlap and would benefit from a DIEM architecture developed to provide the requirements listed above, though some may require additional extensions.
-We alphabetically list use cases here so that relevant stakeholders can provide input whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.<a href="#section-5-1" class="pilcrow">¶</a></p>
+We alphabetically list use cases here so that relevant stakeholders can provide input on whether their use case would indeed benefit from a DIEM architecture, and invite participants to provide use cases or details that we have missed.<a href="#section-5-1" class="pilcrow">¶</a></p>
 <p id="section-5-2">We provide auxiliary material under Informative References.<a href="#section-5-2" class="pilcrow">¶</a></p>
 <div id="basel-convention">
 <section id="section-5.1">
@@ -1708,10 +1708,10 @@ Digital emblem would carry a geographic description of the flight plan, its curr
 Potential need for the emblem to reference a limited or partially redacted flight manifest.<a href="#section-5.4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="protective-emblems-under-the-geneva-conventions-its-additional-protocols-and-the-1954-hague-convention">
+<div id="protective-emblems-under-the-geneva-conventions-their-additional-protocols-and-the-1954-hague-convention">
 <section id="section-5.5">
         <h3 id="name-protective-emblems-under-th">
-<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-protective-emblems-under-th" class="section-name selfRef">Protective Emblems under The Geneva Conventions, its Additional Protocols, and the 1954 Hague Convention</a>
+<a href="#section-5.5" class="section-number selfRef">5.5. </a><a href="#name-protective-emblems-under-th" class="section-name selfRef">Protective Emblems under the Geneva Conventions, their Additional Protocols, and the 1954 Hague Convention</a>
         </h3>
 <div id="background">
 <section id="section-5.5.1">
@@ -1737,7 +1737,7 @@ Namely, these emblems are:<a href="#section-5.5.1-1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 <p id="section-5.5.1-3">However, these emblems can currently only be used to mark physical assets, and there is no way to mark digital, network-connected infrastructure that enjoys the same protections.
-A digital emblem using the DIEM architecture could address this gap, and resolutions from UNESCO and the International Conference of the Red Cross and Red Crescent have expressed the support for such a digital emblem <span>[<a href="#RCRCRES" class="cite xref">RCRCRES</a>]</span> <span>[<a href="#UNESCORES" class="cite xref">UNESCORES</a>]</span>.<a href="#section-5.5.1-3" class="pilcrow">¶</a></p>
+A digital emblem using the DIEM architecture could address this gap, and resolutions from UNESCO and the International Conference of the Red Cross and Red Crescent have expressed support for such a digital emblem <span>[<a href="#RCRCRES" class="cite xref">RCRCRES</a>]</span> <span>[<a href="#UNESCORES" class="cite xref">UNESCORES</a>]</span>.<a href="#section-5.5.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="ihl-stakeholders">
@@ -1745,7 +1745,7 @@ A digital emblem using the DIEM architecture could address this gap, and resolut
           <h4 id="name-domain-model-and-stakeholde">
 <a href="#section-5.5.2" class="section-number selfRef">5.5.2. </a><a href="#name-domain-model-and-stakeholde" class="section-name selfRef">Domain Model and Stakeholders</a>
           </h4>
-<p id="section-5.5.2-1">In context of digital, protective emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
+<p id="section-5.5.2-1">In the context of digital, protective emblems under IHL, emblems will mark assets that are digital services and that solely serve protected purposes (for example, a medical unit, a cultural site, or an installation containing dangerous forces).
 Such emblems will be issued by the party controlling the marked service, and they signal that these assets must be respected and protected.
 Emblems must only be issued by entities that have been authorized to bear a digital emblem or other distinctive sign under international law.
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.<a href="#section-5.5.2-1" class="pilcrow">¶</a></p>
@@ -1762,13 +1762,13 @@ Concretely, we can assume that they will typically first identify an asset that 
           </h4>
 <p id="section-5.5.3-1">The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
 Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
-As verifiers intend to attack assets that are not protected under IHL, this will only be the case they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
+As verifiers intend to attack assets that are not protected under IHL, this will only be the case when they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
 Therefore, digital, protective emblems under IHL require validation for authenticity (<a href="#validation" class="auto internal xref">Section 3.3.1</a>) that is undetectable (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>).<a href="#section-5.5.3-1" class="pilcrow">¶</a></p>
 <p id="section-5.5.3-2">At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
-First, IHL requires that, emblem issuers must seek authorization from a competent authority prior to applying them (see <a href="#authorization" class="auto internal xref">Section 3.3.2</a> and <a href="#ihl-stakeholders" class="auto internal xref">Section 5.5.2</a>).
+First, IHL requires that emblem issuers must seek authorization from a competent authority prior to applying them (see <a href="#authorization" class="auto internal xref">Section 3.3.2</a> and <a href="#ihl-stakeholders" class="auto internal xref">Section 5.5.2</a>).
 The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
 Second, bearing an emblem can increase the risk for targeted attacks.
-We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks to outweigh the benefits, i.e., we require that digital emblems are removable (<a href="#removable" class="auto internal xref">Section 3.2.3</a>).<a href="#section-5.5.3-2" class="pilcrow">¶</a></p>
+We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks as outweighing the benefits, i.e., we require that digital emblems are removable (<a href="#removable" class="auto internal xref">Section 3.2.3</a>).<a href="#section-5.5.3-2" class="pilcrow">¶</a></p>
 <p id="section-5.5.3-3">Beyond the DIEM architecture as described in this document, digital, protective emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.<a href="#section-5.5.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1962,7 +1962,7 @@ For example, a party might claim that no emblem was presented, even while an emb
 <dd class="break"></dd>
 <dt id="CUSTOMARY">[CUSTOMARY]</dt>
         <dd>
-<span class="refAuthor">International Committe of the Red Cross</span>, <span class="refTitle">"Customary IHL - IHL Databases"</span>, <span>n.d.</span>, <span>&lt;<a href="https://ihl-databases.icrc.org/en/customary-ihl">https://ihl-databases.icrc.org/en/customary-ihl</a>&gt;</span>. </dd>
+<span class="refAuthor">International Committee of the Red Cross</span>, <span class="refTitle">"Customary IHL - IHL Databases"</span>, <span>n.d.</span>, <span>&lt;<a href="https://ihl-databases.icrc.org/en/customary-ihl">https://ihl-databases.icrc.org/en/customary-ihl</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="DIPLOMAT">[DIPLOMAT]</dt>
         <dd>

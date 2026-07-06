@@ -105,7 +105,7 @@ Table of Contents
        5.2.1.  Limitations of proof of presence:
      5.3.  International Atomic Energy Agency (IAEA)
      5.4.  International Civil Aviation Organization (ICAO)
-     5.5.  Protective Emblems under The Geneva Conventions, its
+     5.5.  Protective Emblems under the Geneva Conventions, their
             Additional Protocols, and the 1954 Hague Convention
        5.5.1.  Background
        5.5.2.  Domain Model and Stakeholders
@@ -138,12 +138,11 @@ Table of Contents
    of digital emblems.  This document lists the requirements that the
    architecture must accommodate.  These requirements were identified
    across different use cases.  Not all use cases share all
-   requirements.  We envision an architecture system comprising multiple
+   requirements.  We envision an architecture comprising multiple
    standards, which can be flexibly profiled for different use cases.
    We use the terms "(digital) emblem" and "validation" in accordance
    with the DIEM charter as of this writing [CHARTER].  These
-   definitions have been reproduced in section Conventions and
-   Definitions.
+   definitions have been reproduced in Section 2.
 
 2.  Conventions and Definitions
 
@@ -165,9 +164,10 @@ Table of Contents
       Digital emblems extend the range of identifying marks from the
       physical (visual and tactile) to the digital realm.
 
-   Asset:  A physical resource -- such as place or thing; or a digital
-      resource, system, or service - such as a server, data repository,
-      or networked device - that can present a digital emblem.
+   Asset:  A physical resource -- such as a place or thing -- or a
+      digital resource, system, or service -- such as a server, data
+      repository, or networked device -- that can present a digital
+      emblem.
 
    Emblem issuer:  The entity that operates or controls an asset that
       bears a digital emblem.  Depending on the applicable emblem, the
@@ -213,16 +213,17 @@ Table of Contents
    otherwise affect the requirements of any other use case.  Where a use
    case specifies a limited domain of application for a particular
    emblem (e.g. only digital or physical assets, a narrow scope of valid
-   issuers or validators, or specific discovery mechanism), such a
+   issuers or validators, or a specific discovery mechanism), such a
    limitation SHOULD be understood as reflecting current use case
    constraints only.
 
    Drafts will likely address a subset of the requirements set out in
-   this document.  Whenever a draft address one use case's requirement,
-   this must not be interpreted as that draft inheriting all limitations
-   of the respective use case.  Future or different use cases should be
-   able to reuse any draft or parts thereof, in particular, when the use
-   case has a different or expanded domain of application.
+   this document.  Whenever a draft addresses one use case's
+   requirement, this must not be interpreted as that draft inheriting
+   all limitations of the respective use case.  Future or different use
+   cases should be able to reuse any draft or parts thereof, in
+   particular, when the use case has a different or expanded domain of
+   application.
 
 3.1.  Digital Emblem Requirements
 
@@ -232,7 +233,7 @@ Table of Contents
    digital emblem.  Beyond that, digital emblems MAY include other data,
    for example, an issuer or a validity window.  To accommodate use
    cases requiring extensible data, a digital emblem architecture SHOULD
-   introduce minimal overhead size except for fields required to fulfil
+   introduce minimal size overhead except for fields required to fulfil
    other requirements in this document.
 
    As of this writing, the DIEM charter requires that digital emblems
@@ -250,15 +251,15 @@ Table of Contents
 3.2.1.  Discovery
 
    Digital emblems MUST specify how validators can check for the
-   presence of a digital emblem.  That is, given an asset a validator
+   presence of a digital emblem.  That is, given an asset, a validator
    must be able to determine whether it has an associated emblem.  For
    example, verifying whether a FQDN has an emblem associated with it
    could be realized by fetching digital emblem-associated records for
-   said FQDN.
+   that FQDN.
 
 3.2.2.  Query Response
 
-   Specifications for each use case MUST each determine how servers must
+   Specifications for each use case MUST determine how servers must
    respond to queries for Digital Emblems of their specified type.
    Specifically, they must determine the responsiveness and consistency
    requirements for emblems of their given type and provide explanations
@@ -302,9 +303,9 @@ Table of Contents
 
    Some use cases require that digital emblem discovery and validation
    is undetectable.  This requirement is motivated by emblems that mark
-   its asset as protected and ask validators to not disrupt the marked
-   asset.  If emblem discovery were detectable, malicious parties could
-   misuse the digital emblem as an intrusion detection system.
+   their assets as protected and ask validators to not disrupt the
+   marked asset.  If emblem discovery were detectable, malicious parties
+   could misuse the digital emblem as an intrusion detection system.
 
    For specific use cases and designs, it may be acceptable that certain
    parties can detect emblem discovery and validation, for example, when
@@ -333,15 +334,16 @@ Table of Contents
 3.3.2.  Authorization
 
    For some use cases, use of a digital emblem requires authorization by
-   third-parties.  When they do, they MUST define a trust model that
-   describes how validators can discover authorities and how the system
-   selects authorities.  The generalized digital emblem architecture
-   MUST NOT assume that Internet access is available or required so that
-   individual digital emblems standards can choose to take a dependency
-   on Internet access or not.  For example, a given digital emblem MAY
-   use PKI or the DNS as a root of trust if they want, but the
-   generalized digital emblem architecture cannot mandate this or other
-   options and MUST make this a point of extensibility.
+   third parties.  When a digital emblem requires authorization,
+   standards MUST define a trust model that describes how validators can
+   discover authorities and how the system selects authorities.  The
+   generalized digital emblem architecture MUST NOT assume that Internet
+   access is available or required so that individual digital emblem
+   standards can choose to take a dependency on Internet access or not.
+   For example, a given digital emblem MAY use a PKI or the DNS as a
+   root of trust if desired, but the generalized digital emblem
+   architecture cannot mandate this or other options and MUST make this
+   a point of extensibility.
 
    Any authorization mechanism MUST account for the possibility of
    compromise of cryptographic key material, for example, by specifying
@@ -352,8 +354,8 @@ Table of Contents
 3.4.1.  Extensibility
 
    The digital emblem architecture should be extensible.  The initial
-   work should not preclude future extensions and individual standards
-   should be designed as general as possible.
+   work should not preclude future extensions, and individual standards
+   should be designed to be as general as possible.
 
 4.  Extensions
 
@@ -371,9 +373,8 @@ Table of Contents
 
    It may be non-obvious for some use cases to learn the identifier
    associated with an asset, and thus impossible to discover emblems
-   associated with that asset.  To accommodate for such use cases, one
-   could specify means to discover identifiers for different types of
-   assets.
+   associated with that asset.  To accommodate such use cases, one could
+   specify means to discover identifiers for different types of assets.
 
 4.3.  Implicit Discovery
 
@@ -439,9 +440,9 @@ Table of Contents
    DIEM architecture developed to provide the requirements listed above,
    though some may require additional extensions.  We alphabetically
    list use cases here so that relevant stakeholders can provide input
-   whether their use case would indeed benefit from a DIEM architecture,
-   and invite participants to provide use cases or details that we have
-   missed.
+   on whether their use case would indeed benefit from a DIEM
+   architecture, and invite participants to provide use cases or details
+   that we have missed.
 
    We provide auxiliary material under Informative References.
 
@@ -518,7 +519,7 @@ Table of Contents
    (i.e., tail number).  Potential need for the emblem to reference a
    limited or partially redacted flight manifest.
 
-5.5.  Protective Emblems under The Geneva Conventions, its Additional
+5.5.  Protective Emblems under the Geneva Conventions, their Additional
       Protocols, and the 1954 Hague Convention
 
 5.5.1.  Background
@@ -551,12 +552,12 @@ Table of Contents
    infrastructure that enjoys the same protections.  A digital emblem
    using the DIEM architecture could address this gap, and resolutions
    from UNESCO and the International Conference of the Red Cross and Red
-   Crescent have expressed the support for such a digital emblem
-   [RCRCRES] [UNESCORES].
+   Crescent have expressed support for such a digital emblem [RCRCRES]
+   [UNESCORES].
 
 5.5.2.  Domain Model and Stakeholders
 
-   In context of digital, protective emblems under IHL, emblems will
+   In the context of digital, protective emblems under IHL, emblems will
    mark assets that are digital services and that solely serve protected
    purposes (for example, a medical unit, a cultural site, or an
    installation containing dangerous forces).  Such emblems will be
@@ -583,7 +584,7 @@ Table of Contents
    by informing verifiers that marked assets enjoy protection under IHL.
    Digital emblems will only be able to do so when verifiers are willing
    to pay attention to them.  As verifiers intend to attack assets that
-   are not protected under IHL, this will only be the case they are
+   are not protected under IHL, this will only be the case when they are
    confident that their targets cannot fake protection and that they do
    not alert their target about an imminent attack.  Therefore, digital,
    protective emblems under IHL require validation for authenticity
@@ -591,15 +592,16 @@ Table of Contents
 
    At the same time, digital, protective emblems under IHL should fit
    well into the existing framework of IHL and not put emblem issuers at
-   increased risk.  First, IHL requires that, emblem issuers must seek
+   increased risk.  First, IHL requires that emblem issuers must seek
    authorization from a competent authority prior to applying them (see
    Section 3.3.2 and Section 5.5.2).  The authorization must be
    decentralized, i.e., there must be no central authorities that govern
    the use or distribution of digital emblems.  Second, bearing an
    emblem can increase the risk for targeted attacks.  We require that
    emblem issuers must be able to individually assess that risk and
-   remove emblems whenever they see the risks to outweigh the benefits,
-   i.e., we require that digital emblems are removable (Section 3.2.3).
+   remove emblems whenever they see the risks as outweighing the
+   benefits, i.e., we require that digital emblems are removable
+   (Section 3.2.3).
 
    Beyond the DIEM architecture as described in this document, digital,
    protective emblems under IHL would benefit from other discovery
@@ -787,7 +789,7 @@ Table of Contents
               humanity>.
 
    [CUSTOMARY]
-              International Committe of the Red Cross, "Customary IHL -
+              International Committee of the Red Cross, "Customary IHL -
               IHL Databases", n.d.,
               <https://ihl-databases.icrc.org/en/customary-ihl>.
 
