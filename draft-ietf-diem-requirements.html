@@ -1484,9 +1484,11 @@ newly defined emblem types will be outlined in the architecture document.<a href
           <h4 id="name-removable">
 <a href="#section-3.2.3" class="section-number selfRef">3.2.3. </a><a href="#name-removable" class="section-name selfRef">Removable</a>
           </h4>
-<p id="section-3.2.3-1">Digital emblems <span class="bcp14">MAY</span> require to be removable in that checking for the presence of an asset's emblems results in no emblem.
-Note that checking for emblem presence is independent of its validation.
-That is, emblems do not count as removed when they become invalid.<a href="#section-3.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.3-1">Some use cases require that digital emblems are removable.
+"Removing" an emblem means that one cannot determine whether an emblem ever was applied to a particular asset.
+This means, in particular, emblems do not count as removed when they become invalid, e.g., due to expiry.<a href="#section-3.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.2.3-2">Note that removability is a security requirement.
+Therefore, drafts that address removability <span class="bcp14">MUST</span> specify a threat model for removability that specifies when and under what conditions it is acceptable that someone can learn after the fact that an emblem was applied.<a href="#section-3.2.3-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="undet-validation">
@@ -1494,7 +1496,7 @@ That is, emblems do not count as removed when they become invalid.<a href="#sect
           <h4 id="name-undetectable-validation">
 <a href="#section-3.2.4" class="section-number selfRef">3.2.4. </a><a href="#name-undetectable-validation" class="section-name selfRef">Undetectable Validation</a>
           </h4>
-<p id="section-3.2.4-1">A digital emblem <span class="bcp14">MAY</span> require that its discovery and validation is undetectable.
+<p id="section-3.2.4-1">Some use cases require that digital emblem discovery and validation is undetectable.
 This requirement is motivated by emblems that mark its asset as protected and ask validators to not disrupt the marked asset.
 If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.<a href="#section-3.2.4-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.4-2">For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
@@ -1514,7 +1516,7 @@ This threat model must detail which parties can detect emblem discovery and vali
           <h4 id="name-validation">
 <a href="#section-3.3.1" class="section-number selfRef">3.3.1. </a><a href="#name-validation" class="section-name selfRef">Validation</a>
           </h4>
-<p id="section-3.3.1-1">Digital emblems <span class="bcp14">MAY</span> require validation. The digital emblem architecture <span class="bcp14">MUST</span>, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
+<p id="section-3.3.1-1">Some use cases require that digital emblems be validated. The digital emblem architecture <span class="bcp14">MUST</span>, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
 In particular, when validation is defined, it <span class="bcp14">MUST</span> ensure that the emblem was issued for the respective asset.
 Some use cases <span class="bcp14">MAY</span> use unverified digital emblems.<a href="#section-3.3.1-1" class="pilcrow">¶</a></p>
 </section>
@@ -1524,7 +1526,7 @@ Some use cases <span class="bcp14">MAY</span> use unverified digital emblems.<a 
           <h4 id="name-authorization">
 <a href="#section-3.3.2" class="section-number selfRef">3.3.2. </a><a href="#name-authorization" class="section-name selfRef">Authorization</a>
           </h4>
-<p id="section-3.3.2-1">Digital emblems <span class="bcp14">MAY</span> require authorization by third-parties. When they do, they <span class="bcp14">MUST</span> define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture <span class="bcp14">MUST NOT</span> assume that Internet access is available or required so that individual digital emblems standards can choose to take a dependency on Internet access or not. For example, a given digital emblem <span class="bcp14">MAY</span> use PKI or the DNS as a root of trust if they want, but the generalized digital emblem architecture cannot mandate this or other options and <span class="bcp14">MUST</span> make this a point of extensibility.<a href="#section-3.3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.3.2-1">For some use cases, use of a digital emblem requires authorization by third-parties. When they do, they <span class="bcp14">MUST</span> define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture <span class="bcp14">MUST NOT</span> assume that Internet access is available or required so that individual digital emblems standards can choose to take a dependency on Internet access or not. For example, a given digital emblem <span class="bcp14">MAY</span> use PKI or the DNS as a root of trust if they want, but the generalized digital emblem architecture cannot mandate this or other options and <span class="bcp14">MUST</span> make this a point of extensibility.<a href="#section-3.3.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.3.2-2">Any authorization mechanism <span class="bcp14">MUST</span> account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.<a href="#section-3.3.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
