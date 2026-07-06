@@ -549,16 +549,15 @@ Brands that are protected under international law (e.g., Madrid Protocol) can ma
 # Security Considerations
 
 Many of the requirements defined in this document have security implications: in particular, query response ({{response-reqs}}), removable ({{removable}}), undetectable validation ({{undet-validation}}), validation ({{validation}}), and authorization ({{authorization}}).
-The DIEM architecture and respective standards must define desired security guarantees and respective threat models.
+The DIEM architecture and respective standards will include discussions of desired security guarantees and respective threat models.
 For example, in a use case where removability is needed, there are security considerations such as the potential for replay of removed emblems.
-Similarly, for emblems that require validation or authorization, specifications must address falsified presentation of emblems.
+Similarly, for emblems that require validation or authorization, specifications will discuss falsified presentation of emblems.
 
 Moreover, there may be use case specific risks.
 Some emblem types are intended to signal specific rights or status by law, convention, or agreement.
 As with physical emblems, the presence of a digital emblem exists to inform; it does not ensure that the corresponding rights or status will be respected by those who are privy to the emblem.
 In some cases, the presentation of an emblem may even result in a greater likelihood of attack.
 Specifications that address specific use cases should consider such use-case-specific risks and their consequences.
-For example, a party might claim that no emblem was presented, even while an emblem was available (see also {{proof-pres}}).
 
 # IANA Considerations
 
