@@ -721,12 +721,13 @@ Table of Contents
    implications: in particular, query response (Section 3.2.2),
    removable (Section 3.2.3), undetectable validation (Section 3.2.4),
    validation (Section 3.3.1), and authorization (Section 3.3.2).  The
-   DIEM architecture and respective standards must define desired
-   security guarantees and respective threat models.  For example, in a
-   use case where removability is needed, there are security
-   considerations such as the potential for replay of removed emblems.
-   Similarly, for emblems that require validation or authorization,
-   specifications must address falsified presentation of emblems.
+   DIEM architecture and respective standards will include discussions
+   of desired security guarantees and respective threat models.  For
+   example, in a use case where removability is needed, there are
+   security considerations such as the potential for replay of removed
+   emblems.  Similarly, for emblems that require validation or
+   authorization, specifications will discuss falsified presentation of
+   emblems.
 
    Moreover, there may be use case specific risks.  Some emblem types
    are intended to signal specific rights or status by law, convention,
@@ -736,9 +737,7 @@ Table of Contents
    emblem.  In some cases, the presentation of an emblem may even result
    in a greater likelihood of attack.  Specifications that address
    specific use cases should consider such use-case-specific risks and
-   their consequences.  For example, a party might claim that no emblem
-   was presented, even while an emblem was available (see also
-   Section 4.5).
+   their consequences.
 
 7.  IANA Considerations
 
