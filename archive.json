@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-05T02:11:21.835903+00:00",
+  "timestamp": "2026-07-07T02:11:39.054328+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -100,7 +100,7 @@
       "id": "I_kwDOPTNEDc7PFar0",
       "title": "Add outline of Security Considerations Topics/sub-sections",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "rahelFain",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -112,8 +112,8 @@
       ],
       "body": "Provide an outline of the topics that will be discussed in this document. \nThis could also include a statement noting that use case specific security considerations will need to be specified in their protocol specification document(s). ",
       "createdAt": "2025-10-01T16:36:15Z",
-      "updatedAt": "2026-05-30T00:10:27Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:27:34Z",
+      "closedAt": "2026-07-06T07:27:34Z",
       "comments": [
         {
           "author": "rahelFain",
@@ -149,6 +149,13 @@
           "body": "@rahelFain Speaking in my personal capacity.\n\nFrom the perspective of IHL-related use cases, I think the Security Considerations section could benefit from a short outline that separates different kinds of risk.\n\nIn particular, it may be useful to distinguish between:\n\n- **False or unauthorized claims of protected status.** A digital emblem or marking should not make it easy for an unauthorized actor to claim a protected status merely by publishing data.\n\n- **Over-reliance on the emblem.** A digital emblem does not itself create legal protection or actively defend an asset. It can make a claimed or authorized status visible and technically verifiable, but downstream legal or operational interpretation remains outside the protocol.\n\n- **Visibility versus exposure.** For some protected assets, visibility is part of the protective function. For others, publishing too much information may increase risk to the asset, staff, infrastructure, or affected population.\n\n- **Undetectable validation.** Some use cases, especially those involving protected assets in armed conflict, may require that discovery or validation not alert the asset operator or other observers.\n\n- **Authorization and revocation.** For legally-derived use cases, validators may need to distinguish between data that is merely self-published and data that is issued or authorized under an applicable trust model.\n\n- **Misuse and probing.** Adverse actors may ignore, falsify, misuse, or probe digital emblems. The draft does not need to model every attacker behavior, but the security considerations could acknowledge these categories when deriving requirements.\n\n- **Proof, audit, or forensic extensions.** Some use cases may need evidence that an emblem existed, was discoverable, or was validated at a relevant time. However, those mechanisms may be profile-specific or extension-specific and should be considered carefully against privacy and undetectable-validation requirements.\n\nI do not think the requirements document needs to resolve all of these issues in detail. But a short outline could help clarify which risks belong to the core DIEM architecture and which risks should be addressed by individual profiles, extensions, or downstream operational/legal processes.",
           "createdAt": "2026-05-30T00:10:27Z",
           "updatedAt": "2026-05-30T00:10:27Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closed by #42 ",
+          "createdAt": "2026-07-06T07:27:34Z",
+          "updatedAt": "2026-07-06T07:27:34Z"
         }
       ]
     },
@@ -360,7 +367,7 @@
       "id": "I_kwDOPTNEDc7Wsg8G",
       "title": "Is there a need for forensic records of emblems for some emblem types?",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/13",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -373,8 +380,8 @@
       ],
       "body": "Suggested by @amankin \n\n@felixlinker said they intended to address this in Section 4.5",
       "createdAt": "2025-11-07T20:55:41Z",
-      "updatedAt": "2026-02-25T18:38:44Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:27:53Z",
+      "closedAt": "2026-07-06T07:27:53Z",
       "comments": [
         {
           "author": "felixlinker",
@@ -396,6 +403,13 @@
           "body": "@ts5746 Thank you for the suggestion! \nI've created [a PR with some initial changes](https://github.com/ietf-wg-diem/diem-requirements/pull/25) based on it. \n",
           "createdAt": "2026-02-25T18:38:44Z",
           "updatedAt": "2026-02-25T18:38:44Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closed by #25 ",
+          "createdAt": "2026-07-06T07:27:53Z",
+          "updatedAt": "2026-07-06T07:27:53Z"
         }
       ]
     },
@@ -404,7 +418,7 @@
       "id": "I_kwDOPTNEDc7Ws3WH",
       "title": "Attacker and authorizing party roles and operations in use cases",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/14",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "dkg",
       "authorAssociation": "NONE",
       "assignees": [
@@ -415,8 +429,8 @@
       ],
       "body": "When describing a use case for a digital protocol, i'm used to seeing use cases presented from every party involved in a transaction.\n\nFor example, in digital id discussions, we need to talk about how a verifier operates, as well as how an issuer operates, and how a holder operates.\n\nThe use cases i'm seeing in the current document are all split out by talking about different bearer scenarios.\n\nBut i don't see any discussion of an attacker's perspective, or an authorizing party's perspective.  Should we detail those perspectives within each use case?  or should we detail them as their own distinct use case?",
       "createdAt": "2025-11-07T21:28:01Z",
-      "updatedAt": "2026-05-29T23:59:33Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:34:39Z",
+      "closedAt": "2026-07-06T07:34:39Z",
       "comments": [
         {
           "author": "felixlinker",
@@ -438,6 +452,13 @@
           "body": "@dkg  Speaking in my personal capacity.\n\nI think this issue is important, especially for use cases that are derived from existing legal or protective frameworks such as IHL.\n\nFrom that perspective, it may be useful for each use case to identify the relevant roles without turning those roles into separate legal conclusions or protocol obligations. For example, an IHL-related use case may need to distinguish between:\n\n- the protected asset or bearer;\n- the entity operating or controlling the asset;\n- the competent authorizing entity, where authorization is required;\n- the emblem issuer or entity publishing the digital marking;\n- the validator or party checking whether DIEM-interpretable data exists and can be validated;\n- and possible misuse or adverse actors, such as parties falsely claiming a protected status.\n\nI would be careful with trying to model the \u201cattacker\u201d perspective too fully. In contemporary armed conflicts, the range of possible actors, motivations, operational settings, and legal contexts can be very broad, so any such model would likely need to remain high-level and non-exhaustive.\n\nFor that reason, I think it may be more useful to capture only a minimal and non-canonical adverse-actor perspective, just enough to help derive technical requirements. For IHL-related use cases, that could include questions such as whether a party may try to ignore, misuse, falsify, or probe a digital emblem, and whether the design should account for false claims, revocation, authorization, or undetectable validation.\n\nSo perhaps the use cases could include a lightweight role model, while leaving legal, operational, and accountability conclusions outside the DIEM requirements document.\n",
           "createdAt": "2026-05-29T23:59:33Z",
           "updatedAt": "2026-05-29T23:59:33Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think we will not get any more text than we have on this one. Thus, closing.",
+          "createdAt": "2026-07-06T07:34:39Z",
+          "updatedAt": "2026-07-06T07:34:39Z"
         }
       ]
     },
@@ -446,7 +467,7 @@
       "id": "I_kwDOPTNEDc7bzJsS",
       "title": "Diplomatic bag rules",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/17",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "ohmantics",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -459,8 +480,8 @@
       ],
       "body": "This use case was in early discussions but did not make it into this draft.\n\nThey're covered in article 27 of the 1961 [Vienna Convention on Diplomatic Relations](http://www.corpsdiplomatique.cd/VIENNA_CONVENTION_1961_ON_DIPLOMATIC_RELATIONS.pdf).",
       "createdAt": "2025-12-02T21:32:40Z",
-      "updatedAt": "2026-04-25T19:58:59Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:30:27Z",
+      "closedAt": "2026-07-06T07:30:27Z",
       "comments": [
         {
           "author": "mcr",
@@ -517,6 +538,13 @@
           "body": "_(speaking as an individual, no hat)_\n\n> Feel free to complain to the IESG that they did not charter the full original scope if you would like.\n\nWe all chartered that together, let's not pin the blame on the IESG of the time. For more concrete guidance, I would turn to WG consensus [from a previous meeting](https://datatracker.ietf.org/doc/minutes-123-diem-202507221500/) that told the editors to \"concentrate discussion on requirements covered by the initial scope\" but not forbidding \"inclusion of out-of-scope\nrequirements which are non controversial\". \n\nThat said, for this specific use case, I used [this text](https://www.lawglobalhub.com/article-27-vienna-convention-on-diplomatic-relations-1961/) since the original link wasn't loading for me. From this, I derive this is indeed a case where an emblem makes sense, and a digital emblem could offer additional benefits (e.g. making it removable). \n\nThat said, what is unique about this case is about how _humans_ behave (e.g. cannot open the bag) not how _emblems_ behave. Looking through our existing requirements, I do not see any missing for implementing this one, which seems pretty straightforward using Discovery, Removable, and Validation requirement subsections, along with the MAY for including additional data with the emblem (such as \"indicating [the courier's] status and the number of packages constituting the diplomatic bag\", from Article 27 subsection 5). Even with proximity discovery being beyond scope, I could imagine use in the opposite direction (email from one embassy to another: \"diplomat identified by <domain-name> is headed your way\" and we stay out of the way telling anybody how to bind domain names physically to somebody/something).\n\nDoes anyone else see a requirement currently missing this would need to have listed? My point being this document is **not** saying \"only included use cases matter\" but to use use cases we have active engagement from stakeholders on to help us validate design against requirements. We absolutely should hope that fulfilling their requirements will then make the mechanisms developed here usable by any other use cases with a subset of the same requirements. If there is a missing requirement, let's focus on that for guiding drafted text (right now I wouldn't know what to suggest that would expand the requirements list).",
           "createdAt": "2026-03-15T05:30:45Z",
           "updatedAt": "2026-03-15T05:30:45Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closed by #25 ",
+          "createdAt": "2026-07-06T07:30:27Z",
+          "updatedAt": "2026-07-06T07:30:27Z"
         }
       ]
     },
@@ -525,7 +553,7 @@
       "id": "I_kwDOPTNEDc7e5tKn",
       "title": "ISO shipping containers and related systems",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/18",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "ohmantics",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -536,8 +564,8 @@
       ],
       "body": "Early pre-WG use cases discussions included ISO shipping containers. They're covered by ISO 6346 with owner codes registered with [Bureau International des Containers](https://bic-code.org). The International Convention for Safe Containers established the [CSC Combined Data Plate](https://www.bic-code.org/csc-combined-data-plate/) which labels them for safety. Those come from the UN and International Maritime Organization.\n\nhttps://www.bic-code.org/marking-of-containers/ goes into more detail about the ISO codes, CSC Combined Data Plate and includes an existing geofencing database used by IoT-enabled containers including a facility coding system established in ISO 9897, which itself is a coding system to describe the condition of a container including damage.",
       "createdAt": "2025-12-17T16:51:13Z",
-      "updatedAt": "2026-04-28T04:43:55Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:35:09Z",
+      "closedAt": "2026-07-06T07:35:09Z",
       "comments": [
         {
           "author": "mcr",
@@ -552,6 +580,13 @@
           "body": "> 3\\. If the goal is to prevent digital attack on containers en-route, then the emblem will wind up applying to the ship.\n\nThe ship would have an emblem bundling all the emblems of its manifest.",
           "createdAt": "2026-04-28T04:43:55Z",
           "updatedAt": "2026-04-28T04:43:55Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closing as no text has been suggested.",
+          "createdAt": "2026-07-06T07:35:09Z",
+          "updatedAt": "2026-07-06T07:35:09Z"
         }
       ]
     },
@@ -560,7 +595,7 @@
       "id": "I_kwDOPTNEDc7mO9pF",
       "title": "How should this draft expand on the Press case?",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/23",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "amankin",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -569,15 +604,22 @@
       ],
       "body": "The draft currently has a placeholder:\n\n   Journalists in conflict zones use protective markings that indicate\n   their status as a non-combatant.  Digital assets belonging to the\n   press could be digitally marked, and protective markings in conflict\n   zones could be digitized.\n\nThis does not even say clearly something that was articulated at IETF 124 by a stakeholder there\nare distinct use cases here:  1. a digital emblem form of the PRESS marking worn by a person to mark\nbeing a non-combatant; 2. a digital emblem marking on equipment (whether it about networked\ncomputers/databases etc or about physical cameras, computers, sound equipment etc).  Let's use comments \non this issue to flesh out 1. and 2. and also to reflect by the stakeholders about how much to develop these \ntwo sub-use-cases.\n\n\n ",
       "createdAt": "2026-01-27T22:25:05Z",
-      "updatedAt": "2026-03-15T06:35:47Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:33:44Z",
+      "closedAt": "2026-07-06T07:33:44Z",
       "comments": [
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\n\n> This does not even say clearly something that was articulated at IETF 124 by a stakeholder\n\nThe comment made by Cory at IETF 124 was that \"we are not opposed to the Press use case being listed here. We do not see a concrete use case for it that we are pursuing\" ([meeting recording at timestamp 1:35:07](https://youtu.be/Q17UfUwzBz8?si=_4IEwjk9bQJIXDAs&t=5707)). I do not see other comments from a press use case stakeholder during that meeting, though I may have just missed them on re-review.\n\nThe comments made by Chantel at IETF 123 in a back and forth discussion with Rohan were, and I'm paraphrasing, that she has reservations about its use at all given it may invite more attacks versus trying to stay unnoticed ([discussion begins at 41:35](https://youtu.be/qNelwWBU11Y?si=2tKOgQmu7nRulhlC&t=2495)).\n\nI agree with you and Chantel who both said that \"the press\" is not a monolithic organization with singular needs (my paraphrase). One organization not pursuing a use case doesn't mean there couldn't be others. That said, it's difficult to validate text with stakeholders if they are not here with an interest in doing so, or even go so far as to express misgivings in the absence of several press reviewers (near the end of Chantel's remarks at the mic line).\n\nAs I am asking with every other use case: are there requirements that do not yet exist in the draft that need to for the use case you are envisioning? At IETF 123, the editors presented a slide breaking down the matrix of use cases versus requirements that compared a few other use cases against the press use case ([see slides 13 and 14](https://datatracker.ietf.org/meeting/123/materials/slides-123-diem-use-cases-and-requirements-00)). From this, I do not see the press case needing to be expanded in the use cases document to add new requirements, so I don't think in light of the comments brought to the IETF since the WG was formed that expanding on this text is a good idea.",
           "createdAt": "2026-03-15T06:35:47Z",
           "updatedAt": "2026-03-15T06:35:47Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "No text was suggested and no missing requirements have been mentioned. Thus, closing.",
+          "createdAt": "2026-07-06T07:33:44Z",
+          "updatedAt": "2026-07-06T07:33:44Z"
         }
       ]
     },
@@ -586,19 +628,19 @@
       "id": "I_kwDOPTNEDc7qZSty",
       "title": "Should we add CITES as a digital emblem use case?",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/24",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "CITES: the Convention on International Trade in Endangered Species of Wild Fauna and Flora  includes a system for tracking the legal movement of endangered species. If we can get stakeholder involvement I think this would be another good use case.\n\n",
       "createdAt": "2026-02-12T15:34:22Z",
-      "updatedAt": "2026-03-15T05:50:35Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:35:19Z",
+      "closedAt": "2026-07-06T07:35:19Z",
       "comments": [
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\n\nDo we expect that will expand the existing requirements list? I think that should be the guiding principle at this point. The important point of this document is to create the set of requirements the architecture doc needs to account for using use cases to illustrate why with active stakeholders. I want to make sure we don't fall into the trap of the reverse: making this a never-ending list of active or potential stakeholders when the requirements as written would work for them whether their use case is listed or not. \n\nPersonally, I do not see this introducing anything beyond what is in there or what is out of current charter scope (which the WG decided should not be the focus of the editors).",
           "createdAt": "2026-03-15T04:39:47Z",
           "updatedAt": "2026-03-15T04:40:56Z"
@@ -612,10 +654,17 @@
         },
         {
           "author": "tojens-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "_(speaking as an individual, no hat)_\n\nI was thinking about something similar on the other comment. It's true that the use cases are different for the humans interpreting the emblems, but I don't see how they are different for the implementors of resulting standards. We aren't in the business of telling implementors how to honor the _intent_ communicated by the emblems (we better _never_ write an RFC that says \"observers of a digital Red Cross MUST NOT send more than 50 megabits per second of traffic...\" or anything like that). We just want to explain how to detect and verify emblems, then leave acting on the detected and verified emblems up to the parties to do whatever they were going to do about it.\n\nOr am I missing something? Should there be a technical difference in the way emblems are implemented for use cases that mandate interaction with the asset versus forbid interaction?\n\nOr alternatively, do you see value in using this as a shim example illustrating how these requirements are extensible far beyond the examples we end up including? ",
           "createdAt": "2026-03-15T05:38:38Z",
           "updatedAt": "2026-03-15T05:50:35Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closing as no text has been suggested.",
+          "createdAt": "2026-07-06T07:35:19Z",
+          "updatedAt": "2026-07-06T07:35:19Z"
         }
       ]
     },
@@ -631,7 +680,7 @@
       "labels": [],
       "body": "2. I see the forensic tracking as a core requirement. That is to say, I don't think all use cases will need to support forensic tracing of emblem issuance/discoverability etc. but I think that every emblem's depiction should indicate whether or not it has an associated forensic tracing mechanism or ledger - and in cases where it does should include pointers to it.\r\n\r\n_Originally posted by @rahelFain in https://github.com/ietf-wg-diem/diem-requirements/issues/25#issuecomment-3961344021_\r\n\r\n2a. In addition to noting this as a core field, I think the question of whether or not a specific use case supports and/or requires the use of one or more forensic tracing mechanisms and the reasoning behind the decision(s) reached needs to be detailed in its security considerations. In cases where forensic tracing is optional I think the security considerations will also need to detail the risks vs. benefits of including it within the emblem",
       "createdAt": "2026-02-25T19:10:13Z",
-      "updatedAt": "2026-05-30T00:29:25Z",
+      "updatedAt": "2026-07-06T07:41:05Z",
       "closedAt": null,
       "comments": [
         {
@@ -654,6 +703,13 @@
           "body": "@rahelFain Speaking in my personal capacity.\n\nI think this issue is delicate because forensic tracing may be important for some use cases, but it may also be outside the core scope of DIEM.\n\nFrom an IHL-related use case perspective, there may be situations where, after a cyber operation or other incident, different parties may want to reconstruct what information was available, discoverable, or technically verifiable at a relevant point in time. For example, the relevant question may not only be whether an emblem was valid, but whether DIEM-related data existed, was discoverable, could be validated, or was associated with an applicable authorization model.\n\nAt the same time, I do not want to suggest that the core DIEM mechanism should become a forensic, audit, or accountability system. That may belong to a later implementation stage, a profile-specific extension, an external registry/logging mechanism, or another system entirely.\n\nMaking forensic tracing a mandatory core property could create tension with:\n\n- undetectable validation;\n- minimization of sensitive information;\n- protection of staff, facilities, infrastructure, or affected populations;\n- and avoiding exposure of who queried or validated a protected asset.\n\nFor that reason, I would lean toward treating forensic tracing as outside the core DIEM mechanism, or at most as a profile-specific or extension-specific capability.\n\nHowever, I think the requirements document could still acknowledge the question at a high level, so implementers do not assume that DIEM itself provides forensic or evidentiary guarantees.\n\nCould the chairs/editors provide guidance on where this belongs?\n\nShould the requirements document:\n\n- merely acknowledge forensic/audit support as a possible use-case-specific need;\n- define an extension point for future profiles;\n- mention it only in Security Considerations;\n- or leave it entirely to external systems and later implementation work?",
           "createdAt": "2026-05-30T00:29:25Z",
           "updatedAt": "2026-05-30T00:29:25Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rahelFain Are we good here? To me, it seems like the conclusion is that the text is good as is.",
+          "createdAt": "2026-07-06T07:41:05Z",
+          "updatedAt": "2026-07-06T07:41:05Z"
         }
       ]
     },
@@ -662,15 +718,15 @@
       "id": "I_kwDOPTNEDc739qzY",
       "title": "Additional potential emblems: Any missing requirements?",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/30",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "In chat during IETF 125, @ohmantics mentioned several additional potential emblem types. Please let us know if we are missing any requirements needed for these use cases.\n\n\n> For consideration, here are a list of use cases we haven't discussed:\n> \n> Wassenaar Arrangement / Export Controls \u2014 dual-use goods and technologies have export control markings; digital emblems could mark shipments or data transfers subject to export control regimes\n> Antarctic Treaty System \u2014 research stations and vessels in Antarctica have protected status; digital assets of Antarctic research programs could benefit from emblems\n> Outer Space Treaty / COPUOS \u2014 space objects, ground stations, and telemetry systems have registration and non-interference obligations; satellite ground infrastructure could bear digital emblems\n> Convention on Certain Conventional Weapons (CCW) \u2014 minefields and areas with unexploded ordnance carry physical markings; digital geodata could carry equivalent emblems\n> International Telecommunication Union (ITU) \u2014 frequency allocations and emergency telecommunications have protected status under the ITU Constitution; digital infrastructure supporting emergency comms could be marked\n> \n> Undersea cable systems \u2014 submarine cables have protected status under UNCLOS and the 1884 Convention for the Protection of Submarine Telegraph Cables; landing stations, management systems, and monitoring infrastructure could bear digital emblems\n> Critical infrastructure / CNI designations \u2014 many nations designate critical national infrastructure; while not treaty-based, mutual recognition frameworks could use digital emblems\n> Election infrastructure \u2014 some jurisdictions designate election systems as critical infrastructure; digital emblems could signal this status to potential attackers\n> Maritime vessels (IMO) \u2014 beyond containers, vessels themselves carry IMO numbers and safety certifications (SOLAS); their digital systems (AIS, ECDIS) could bear emblems\n> Pharmaceutical supply chain (WHO prequalification) \u2014 beyond WHO's Red Cross-like protection, WHO-prequalified medicines in transit could use digital emblems for anti-counterfeiting",
       "createdAt": "2026-03-28T14:14:31Z",
-      "updatedAt": "2026-05-30T00:42:49Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T07:32:22Z",
+      "closedAt": "2026-07-06T07:32:22Z",
       "comments": [
         {
           "author": "ohmantics",
@@ -685,6 +741,13 @@
           "body": "@rohanmahy Speaking in my personal capacity.\n\nI think this issue is useful, but I would be careful about treating all listed examples as automatically within the same scope or as the same kind of \u201cemblem\u201d use case.\n\nSome examples may be connected to existing legal frameworks, treaties, conventions, regulatory regimes, or technical certification systems. Others may involve critical infrastructure or protected-status signaling in a broader sense. However, that does not necessarily mean that each example should be treated as a digital emblem use case in the same way, or that it should be included in this requirements draft.\n\nFrom an IHL-related perspective, I think this distinction matters because not every protected, regulated, critical, or sensitive asset has the same legal basis, protective meaning, authorization model, or expected validator behavior.\n\nFor that reason, could the chairs/editors provide guidance on the threshold for including additional potential emblem types in this draft?\n\nFor example, should a candidate use case identify at least:\n\n- the legal, treaty, regulatory, policy, or technical-standard source of the claimed status;\n- whether the mark is an existing emblem/sign, a regulated label, a certification signal, or a future protected-status marking;\n- who is competent to authorize, issue, or validate the marking;\n- what technical information the validator is expected to learn;\n- whether the use case requires public discoverability, selective disclosure, confidentiality, or undetectable validation;\n- and which legal, operational, or accountability conclusions remain outside DIEM.\n\nThis may help avoid merging very different categories into one broad \u201cemblem\u201d concept.\n\nI am not suggesting that the listed examples are invalid. I am only suggesting that additional use cases may need a scope filter before being added to the draft, so the architecture remains extensible without implying that all protected, regulated, or critical assets have the same legal meaning or should be handled under the same profile.",
           "createdAt": "2026-05-30T00:42:49Z",
           "updatedAt": "2026-05-30T00:42:49Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Selective disclosure has been added in #33.\n\nBeyond that, no other requirements have been brought up, so I'm closing this one.",
+          "createdAt": "2026-07-06T07:32:22Z",
+          "updatedAt": "2026-07-06T07:32:22Z"
         }
       ]
     },
@@ -693,15 +756,15 @@
       "id": "I_kwDOPTNEDc8AAAABAt5PRQ",
       "title": "Any requirements for post-DNS discovery mechanisms?",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/issues/36",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "rohanmahy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Reflects this thread on the mailing list\n\nhttps://mailarchive.ietf.org/arch/msg/diem/ZBoyhqP91PkLktHGlaD3W2n2YMc/\n",
       "createdAt": "2026-04-28T12:23:52Z",
-      "updatedAt": "2026-05-30T00:03:28Z",
-      "closedAt": null,
+      "updatedAt": "2026-07-06T08:59:03Z",
+      "closedAt": "2026-07-06T07:40:04Z",
       "comments": [
         {
           "author": "wnunezc",
@@ -709,6 +772,34 @@
           "body": "@rohanmahy Speaking in my personal capacity.\n\nI think this issue is useful because it may help separate different discovery questions without requiring the draft to prescribe a specific post-DNS mechanism at this stage.\n\nFor IHL-related or other legally-derived use cases, I would distinguish at least three conceptual layers:\n\n- discovering or identifying the relevant asset name or asset identifier;\n- determining whether the returned data, bundle, or associated material is interpretable as DIEM-related data;\n- validating that the DIEM-related data is properly bound to the relevant asset and issued or authorized under the applicable trust model.\n\nI am not proposing a new DNS label, a new RRtype, or any particular post-DNS discovery syntax. My point is only that future discovery mechanisms may need to preserve the same functional separation: asset identification, DIEM-data discovery, and technical validation.\n\nThis may be especially relevant for protected assets that do not map cleanly to a single FQDN, or where the physical-world protected object, the digital service, and the validating party do not all share the same operational view of the asset.\n\nSo perhaps the requirements could remain mechanism-neutral, while noting that any future post-DNS discovery mechanism should make clear:\n\n- what asset or identifier is being queried;\n- what makes the returned material interpretable as DIEM-related;\n- how the validator checks binding, authorization, and validity;\n- and which legal, operational, or policy interpretation remains outside the discovery mechanism itself.",
           "createdAt": "2026-05-30T00:03:28Z",
           "updatedAt": "2026-05-30T00:03:28Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@rohanmahy Mallory's suggestion was actually for Jim's architecture draftdocument . I think the requirements document is good the way it is as it is as much DNS-agnostic as it can be. Thus closing this one.",
+          "createdAt": "2026-07-06T07:40:04Z",
+          "updatedAt": "2026-07-06T07:40:04Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Hi Felix,\r\nI don't think that was actually the point. I think Mallory was asking for\r\nsome text in requirements saying that eventually we may/will need emblems\r\nfor which there isn't an obvious FQDN associated.\r\n\r\nOn Mon, 6 Jul 2026, 09:40 Felix Linker, ***@***.***> wrote:\r\n\r\n> *felixlinker* left a comment (ietf-wg-diem/diem-requirements#36)\r\n> <https://github.com/ietf-wg-diem/diem-requirements/issues/36#issuecomment-4890281201>\r\n>\r\n> @rohanmahy <https://github.com/rohanmahy> Mallory's suggestion was\r\n> actually for Jim's architecture draftdocument . I think the requirements\r\n> document is good the way it is as it is as much DNS-agnostic as it can be.\r\n> Thus closing this one.\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-diem/diem-requirements/issues/36?email_source=notifications&email_token=AADSQPTJRAO2WMZDUVN72AD5DNJWXA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTIOBZGAZDQMJSGAY2M4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJLDGN5XXIZLSL5RWY2LDNM#issuecomment-4890281201>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AADSQPSBZR5TABCF5UKLKHL5DNJWXAVCNFSNUABGKJSXA33TNF2G64TZHMYTAMRWG43DSOJTGM5US43TOVSTWNBTGQZTAOJRGAYTHILWAI>\r\n> .\r\n> Triage notifications, keep track of coding agent tasks and review pull\r\n> requests on the go with GitHub Mobile for iOS\r\n> <https://github.com/notifications/mobile/ios/AADSQPQGNA4N4MNLZL5VFQL5DNJWXA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTIOBZGAZDQMJSGAY2M4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJKTGN5XXIZLSL5UW64Y>\r\n> and Android\r\n> <https://github.com/notifications/mobile/android/AADSQPRNLBWS37ODFF4M2635DNJWXA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTIOBZGAZDQMJSGAY2M4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJLTGN5XXIZLSL5QW4ZDSN5UWI>.\r\n> Download it today!\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2026-07-06T07:53:23Z",
+          "updatedAt": "2026-07-06T07:53:23Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hey Rohan,\n\nI quote from Mallory's mail (emphasis added by me).\n\n> We might for now just include a placeholder section **in Jim's draft** that points the way for future work beyond DNS when the time comes.",
+          "createdAt": "2026-07-06T08:52:18Z",
+          "updatedAt": "2026-07-06T08:52:18Z"
+        },
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Subject also is: \"Suggested placeholder text to catch beyond-DNS **arch**, for now\"",
+          "createdAt": "2026-07-06T08:59:03Z",
+          "updatedAt": "2026-07-06T08:59:03Z"
         }
       ]
     }
@@ -3553,24 +3644,26 @@
       "id": "PR_kwDOPTNEDc7rRsFr",
       "title": "New language on independence of use cases",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/39",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "New language for the text on use cases being independent. I check with Sarah, and she confirmed that the rephrasing still expresses what she wanted the initial text to say.\r\n\r\nThe main change is that I removed the term \"applying an emblem,\" which I found underspecified. The longer I thought about it, the less it was clear to me what it meant exactly. Now, the draft talks about \"drafts that address individual requirements.\" I think that has a much clearer semantics!\r\n\r\nI hope everyone agrees :)",
       "createdAt": "2026-06-27T10:27:55Z",
-      "updatedAt": "2026-07-03T08:22:40Z",
+      "updatedAt": "2026-07-06T07:26:36Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "indep-use-cases",
       "headRefOid": "719a5b896d055b2a4943f2365bc2fa773565a2a2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-07-06T07:26:36Z",
+      "mergedAt": "2026-07-06T07:26:36Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "ac53359ce4f509d2ca2f14c08af85f2c53be8d15"
+      },
       "comments": [
         {
           "author": "rohanmahy",
@@ -3594,24 +3687,26 @@
       "id": "PR_kwDOPTNEDc7rRsZP",
       "title": "New text for removability",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/40",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Text is not a major change, but I think my previous suggestion were too indirect. I think the new text is clearer, and it also highlights that removability must be considered w.r.t. an adversary.",
       "createdAt": "2026-06-27T10:28:28Z",
-      "updatedAt": "2026-07-03T08:33:46Z",
+      "updatedAt": "2026-07-06T07:26:56Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "new-removability",
       "headRefOid": "0bd107e642813fc57ce9093958b9621bdb83fc83",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-07-06T07:26:55Z",
+      "mergedAt": "2026-07-06T07:26:55Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "257238a41f729d07b5e4717a5d2f1a679dfde561"
+      },
       "comments": [],
       "reviews": [
         {
@@ -3641,21 +3736,21 @@
       "id": "PR_kwDOPTNEDc7rRuCY",
       "title": "Must to may",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/41",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Suggestion to make this MUST a MAY. I appreciate that some use cases have this requirement, but I think we should be careful about forcing drafts to address certain requirements. Let's not create \"doc debt.\"",
       "createdAt": "2026-06-27T10:31:32Z",
-      "updatedAt": "2026-07-03T18:38:48Z",
+      "updatedAt": "2026-07-06T07:26:02Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "must-may",
       "headRefOid": "48f72fb00c0a836adc452c342e50dabe3092dd8f",
-      "closedAt": null,
+      "closedAt": "2026-07-06T07:26:02Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -3790,24 +3885,26 @@
       "id": "PR_kwDOPTNEDc7skas9",
       "title": "More security considerations",
       "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/42",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "felixlinker",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-07-01T07:47:43Z",
-      "updatedAt": "2026-07-03T08:32:11Z",
+      "updatedAt": "2026-07-06T07:27:13Z",
       "baseRepository": "ietf-wg-diem/diem-requirements",
       "baseRefName": "main",
       "baseRefOid": "f2a13775a101a915487bf30ad9b742c78fe527df",
       "headRepository": "ietf-wg-diem/diem-requirements",
       "headRefName": "sec-considerations",
       "headRefOid": "834eabb49d8c0c5d39d86f6e773d0a3eb469e108",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-07-06T07:27:13Z",
+      "mergedAt": "2026-07-06T07:27:13Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "7e188f182bf8a67845db6e4a62266eddf5c5a9e1"
+      },
       "comments": [],
       "reviews": [
         {
