@@ -26,7 +26,7 @@ This document lists the requirements and use cases that an architecture for digi
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.10.0
+    platformdirs 4.10.1
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
@@ -1053,7 +1053,7 @@ svg {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fainchtein, et al.</td>
-<td class="center">Expires 7 January 2027</td>
+<td class="center">Expires 19 January 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg {
 <dd class="internet-draft">draft-ietf-diem-requirements-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-07-06" class="published">6 July 2026</time>
+<time datetime="2026-07-18" class="published">18 July 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-01-07">7 January 2027</time></dd>
+<dd class="expires"><time datetime="2027-01-19">19 January 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1138,7 +1138,7 @@ This document lists the requirements and use cases that an architecture for digi
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 7 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 19 January 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1351,9 +1351,7 @@ The DIEM WG will define a set of standards for an architecture that enables disc
 This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
-We envision an architecture comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem" and "validation" in accordance with the DIEM charter as of this writing <span>[<a href="#CHARTER" class="cite xref">CHARTER</a>]</span>.
-These definitions have been reproduced in <a href="#defs" class="auto internal xref">Section 2</a>.<a href="#section-1-1" class="pilcrow">¶</a></p>
+We envision an architecture comprising multiple standards, which can be flexibly profiled for different use cases.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="defs">
@@ -1378,7 +1376,7 @@ Digital emblems extend the range of identifying marks from the physical (visual 
         <dd class="break"></dd>
 <dt id="section-2-3.3">Asset:</dt>
         <dd style="margin-left: 1.5em" id="section-2-3.4">
-          <p id="section-2-3.4.1">A physical resource -- such as a place or thing -- or a digital resource, system, or service -- such as a server, data repository, or networked device -- that can present a digital emblem.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.4.1">A physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="section-2-3.5">Emblem issuer:</dt>
@@ -1416,7 +1414,7 @@ Validation may include ensuring that the emblem has not been forged, stolen, or 
       <h2 id="name-requirements">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-requirements" class="section-name selfRef">Requirements</a>
       </h2>
-<p id="section-3-1">The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see <a href="#use-cases" class="auto internal xref">Section 5</a>), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">The requirements for individual use cases are independent, and the requirements for one use case <span class="bcp14">MUST NOT</span> constrain, override, or otherwise affect the requirements of any other use case.
 Where a use case specifies a limited domain of application for a particular emblem (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or a specific discovery mechanism), such a limitation <span class="bcp14">SHOULD</span> be understood as reflecting current use case constraints only.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">Drafts will likely address a subset of the requirements set out in this document.
@@ -1607,12 +1605,12 @@ time of an alleged violation.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.5-3">Level 2 - presence, verifiability and access: Establishing the emblem's presence and verifiability and that the
 querying party accessed the digital emblem.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
 <p id="section-4.5-4">Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
-<p id="section-4.5-5">Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation <a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>.
-An example from the Diplomatic Pouch use case, described in Section <a href="#diplo-pouch" class="auto internal xref">Section 5.2</a>, illustrates the
+<p id="section-4.5-5">Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>).
+An example from the Diplomatic Pouch use case, described in <a href="#diplo-pouch" class="auto internal xref">Section 5.2</a>, illustrates the
 Level 3 Proof of Presence requirement, and how it in some cases may need to be part of a chain of custody and/or
  accompanied by additional security measures to provide adequate security guarantees.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
 <aside id="section-4.5-6">
-          <p id="section-4.5-6.1">Level 2 validation could be available for the validator without violating Undetectable Validation <a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>.
+          <p id="section-4.5-6.1">Level 2 validation could be available for the validator without violating Undetectable Validation (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>).
 However, enabling Level 2 validation to the asset, issuer or authorizer would violate that requirement.<a href="#section-4.5-6.1" class="pilcrow">¶</a></p>
 </aside>
 </section>
@@ -1751,7 +1749,7 @@ Emblems must only be issued by entities that have been authorized to bear a digi
 Such authorizations must be issued by a state, other party to an armed conflict, or other entity competent under international law.<a href="#section-5.5.2-1" class="pilcrow">¶</a></p>
 <p id="section-5.5.2-2">For digital, protective emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
 In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
-Similarly, other malicious ICT actors, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
+Similarly, other cyber operators, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
 Concretely, we can assume that they will typically first identify an asset that they plan to engage with and then check whether that asset bears an emblem.<a href="#section-5.5.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1760,9 +1758,9 @@ Concretely, we can assume that they will typically first identify an asset that 
           <h4 id="name-requirements-2">
 <a href="#section-5.5.3" class="section-number selfRef">5.5.3. </a><a href="#name-requirements-2" class="section-name selfRef">Requirements</a>
           </h4>
-<p id="section-5.5.3-1">The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
-Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
-As verifiers intend to attack assets that are not protected under IHL, this will only be the case when they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
+<p id="section-5.5.3-1">The purpose of a digital emblem is to prevent disruptions of assets by informing validators that marked assets enjoy protection under IHL.
+Digital emblems will only be able to do so when validators are willing to pay attention to them.
+As validators intend to engage with assets that are not protected under IHL, this will only be the case when they are confident that their targets cannot fake protection and that they do not alert their target.
 Therefore, digital, protective emblems under IHL require validation for authenticity (<a href="#validation" class="auto internal xref">Section 3.3.1</a>) that is undetectable (<a href="#undet-validation" class="auto internal xref">Section 3.2.4</a>).<a href="#section-5.5.3-1" class="pilcrow">¶</a></p>
 <p id="section-5.5.3-2">At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
 First, IHL requires that emblem issuers must seek authorization from a competent authority prior to applying them (see <a href="#authorization" class="auto internal xref">Section 3.3.2</a> and <a href="#ihl-stakeholders" class="auto internal xref">Section 5.5.2</a>).
