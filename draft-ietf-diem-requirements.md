@@ -192,8 +192,6 @@ This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
 Not all use cases share all requirements.
 We envision an architecture comprising multiple standards, which can be flexibly profiled for different use cases.
-We use the terms "(digital) emblem" and "validation" in accordance with the DIEM charter as of this writing {{CHARTER}}.
-These definitions have been reproduced in {{defs}}.
 
 # Conventions and Definitions {#defs}
 
@@ -210,7 +208,7 @@ The definitions for terms "(digital) emblem" and "validation" are reproduced fro
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A physical resource -- such as a place or thing -- or a digital resource, system, or service -- such as a server, data repository, or networked device -- that can present a digital emblem.
+: A physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
 
 Emblem issuer:
 : The entity that operates or controls an asset that bears a digital emblem.
@@ -233,7 +231,7 @@ often by checking its details against a known standard or reference point.
 
 # Requirements
 
-The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see Section Use Cases), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
+The DIEM architecture will allow validators to discover and validate digital emblems that are associated with assets. This section contains the requirements that this architecture will address. They are based on use cases identified thus far (see {{use-cases}}), but note that not all use cases share all requirements. We categorize these requirements into: requirements on digital emblems and their format, on their discovery, on their validation, and other requirements.
 
 The requirements for individual use cases are independent, and the requirements for one use case MUST NOT constrain, override, or otherwise affect the requirements of any other use case.
 Where a use case specifies a limited domain of application for a particular emblem (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or a specific discovery mechanism), such a limitation SHOULD be understood as reflecting current use case constraints only.
@@ -361,18 +359,18 @@ querying party accessed the digital emblem.
 
 Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.
 
-Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation {{undet-validation}}.
-An example from the Diplomatic Pouch use case, described in Section {{diplo-pouch}}, illustrates the
+Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation ({{undet-validation}}).
+An example from the Diplomatic Pouch use case, described in {{diplo-pouch}}, illustrates the
 Level 3 Proof of Presence requirement, and how it in some cases may need to be part of a chain of custody and/or
  accompanied by additional security measures to provide adequate security guarantees.
 
 
 {:aside}
-> Level 2 validation could be available for the validator without violating Undetectable Validation {{undet-validation}}.
+> Level 2 validation could be available for the validator without violating Undetectable Validation ({{undet-validation}}).
 > However, enabling Level 2 validation to the asset, issuer or authorizer would violate that requirement.
 
 
-# Use Cases
+# Use Cases {#use-cases}
 
 Different use cases have different requirements.
 The purpose of this document is to list the requirements that will be addressed with the initial architecture.
@@ -460,14 +458,14 @@ Such authorizations must be issued by a state, other party to an armed conflict,
 
 For digital, protective emblems under IHL, validators will typically be armed forces under the command of either state or non-state actors.
 In situations of armed conflict, all such actors are under an obligation to check whether assets subject to military activities bear an emblem.
-Similarly, other malicious ICT actors, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
+Similarly, other cyber operators, whilst not necessarily obligated under IHL, may choose to respect assets bearing the emblem.
 Concretely, we can assume that they will typically first identify an asset that they plan to engage with and then check whether that asset bears an emblem.
 
 ### Requirements
 
-The purpose of a digital emblem is to prevent disruptions of assets by informing verifiers that marked assets enjoy protection under IHL.
-Digital emblems will only be able to do so when verifiers are willing to pay attention to them.
-As verifiers intend to attack assets that are not protected under IHL, this will only be the case when they are confident that their targets cannot fake protection and that they do not alert their target about an imminent attack.
+The purpose of a digital emblem is to prevent disruptions of assets by informing validators that marked assets enjoy protection under IHL.
+Digital emblems will only be able to do so when validators are willing to pay attention to them.
+As validators intend to engage with assets that are not protected under IHL, this will only be the case when they are confident that their targets cannot fake protection and that they do not alert their target.
 Therefore, digital, protective emblems under IHL require validation for authenticity ({{validation}}) that is undetectable ({{undet-validation}}).
 
 At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
