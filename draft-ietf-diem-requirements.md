@@ -285,6 +285,8 @@ Some use cases require that digital emblems are removable.
 "Removing" an emblem means that one cannot determine whether an emblem ever was applied to a particular asset.
 This means, in particular, emblems do not count as removed when they become invalid, e.g., due to expiry.
 
+Removal or invalidity of a digital emblem does not, by itself, determine whether any external legal, administrative, or organizational status associated with the asset has changed.
+
 Note that removability is a security requirement.
 Therefore, drafts that address removability MUST specify a threat model for removability that specifies when and under what conditions it is acceptable that someone can learn after the fact that an emblem was applied.
 
@@ -305,12 +307,21 @@ This threat model must detail which parties can detect emblem discovery and vali
 Some use cases require that digital emblems be validated. The digital emblem architecture MUST, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
 In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
+Unless explicitly required by an individual digital emblem specification, validation MUST NOT require a validator to reconstruct or adjudicate, in real time, external legal, administrative, or organizational processes that determine whether an issuer is permitted to use an emblem. The existence of such authorization as a prerequisite for use does not, by itself, make that authorization part of validation.
 
 ### Authorization {#authorization}
 
-For some use cases, use of a digital emblem requires authorization by third parties. When a digital emblem requires authorization, standards MUST define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblem standards can choose to take a dependency on Internet access or not. For example, a given digital emblem MAY use a PKI or the DNS as a root of trust if desired, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
+For some use cases, use of a digital emblem requires authorization by third parties. Such authorization MAY be a prerequisite for applying an emblem without necessarily being part of validation.
 
-Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
+When an individual digital emblem specification requires authorization information to be evaluated during validation, standards MUST define a trust model that describes how validators can discover authorities and how the system selects authorities. Unless explicitly required by that specification, validators MUST NOT be required to reconstruct or adjudicate external legal, administrative, or organizational authorization processes in real time.
+
+The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblem standards can choose to take a dependency on Internet access or not.
+
+For example, a given digital emblem MAY use a PKI or the DNS as a root of trust if desired, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
+
+Any authorization mechanism that relies on cryptographic key material MUST account for the possibility of compromise of that key material, for example, by specifying revocation mechanisms or using short-lived credentials.
+
+Revocation or expiration of such technical credentials MUST NOT, by itself, be interpreted as revocation of any external legal, administrative, or organizational status associated with the emblem or asset.
 
 ## Other Requirements
 
@@ -346,12 +357,12 @@ For example, this could be realized with encryption of the general emblem data f
 
 ## Proof of Presence {#proof-pres}
 
-Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically.
+Since emblems themselves are unable to directly protect assets against attack, emblems indicating that assets are entitled to protections may require a mechanism through which evidence of the emblem's presence, verifiability, access, or verification at the time of an alleged violation can be established forensically.
 This would be particularly relevant in cases where emblems can be applied and removed dynamically.
 These protections are defined in three different levels, listed from weakest to strongest.
 
 Level 1 - presence and verifiability: Establishing that an actor or querying party was able to obtain the emblem at the
-time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
+time of an alleged violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
 time of an alleged violation.
 
 Level 2 - presence, verifiability and access: Establishing the emblem's presence and verifiability and that the
@@ -471,8 +482,13 @@ Therefore, digital, protective emblems under IHL require validation for authenti
 At the same time, digital, protective emblems under IHL should fit well into the existing framework of IHL and not put emblem issuers at increased risk.
 First, IHL requires that emblem issuers must seek authorization from a competent authority prior to applying them (see {{authorization}} and {{ihl-stakeholders}}).
 The authorization must be decentralized, i.e., there must be no central authorities that govern the use or distribution of digital emblems.
+For this use case, such authorization is a prerequisite for applying the emblem and does not, by itself, require a validator to reconstruct or adjudicate the underlying legal or administrative authorization process during validation.
+
 Second, bearing an emblem can increase the risk for targeted attacks.
+
 We require that emblem issuers must be able to individually assess that risk and remove emblems whenever they see the risks as outweighing the benefits, i.e., we require that digital emblems are removable ({{removable}}).
+
+Removal or technical invalidity of a digital emblem does not, by itself, determine whether the marked asset retains or loses protection under IHL.
 
 Beyond the DIEM architecture as described in this document, digital, protective emblems under IHL would benefit from other discovery mechanisms than the DNS, as not all assets may have domain names associated with them.
 
@@ -554,6 +570,7 @@ Similarly, for emblems that require validation or authorization, specifications 
 Moreover, there may be use case specific risks.
 Some emblem types are intended to signal specific rights or status by law, convention, or agreement.
 As with physical emblems, the presence of a digital emblem exists to inform; it does not ensure that the corresponding rights or status will be respected by those who are privy to the emblem.
+Likewise, successful or failed validation, removal, expiration, or revocation of a digital emblem or related credential does not, by itself, determine the existence, loss, or validity of those external rights or status.
 In some cases, the presentation of an emblem may even result in a greater likelihood of attack.
 Specifications that address specific use cases should consider such use-case-specific risks and their consequences.
 
