@@ -178,7 +178,7 @@ informative:
 
 --- abstract
 
-Digital emblems are a means for an asset to signal to validating entities that it should be protected or treated in a specific way,
+Digital emblems allow an issuer to signal that an asset should be protected or treated in a specific way,
 using some normative framework.
 This document lists the requirements and use cases that an architecture for digital emblems must accommodate.
 
@@ -186,7 +186,7 @@ This document lists the requirements and use cases that an architecture for digi
 
 # Introduction
 
-Digital emblems are a means for an asset to signal to validating entities that it should be protected or treated in a specific way, using some normative framework.
+Digital emblems allow an issuer to signal to validating entities that an asset should be protected or treated in a specific way, using some normative framework.
 The DIEM WG will define a set of standards for an architecture that enables discovery and validation of digital emblems.
 This document lists the requirements that the architecture must accommodate.
 These requirements were identified across different use cases.
@@ -208,25 +208,25 @@ The definitions for terms "(digital) emblem" and "validation" are reproduced fro
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can present a digital emblem.
+: A physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can be marked with a digital emblem.
 
 Emblem issuer:
-: The entity that operates or controls an asset that bears a digital emblem.
+: The entity that issues a digital emblem.
   Depending on the applicable emblem, the issuer may have received authorization to issue emblems, and in such cases, emblem issuers are also called *authorized entities*.
   For example, emblem issuers could be a medical or humanitarian organization, a cultural institution, or an operator of installations containing dangerous forces, among others.
 
 Authorizing entity:
 : An entity competent to grant authorization for the use, by an authorized entity, of a digital emblem.
-  The authorizing entity ensures that such authorization is issued and recorded in accordance with applicable legal requirements, enabling technical and operational verification.
+  The authorizing entity ensures that such authorization is issued and recorded in accordance with applicable legal requirements, enabling validation.
   In certain specific cases, the authorizing entity is also the authorized entity.
 
 Validator:
-: An entity that queries, inspects, or otherwise interacts with assets to determine whether they are marked with a valid digital emblem.
-  Validators may include technical systems, network operators, or other actors implementing protective or non-interference measures consistent with the emblem's purpose.
+: An entity that seeks to determine whether an asset is marked with a valid digital emblem.
+  Validators may include technical systems, network operators, or other actors.
 
 Validation:
-: "To validate an emblem" means to confirm the authenticity or legitimacy of a particular symbol or design,
-often by checking its details against a known standard or reference point.
+: "To validate an emblem" means to confirm the authenticity or legitimacy of a particular digital emblem.
+  Validation can be performed by cryptographic checks, e.g., signature verification, by using domain-specific knowledge, or by following particular business processes.
   Validation may include ensuring that the emblem has not been forged, stolen, or tampered with.
 
 # Requirements
@@ -236,15 +236,15 @@ The DIEM architecture will allow validators to discover and validate digital emb
 The requirements for individual use cases are independent, and the requirements for one use case MUST NOT constrain, override, or otherwise affect the requirements of any other use case.
 Where a use case specifies a limited domain of application for a particular emblem (e.g. only digital or physical assets, a narrow scope of valid issuers or validators, or a specific discovery mechanism), such a limitation SHOULD be understood as reflecting current use case constraints only.
 
-Drafts will likely address a subset of the requirements set out in this document.
-Whenever a draft addresses one use case's requirement, this must not be interpreted as that draft inheriting all limitations of the respective use case.
-Future or different use cases should be able to reuse any draft or parts thereof, in particular, when the use case has a different or expanded domain of application.
+Drafts will likely address a subset of the requirements set out in this document, and there will likely be different digital emblem profiles, which each will address one or more use cases.
+Whenever a profile addresses one use case's requirement, this must not be interpreted as that profile inheriting all limitations of the respective use case.
+Future or different drafts and profiles should be able to reuse any draft or parts thereof, in particular, when an addressed use case has a different or expanded domain of application.
 
 ## Digital Emblem Requirements
 
 ### Digital Emblem Format
 
-Digital emblems MUST identify the marked asset and their kind of digital emblem.
+Digital emblems MUST identify the marked asset and what kind of emblem they resemble.
 Beyond that, digital emblems MAY include other data, for example, an issuer or a validity window.
 To accommodate use cases requiring extensible data, a digital emblem architecture SHOULD introduce minimal size overhead except for fields required to fulfil other requirements in this document.
 
@@ -252,31 +252,31 @@ As of this writing, the DIEM charter requires that digital emblems MUST explicit
 
 ### Emblem Semantics
 
-Individual use cases MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
+Digital emblem profiles MUST specify the semantics of the emblem. It must be clearly stated how discovery and validation of a digital emblem should inform validator behavior.
 
 ## Discovery Requirements
 
 ### Discovery
 
-Digital emblems MUST specify how validators can check for the presence of a digital emblem. That is, given an asset, a validator must be able to determine whether it has an associated emblem. For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for that FQDN.
-
+Digital emblem profiles MUST specify how validators, given an asset, can check for the presence of a digital emblem.
+For example, verifying whether a FQDN has an emblem associated with it could be realized by fetching digital emblem-associated records for that FQDN.
 
 ### Query Response {#response-reqs}
 
-Specifications for each use case MUST determine how servers must respond to queries for Digital Emblems of their specified type.
-Specifically, they must determine the responsiveness and consistency requirements for emblems of their given type and
+Digital emblem profiles MUST determine how servers must respond to queries for Digital Emblems.
+Specifically, they must determine the responsiveness and consistency requirements for emblems and
 provide explanations of how the chosen requirements apply and the rationales for their selection.
 
-For responsiveness, an instance of a specific type of digital emblem can either be required to respond to all queries for it (Assured Response), or allowed to selectively respond to a specific subset of incoming queries (Selective Response).
+For responsiveness, a digital emblem profile can either require that all queries must be responded to (Assured Response), or can allow for selectively responding to a subset of incoming queries (Selective Response).
 
-For consistency of response, specifications for a given type of Digital Emblem T must denote whether all queries for an
-asset's records (as denoted by its FQDN) must return all Digital Emblems of type T associated with the
-asset (Consistent Content), or whether the inclusion of emblems of type T in a response may vary based on specific requester attributes (Selective Content).
+For consistency of response, digital emblem profiles must denote whether all queries for an
+asset's records (as denoted by its FQDN) must return all respective Digital Emblems associated with the
+asset (Consistent Content), or whether the inclusion of emblems in a response may vary based on specific requester attributes (Selective Content).
 
 Note that as of this writing, neither the baseline definition for the minimum set of attributes that constitute a unique Digital
 Emblem, nor the attributes needed to attain Consistent Content have been defined.
 Given the limited scope of this document, that definition as well as the mechanism to ensure its extensibility across
-newly defined emblem types will be outlined in the architecture document.
+newly defined emblem profiles will be outlined in the architecture document.
 
 
 ### Removable {#removable}
@@ -286,7 +286,7 @@ Some use cases require that digital emblems are removable.
 This means, in particular, emblems do not count as removed when they become invalid, e.g., due to expiry.
 
 Note that removability is a security requirement.
-Therefore, drafts that address removability MUST specify a threat model for removability that specifies when and under what conditions it is acceptable that someone can learn after the fact that an emblem was applied.
+Therefore, digital emblem profiles and drafts that address removability MUST specify a threat model for removability that specifies when and under what conditions it is acceptable that someone can learn after the fact that an emblem was applied.
 
 ### Undetectable Validation {#undet-validation}
 
@@ -294,21 +294,27 @@ Some use cases require that digital emblem discovery and validation is undetecta
 This requirement is motivated by emblems that mark their assets as protected and ask validators to not disrupt the marked asset.
 If emblem discovery were detectable, malicious parties could misuse the digital emblem as an intrusion detection system.
 
-For specific use cases and designs, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
-Concrete designs MUST specify a threat model for undetectable validation.
+For specific digital emblem profiles, it may be acceptable that certain parties can detect emblem discovery and validation, for example, when the validator can hide in a sufficiently large anonymity set, or it is acceptable that the given party could detect the discovery or validation.
+Digital emblem profiles and drafts MUST specify a threat model for undetectable validation.
 This threat model must detail which parties can detect emblem discovery and validation, under which conditions, and to what extent.
 
 ## Validation Requirements
 
 ### Validation {#validation}
 
-Some use cases require that digital emblems be validated. The digital emblem architecture MUST, without restriction, allow individual standards to support verification of all the digital emblem's data or a defined subset. This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem type.
-In particular, when validation is defined, it MUST ensure that the emblem was issued for the respective asset.
+Some use cases require that digital emblems be validated.
+When a profile specifies validation procedures, those procedures MUST ensure that the emblem was issued for the respective asset.
 Some use cases MAY use unverified digital emblems.
+
+The digital emblem architecture MUST allow individual profiles and drafts to support validation of all the digital emblem's data or a defined subset.
+This ensures digital emblems can support static or dynamic data without having to account for the pain of frequent re-signing of dynamic data if its validation is not required by a given digital emblem profile.
 
 ### Authorization {#authorization}
 
-For some use cases, use of a digital emblem requires authorization by third parties. When a digital emblem requires authorization, standards MUST define a trust model that describes how validators can discover authorities and how the system selects authorities. The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblem standards can choose to take a dependency on Internet access or not. For example, a given digital emblem MAY use a PKI or the DNS as a root of trust if desired, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
+For some use cases, issuing digital emblem requires authorization by third parties.
+When a digital emblem profile requires authorization, it MUST define a trust model that describes how validators can discover authorities and how the system selects authorities.
+The generalized digital emblem architecture MUST NOT assume that Internet access is available or required so that individual digital emblem profiles can choose to take a dependency on Internet access or not.
+For example, a given digital emblem profile MAY use a PKI or the DNS as a root of trust if desired, but the generalized digital emblem architecture cannot mandate this or other options and MUST make this a point of extensibility.
 
 Any authorization mechanism MUST account for the possibility of compromise of cryptographic key material, for example, by specifying revocation mechanisms or using short-lived credentials.
 
@@ -329,7 +335,7 @@ Emblems for additional use cases may be defined via new profiles in future stand
 
 ## Asset Identifier Discovery
 
-It may be non-obvious for some use cases to learn the identifier associated with an asset, and thus impossible to discover emblems associated with that asset.
+It may be non-obvious for some use cases to learn the identifiers associated with an asset, and thus impossible to discover emblems associated with that asset.
 To accommodate such use cases, one could specify means to discover identifiers for different types of assets.
 
 ## Implicit Discovery
@@ -346,18 +352,17 @@ For example, this could be realized with encryption of the general emblem data f
 
 ## Proof of Presence {#proof-pres}
 
-Since emblems themselves are unable to directly protect assets against attack, emblems indicating assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically.
+Since emblems themselves are unable to directly protect assets against attack, emblems which indicate that assets are entitled to protections may require a mechanism through which violations of their laws or provisions can be verified forensically.
 This would be particularly relevant in cases where emblems can be applied and removed dynamically.
 These protections are defined in three different levels, listed from weakest to strongest.
 
-Level 1 - presence and verifiability: Establishing that an actor or querying party was able to obtain the emblem at the
-time of violation. That is forensically demonstrating/proving that the emblem was discoverable and verifiable at the
+Level 1 - presence and validation: Establishing that a validator was able to obtain the emblem at the
+time of violation. That is forensically demonstrating or proving that the emblem was discoverable and could be validated at the
 time of an alleged violation.
 
-Level 2 - presence, verifiability and access: Establishing the emblem's presence and verifiability and that the
-querying party accessed the digital emblem.
+Level 2 - presence, validation, and access: Establishing Level 1 and additionally that the validator accessed the digital emblem.
 
-Level 3 -  presence, verifiability access and verification: Demonstrating presence verifiability and access and that the querying party verified the emblem upon accessing it. This level of proof can only be made by the querying party.
+Level 3 - presence, validation, access and verification: Establishing Level 2 and that the validator validated the emblem upon accessing it. This level of proof can only be made by the validator.
 
 Note that Levels 2 and 3 are intended to be mutually exclusive requirements with Undetectable Validation ({{undet-validation}}).
 An example from the Diplomatic Pouch use case, described in {{diplo-pouch}}, illustrates the
@@ -478,8 +483,9 @@ Beyond the DIEM architecture as described in this document, digital, protective 
 
 ## Organization for the Prohibition of Chemical Weapons (OPCW)
 
-Requires protection of Schedule 1 chemicals in transit between signatory countries for research, medical, pharmaceutical, or protective purposes.
-Emblem would identify place, date, and volume of production, and the emblem can contain confidential data.
+Emblem would include the UN packaging symbol, and identify the UN Packaging Code, Proper Shipping Name, four-digit UN hazardous material identification number, GHS Class 6.1 Toxic Substances pictogram, any other applicable GHS pictogram, the Chemical Abstracts Service registry number, the IUPAC chemical name, the quantity, and Consignee and Consignor details.
+In addition, the place, date, and volume of production may be required.
+The OPCW also employs diplomatic pouches for its equipment, and its staff are protected in the same way as couriers or diplomats while on mission.
 
 ## Other IHL-related use cases
 
@@ -500,7 +506,7 @@ The Whiteflag Protocol {{WHITEFLAG}} specifically identifies several categories 
 ## Press
 
 Journalists in conflict zones use protective markings that indicate their status as a non-combatant.
-Assets belonging to the press could be digitally marked, and protective markings in conflict zones could be digitized.
+Assets belonging to the press, such as cameras and satellite terminals, could be digitally marked, and protective markings in conflict zones could be digitized.
 
 ## Ramsar Convention on the Wetlands
 
@@ -526,7 +532,9 @@ Among other things is responsible for the International Plant Protection Convent
 
 ## United Nations Peacekeepers
 
-UN Peacekeepers use protective markings in theater as well as facilities associated with the mission.
+Peacekeepers' blue helmets may require protective marking in a theater for the duration of a deployment, or may be more specifically and individually located using GPS and dynamic DNS, as with shipments of sensitive goods, diplomatic pouches, and couriers and envoys.
+The `invalid_treatment` flag could be used in conjunction with the `contact` TXT record to report strays.
+Barracks and other facilities can be denoted using polygonal LOC records for the TIME of their use.
 
 ## World Customs Organization (WCO)
 
@@ -552,7 +560,7 @@ For example, in a use case where removability is needed, there are security cons
 Similarly, for emblems that require validation or authorization, specifications will discuss falsified presentation of emblems.
 
 Moreover, there may be use case specific risks.
-Some emblem types are intended to signal specific rights or status by law, convention, or agreement.
+Some emblems convey that a marked asset has specific rights or a specific status by law, convention, or agreement.
 As with physical emblems, the presence of a digital emblem exists to inform; it does not ensure that the corresponding rights or status will be respected by those who are privy to the emblem.
 In some cases, the presentation of an emblem may even result in a greater likelihood of attack.
 Specifications that address specific use cases should consider such use-case-specific risks and their consequences.
