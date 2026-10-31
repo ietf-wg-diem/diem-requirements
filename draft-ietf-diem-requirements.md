@@ -356,13 +356,13 @@ Since emblems themselves are unable to directly protect assets against attack, e
 This would be particularly relevant in cases where emblems can be applied and removed dynamically.
 These proofs of presence are defined at three different levels, listed from weakest to strongest.
 
-Level 1 - presence and validation: Establishing that a validator was able to obtain the emblem at the
+Level 1 - presence and validation possible: Establishing that a validator was able to obtain the emblem at the
 time of violation. That is, forensically demonstrating or proving that the emblem was discoverable and could be validated at the
 time of an alleged violation.
 
-Level 2 - presence, validation, and access: Establishing Level 1 and additionally that the validator accessed the digital emblem.
+Level 2 - presence, validation possible, and access: Establishing Level 1 and additionally that the validator accessed the digital emblem.
 
-Level 3 - presence, validation, access, and verification: Establishing Level 2 and that the validator validated the emblem upon accessing it. This level of proof can only be provided by the validator.
+Level 3 - presence, validation possible, access, and validation: Establishing Level 2 and that the validator validated the emblem upon accessing it. This level of proof can only be provided by the validator.
 
 Note that Levels 2 and 3 are intended to be mutually exclusive requirements with undetectable validation ({{undet-validation}}).
 An example from the Diplomatic Pouches use case, described in {{diplo-pouch}}, illustrates the
