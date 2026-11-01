@@ -228,7 +228,6 @@ Digital emblem profile:
 : A specification for a digital emblem design addressing one or more use cases.
   Will include a specifcation of an emblem's data elements, what type each has, which are required or confidential, how validators interpret them, etc.
   A profile also states which of the options offered by the DIEM architecture it uses, for example for discovery, validation, and authorization.
-  Profiles share the common DIEM architecture; a profile is not a separate protocol stack.
 
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular digital emblem.
