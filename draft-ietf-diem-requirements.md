@@ -225,7 +225,8 @@ Validator:
   Validators may include technical systems, network operators, or other actors.
 
 Digital emblem profile:
-: A specification of the data that digital emblems convey for one or more use cases or industries: which data elements appear, what type each has, which are required or confidential, and how validators interpret them.
+: A specification for a digital emblem design addressing one or more use cases.
+  Will include a specifcation of an emblem's data elements, what type each has, which are required or confidential, how validators interpret them, etc.
   A profile also states which of the options offered by the DIEM architecture it uses, for example for discovery, validation, and authorization.
   Profiles share the common DIEM architecture; a profile is not a separate protocol stack.
   One profile may address several use cases, and one asset may be marked with emblems of several profiles.
