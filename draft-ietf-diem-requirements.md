@@ -208,7 +208,7 @@ The definitions for the terms "(digital) emblem" and "validation" are reproduced
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can be marked with a digital emblem.
+: A person, a physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can be marked with a digital emblem.
 
 Emblem issuer:
 : The entity that issues a digital emblem.
