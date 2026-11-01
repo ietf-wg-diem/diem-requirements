@@ -224,6 +224,11 @@ Validator:
 : An entity that seeks to determine whether an asset is marked with a valid digital emblem.
   Validators may include technical systems, network operators, or other actors.
 
+Digital emblem profile:
+: A specification for a digital emblem design addressing one or more use cases.
+  Will include a specifcation of an emblem's data elements, what type each has, which are required or confidential, how validators interpret them, etc.
+  A profile also states how emblems are discovered and whether it requires validation or authorization mechanisms.
+
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular digital emblem.
   Validation can be performed by cryptographic checks, e.g., signature verification, by using domain-specific knowledge, or by following particular business processes.
