@@ -532,9 +532,10 @@ Among other things is responsible for the International Plant Protection Convent
 
 ## United Nations Peacekeepers
 
-Peacekeepers' blue helmets may require protective marking in a theater for the duration of a deployment, or may be more specifically and individually located using GPS and dynamic DNS, as with shipments of sensitive goods, diplomatic pouches, and couriers and envoys.
-The `invalid_treatment` flag could be used in conjunction with the `contact` TXT record to report strays.
-Barracks and other facilities can be denoted using polygonal LOC records for the TIME of their use.
+Peacekeepers' blue helmets may require protective marking in a theater for the duration of a deployment.
+Personnel, vehicles, and convoys may also need to be individually located as they move, as with shipments of sensitive goods, diplomatic pouches, and couriers and envoys, which implies emblem data that changes frequently.
+An emblem may need to identify a point of contact and indicate how an asset whose emblem fails validation should be treated, for example so that strays can be reported.
+Barracks and other facilities may need to be marked by area, for the period of their use.
 
 ## World Customs Organization (WCO)
 
