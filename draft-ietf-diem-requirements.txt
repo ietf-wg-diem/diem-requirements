@@ -5,14 +5,14 @@
 Digital Emblems                                         R. A. Fainchtein
 Internet-Draft                                                   JHU/APL
 Intended status: Informational                                 F. Linker
-Expires: 4 May 2027                                                     
+Expires: 5 May 2027                                                     
                                                             A. Rosenberg
                                                                 Veridigo
                                                                C. Deccio
                                                 Brigham Young University
                                                                A. Mankin
                                                    Packet Clearing House
-                                                         31 October 2026
+                                                         1 November 2026
 
 
               Digital Emblems - Use Cases and Requirements
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 May 2027.
+   This Internet-Draft will expire on 5 May 2027.
 
 Copyright Notice
 
@@ -690,12 +690,14 @@ Table of Contents
 5.12.  United Nations Peacekeepers
 
    Peacekeepers' blue helmets may require protective marking in a
-   theater for the duration of a deployment, or may be more specifically
-   and individually located using GPS and dynamic DNS, as with shipments
-   of sensitive goods, diplomatic pouches, and couriers and envoys.  The
-   invalid_treatment flag could be used in conjunction with the contact
-   TXT record to report strays.  Barracks and other facilities can be
-   denoted using polygonal LOC records for the TIME of their use.
+   theater for the duration of a deployment.  Personnel, vehicles, and
+   convoys may also need to be individually located as they move, as
+   with shipments of sensitive goods, diplomatic pouches, and couriers
+   and envoys, which implies emblem data that changes frequently.  An
+   emblem may need to identify a point of contact and indicate how an
+   asset whose emblem fails validation should be treated, for example so
+   that strays can be reported.  Barracks and other facilities may need
+   to be marked by area, for the period of their use.
 
 5.13.  World Customs Organization (WCO)
 
