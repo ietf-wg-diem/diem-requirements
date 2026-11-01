@@ -208,7 +208,7 @@ The definitions for the terms "(digital) emblem" and "validation" are reproduced
   Digital emblems extend the range of identifying marks from the physical (visual and tactile) to the digital realm.
 
 Asset:
-: A physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can be marked with a digital emblem.
+: A person, a physical resource - such as a place or thing - or a digital resource, system, or service - such as a server, data repository, or networked device - that can be marked with a digital emblem.
 
 Emblem issuer:
 : The entity that issues a digital emblem.
@@ -223,6 +223,11 @@ Authorizing entity:
 Validator:
 : An entity that seeks to determine whether an asset is marked with a valid digital emblem.
   Validators may include technical systems, network operators, or other actors.
+
+Digital emblem profile:
+: A specification for a digital emblem design addressing one or more use cases.
+  Will include a specifcation of an emblem's data elements, what type each has, which are required or confidential, how validators interpret them, etc.
+  A profile also states how emblems are discovered and whether it requires validation or authorization mechanisms.
 
 Validation:
 : "To validate an emblem" means to confirm the authenticity or legitimacy of a particular digital emblem.
@@ -532,9 +537,10 @@ Among other things is responsible for the International Plant Protection Convent
 
 ## United Nations Peacekeepers
 
-Peacekeepers' blue helmets may require protective marking in a theater for the duration of a deployment, or may be more specifically and individually located using GPS and dynamic DNS, as with shipments of sensitive goods, diplomatic pouches, and couriers and envoys.
-The `invalid_treatment` flag could be used in conjunction with the `contact` TXT record to report strays.
-Barracks and other facilities can be denoted using polygonal LOC records for the TIME of their use.
+Peacekeepers' blue helmets may require protective marking in a theater for the duration of a deployment.
+Personnel, vehicles, and convoys may also need to be individually located as they move, as with shipments of sensitive goods, diplomatic pouches, and couriers and envoys, which implies emblem data that changes frequently.
+An emblem may need to identify a point of contact and indicate how an asset whose emblem fails validation should be treated, for example so that strays can be reported.
+Barracks and other facilities may need to be marked by area, for the period of their use.
 
 ## World Customs Organization (WCO)
 
