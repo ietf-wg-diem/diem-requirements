@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-10-18T02:16:12.273781+00:00",
+  "timestamp": "2026-11-03T04:41:40.130904+00:00",
   "repo": "ietf-wg-diem/diem-requirements",
   "labels": [
     {
@@ -4041,6 +4041,179 @@
           "updatedAt": "2026-10-15T12:50:47Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 44,
+      "id": "PR_kwDOPTNEDc8AAAABMDp9aw",
+      "title": "Define \"digital emblem profile\"",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/44",
+      "state": "MERGED",
+      "author": "ohmantics",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Since -04, \"profile\" is used normatively throughout the requirements (\"Digital emblem profiles MUST specify...\"), but the term is never defined. This adds a definition to the terminology section: a profile specifies the data emblems convey for one or more use cases and which architecture options it uses, on top of the shared DIEM architecture rather than as a separate protocol stack.",
+      "createdAt": "2026-11-01T03:46:14Z",
+      "updatedAt": "2026-11-01T09:42:52Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "290d801a1781e9aa9f208baf4144bdf038dbb9bf",
+      "headRepository": "ohmantics/diem-requirements",
+      "headRefName": "define-profile",
+      "headRefOid": "967f3538fcca50e5f831a7a5f7d3faf53c1ccad9",
+      "closedAt": "2026-11-01T09:41:44Z",
+      "mergedAt": "2026-11-01T09:41:44Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "d5c0000a5a4a96590db92d211f900c84abbbc312"
+      },
+      "comments": [
+        {
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@ohmantics I think defining the term is good, but it seemed like the definition made some stronger assumptions on how the DIEM architecture will look like and similar. I don't think we have strong WG consensus on what the architecture document will actually contain, so I think it's better to write the text more generally, which is what I did.",
+          "createdAt": "2026-11-01T09:42:51Z",
+          "updatedAt": "2026-11-01T09:42:51Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABVWE4kQ",
+          "commit": {
+            "abbreviatedOid": "fdcac82"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-01T09:37:26Z",
+          "updatedAt": "2026-11-01T09:37:27Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\n: A specification for a digital emblem design addressing one or more use cases.\n  Will include a specifcation of an emblem's data elements, what type each has, which are required or confidential, how validators interpret them, etc.\n```",
+              "createdAt": "2026-11-01T09:37:27Z",
+              "updatedAt": "2026-11-01T09:37:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABVWFinQ",
+          "commit": {
+            "abbreviatedOid": "c763ef2"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-01T09:39:22Z",
+          "updatedAt": "2026-11-01T09:39:22Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\n```",
+              "createdAt": "2026-11-01T09:39:22Z",
+              "updatedAt": "2026-11-01T09:39:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABVWFvqg",
+          "commit": {
+            "abbreviatedOid": "4f00b9b"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-01T09:39:54Z",
+          "updatedAt": "2026-11-01T09:39:54Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\n```",
+              "createdAt": "2026-11-01T09:39:54Z",
+              "updatedAt": "2026-11-01T09:39:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOPTNEDc8AAAABVWGGoQ",
+          "commit": {
+            "abbreviatedOid": "95f32ff"
+          },
+          "author": "felixlinker",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-01T09:40:53Z",
+          "updatedAt": "2026-11-01T09:40:54Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\n  A profile also states how emblems are discovered and whether it requires validation or authorization mechanisms.\n```",
+              "createdAt": "2026-11-01T09:40:54Z",
+              "updatedAt": "2026-11-01T09:41:06Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "id": "PR_kwDOPTNEDc8AAAABMDp-Tw",
+      "title": "Peacekeepers: avoid undefined mechanisms",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/45",
+      "state": "MERGED",
+      "author": "ohmantics",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The peacekeepers text added in -04 refers to an `invalid_treatment` flag, a `contact` TXT record, polygonal LOC records, and TIME, none of which are defined in this document (and LOC records are points, not polygons). This keeps the underlying needs (deployment-long marking, moving assets with frequently changing location, a point of contact and handling of assets whose emblem fails validation, facilities marked by area for a period of time) without presupposing mechanisms.",
+      "createdAt": "2026-11-01T03:46:16Z",
+      "updatedAt": "2026-11-01T09:34:39Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "290d801a1781e9aa9f208baf4144bdf038dbb9bf",
+      "headRepository": "ohmantics/diem-requirements",
+      "headRefName": "peacekeepers-text",
+      "headRefOid": "f1a2dea9b25336e18ebe3e058e322dc5aff59a76",
+      "closedAt": "2026-11-01T09:34:39Z",
+      "mergedAt": "2026-11-01T09:34:39Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "e8eed0051fe39287d68bdb5f3c666b656d0fc20b"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 46,
+      "id": "PR_kwDOPTNEDc8AAAABMDp_HA",
+      "title": "Include people in the definition of asset",
+      "url": "https://github.com/ietf-wg-diem/diem-requirements/pull/46",
+      "state": "MERGED",
+      "author": "ohmantics",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Bill pointed out during WGLC that people were left out of the definition of asset, and Felix agreed on the list that they could be added. This adds them.",
+      "createdAt": "2026-11-01T03:46:19Z",
+      "updatedAt": "2026-11-01T09:43:13Z",
+      "baseRepository": "ietf-wg-diem/diem-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "290d801a1781e9aa9f208baf4144bdf038dbb9bf",
+      "headRepository": "ohmantics/diem-requirements",
+      "headRefName": "asset-people",
+      "headRefOid": "c56d701dba9493c5cacc11287cce1c96919e92fa",
+      "closedAt": "2026-11-01T09:43:13Z",
+      "mergedAt": "2026-11-01T09:43:13Z",
+      "mergedBy": "felixlinker",
+      "mergeCommit": {
+        "oid": "ff8ec723dd851842f64aa5eaecb312ba1cf806ba"
+      },
+      "comments": [],
       "reviews": []
     }
   ]
